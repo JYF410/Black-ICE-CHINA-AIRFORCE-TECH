@@ -1,0 +1,70 @@
+ad_curtiss_hawk3_mr_equipment_1	('GFX_ad_curtiss_hawk3_mr_equipment_1_medium', 'gfx/interface/technologies/USA_early_fighter.dds', 'D:\\Steam\\steamapps\\common\\Hearts of Iron IV')
+ad_i_152_equipment_1	('GFX_ad_i_152_equipment_1_medium', 'gfx/interface/technologies/air/SOV/sov_fighter_i15_bis.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_i_16_equipment_3	('GFX_ad_i_16_equipment_3_medium', 'gfx/interface/technologies/air/SOV/SOV_fighter_i16_type10.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_i_16_equipment_4	('GFX_ad_i_16_equipment_4_medium', 'gfx/interface/technologies/air/SOV/SOV_fighter_i16_type24.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_curtiss_p40_equipment_1	('GFX_ad_curtiss_p40_equipment_1_medium', 'gfx/interface/technologies/air/USA/USA_fighter_p40_warhawk.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_curtiss_p40_equipment_2	('GFX_ad_curtiss_p40_equipment_2_medium', 'gfx/interface/technologies/air/USA/USA_fighter_p40e_warhawk.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_republic_p43_equipment_1	('GFX_ad_republic_p43_equipment_1_medium', 'gfx/interface/technologies/air/USA/USA_fighter_p43_lancer.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_republic_p47d_equipment_1	('GFX_ad_republic_p47d_equipment_1_medium', 'gfx/interface/technologies/air/USA/USA_fighter_p47_d_thunderbolt.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_northamerican_p51d_equipment_1	('GFX_ad_northamerican_p51d_equipment_1_medium', 'gfx/interface/technologies/air/USA/USA_fighter_p51d_mustang.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_lockheed_p80_equipment_1	('GFX_ad_lockheed_p80_equipment_1_medium', 'gfx/interface/technologies/air/USA/USA_fighter_p80_shooting_star.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_i_153_equipment_1	('GFX_ad_i_153_equipment_1_medium', 'gfx/interface/technologies/air/SOV/sov_fighter_i153.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_nakajima_ki_27_equipment_1	('GFX_ad_nakajima_ki_27_equipment_1_medium', 'gfx/interface/technologies/air/JAP/JAP_fighter_ki27.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_nakajima_ki_43_equipment_1	('GFX_ad_nakajima_ki_43_equipment_1_medium', 'gfx/interface/technologies/air/JAP/JAP_fighter_ki43_i.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_mitsubishi_a6m_equipment_1	('GFX_ad_mitsubishi_a6m_equipment_1_medium', 'gfx/interface/technologies/air/JAP/JAP_cv_fighter_a6m2.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_nakajima_ki_84_equipment_1	('GFX_ad_nakajima_ki_84_equipment_1_medium', 'gfx/interface/technologies/air/JAP/JAP_fighter_ki84.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_lagg_9_equipment_1	('GFX_ad_lagg_9_equipment_1_medium', 'gfx/interface/technologies/air/SOV/sov_fighter_la9.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_mig_9_fighter_equipment_1	('GFX_ad_mig_9_fighter_equipment_1_medium', 'gfx/interface/technologies/air/SOV/sov_jet_fighter_mig9.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_northrop_gamma_2e_equipment_1	('GFX_ad_northrop_gamma_2e_equipment_1_medium', 'gfx/interface/technologies/USA_CAS1.dds', 'D:\\Steam\\steamapps\\common\\Hearts of Iron IV')
+ad_hs_123_equipment_1	('GFX_ad_hs_123_equipment_1_medium', 'gfx/interface/technologies/air/GER/ger_cas_hs123.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_vultee_a19_equipment_1	('GFX_ad_vultee_a19_equipment_1_medium', 'gfx/interface/technologies/air/USA/USA_cas_a19.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_mosquito_hvf_equipment_1	('GFX_ad_mosquito_hvf_equipment_1_medium', 'gfx/interface/technologies/air/ENG/ENG_heavy_fighter_mosquito_mk6.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_il_10_equipment_1	('GFX_ad_il_10_equipment_1_medium', 'gfx/interface/technologies/air/SOV/sov_cas_il10.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_he_111_bomber_equipment_1	('GFX_ad_he_111_bomber_equipment_1_medium', 'gfx/interface/technologies/air/GER/GER_med_bomber_he111_a.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_sb_2m_bomber_equipment_1	('GFX_ad_sb_2m_bomber_equipment_1_medium', 'gfx/interface/technologies/air/SOV/sov_light_bomber_sb2m100.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+br20_bomber_equipment_1	('GFX_br20_bomber_equipment_1_medium', 'gfx/interface/technologies/air/ITA/ita_bomber_medium_br20.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_db_3_bomber_equipment_1	('GFX_ad_db_3_bomber_equipment_1_medium', 'gfx/interface/technologies/air/SOV/sov_med_bomber_db3.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_northamerican_b25_equipment_2	('GFX_ad_northamerican_b25_equipment_2_medium', 'gfx/interface/technologies/air/USA/USA_medium_bomber_b25c_mitchell.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_consolidated_b24_equipment_2	('GFX_ad_consolidated_b24_equipment_2_medium', 'gfx/interface/technologies/air/USA/USA_strategic_bomber_b24_liberator.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_tu_2_bomber_equipment_1	('GFX_ad_tu_2_bomber_equipment_1_medium', 'gfx/interface/technologies/air/SOV/sov_med_bomber_tu2.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_mitsubishi_g4m2_equipment_1	('GFX_ad_mitsubishi_g4m2_equipment_1_medium', 'gfx/interface/technologies/air/JAP/JAP_medium_bomber_g4m2.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_mitsubishi_ki_15_scout_equipment_1	('GFX_ad_mitsubishi_ki_15_scout_equipment_1_medium', 'gfx/interface/technologies/air/JAP/JAP_recon_plane_ki15.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_lockheed_p38_scout_equipment_2	('GFX_ad_lockheed_p38_scout_equipment_2_medium', 'gfx/interface/technologies/air/USA/USA_recon_plane_f5g.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_mosquito_scout_equipment_2	('GFX_ad_mosquito_scout_equipment_2_medium', 'gfx/interface/technologies/air/ENG/ENG_recon_plane_mosquito_pr_mk9.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_consolidated_pby_equipment_2	('GFX_ad_consolidated_pby_equipment_2_medium', 'gfx/interface/technologies/air/USA/USA_naval_bomber_pbn_nomad.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+douglas_c47_transport_equipment_1	('GFX_douglas_c47_transport_equipment_1_medium', 'gfx/interface/technologies/air/USA/USA_transport_plane_c47_skytrain.dds', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\1851181613')
+ad_usa_tech_engine_r1820	None
+ad_usa_tech_engine_v1710	None
+ad_usa_tech_engine_v1650	None
+ad_usa_tech_engine_r2800	None
+ad_usa_tech_engine_r2600	None
+ad_usa_tech_engine_r1830	None
+ad_sov_tech_engine_m25	('GFX_ad_sov_tech_engine_m25_medium', 'gfx/interface/technologies/ad_sov_equipment/ad_sov_tech_engine_m25.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_sov_tech_engine_m62	('GFX_ad_sov_tech_engine_m62_medium', 'gfx/interface/technologies/ad_sov_equipment/ad_sov_tech_engine_m62.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_sov_tech_engine_m82	('GFX_ad_sov_tech_engine_m82_medium', 'gfx/interface/technologies/ad_sov_equipment/ad_sov_tech_engine_m82.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_sov_tech_engine_m103	('GFX_ad_sov_tech_engine_m103_medium', 'gfx/interface/technologies/ad_sov_equipment/ad_sov_tech_engine_m103.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_sov_tech_engine_m34	('GFX_ad_sov_tech_engine_m34_medium', 'gfx/interface/technologies/ad_sov_equipment/ad_sov_tech_engine_m34.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_sov_tech_engine_am42	('GFX_ad_sov_tech_engine_am42_medium', 'gfx/interface/technologies/ad_sov_equipment/ad_sov_tech_engine_am42.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_jap_tech_engine_kotobuki	('GFX_ad_jap_tech_engine_kotobuki_medium', 'gfx/interface/technologies/ad_jap_equipment/ad_jap_tech_engine_kotobuki.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_jap_tech_engine_sakae	('GFX_ad_jap_tech_engine_sakae_medium', 'gfx/interface/technologies/ad_jap_equipment/ad_jap_tech_engine_sakae.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_jap_tech_engine_homare	('GFX_ad_jap_tech_engine_homare_medium', 'gfx/interface/technologies/ad_jap_equipment/ad_jap_tech_engine_homare.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_jap_tech_engine_kasei	('GFX_ad_jap_tech_engine_kasei_medium', 'gfx/interface/technologies/ad_jap_equipment/ad_jap_tech_engine_kasei.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_ger_tech_engine_bmw_132	('GFX_ad_ger_tech_engine_bmw_132_medium', 'gfx/interface/technologies/ad_ger_equipment/ad_ger_tech_engine_bmw_132.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_ger_tech_engine_bmw_vi	('GFX_ad_ger_tech_engine_bmw_vi_medium', 'gfx/interface/technologies/ad_ger_equipment/ad_ger_tech_engine_bmw_vi.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_ger_tech_engine_db_601	('GFX_ad_ger_tech_engine_db_601_medium', 'gfx/interface/technologies/ad_ger_equipment/ad_ger_tech_engine_db_601.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_eng_tech_engine_merlin	None
+ad_eng_tech_engine_merlin_xx	None
+ad_usa_tech_engine_j33	None
+ad_sov_tech_engine_rd20	('GFX_ad_sov_tech_engine_rd20_medium', 'gfx/interface/technologies/ad_sov_equipment/ad_sov_tech_engine_rd20.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_jap_tech_gun_type99	('GFX_ad_jap_tech_gun_type99_medium', 'gfx/interface/technologies/ad_jap_equipment/ad_jap_tech_gun_type99.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_jap_tech_gun_type89	('GFX_ad_jap_tech_gun_type89_medium', 'gfx/interface/technologies/ad_jap_equipment/ad_jap_tech_gun_type89.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_jap_tech_gun_ho103	('GFX_ad_jap_tech_gun_ho103_medium', 'gfx/interface/technologies/ad_jap_equipment/ad_jap_tech_gun_ho103.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_ger_tech_gun_mg17	('GFX_ad_ger_tech_gun_mg17_medium', 'gfx/interface/technologies/ad_ger_equipment/ad_ger_tech_gun_mg17.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_sov_tech_mg_shkas	('GFX_ad_sov_tech_mg_shkas_medium', 'gfx/interface/technologies/ad_sov_equipment/ad_sov_tech_mg_shkas.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_sov_tech_mg_ubs	('GFX_ad_sov_tech_mg_ubs_medium', 'gfx/interface/technologies/ad_sov_equipment/ad_sov_tech_mg_ubs.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_sov_tech_cannon_shvak20	('GFX_ad_sov_tech_cannon_shvak20_medium', 'gfx/interface/technologies/ad_sov_equipment/ad_sov_tech_cannon_shvak20.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_sov_tech_cannon_ns23	('GFX_ad_sov_tech_cannon_ns23_medium', 'gfx/interface/technologies/ad_sov_equipment/ad_sov_tech_cannon_ns23.png', 'D:\\Steam\\steamapps\\workshop\\content\\394360\\3808452657')
+ad_usa_tech_mg_m1919	None
+ad_usa_tech_mg_m2	None
+ad_eng_tech_cannon_hispano	None
+ad_usa_ord_mk7	None

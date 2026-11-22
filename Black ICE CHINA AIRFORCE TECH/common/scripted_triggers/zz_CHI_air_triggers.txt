@@ -1,0 +1,19 @@
+# 中系飞机科技树 / Chinese Aircraft Tech Tree
+# 供其它模组、事件、AI 复用的触发器（AUTO-GENERATED）
+scripted_triggers = {
+	# 这个国家是否算"中系"（含内战分裂政权，用 original_tag）
+	CHI_is_chinese_country = {
+		OR = {
+			original_tag = CHI
+			original_tag = PRC
+		}
+	}
+
+	# 这个国家是否拥有中国空军科技页
+	CHI_has_chinese_air_tree = {
+		OR = {
+			has_country_flag = CHI_air
+			CHI_is_chinese_country = yes
+		}
+	}
+}

@@ -1,0 +1,218 @@
+﻿
+=== ad_curtiss_hawk3_mr_equipment_1 | mr_fighter_equipment | 1933 | USA_airframes.txt
+  EN: Curtiss Hawk III Airframe
+  ZH: 寇蒂斯 “鹰” III多用途战斗机机身
+  slot ad_airforce_body_weapon: ['ad_mg_m1919_1x', 'ad_mg_m2_1x']
+     [ad_mg_m1919_1x] ad_mg_m1919_1x(.30 cal M1919 Browning Machine Gun)
+     [ad_mg_m2_1x] ad_mg_m2_1x(.50 cal M2 Browning Machine Gun)
+  slot ad_airforce_wing_weapon: ['ad_mg_m1919_1x']
+     [ad_mg_m1919_1x] ad_mg_m1919_1x(.30 cal M1919 Browning Machine Gun)
+  slot ad_airforce_motorkanone: (inherit)
+  slot ad_airforce_hardpoints: ['ad_bomb_anm30_1x', 'ad_bomb_anm30_2x', 'ad_droptank_150l', 'ad_droptank_300l', 'ad_droptank_900l', 'ad_droptank_900l_2x']
+     [ad_bomb_anm30_1x] ad_bomb_anm30_1x(AN-M30A1 100 lb GP Bomb)
+     [ad_bomb_anm30_2x] ad_bomb_anm30_2x(AN-M30A1 100 lb GP Bomb ×2)
+     [ad_droptank_150l] ad_droptank_150l(150 L Drop Tank)
+     [ad_droptank_300l] ad_droptank_300l(300 L Drop Tank)
+     [ad_droptank_900l] ad_droptank_900l(900 L Drop Tank)
+     [ad_droptank_900l_2x] ad_droptank_900l_2x(900 L Drop Tank ×2)
+  slot ad_airforce_powerplant: ['ad_engine_usa_type']
+     [ad_engine_usa_type] ad_engine_usa_r1340_1x(Pratt & Whitney R-1340 Wasp), ad_engine_usa_r1535_1x(Pratt & Whitney R-1535 Twin Wasp Junior), ad_engine_usa_r1690_1x(Pratt & Whitney R-1690 Hornet), ad_engine_usa_r1830_1x(Pratt & Whitney R-1830 Twin Wasp), ad_engine_usa_r2000_1x(Pratt & Whitney R-2000 Twin Wasp), ad_engine_usa_r2800_1x(Pratt & Whitney R-2800 Double Wasp) ...
+  slot special_type_slot_1: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_2: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_3: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_4: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_5: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot ad_airforce_frame_config: ['ad_frame_config_curtiss_hawk3_mr_equipment_1']
+     [ad_frame_config_curtiss_hawk3_mr_equipment_1] ad_frame_config_curtiss_hawk3_mr_equipment_1(Curtiss Hawk III Configuration)
+
+=== ad_i_152_equipment_1 | fighter_alt_equipment | 1937 | SOV_airframes.txt
+  EN: Polikarpov I-15bis Airframe
+  ZH: 波利卡波夫 I-15bis 轻型战斗机机身
+  slot ad_airforce_body_weapon: ['ad_mg_da2_1x', 'ad_mg_da2_2x', 'ad_mg_pv1_1x', 'ad_mg_pv1_2x', 'ad_mg_shkas_1x', 'ad_mg_shkas_2x']
+     [ad_mg_da2_1x] ad_mg_da2_1x(DA-2 7.62mm Machine Gun)
+     [ad_mg_da2_2x] ad_mg_da2_2x(DA-2 7.62mm Machine Gun ×2)
+     [ad_mg_pv1_1x] ad_mg_pv1_1x(PV-1 7.62mm Machine Gun)
+     [ad_mg_pv1_2x] ad_mg_pv1_2x(PV-1 7.62mm Machine Gun ×2)
+     [ad_mg_shkas_1x] ad_mg_shkas_1x(ShKAS 7.62mm Machine Gun)
+     [ad_mg_shkas_2x] ad_mg_shkas_2x(ShKAS 7.62mm Machine Gun ×2)
+  slot ad_airforce_wing_weapon: ['ad_mg_da2_1x', 'ad_mg_da2_2x', 'ad_mg_pv1_1x', 'ad_mg_pv1_2x', 'ad_mg_shkas_1x', 'ad_mg_shkas_2x']
+     [ad_mg_da2_1x] ad_mg_da2_1x(DA-2 7.62mm Machine Gun)
+     [ad_mg_da2_2x] ad_mg_da2_2x(DA-2 7.62mm Machine Gun ×2)
+     [ad_mg_pv1_1x] ad_mg_pv1_1x(PV-1 7.62mm Machine Gun)
+     [ad_mg_pv1_2x] ad_mg_pv1_2x(PV-1 7.62mm Machine Gun ×2)
+     [ad_mg_shkas_1x] ad_mg_shkas_1x(ShKAS 7.62mm Machine Gun)
+     [ad_mg_shkas_2x] ad_mg_shkas_2x(ShKAS 7.62mm Machine Gun ×2)
+  slot ad_airforce_motorkanone: (inherit)
+  slot ad_airforce_hardpoints: ['ad_bomb_ao10_1x', 'ad_bomb_ao10_2x', 'ad_bomb_ao10_4x', 'ad_bomb_ao25_1x', 'ad_bomb_ao25_2x', 'ad_bomb_ao25_4x', 'ad_bomb_fab100_1x', 'ad_bomb_fab50_1x', 'ad_bomb_fab50_2x', 'ad_droptank_150l', 'ad_droptank_300l', 'ad_droptank_900l', 'ad_droptank_900l_2x', 'ad_rocket_rs132_10x', 'ad_rocket_rs132_1x', 'ad_rocket_rs132_2x', 'ad_rocket_rs132_4x', 'ad_rocket_rs82_1x', 'ad_rocket_rs82_2x', 'ad_rocket_rs82_4x']
+     [ad_bomb_ao10_1x] ad_bomb_ao10_1x(AO-10 10 kg Fragmentation Bomb)
+     [ad_bomb_ao10_2x] ad_bomb_ao10_2x(AO-10 10 kg Fragmentation Bomb ×2)
+     [ad_bomb_ao10_4x] ad_bomb_ao10_4x(AO-10 10 kg Fragmentation Bomb ×4)
+     [ad_bomb_ao25_1x] ad_bomb_ao25_1x(AO-25 25 kg Fragmentation Bomb)
+     [ad_bomb_ao25_2x] ad_bomb_ao25_2x(AO-25 25 kg Fragmentation Bomb ×2)
+     [ad_bomb_ao25_4x] ad_bomb_ao25_4x(AO-25 25 kg Fragmentation Bomb ×4)
+     [ad_bomb_fab100_1x] ad_bomb_fab100_1x(FAB-100 100 kg General-Purpose Bomb)
+     [ad_bomb_fab50_1x] ad_bomb_fab50_1x(FAB-50 50 kg General-Purpose Bomb)
+     [ad_bomb_fab50_2x] ad_bomb_fab50_2x(FAB-50 50 kg General-Purpose Bomb ×2)
+     [ad_droptank_150l] ad_droptank_150l(150 L Drop Tank)
+     [ad_droptank_300l] ad_droptank_300l(300 L Drop Tank)
+     [ad_droptank_900l] ad_droptank_900l(900 L Drop Tank)
+     [ad_droptank_900l_2x] ad_droptank_900l_2x(900 L Drop Tank ×2)
+  slot ad_airforce_powerplant: ['ad_engine_sov_type']
+     [ad_engine_sov_type] ad_engine_sov_m17_1x(Mikulin M-17), ad_engine_sov_m34_1x(Mikulin M-34 / AM-34), ad_engine_sov_am35_1x(Mikulin AM-35 / AM-35A), ad_engine_sov_am38_1x(Mikulin AM-38 / AM-38F), ad_engine_sov_am42_1x(Mikulin AM-42), ad_engine_sov_m103_1x(Klimov M-103 / M-103A) ...
+  slot special_type_slot_1: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_2: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_3: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_4: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_5: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot ad_airforce_frame_config: ['ad_frame_config_i_152_equipment_1']
+     [ad_frame_config_i_152_equipment_1] ad_frame_config_i_152_equipment_1(Polikarpov I-15bis Configuration)
+
+=== ad_i_16_equipment_3 | fighter_equipment | 1937 | SOV_airframes.txt
+  EN: Polikarpov I-16 Type 10 Airframe
+  ZH: 波利卡波夫 I-16 10型 战斗机机身
+  slot ad_airforce_body_weapon: ['ad_mg_da2_1x', 'ad_mg_da2_2x', 'ad_mg_pv1_1x', 'ad_mg_pv1_2x', 'ad_mg_shkas_1x', 'ad_mg_shkas_2x']
+     [ad_mg_da2_1x] ad_mg_da2_1x(DA-2 7.62mm Machine Gun)
+     [ad_mg_da2_2x] ad_mg_da2_2x(DA-2 7.62mm Machine Gun ×2)
+     [ad_mg_pv1_1x] ad_mg_pv1_1x(PV-1 7.62mm Machine Gun)
+     [ad_mg_pv1_2x] ad_mg_pv1_2x(PV-1 7.62mm Machine Gun ×2)
+     [ad_mg_shkas_1x] ad_mg_shkas_1x(ShKAS 7.62mm Machine Gun)
+     [ad_mg_shkas_2x] ad_mg_shkas_2x(ShKAS 7.62mm Machine Gun ×2)
+  slot ad_airforce_wing_weapon: ['ad_mg_da2_1x', 'ad_mg_da2_2x', 'ad_mg_pv1_1x', 'ad_mg_pv1_2x', 'ad_mg_shkas_1x', 'ad_mg_shkas_2x']
+     [ad_mg_da2_1x] ad_mg_da2_1x(DA-2 7.62mm Machine Gun)
+     [ad_mg_da2_2x] ad_mg_da2_2x(DA-2 7.62mm Machine Gun ×2)
+     [ad_mg_pv1_1x] ad_mg_pv1_1x(PV-1 7.62mm Machine Gun)
+     [ad_mg_pv1_2x] ad_mg_pv1_2x(PV-1 7.62mm Machine Gun ×2)
+     [ad_mg_shkas_1x] ad_mg_shkas_1x(ShKAS 7.62mm Machine Gun)
+     [ad_mg_shkas_2x] ad_mg_shkas_2x(ShKAS 7.62mm Machine Gun ×2)
+  slot ad_airforce_motorkanone: (inherit)
+  slot ad_airforce_hardpoints: (inherit)
+  slot ad_airforce_powerplant: ['ad_engine_sov_type']
+     [ad_engine_sov_type] ad_engine_sov_m17_1x(Mikulin M-17), ad_engine_sov_m34_1x(Mikulin M-34 / AM-34), ad_engine_sov_am35_1x(Mikulin AM-35 / AM-35A), ad_engine_sov_am38_1x(Mikulin AM-38 / AM-38F), ad_engine_sov_am42_1x(Mikulin AM-42), ad_engine_sov_m103_1x(Klimov M-103 / M-103A) ...
+  slot special_type_slot_1: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_2: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_3: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_4: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_5: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot ad_airforce_frame_config: ['ad_frame_config_i_16_equipment_3']
+     [ad_frame_config_i_16_equipment_3] ad_frame_config_i_16_equipment_3(Polikarpov I-16 Type 10 Configuration)
+
+=== ad_curtiss_p40_equipment_1 | fighter_equipment | 1940 | USA_airframes.txt
+  EN: Curtiss P-40B Warhawk Airframe
+  ZH: 寇蒂斯 P-40B “战斧”战斗机机身
+  slot ad_airforce_body_weapon: ['ad_mg_m1919_1x', 'ad_mg_m1919_2x', 'ad_mg_m2_1x', 'ad_mg_m2_2x']
+     [ad_mg_m1919_1x] ad_mg_m1919_1x(.30 cal M1919 Browning Machine Gun)
+     [ad_mg_m1919_2x] ad_mg_m1919_2x(.30 cal M1919 Browning Machine Gun ×2)
+     [ad_mg_m2_1x] ad_mg_m2_1x(.50 cal M2 Browning Machine Gun)
+     [ad_mg_m2_2x] ad_mg_m2_2x(.50 cal M2 Browning Machine Gun ×2)
+  slot ad_airforce_wing_weapon: ['ad_mg_m1919_1x', 'ad_mg_m1919_2x', 'ad_mg_m1919_3x', 'ad_mg_m1919_4x']
+     [ad_mg_m1919_1x] ad_mg_m1919_1x(.30 cal M1919 Browning Machine Gun)
+     [ad_mg_m1919_2x] ad_mg_m1919_2x(.30 cal M1919 Browning Machine Gun ×2)
+     [ad_mg_m1919_3x] ad_mg_m1919_3x(.30 cal M1919 Browning Machine Gun ×3)
+     [ad_mg_m1919_4x] ad_mg_m1919_4x(.30 cal M1919 Browning Machine Gun ×4)
+  slot ad_airforce_motorkanone: (inherit)
+  slot ad_airforce_hardpoints: (inherit)
+  slot ad_airforce_powerplant: ['ad_engine_usa_type']
+     [ad_engine_usa_type] ad_engine_usa_r1340_1x(Pratt & Whitney R-1340 Wasp), ad_engine_usa_r1535_1x(Pratt & Whitney R-1535 Twin Wasp Junior), ad_engine_usa_r1690_1x(Pratt & Whitney R-1690 Hornet), ad_engine_usa_r1830_1x(Pratt & Whitney R-1830 Twin Wasp), ad_engine_usa_r2000_1x(Pratt & Whitney R-2000 Twin Wasp), ad_engine_usa_r2800_1x(Pratt & Whitney R-2800 Double Wasp) ...
+  slot special_type_slot_1: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_2: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_3: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_4: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_5: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot ad_airforce_frame_config: ['ad_frame_config_curtiss_p40_equipment_1']
+     [ad_frame_config_curtiss_p40_equipment_1] ad_frame_config_curtiss_p40_equipment_1(Curtiss P-40B Warhawk Configuration)
+
+=== ad_northamerican_p51d_equipment_1 | fighter_equipment | 1944 | USA_airframes.txt
+  EN: North American P-51D Mustang Airframe
+  ZH: 北美 P-51D “野马”战斗机机身
+  slot ad_airforce_body_weapon: ['ad_mg_m1919_1x', 'ad_mg_m1919_2x', 'ad_mg_m1919_3x', 'ad_mg_m1919_4x', 'ad_mg_m2_1x', 'ad_mg_m2_2x', 'ad_mg_m2_3x', 'ad_mg_m2_4x']
+     [ad_mg_m1919_1x] ad_mg_m1919_1x(.30 cal M1919 Browning Machine Gun)
+     [ad_mg_m1919_2x] ad_mg_m1919_2x(.30 cal M1919 Browning Machine Gun ×2)
+     [ad_mg_m1919_3x] ad_mg_m1919_3x(.30 cal M1919 Browning Machine Gun ×3)
+     [ad_mg_m1919_4x] ad_mg_m1919_4x(.30 cal M1919 Browning Machine Gun ×4)
+     [ad_mg_m2_1x] ad_mg_m2_1x(.50 cal M2 Browning Machine Gun)
+     [ad_mg_m2_2x] ad_mg_m2_2x(.50 cal M2 Browning Machine Gun ×2)
+     [ad_mg_m2_3x] ad_mg_m2_3x(.50 cal M2 Browning Machine Gun ×3)
+     [ad_mg_m2_4x] ad_mg_m2_4x(.50 cal M2 Browning Machine Gun ×4)
+  slot ad_airforce_wing_weapon: ['ad_mg_m1919_1x', 'ad_mg_m1919_2x', 'ad_mg_m2_1x', 'ad_mg_m2_2x']
+     [ad_mg_m1919_1x] ad_mg_m1919_1x(.30 cal M1919 Browning Machine Gun)
+     [ad_mg_m1919_2x] ad_mg_m1919_2x(.30 cal M1919 Browning Machine Gun ×2)
+     [ad_mg_m2_1x] ad_mg_m2_1x(.50 cal M2 Browning Machine Gun)
+     [ad_mg_m2_2x] ad_mg_m2_2x(.50 cal M2 Browning Machine Gun ×2)
+  slot ad_airforce_motorkanone: (inherit)
+  slot ad_airforce_hardpoints: ['ad_bomb_anm30_1x', 'ad_bomb_anm30_2x', 'ad_bomb_anm57_1x', 'ad_rocket_hvar_2x', 'ad_bomb_anm30_4x', 'ad_bomb_anm57_2x', 'ad_bomb_anm64_1x', 'ad_rocket_hvar_4x', 'ad_torpedo_mk24_1x', 'ad_rocket_hvar_6x', 'ad_bomb_anm57_4x', 'ad_bomb_anm64_2x', 'ad_bomb_anm65_1x', 'ad_droptank_150l', 'ad_droptank_300l', 'ad_droptank_900l', 'ad_droptank_900l_2x']
+     [ad_bomb_anm30_1x] ad_bomb_anm30_1x(AN-M30A1 100 lb GP Bomb)
+     [ad_bomb_anm30_2x] ad_bomb_anm30_2x(AN-M30A1 100 lb GP Bomb ×2)
+     [ad_bomb_anm57_1x] ad_bomb_anm57_1x(AN-M57A1 250 lb GP Bomb)
+     [ad_rocket_hvar_2x] ad_rocket_hvar_2x(5-inch HVAR Rocket ×2)
+     [ad_bomb_anm30_4x] ad_bomb_anm30_4x(AN-M30A1 100 lb GP Bomb ×4)
+     [ad_bomb_anm57_2x] ad_bomb_anm57_2x(AN-M57A1 250 lb GP Bomb ×2)
+     [ad_bomb_anm64_1x] ad_bomb_anm64_1x(AN-M64A1 500 lb GP Bomb)
+     [ad_rocket_hvar_4x] ad_rocket_hvar_4x(5-inch HVAR Rocket ×4)
+     [ad_torpedo_mk24_1x] ad_torpedo_mk24_1x(Mk 24 'FIDO' Anti-Submarine Torpedo)
+     [ad_rocket_hvar_6x] ad_rocket_hvar_6x(5-inch HVAR Rocket ×6)
+     [ad_bomb_anm57_4x] ad_bomb_anm57_4x(AN-M57A1 250 lb GP Bomb ×4)
+     [ad_bomb_anm64_2x] ad_bomb_anm64_2x(AN-M64A1 500 lb GP Bomb ×2)
+     [ad_bomb_anm65_1x] ad_bomb_anm65_1x(AN-M65A1 1000 lb GP Bomb)
+     [ad_droptank_150l] ad_droptank_150l(150 L Drop Tank)
+     [ad_droptank_300l] ad_droptank_300l(300 L Drop Tank)
+     [ad_droptank_900l] ad_droptank_900l(900 L Drop Tank)
+     [ad_droptank_900l_2x] ad_droptank_900l_2x(900 L Drop Tank ×2)
+  slot ad_airforce_powerplant: ['ad_engine_usa_type']
+     [ad_engine_usa_type] ad_engine_usa_r1340_1x(Pratt & Whitney R-1340 Wasp), ad_engine_usa_r1535_1x(Pratt & Whitney R-1535 Twin Wasp Junior), ad_engine_usa_r1690_1x(Pratt & Whitney R-1690 Hornet), ad_engine_usa_r1830_1x(Pratt & Whitney R-1830 Twin Wasp), ad_engine_usa_r2000_1x(Pratt & Whitney R-2000 Twin Wasp), ad_engine_usa_r2800_1x(Pratt & Whitney R-2800 Double Wasp) ...
+  slot special_type_slot_1: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_2: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_3: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_4: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot special_type_slot_5: ['ad_special_module', 'ad_underwing_extra']
+     [ad_special_module] ad_armor_plate(Armor Plates), ad_self_sealing_tank(Self-Sealing Fuel Tanks), ad_turbocharger(Turbocharger), ad_boost_injection(Boost Injection System), ad_dive_brakes(Dive Brakes), ad_rato(RATO Assist Units) ...
+     [ad_underwing_extra] ad_rocket_r4m_24x(R4M Air-to-Air Rocket ×24), ad_rocket_r4hl_24x(R4HL Anti-Tank Rocket ×24), ad_rocket_pb1_6x(Panzerblitz I Anti-Tank Rocket ×6), ad_rocket_pb2_6x(Panzerblitz II Anti-Tank Rocket ×6), ad_rocket_rs82_1x(RS-82 82mm Rocket), ad_rocket_rs82_2x(RS-82 82mm Rocket ×2) ...
+  slot ad_airforce_frame_config: ['ad_frame_config_northamerican_p51d_equipment_1']
+     [ad_frame_config_northamerican_p51d_equipment_1] ad_frame_config_northamerican_p51d_equipment_1(North American P-51D Mustang Configuration)

@@ -1,0 +1,18 @@
+# 中系飞机科技树 / Chinese Aircraft Tech Tree
+# 开局给中国（含中共）挂上 CHI_air 标志，科技树标签页据此显示。
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = CHI
+						original_tag = PRC
+					}
+				}
+				set_country_flag = CHI_air
+				log = "CHI_AIR_TREE: CHI_air granted to [THIS.GetTag]"
+			}
+		}
+	}
+}

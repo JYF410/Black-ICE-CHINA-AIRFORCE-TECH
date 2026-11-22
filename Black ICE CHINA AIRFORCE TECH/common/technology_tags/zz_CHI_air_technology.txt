@@ -1,0 +1,35 @@
+# 中系飞机科技树 / Chinese Aircraft Tech Tree
+# 中国（含中共及内战分裂政权）显示专属空军科技标签页，
+# 同时把黑冰通用空军页对中国隐藏，避免出现两个空军页。
+# 判定方式：CHI_air 标志（on_startup 设置）或 original_tag，双重保险。
+technology_folders = {
+	chinaair_folder = {
+		ledger = air
+		available = {
+			OR = {
+				has_country_flag = CHI_air
+				original_tag = CHI
+				original_tag = PRC
+			}
+		}
+	}
+	air_techs_folder = {
+		ledger = air
+		available = {
+			NOT = {
+				OR = {
+					has_country_flag = GER_air
+					has_country_flag = ITA_air
+					has_country_flag = JAP_air
+					has_country_flag = USA_air
+					has_country_flag = ENG_air
+					has_country_flag = FRA_air
+					has_country_flag = SOV_air
+					has_country_flag = CHI_air
+					original_tag = CHI
+					original_tag = PRC
+				}
+			}
+		}
+	}
+}

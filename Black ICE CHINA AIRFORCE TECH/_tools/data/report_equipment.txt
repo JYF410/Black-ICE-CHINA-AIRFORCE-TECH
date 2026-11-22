@@ -1,0 +1,1684 @@
+
+### 00_airframe_archetypes.txt
+1930 CAS_equipment                                                        
+1930 cv_CAS_equipment                                                     
+1930 cv_fighter_equipment                                                 
+1930 cv_mr_fighter_equipment                                              
+1930 cv_nav_bomber_equipment                                              
+1930 fast_bomber_equipment                                                
+1930 fighter_alt_equipment                                                
+1930 fighter_equipment                                                    
+1930 fighter_navy_equipment                                               
+1930 flying_boat_equipment                                                
+1930 heavy_fighter_equipment                                              
+1930 heavy_nav_bomber_equipment                                           
+1930 interceptor_equipment                                                
+1930 interceptor_navy_equipment                                           
+1930 light_bomber_equipment                                               
+1930 mr_fighter_equipment                                                 
+1930 nav_bomber_equipment                                                 
+1930 nav_bomber_gb_equipment                                              
+1930 night_fighter_equipment                                              
+1930 quad_engine_bomber_equipment                                         
+1930 tac_bomber_equipment                                                 
+1930 twin_cas_equipment                                                   
+1933 scout_plane_equipment                                                
+1933 transport_plane_equipment                                            
+1936 suicide_craft_equipment                                              
+1944 jet_cas_equipment                                                    
+1944 jet_fighter_equipment                                                
+1944 jet_mr_fighter_equipment                                             
+1944 jet_strat_bomber_equipment                                           
+1944 jet_tac_bomber_equipment                                             
+1944 rocket_interceptor_equipment                                         
+
+### ENG_airframes.txt
+1924 ad_vickers_virginia_bomber_equipment_1        tac_bomber_equipment   Vickers Virginia IX Airframe
+1924 ad_vickers_virginia_bomber_equipment_2        tac_bomber_equipment   Vickers Virginia X Airframe
+1925 ad_supermarine_southampton_equipment_1        flying_boat_equipment  Supermarine Southampton Airframe
+1928 ad_aw_atlas_equipment_1                       CAS_equipment          Armstrong Whitworth Atlas Airframe
+1928 ad_bolton_sidestrand_equipment_1              light_bomber_equipment Boulton Paul Sidestrand Airframe
+1928 ad_westland_wapiti_equipment_1                CAS_equipment          Westland Wapiti Airframe
+1930 ad_fairey_iiif_equipment_1                    cv_CAS_equipment       Fairey IIIF Airframe
+1931 ad_armstrong_aw16_equipment_1                 fighter_equipment      A.W. 16 Airframe
+1931 ad_armstrong_scimitar_equipment_1             fighter_equipment      Armstrong Whitworth A.W.35 Scimitar Airframe
+1931 ad_bristol_bulldog_equipment_1                interceptor_equipment  Bristol Bulldog II Airframe
+1931 ad_bristol_bulldog_equipment_2                interceptor_equipment  Bristol Bulldog IV Airframe
+1931 ad_fairey_gordon_equipment_1                  CAS_equipment          Fairey Gordon Airframe
+1931 ad_hawker_audax_equipment_1                   CAS_equipment          Hawker Audax Airframe
+1931 ad_hawker_audax_scout_equipment_1             scout_plane_equipment  Hawker Audax (Recon) Airframe
+1931 ad_hawker_fury_equipment_1                    mr_fighter_equipment   Hawker Fury Airframe
+1931 ad_hawker_hart_equipment_1                    CAS_equipment          Hawker Hart Airframe
+1931 ad_hawker_hartebeest_equipment_1              CAS_equipment          Hawker Hartebeest Airframe
+1931 ad_hawker_hornet_equipment_1                  fighter_equipment      Hawker Hornet Airframe
+1932 ad_hawker_osprey_fighter_equipment_1          cv_fighter_equipment   Hawker Osprey Airframe
+1933 ad_blackburn_baffin_equipment_1               cv_nav_bomber_equipment Blackburn Baffin Airframe
+1933 ad_fairey_seal_equipment_1                    cv_CAS_equipment       Fairey Seal Airframe
+1933 ad_nimrod_fighter_equipment_1                 cv_fighter_equipment   Hawker Nimrod Airframe
+1934 ad_aw_siskin_equipment_1                      fighter_equipment      A.W. Siskin Airframe
+1934 ad_blackburn_shark_equipment_1                cv_nav_bomber_equipment Blackburn Shark Airframe
+1934 ad_bolton_overstrand_equipment_1              light_bomber_equipment Boulton Paul Overstrand Airframe
+1934 ad_handley_heyford_equipment_1                light_bomber_equipment Handley Page Heyford I Airframe
+1934 ad_hawker_demon_equipment_1                   fighter_equipment      Hawker Demon Airframe
+1934 ad_supermarine_scapa_equipment_1              flying_boat_equipment  Supermarine Scapa Airframe
+1935 ad_gauntlet_fighter_equipment_1               interceptor_equipment  Gloster Gauntlet Airframe
+1935 ad_handley_heyford_equipment_2                light_bomber_equipment Handley Page Heyford II Airframe
+1935 ad_handley_heyford_equipment_3                light_bomber_equipment Handley Page Heyford III Airframe
+1935 ad_hawker_hector_scout_equipment_1            scout_plane_equipment  Hawker Hector Airframe
+1935 ad_hawker_hind_equipment_1                    CAS_equipment          Hawker Hind Airframe
+1935 ad_hawker_osprey_fighter_equipment_2          cv_fighter_equipment   Hawker Osprey IV Airframe
+1935 ad_vickers_valentia_equipment_1               light_bomber_equipment Vickers Valentia Airframe
+1936 ad_fairey_swordfish_equipment_1               cv_nav_bomber_equipment Fairey Swordfish Airframe
+1936 ad_gladiator_fighter_equipment_1              interceptor_equipment  Gloster Gladiator Airframe
+1936 ad_hendon_equipment_1                         quad_engine_bomber_equipment Fairey Hendon Airframe
+1936 ad_saro_london_equipment_1                    flying_boat_equipment  Saro London Airframe
+1937 ad_avro_anson_equipment_1                     nav_bomber_equipment   Avro Anson Airframe
+1937 ad_avro_anson_scout_equipment_1               scout_plane_equipment  Avro Anson (Recon) Airframe
+1937 ad_aw_whitley_equipment_1                     quad_engine_bomber_equipment Armstrong Whitworth A.W.38 Whitley Mk V Airframe
+1937 ad_bristol_blenheim_equipment_1               light_bomber_equipment Bristol Blenheim Mk I Airframe
+1937 ad_fairey_battle_equipment_1                  CAS_equipment          Fairey Battle Airframe
+1937 ad_handley_harrow_bomber_equipment_1          tac_bomber_equipment   Handley Page HP.54 Harrow Airframe
+1937 ad_hawker_hurricane_equipment_1               mr_fighter_equipment   Hawker Hurricane Mk I Airframe
+1937 ad_sea_gladiator_equipment_1                  cv_fighter_equipment   Gloster Sea Gladiator Airframe
+1937 ad_vickers_wellesley_equipment_1              light_bomber_equipment Vickers Wellesley Airframe
+1938 ad_blackburn_skua_equipment_1                 cv_CAS_equipment       Blackburn B-24 Skua Airframe
+1938 ad_bristol_blenheim_f_equipment_1             night_fighter_equipment Bristol Blenheim Mk IF Airframe
+1938 ad_handley_hampden_bomber_equipment_1         quad_engine_bomber_equipment Handley Page HP.52 Hampden Airframe
+1938 ad_short_sunderland_equipment_1               flying_boat_equipment  Short Sunderland Airframe
+1938 ad_spitfire_equipment_1                       fighter_equipment      Supermarine Spitfire Mk I Airframe
+1938 ad_vickers_wellington_bomber_equipment_1      tac_bomber_equipment   Vickers Wellington Mk I Airframe
+1939 ad_aw_whitley_gr_equipment_1                  heavy_nav_bomber_equipment Armstrong Whitworth Whitley A.W. Type 217 Airframe
+1939 ad_blackburn_roc_equipment_1                  cv_fighter_equipment   Blackburn B-25 Roc Airframe
+1939 ad_bristol_blenheim_equipment_2               light_bomber_equipment Bristol Blenheim Mk IV Airframe
+1939 ad_bristol_blenheim_f_equipment_2             night_fighter_equipment Bristol Blenheim Mk IVf Airframe
+1939 ad_bristol_bolingbroke_equipment_1            nav_bomber_equipment   Bristol Bolingbroke Mk IV Airframe
+1939 ad_defiant_fighter_equipment_1                interceptor_equipment  Boulton Paul Defiant Airframe
+1939 ad_spitfire_equipment_2                       fighter_equipment      Supermarine Spitfire Mk II Airframe
+1940 ad_avro_manchester_bomber_equipment_1         quad_engine_bomber_equipment Avro Manchester Airframe
+1940 ad_bristol_beaufighter_equipment_1            heavy_fighter_equipment Bristol Beaufighter Mk IF Airframe
+1940 ad_bristol_beaufort_equipment_1               light_bomber_equipment Bristol Beaufort Airframe
+1940 ad_fairey_albacore_equipment_1                cv_nav_bomber_equipment Fairey Albacore Airframe
+1940 ad_fairey_fulmar_equipment_1                  cv_mr_fighter_equipment Fairey Fulmar Mk I Airframe
+1940 ad_hawker_hurricane_equipment_2               mr_fighter_equipment   Hawker Hurricane Mk II Airframe
+1940 ad_short_stirling_equipment_1                 quad_engine_bomber_equipment Short Stirling Airframe
+1940 ad_vickers_wellington_bomber_equipment_2      tac_bomber_equipment   Vickers Wellington B Mk III Airframe
+1940 ad_westland_whirlwind_equipment_1             interceptor_equipment  Westland Whirlwind Airframe
+1941 ad_bristol_beaufighter_cas_equipment_1        twin_cas_equipment     Bristol Beaufighter Mk Ic Airframe
+1941 ad_fairey_fulmar_equipment_2                  cv_mr_fighter_equipment Fairey Fulmar Mk II Airframe
+1941 ad_handley_halifax_equipment_1                quad_engine_bomber_equipment Handley Page Halifax Airframe
+1941 ad_handley_halifax_gr_equipment_1             heavy_nav_bomber_equipment Handley Page Halifax GR Airframe
+1941 ad_hawker_hurricane_iic_equipment_1           CAS_equipment          Hawker Hurricane Mk IIc Airframe
+1941 ad_hawker_sea_hurricane_equipment_1           cv_fighter_equipment   Hawker Sea Hurricane Ib Airframe
+1941 ad_hawker_typhoon_equipment_1                 mr_fighter_equipment   Hawker Typhoon Mk Ia Airframe
+1941 ad_mid_spitfire_equipment_1                   fighter_equipment      Supermarine Spitfire Mk V Airframe
+1941 ad_mosquito_fsb_equipment_1                   fast_bomber_equipment  De Havilland Mosquito B Mk IV Airframe
+1941 ad_mosquito_scout_equipment_1                 scout_plane_equipment  De Havilland Mosquito PR Mk IV (Recon) Airframe
+1941 ad_spitfire_scout_equipment_1                 scout_plane_equipment  Supermarine Spitfire PR Mk XI (Recon) Airframe
+1941 ad_spitfire_scout_equipment_2                 scout_plane_equipment  Supermarine Spitfire Mk XIX (Recon) Airframe
+1941 ad_vickers_wellington_gr_bomber_equipment_1   nav_bomber_equipment   Vickers Wellington GR Mk VIII Airframe
+1942 ad_avro_lancaster_equipment_1                 quad_engine_bomber_equipment Avro Lancaster Airframe
+1942 ad_bristol_beaufighter_cas_equipment_2        twin_cas_equipment     Bristol Beaufighter Mk VIc Airframe
+1942 ad_fairey_barracuda_equipment_1               cv_CAS_equipment       Fairey Barracuda Mk I Airframe
+1942 ad_hawker_typhoon1b_equipment_1               mr_fighter_equipment   Hawker Typhoon Mk Ib Airframe
+1942 ad_late_spitfire_equipment_1                  fighter_equipment      Supermarine Spitfire Mk IX Airframe
+1942 ad_mosquito_nf_equipment_1                    night_fighter_equipment De Havilland Mosquito NF Mk II Airframe
+1942 ad_short_sunderland_equipment_2               flying_boat_equipment  Short Sunderland Mk III Airframe
+1942 ad_supermarine_seafire_equipment_1            cv_fighter_equipment   Supermarine Seafire Mk IIc Airframe
+1942 ad_vickers_wellington_bomber_equipment_3      tac_bomber_equipment   Vickers Wellington B Mk X Airframe
+1943 ad_avro_lancaster_gr_equipment_1              heavy_nav_bomber_equipment Avro Lancaster GR.3/MR.3 Airframe
+1943 ad_bristol_beaufighter_equipment_2            heavy_fighter_equipment Bristol Beaufighter TF Mk X Airframe
+1943 ad_bristol_buckingham_equipment_1             light_bomber_equipment Bristol Buckingham Airframe
+1943 ad_fairey_barracuda_equipment_2               cv_CAS_equipment       Fairey Barracuda Mk II Airframe
+1943 ad_fairey_firefly_equipment_1                 cv_mr_fighter_equipment Fairey Firefly Airframe
+1943 ad_griffon_fighter_equipment_1                fighter_equipment      Supermarine Spitfire Mk XIV Airframe
+1943 ad_hawker_hurricane_iv_equipment_1            CAS_equipment          Hawker Hurricane Mk IV Airframe
+1943 ad_hawker_typhoon1b_equipment_2               mr_fighter_equipment   Hawker Typhoon Mk Ib (Late) Airframe
+1943 ad_mosquito_fsb_equipment_2                   fast_bomber_equipment  De Havilland Mosquito B Mk IX Airframe
+1943 ad_mosquito_hvf_equipment_1                   heavy_fighter_equipment De Havilland Mosquito FB Mk VI Airframe
+1943 ad_mosquito_scout_equipment_2                 scout_plane_equipment  De Havilland Mosquito PR Mk IX (Recon) Airframe
+1943 ad_supermarine_dumbo_equipment_1              cv_nav_bomber_equipment Supermarine Type 322 Airframe
+1943 ad_supermarine_seafire_iii_equipment_1        cv_fighter_equipment   Supermarine Seafire Mk III Airframe
+1943 ad_vickers_wellington_gr_bomber_equipment_2   nav_bomber_equipment   Vickers Wellington GR Mk XIII Airframe
+1944 ad_avro_lancaster_equipment_2                 quad_engine_bomber_equipment Avro Lancaster (Special) Airframe
+1944 ad_gloster_meteor_equipment_1                 jet_fighter_equipment  Gloster Meteor F.1 Airframe
+1944 ad_griffon_spitfire_equipment_1               fighter_equipment      Supermarine Spitfire Mk XIVe Airframe
+1944 ad_hawker_tempest_equipment_1                 mr_fighter_equipment   Hawker Tempest Mk V Airframe
+1944 ad_mosquito_cas_equipment_1                   twin_cas_equipment     De Havilland Mosquito FB Mk XVIII Airframe
+1944 ad_mosquito_nf_equipment_2                    night_fighter_equipment De Havilland Mosquito NF Mk 30 Airframe
+1944 ad_supermarine_seafire_xv_equipment_1         cv_fighter_equipment   Supermarine Seafire Mk XV Airframe
+1944 ad_vickers_warwick_equipment_1                nav_bomber_equipment   Vickers Warwick Airframe
+1944 ad_welkin_equipment_1                         interceptor_equipment  Westland Welkin Airframe
+1945 ad_avro_lincoln_equipment_1                   quad_engine_bomber_equipment Avro Lincoln Airframe
+1945 ad_blackburn_firebrand_equipment_1            cv_CAS_equipment       Blackburn Firebrand T.F. IV Airframe
+1945 ad_gloster_meteor_equipment_2                 jet_mr_fighter_equipment Gloster Meteor F.3 Airframe
+1945 ad_griffon_spitfire_equipment_2               fighter_equipment      Supermarine Spitfire Mk 21 Airframe
+1945 ad_martinbaker_fighter_equipment_1            interceptor_equipment  Martin-Baker MB 5 Airframe
+1945 ad_mosquito_scout_equipment_3                 scout_plane_equipment  De Havilland Mosquito PR Mk 34 Airframe
+1945 ad_short_seaford_equipment_1                  flying_boat_equipment  Short Seaford Airframe
+1946 ad_bristol_brigand_equipment_1                twin_cas_equipment     Bristol Brigand Airframe
+1946 ad_fairey_spearfish_equipment_1               cv_nav_bomber_equipment Fairey Spearfish Airframe
+1946 ad_gloster_meteor_equipment_3                 jet_mr_fighter_equipment Gloster Meteor F.4 Airframe
+1946 ad_hawker_monofury_equipment_1                mr_fighter_equipment   Hawker Fury Airframe
+1946 ad_hawker_seafury_equipment_1                 cv_mr_fighter_equipment Hawker Sea Fury FB.11 Airframe
+1946 ad_hornet_equipment_1                         heavy_fighter_equipment De Havilland Hornet Airframe
+1946 ad_sea_fire45_equipment_1                     cv_fighter_equipment   Supermarine Seafire Mk 45 Airframe
+1946 ad_spitfire_24_equipment_1                    fighter_equipment      Supermarine Spitfire Mk 24 Airframe
+1946 ad_vampire_equipment_1                        jet_fighter_equipment  De Havilland Vampire F.1 Airframe
+
+### GER_airframes.txt
+1931 ad_do_wal_equipment_1                         flying_boat_equipment  Dornier 16 Airframe
+1933 ad_ar_65_equipment_1                          interceptor_equipment  Arado Ar 65 Airframe
+1933 ad_ar_65_fighter_equipment_1                  interceptor_equipment  Arado Ar 65 F Airframe
+1933 ad_ar_66_equipment_1                          CAS_equipment          Arado 66 C Airframe
+1933 ad_do_11_bomber_equipment_1                   tac_bomber_equipment   Dornier 11 Airframe
+1933 ad_ju_52_bomber_equipment_1                   tac_bomber_equipment   Junkers 52/3mg Airframe
+1933 ad_me_109_fighter_equipment_1                 fighter_equipment      Bayerische Flugzeugwerke 109 B Airframe
+1934 ad_do_23_bomber_equipment_1                   tac_bomber_equipment   Dornier 23 Airframe
+1934 ad_he_45_equipment_1                          CAS_equipment          Heinkel 45 C Airframe
+1934 ad_he_46_equipment_1                          CAS_equipment          Heinkel 46 C Airframe
+1934 ad_he_46_scout_equipment_1                    scout_plane_equipment  Heinkel 46 (Recon) Airframe
+1934 ad_he_66_equipment_1                          cv_CAS_equipment       Heinkel He 66 Airframe
+1934 ad_hs_126_equipment_1                         CAS_equipment          Henschel 126 Airframe
+1935 ad_ar_68_equipment_1                          fighter_equipment      Arado 68 Airframe
+1935 ad_ar_76_equipment_1                          fighter_equipment      Arado Ar 76 Airframe
+1935 ad_ar_81_equipment_1                          CAS_equipment          Arado 81 Airframe
+1935 ad_he_111_bomber_equipment_1                  tac_bomber_equipment   Heinkel 111 A Airframe
+1935 ad_he_50_equipment_1                          CAS_equipment          Heinkel 50 A Airframe
+1935 ad_he_51_equipment_1                          fighter_equipment      Heinkel 51 A Airframe
+1935 ad_he_51_equipment_2                          fighter_equipment      Heinkel 51 B Airframe
+1935 ad_he_51_equipment_3                          mr_fighter_equipment   Heinkel 51 C Airframe
+1935 ad_he_59_bomber_equipment_1                   nav_bomber_equipment   Heinkel 59 Airframe
+1935 ad_he_70_bomber_equipment_1                   fast_bomber_equipment  Heinkel 70 E Airframe
+1935 ad_hs_123_equipment_1                         CAS_equipment          Henschel 123 A-1 Airframe
+1936 ad_he_111_bomber_equipment_2                  tac_bomber_equipment   Heinkel 111 B Airframe
+1936 ad_he_118_equipment_1                         CAS_equipment          Heinkel 118 Airframe
+1936 ad_he_70_scout_equipment_1                    scout_plane_equipment  Heinkel 70 F Airframe
+1936 ad_ju_86_bomber_equipment_1                   light_bomber_equipment Junkers 86 D Airframe
+1936 ad_ju_87_equipment_1                          CAS_equipment          Junkers 87 A 'Stuka' Airframe
+1937 ad_ar_95_bomber_equipment_1                   nav_bomber_equipment   Arado 95 Airframe
+1937 ad_bf_110_fighter_equipment_1                 heavy_fighter_equipment Bayerische Flugzeugwerke 110 B Airframe
+1937 ad_do_17_bomber_equipment_1                   fast_bomber_equipment  Dornier 17 E Airframe
+1937 ad_do_18_equipment_1                          flying_boat_equipment  Dornier 18 Airframe
+1937 ad_do_22_bomber_equipment_1                   nav_bomber_equipment   Dornier 22 Airframe
+1937 ad_he_111_bomber_equipment_3                  tac_bomber_equipment   Heinkel 111 E Airframe
+1937 ad_he_112_equipment_1                         mr_fighter_equipment   Heinkel He 112 A Airframe
+1937 ad_hs_126_scout_equipment_1                   scout_plane_equipment  Henschel 126 (Recon) Airframe
+1937 ad_ju_86_bomber_equipment_2                   light_bomber_equipment Junkers 86 E Airframe
+1937 ad_ju_87_equipment_2                          CAS_equipment          Junkers 87 B 'Stuka' Airframe
+1937 ad_me_109_fighter_equipment_2                 fighter_equipment      Bayerische Flugzeugwerke 109 C Airframe
+1938 ad_ar_197_fighter_equipment_1                 cv_fighter_equipment   Arado Ar 197 Airframe
+1938 ad_bf_110_c_fighter_equipment_1               heavy_fighter_equipment Bayerische Flugzeugwerke 110 C Airframe
+1938 ad_do_17_bomber_equipment_2                   fast_bomber_equipment  Dornier 17 M Airframe
+1938 ad_do_17_scout_equipment_1                    scout_plane_equipment  Dornier 17 P Airframe
+1938 ad_do_24_equipment_1                          flying_boat_equipment  Dornier 24 Airframe
+1938 ad_fi_167_bomber_equipment_1                  cv_nav_bomber_equipment Fieseler Fi 167 Airframe
+1938 ad_he_111_bomber_equipment_4                  tac_bomber_equipment   Heinkel 111 F Airframe
+1938 ad_he_112_equipment_2                         mr_fighter_equipment   Heinkel He 112 B Airframe
+1938 ad_he_115_bomber_equipment_1                  nav_bomber_equipment   Heinkel 115 Airframe
+1938 ad_ju_87_cv_equipment_1                       cv_CAS_equipment       Junkers 87 C 'Stuka' Airframe
+1938 ad_ju_89_bomber_equipment_1                   quad_engine_bomber_equipment Junkers 89 Airframe
+1938 ad_me_109_early_fighter_equipment_1           fighter_equipment      Bayerische Flugzeugwerke 109 D Airframe
+1939 ad_bf_110_d_fighter_equipment_1               heavy_fighter_equipment Bayerische Flugzeugwerke 110 D Airframe
+1939 ad_do_17_z_bomber_equipment_1                 light_bomber_equipment Dornier 17 Z Airframe
+1939 ad_fw_187_fighter_equipment_1                 heavy_fighter_equipment Focke-Wulf 187 Airframe
+1939 ad_he_100_equipment_1                         interceptor_equipment  Heinkel He 100 D-1 Airframe
+1939 ad_he_111_bomber_equipment_5                  tac_bomber_equipment   Heinkel 111 P Airframe
+1939 ad_he_111_j_bomber_equipment_1                nav_bomber_equipment   Heinkel 111 J Airframe
+1939 ad_ju_87_equipment_3                          CAS_equipment          Junkers 87 B-2 'Stuka' Airframe
+1939 ad_ju_88_bomber_equipment_1                   fast_bomber_equipment  Junkers 88 A-1 Airframe
+1939 ad_me_109_mid_fighter_equipment_1             fighter_equipment      Bayerische Flugzeugwerke 109 E Airframe
+1940 ad_bf_110_e_fighter_equipment_1               heavy_fighter_equipment Bayerische Flugzeugwerke 110 E Airframe
+1940 ad_bv_138_equipment_1                         flying_boat_equipment  Blohm & Voss 138 Airframe
+1940 ad_do_17_night_fighter_equipment_1            night_fighter_equipment Dornier Do 17 Z-10 Airframe
+1940 ad_do_215_bomber_equipment_1                  light_bomber_equipment Dornier 215 B Airframe
+1940 ad_fw_200_bomber_equipment_1                  heavy_nav_bomber_equipment Focke-Wulf 200 C-1 'Condor' Airframe
+1940 ad_he_111_h_bomber_equipment_1                tac_bomber_equipment   Heinkel 111 H Airframe
+1940 ad_ju_86_p_bomber_equipment_1                 light_bomber_equipment Junkers 86 P Airframe
+1940 ad_ju_86_scout_equipment_1                    scout_plane_equipment  Junkers 86 R Airframe
+1940 ad_me_109_late_fighter_equipment_1            fighter_equipment      Bayerische Flugzeugwerke 109 F Airframe
+1940 ad_me_109_t_fighter_equipment_1               cv_fighter_equipment   Bayerische Flugzeugwerke 109 T Airframe
+1941 ad_bf_110_f_fighter_equipment_1               heavy_fighter_equipment Bayerische Flugzeugwerke 110 F Airframe
+1941 ad_do_217_bomber_equipment_1                  light_bomber_equipment Dornier 217 E Airframe
+1941 ad_fw_189_scout_equipment_1                   scout_plane_equipment  Focke-Wulf 189 Airframe
+1941 ad_fw_190_fighter_equipment_1                 mr_fighter_equipment   Focke-Wulf 190 A Airframe
+1941 ad_fw_200_bomber_equipment_2                  heavy_nav_bomber_equipment Focke-Wulf 200 C-3 'Condor' Airframe
+1941 ad_he_111_h6_bomber_equipment_1               tac_bomber_equipment   Heinkel 111 H-6 Airframe
+1941 ad_he_177_bomber_equipment_1                  quad_engine_bomber_equipment Heinkel 177 'Greif' A-1 Airframe
+1941 ad_hs_129_equipment_1                         twin_cas_equipment     Henschel Hs 129 B1 Airframe
+1941 ad_ju_87_equipment_4                          CAS_equipment          Junkers 87 D 'Stuka' Airframe
+1941 ad_ju_88_a4_bomber_equipment_1                fast_bomber_equipment  Junkers 88 A-4 Airframe
+1941 ad_ju_88_c6b_night_fighter_equipment_1        night_fighter_equipment Junkers 88 C-6b Airframe
+1941 ad_me_109_late_fighter_equipment_2            fighter_equipment      Bayerische Flugzeugwerke 109 F-4 Airframe
+1941 ad_me_210_fighter_equipment_1                 heavy_fighter_equipment Messerschmitt 210 Airframe
+1942 ad_bf_110_g_fighter_equipment_1               heavy_fighter_equipment Bayerische Flugzeugwerke 110 G Airframe
+1942 ad_do_217_bomber_equipment_2                  light_bomber_equipment Dornier 217 K Airframe
+1942 ad_do_217_night_fighter_equipment_1           night_fighter_equipment Dornier 217 N Airframe
+1942 ad_fw_190_f_equipment_1                       CAS_equipment          Focke-Wulf 190 F Airframe
+1942 ad_fw_190_fighter_equipment_2                 mr_fighter_equipment   Focke-Wulf 190 A-5 Airframe
+1942 ad_he_111_h16_bomber_equipment_1              tac_bomber_equipment   Heinkel 111 H-16 Airframe
+1942 ad_he_177_bomber_equipment_2                  quad_engine_bomber_equipment Heinkel 177 'Greif' A-3 Airframe
+1942 ad_hs_129_equipment_2                         twin_cas_equipment     Henschel Hs 129 B2 Airframe
+1942 ad_ju_87_cv_equipment_2                       cv_nav_bomber_equipment Junkers 87 D-4 'Stuka' Airframe
+1942 ad_ju_87_cv_equipment_3                       cv_CAS_equipment       Junkers Ju 87 E Airframe
+1942 ad_ju_87_equipment_5                          CAS_equipment          Junkers 87 D-5 'Stuka' Airframe
+1942 ad_ju_88_d_scout_equipment_1                  scout_plane_equipment  Junkers 88 D Airframe
+1942 ad_me_109_late_fighter_equipment_3            fighter_equipment      Bayerische Flugzeugwerke 109 G Airframe
+1943 ad_bf_109_h_equipment_1                       interceptor_equipment  Bayerische Flugzeugwerke 109 H Airframe
+1943 ad_do_217_gb_bomber_equipment_1               nav_bomber_gb_equipment Dornier 217 K-2 (Guided Bomb) Airframe
+1943 ad_fw_190_fighter_equipment_3                 mr_fighter_equipment   Focke-Wulf 190 A-8 Airframe
+1943 ad_fw_190_g_equipment_1                       CAS_equipment          Focke-Wulf 190 G Airframe
+1943 ad_fw_200_c8_bomber_equipment_1               heavy_nav_bomber_equipment Focke-Wulf 200 C-8 'Condor' Airframe
+1943 ad_he_177_bomber_equipment_3                  quad_engine_bomber_equipment Heinkel 177 A-5 Airframe
+1943 ad_he_219_night_fighter_equipment_1           night_fighter_equipment Heinkel 219 'Uhu' Airframe
+1943 ad_ju_188_bomber_equipment_1                  light_bomber_equipment Junkers 188 A Airframe
+1943 ad_ju_88_a17_bomber_equipment_1               nav_bomber_equipment   Junkers 88 A-17 Airframe
+1943 ad_ju_88_s_bomber_equipment_1                 fast_bomber_equipment  Junkers 88 S Airframe
+1943 ad_me_109_late_fighter_equipment_4            fighter_equipment      Bayerische Flugzeugwerke 109 G-14 Airframe
+1943 ad_me_155_fighter_equipment_1                 cv_fighter_equipment   Messerschmitt Me 155 Airframe
+1943 ad_me_410_fighter_equipment_1                 heavy_fighter_equipment Messerschmitt 410 'Hornisse' Airframe
+1944 ad_ar_234_equipment_1                         jet_tac_bomber_equipment Arado 234 B-2 'Blitz' Airframe
+1944 ad_ar_234_scout_equipment_1                   scout_plane_equipment  Arado 234 B-1 'Blitz' Airframe
+1944 ad_bf_109_z_fighter_equipment_1               heavy_fighter_equipment Bayerische Flugzeugwerke 109 Z Airframe
+1944 ad_bv_238_equipment_1                         flying_boat_equipment  Blohm & Voss 238 Airframe
+1944 ad_do_317_bomber_equipment_1                  tac_bomber_equipment   Dornier 317 Airframe
+1944 ad_do_335_fighter_equipment_1                 heavy_fighter_equipment Dornier 335 A 'Pfeil' Airframe
+1944 ad_fw_190_interceptor_equipment_1             interceptor_equipment  Focke-Wulf 190 D Airframe
+1944 ad_he_177_gb_bomber_equipment_1               nav_bomber_gb_equipment Heinkel 177 A-5/R1 (Guided Bomb) Airframe
+1944 ad_ju_188_nav_bomber_equipment_1              nav_bomber_equipment   Junkers 188 E Airframe
+1944 ad_ju_288_bomber_equipment_1                  fast_bomber_equipment  Junkers 288 Airframe
+1944 ad_ju_290_bomber_equipment_1                  heavy_nav_bomber_equipment Junkers 290 A-2 Airframe
+1944 ad_ju_388_bomber_equipment_1                  light_bomber_equipment Junkers 388 Airframe
+1944 ad_ju_87_cv_equipment_4                       cv_nav_bomber_equipment Junkers Ju 87 E-1 Airframe
+1944 ad_ju_88_p_equipment_1                        twin_cas_equipment     Junkers 88 P-2 Airframe
+1944 ad_ju_88_t_scout_equipment_1                  scout_plane_equipment  Junkers 88 T Airframe
+1944 ad_me_109_late_fighter_equipment_5            fighter_equipment      Bayerische Flugzeugwerke 109 K Airframe
+1944 ad_me_163_equipment_1                         rocket_interceptor_equipment Messerschmitt 163 B 'Komet' Airframe
+1944 ad_me_262_cas_equipment_1                     jet_cas_equipment      Messerschmitt 262 A-2 'Sturmvogel' Airframe
+1944 ad_me_262_fighter_equipment_1                 jet_mr_fighter_equipment Messerschmitt 262 A 'Schwalbe' Airframe
+1944 ad_me_264_bomber_equipment_1                  quad_engine_bomber_equipment Messerschmitt 264 Airframe
+1944 ad_ta_154_night_fighter_equipment_1           night_fighter_equipment Focke-Wulf Ta 154 'Moskito' Airframe
+1945 ad_ar_234_equipment_2                         jet_tac_bomber_equipment Arado 234 C 'Blitz' Airframe
+1945 ad_bv_155_fighter_equipment_1                 interceptor_equipment  Blohm & Voss 155 Airframe
+1945 ad_do_335_fighter_equipment_2                 heavy_fighter_equipment Dornier 335 B 'Pfeil' Airframe
+1945 ad_he_162_fighter_equipment_1                 jet_fighter_equipment  Heinkel 162 A 'Spatz' Airframe
+1945 ad_hs_132_cas_equipment_1                     jet_cas_equipment      Henschel 132C Airframe
+1945 ad_ju_290_gb_bomber_equipment_1               nav_bomber_gb_equipment Junkers 290 A-7 Airframe
+1945 ad_ju_488_bomber_equipment_1                  quad_engine_bomber_equipment Junkers 488 Airframe
+1945 ad_me_163_equipment_2                         rocket_interceptor_equipment Messerschmitt 163 C 'Komet' Airframe
+1945 ad_ta_152_fighter_equipment_1                 mr_fighter_equipment   Focke-Wulf Ta 152 C-1 Airframe
+1945 ad_ta_152_fighter_equipment_2                 interceptor_equipment  Focke-Wulf Ta 152 H-1 Airframe
+1945 ad_ta_254_night_fighter_equipment_1           night_fighter_equipment Focke-Wulf Ta 254 Airframe
+
+### JAP_airframes.txt
+1932 ad_kawasaki_t92_equipment_1                   fighter_alt_equipment  Kawasaki Type 92 Airframe
+1932 ad_mitsubishi_b2m_equipment_1                 cv_nav_bomber_equipment Mitsubishi B2M1 Airframe
+1932 ad_mitsubishi_ki_20_equipment_1               quad_engine_bomber_equipment Mitsubishi Ki-20 Airframe
+1932 ad_mitsubishi_t92_scout_equipment_1           scout_plane_equipment  Mitsubishi Type 92 Airframe
+1932 ad_nakajima_a2n_equipment_1                   cv_fighter_equipment   Nakajima A2N Airframe
+1933 ad_hiro_h4h_equipment_1                       flying_boat_equipment  Hiro H4H Airframe
+1933 ad_mitsubishi_b2m_equipment_2                 cv_nav_bomber_equipment Mitsubishi B2M2 Airframe
+1933 ad_mitsubishi_ki_1_equipment_1                fast_bomber_equipment  Mitsubishi Ki-1 Airframe
+1933 ad_mitsubishi_ki_2_equipment_1                light_bomber_equipment Mitsubishi Ki-2 Airframe
+1934 ad_aichi_d1a_equipment_1                      cv_CAS_equipment       Aichi D1A1 Airframe
+1934 ad_kawasaki_ki_3_equipment_1                  light_bomber_equipment Kawasaki Ki-3 Airframe
+1934 ad_kawasaki_t92_equipment_2                   fighter_alt_equipment  Kawasaki Type 92 Mod 2 Airframe
+1934 ad_mitsubishi_ki_2_equipment_2                light_bomber_equipment Mitsubishi Ki-2-II Airframe
+1934 ad_nakajima_ki_4_equipment_1                  CAS_equipment          Nakajima Ki-4 Airframe
+1934 ad_yokosuka_b3y_equipment_1                   cv_nav_bomber_equipment Yokosuka B3Y Airframe
+1935 ad_aichi_d1a_equipment_2                      cv_CAS_equipment       Aichi D1A2 Airframe
+1935 ad_kawasaki_ki_10_equipment_1                 fighter_alt_equipment  Kawasaki Ki-10 Airframe
+1935 ad_mitsubishi_g3m_equipment_1                 tac_bomber_equipment   Mitsubishi G3M1 Airframe
+1935 ad_mitsubishi_ki_1_equipment_2                fast_bomber_equipment  Mitsubishi Ki-1-II Airframe
+1935 ad_nakajima_a2n_equipment_2                   cv_fighter_equipment   Nakajima A4N Airframe
+1936 ad_kawasaki_ki_10_equipment_2                 fighter_alt_equipment  Kawasaki Ki-10 KAI Airframe
+1936 ad_mitsubishi_a5m_equipment_1                 cv_fighter_equipment   Mitsubishi A5M1 Airframe
+1936 ad_yokosuka_b4y_equipment_1                   cv_nav_bomber_equipment Yokosuka B4Y Airframe
+1937 ad_kawanishi_h6k_equipment_1                  flying_boat_equipment  Kawanishi H6K Airframe
+1937 ad_mitsubishi_ki_15_scout_equipment_1         scout_plane_equipment  Mitsubishi Ki-15 Airframe
+1937 ad_nakajima_b5n_equipment_1                   cv_nav_bomber_equipment Nakajima B5N1 Airframe
+1937 ad_nakajima_ki_27_equipment_1                 fighter_alt_equipment  Nakajima Ki-27 Airframe
+1938 ad_a7he_equipment_1                           fighter_navy_equipment Heinkel A7He Airframe
+1938 ad_kawasaki_ki_32_equipment_1                 light_bomber_equipment Kawasaki Ki-32 Airframe
+1938 ad_mitsubishi_a5m_equipment_2                 cv_fighter_equipment   Mitsubishi A5M4 Airframe
+1938 ad_mitsubishi_g3m_equipment_2                 tac_bomber_equipment   Mitsubishi G3M2 Airframe
+1938 ad_mitsubishi_ki_21_equipment_1               fast_bomber_equipment  Mitsubishi Ki-21 Airframe
+1938 ad_mitsubishi_ki_30_equipment_1               light_bomber_equipment Mitsubishi Ki-30 Airframe
+1938 ad_tachikawa_ki_36_equipment_1                CAS_equipment          Tachikawa Ki-36 Airframe
+1939 ad_aichi_d3a_equipment_1                      cv_CAS_equipment       Aichi D3A Airframe
+1939 ad_axhe_equipment_1                           interceptor_navy_equipment Heinkel AXHe Airframe
+1939 ad_kawanishi_h6k_equipment_2                  flying_boat_equipment  Kawanishi H6K4 Airframe
+1939 ad_mitsubishi_ki_15_scout_equipment_2         scout_plane_equipment  Mitsubishi Ki-15-II Airframe
+1939 ad_nakajima_b5n_equipment_2                   cv_nav_bomber_equipment Nakajima B5N2 Airframe
+1940 ad_kawasaki_ki_45_equipment_1                 heavy_fighter_equipment Kawasaki Ki-45 Airframe
+1940 ad_kawasaki_ki_48_equipment_1                 light_bomber_equipment Kawasaki Ki-48 Airframe
+1940 ad_mitsubishi_ki_21_equipment_2               fast_bomber_equipment  Mitsubishi Ki-21-II Airframe
+1940 ad_mitsubishi_ki_51_equipment_1               CAS_equipment          Mitsubishi Ki-51 Airframe
+1940 ad_nakajima_ki_43_equipment_1                 fighter_alt_equipment  Nakajima Ki-43 Airframe
+1941 ad_kawanishi_h8k_equipment_1                  flying_boat_equipment  Kawanishi H8K1 Airframe
+1941 ad_mitsubishi_a6m_equipment_1                 cv_fighter_equipment   Mitsubishi A6M2 Airframe
+1941 ad_mitsubishi_g4m_equipment_1                 tac_bomber_equipment   Mitsubishi G4M1 Airframe
+1941 ad_mitsubishi_ki_46_scout_equipment_1         scout_plane_equipment  Mitsubishi Ki-46-II Airframe
+1941 ad_nakajima_ki_43_equipment_2                 fighter_alt_equipment  Nakajima Ki-43-II Airframe
+1941 ad_nakajima_ki_44_equipment_1                 interceptor_equipment  Nakajima Ki-44 Airframe
+1941 ad_nakajima_ki_49_equipment_1                 fast_bomber_equipment  Nakajima Ki-49 Airframe
+1942 ad_kawasaki_ki_45_kai_equipment_1             heavy_fighter_equipment Kawasaki Ki-45 KAI Airframe
+1942 ad_kawasaki_ki_48_equipment_2                 light_bomber_equipment Kawasaki Ki-48-II Airframe
+1942 ad_kawasaki_ki_61_equipment_1                 fighter_equipment      Kawasaki Ki-61 Airframe
+1942 ad_mansyu_ki_71_equipment_1                   CAS_equipment          Mansyu Ki-71 Airframe
+1942 ad_mitsubishi_a6m3_equipment_1                cv_fighter_equipment   Mitsubishi A6M3 Airframe
+1942 ad_mitsubishi_j2m_equipment_1                 interceptor_navy_equipment Mitsubishi J2M Airframe
+1942 ad_nakajima_g5n_equipment_1                   quad_engine_bomber_equipment Nakajima G5N Airframe
+1942 ad_nakajima_j1n_equipment_1                   night_fighter_equipment Nakajima J1N1 Airframe
+1942 ad_nakajima_ki_44_equipment_2                 interceptor_equipment  Nakajima Ki-44-II Airframe
+1942 ad_nakajima_ki_49_equipment_2                 fast_bomber_equipment  Nakajima Ki-49-II Airframe
+1942 ad_yokosuka_d4y_equipment_1                   cv_CAS_equipment       Yokosuka D4Y Airframe
+1942 ad_yokosuka_d4y_scout_equipment_1             scout_plane_equipment  Yokosuka D4Y-C Airframe
+1943 ad_kawanishi_h8k_equipment_2                  flying_boat_equipment  Kawanishi H8K2 Airframe
+1943 ad_kawanishi_n1k1j_equipment_1                fighter_navy_equipment Kawanishi N1K1-J Airframe
+1943 ad_kawasaki_ki_61_equipment_2                 fighter_equipment      Kawasaki Ki-61-II KAI Airframe
+1943 ad_mitsubishi_g4m2_equipment_1                tac_bomber_equipment   Mitsubishi G4M2 Airframe
+1943 ad_mitsubishi_ki_46_scout_equipment_2         scout_plane_equipment  Mitsubishi Ki-46-III Airframe
+1943 ad_nakajima_b6n_equipment_1                   cv_nav_bomber_equipment Nakajima B6N Airframe
+1943 ad_nakajima_ki_43_equipment_3                 fighter_alt_equipment  Nakajima Ki-43-III Airframe
+1944 ad_aichi_b7a_equipment_1                      cv_nav_bomber_equipment Aichi B7A Airframe
+1944 ad_kawanishi_n1k2j_equipment_1                fighter_navy_equipment Kawanishi N1K2-J Airframe
+1944 ad_kawasaki_ki_102_equipment_1                heavy_fighter_equipment Kawasaki Ki-102a Airframe
+1944 ad_kawasaki_ki_102_equipment_2                twin_cas_equipment     Kawasaki Ki-102b Airframe
+1944 ad_mitsubishi_a6m5c_equipment_1               cv_fighter_equipment   Mitsubishi A6M5c Airframe
+1944 ad_mitsubishi_a6m7_equipment_1                cv_mr_fighter_equipment Mitsubishi A6M7 Airframe
+1944 ad_mitsubishi_g4m2_gb_equipment_1             nav_bomber_gb_equipment Mitsubishi G4M2e (Ohka) Airframe
+1944 ad_mitsubishi_j2m_equipment_2                 interceptor_navy_equipment Mitsubishi J2M5 Airframe
+1944 ad_mitsubishi_ki_67_equipment_1               fast_bomber_equipment  Mitsubishi Ki-67 Airframe
+1944 ad_nakajima_c6n_scout_equipment_1             scout_plane_equipment  Nakajima C6N Airframe
+1944 ad_nakajima_g8n_equipment_1                   quad_engine_bomber_equipment Nakajima G8N1 Airframe
+1944 ad_nakajima_j5n_equipment_1                   night_fighter_equipment Nakajima J5N Airframe
+1944 ad_nakajima_ki_44_equipment_3                 interceptor_equipment  Nakajima Ki-44-III Airframe
+1944 ad_nakajima_ki_84_equipment_1                 fighter_equipment      Nakajima Ki-84 Airframe
+1944 ad_yokosuka_d4y_equipment_2                   cv_CAS_equipment       Yokosuka D4Y3 Airframe
+1944 ad_yokosuka_p1_equipment_1                    tac_bomber_equipment   Yokosuka P1Y Airframe
+1945 ad_aichi_s1a_equipment_1                      night_fighter_equipment Nakajima S1A Airframe
+1945 ad_kawanishi_n1k4a_equipment_1                cv_mr_fighter_equipment Kawanishi N1K4-A Airframe
+1945 ad_kawanishi_n1k4j_equipment_1                fighter_navy_equipment Kawanishi N1K4-J Airframe
+1945 ad_kawasaki_ki_100_equipment_1                fighter_alt_equipment  Kawasaki Ki-100 Airframe
+1945 ad_mitsubishi_a7m2_equipment_1                cv_fighter_equipment   Mitsubishi A7M2 Airframe
+1945 ad_mitsubishi_j8m_equipment_1                 rocket_interceptor_equipment Mitsubishi Ki-200/J8M Airframe
+1945 ad_mitsubishi_ki_83_equipment_1               heavy_fighter_equipment Mitsubishi Ki-83 Airframe
+1945 ad_nakajima_ki_84_equipment_2                 fighter_equipment      Nakajima Ki-84b Airframe
+1945 ad_nakajima_kikka_equipment_1                 jet_mr_fighter_equipment Nakajima Kikka Airframe
+1945 ad_rikugun_ki_93_equipment_1                  twin_cas_equipment     Rikugun Ki-93 Airframe
+1945 ad_yokosuka_p1_gb_equipment_1                 nav_bomber_gb_equipment Yokosuka P1Y (Ohka) Airframe
+1946 ad_kawasaki_ki91_equipment_1                  quad_engine_bomber_equipment Kawasaki Ki-91 Airframe
+1946 ad_kyushu_j7w_equipment_1                     interceptor_navy_equipment Kyushu J7W1 Airframe
+1946 ad_nakajima_ki_201_equipment_1                jet_fighter_equipment  Nakajima Ki-201 Airframe
+1946 ad_tachikawa_ki_94_equipment_1                interceptor_equipment  Tachikawa Ki-94-II Airframe
+
+### SOV_airframes.txt
+1929 ad_tb_1_bomber_equipment_1                    quad_engine_bomber_equipment Tupolev TB-1 Airframe
+1929 ad_tb_1_naval_bomber_equipment_1              nav_bomber_equipment   Tupolev TB-1P Airframe
+1930 ad_r_5_bomber_equipment_1                     CAS_equipment          Polikarpov R-5 Sh Airframe
+1930 ad_r_5_scout_equipment_1                      scout_plane_equipment  Polikarpov R-5 (Recon) Airframe
+1931 ad_i_5_equipment_1                            fighter_alt_equipment  Polikarpov I-5 Airframe
+1931 ad_r_6_scout_equipment_1                      scout_plane_equipment  Tupolev R-6 (Recon) Airframe
+1932 ad_i_7_equipment_1                            fighter_alt_equipment  Mikoyan-Gurevich I-7 Airframe
+1932 ad_i_z_equipment_1                            heavy_fighter_equipment Grigorovich I-Z Airframe
+1932 ad_r_6_fighter_equipment_1                    heavy_fighter_equipment Tupolev KR-6 Airframe
+1932 ad_tb_3_bomber_equipment_1                    quad_engine_bomber_equipment Tupolev TB-3 4M-17F Airframe
+1932 ad_tb_3_naval_bomber_equipment_1              nav_bomber_equipment   Tupolev TB-3 (Naval) Airframe
+1933 ad_r_6_naval_bomber_equipment_1               nav_bomber_equipment   Tupolev R-6P Airframe
+1934 ad_beriev_mbr_2_equipment_1                   flying_boat_equipment  Beriev MBR-2 Maritime Patrol Aircraft Airframe
+1934 ad_po_2_equipment_1                           light_bomber_equipment Polikarpov U-2 Airframe
+1934 ad_r_5_bomber_equipment_2                     CAS_equipment          Polikarpov R-5 SSS Sh Airframe
+1934 ad_tb_3_bomber_equipment_2                    quad_engine_bomber_equipment Tupolev TB-34M-34 Airframe
+1935 ad_beriev_mbr_2_equipment_2                   flying_boat_equipment  Beriev MBR-2bis Maritime Patrol Aircraft Airframe
+1935 ad_di_6_equipment_1                           fighter_alt_equipment  Kochyerigin DI-6 Airframe
+1935 ad_i_14_fighter_equipment_1                   heavy_fighter_equipment Tupolev I-14 Airframe
+1935 ad_i_15_equipment_1                           fighter_alt_equipment  Polikarpov I-15 Airframe
+1935 ad_i_16_equipment_1                           fighter_equipment      Polikarpov I-16 Type 4 Airframe
+1935 ad_r_5_bomber_equipment_3                     CAS_equipment          Polikarpov R-Z Sh Airframe
+1935 ad_r_5_nav_bomber_equipment_1                 cv_nav_bomber_equipment Polikarpov R-5T Airframe
+1935 ad_r_5_scout_equipment_2                      scout_plane_equipment  Polikarpov R-Z (Recon) Airframe
+1935 ad_tb_3_bomber_equipment_3                    quad_engine_bomber_equipment Tupolev TB-3 4M-34R Airframe
+1935 ad_tb_3_bomber_equipment_4                    quad_engine_bomber_equipment Tupolev TB-3 4M-34RN Airframe
+1936 ad_db_3_bomber_equipment_1                    tac_bomber_equipment   Ilyushin DB-3 Airframe
+1936 ad_i_15_equipment_2                           fighter_alt_equipment  Polikarpov I-15 (M-25) Airframe
+1936 ad_i_16_equipment_2                           fighter_equipment      Polikarpov I-16 Type 5 Airframe
+1936 ad_ip_1_fighter_equipment_1                   heavy_fighter_equipment Grigorovich IP-1 Airframe
+1936 ad_sb_2m_bomber_equipment_1                   light_bomber_equipment Tupolev SB 2M-100A Airframe
+1936 ad_soviet_cvnav_equipment_0                   cv_nav_bomber_equipment Polikarpov R-5Tk Airframe
+1936 ad_tb_3_bomber_equipment_5                    quad_engine_bomber_equipment Tupolev TB-3 Airframe
+1937 ad_i_152_equipment_1                          fighter_alt_equipment  Polikarpov I-15bis Airframe
+1937 ad_i_15_cv_fighter_equipment_1                cv_fighter_equipment   Petlyakov I-15k Airframe
+1937 ad_i_16_equipment_3                           fighter_equipment      Polikarpov I-16 Type 10 Airframe
+1937 ad_r_10_bomber_equipment_1                    CAS_equipment          Kharkiv R-10 Airframe
+1937 ad_r_10_scout_equipment_1                     scout_plane_equipment  Kharkiv R-10 (Recon) Airframe
+1938 ad_db_3t_bomber_equipment_1                   nav_bomber_equipment   Ilyushin DB-3T Airframe
+1938 ad_i_153_equipment_1                          fighter_alt_equipment  Polikarpov I-153 Airframe
+1938 ad_i_16_equipment_4                           fighter_equipment      Polikarpov I-16 Type 24 Airframe
+1938 ad_tupolev_mdr_4_equipment_1                  flying_boat_equipment  Tupolev MDR-4 Maritime Patrol Aircraft Airframe
+1939 ad_db_3_bomber_equipment_2                    tac_bomber_equipment   Ilyushin DB-3M Airframe
+1939 ad_i_15_cv_fighter_equipment_2                cv_fighter_equipment   Petlyakov I-153k Airframe
+1939 ad_i_16_equipment_5                           mr_fighter_equipment   Polikarpov I-16 Type 29 Airframe
+1939 ad_sb_2m_bomber_equipment_2                   light_bomber_equipment Tupolev SB 2M-103 Airframe
+1939 ad_su_2_equipment_1                           CAS_equipment          Sukhoi Su-2 Airframe
+1940 ad_ar_2_bomber_equipment_1                    light_bomber_equipment Arhangelsky Ar-2 Airframe
+1940 ad_i_180_equipment_1                          mr_fighter_equipment   Polikarpov I-180S Airframe
+1940 ad_lagg_1_equipment_1                         fighter_equipment      Lavochkin-Gorbunov-Gudkov 1 Airframe
+1940 ad_mig_1_equipment_1                          interceptor_equipment  Mikoyan-Gurevich 1 Airframe
+1940 ad_pe_1_fighter_equipment_1                   heavy_fighter_equipment Petlyakov Pe-1 Airframe
+1940 ad_pe_8_bomber_equipment_1                    quad_engine_bomber_equipment Petlyakov Pe-8 Airframe
+1940 ad_soviet_cvnav_equipment_1                   cv_nav_bomber_equipment Sukhoi SU-2Tk Airframe
+1940 ad_su_2_equipment_2                           CAS_equipment          Sukhoi Su-4 Airframe
+1940 ad_yak_1_equipment_1                          fighter_alt_equipment  Yakovlev 1 Airframe
+1940 ad_yak_2_bomber_equipment_1                   fast_bomber_equipment  Yakovlev Yak-2 Airframe
+1941 ad_chetverikov_mdr_6_equipment_1              flying_boat_equipment  Beriev MDR-6 Maritime Patrol Aircraft Airframe
+1941 ad_i_180_equipment_2                          mr_fighter_equipment   Polikarpov I-180-5 Airframe
+1941 ad_il_2_equipment_1                           CAS_equipment          Ilyushin Il-2 Airframe
+1941 ad_il_4_bomber_equipment_1                    tac_bomber_equipment   Ilyushin Il-4 Airframe
+1941 ad_lagg_3_equipment_1                         fighter_equipment      Lavochkin-Gorbunov-Gudkov 3 Airframe
+1941 ad_mig_3_equipment_1                          interceptor_equipment  Mikoyan-Gurevich 3 Airframe
+1941 ad_pe_2_bomber_equipment_1                    light_bomber_equipment Petlyakov Pe-2 Airframe
+1941 ad_pe_3_fighter_equipment_1                   heavy_fighter_equipment Petlyakov Pe-3 Airframe
+1941 ad_yak_2_bomber_equipment_2                   fast_bomber_equipment  Yakovlev Yak-4 Airframe
+1941 ad_yak_7_equipment_1                          fighter_alt_equipment  Yakovlev 7 Airframe
+1941 ad_yer_2_bomber_equipment_1                   tac_bomber_equipment   Yermolayev Yer-2/M-105 Airframe
+1942 ad_il_4t_bomber_equipment_1                   nav_bomber_equipment   Ilyushin Il-4T Airframe
+1942 ad_lagg_5_equipment_1                         fighter_equipment      Lavochkin 5 Airframe
+1942 ad_pe_2_scout_equipment_1                     scout_plane_equipment  Petlyakov Pe-2R Airframe
+1942 ad_pe_3_fighter_equipment_2                   heavy_fighter_equipment Petlyakov Pe-3bis Airframe
+1942 ad_su_6_equipment_1                           CAS_equipment          Sukhoi Su-6 Airframe
+1942 ad_tu_2_bomber_equipment_1                    fast_bomber_equipment  Tupolev Tu-2 Airframe
+1942 ad_yak_9_equipment_1                          fighter_alt_equipment  Yakovlev 9 Airframe
+1942 ad_yak_cv_fighter_equipment_1                 cv_fighter_equipment   Yakovlev 1k Airframe
+1943 ad_il_2_equipment_2                           CAS_equipment          Ilyushin Il-2M Airframe
+1943 ad_lagg_3_equipment_2                         mr_fighter_equipment   Lavochkin-Gorbunov-Gudkov 3 Series 66 Airframe
+1943 ad_lagg_5_equipment_2                         fighter_equipment      Lavochkin 5FN Airframe
+1943 ad_pe_2_bomber_equipment_2                    light_bomber_equipment Petlyakov Pe-2 (Late) Airframe
+1943 ad_pe_8_bomber_equipment_2                    quad_engine_bomber_equipment Petlyakov Pe-8 (Ash-82) Airframe
+1943 ad_tu_2_bomber_equipment_2                    fast_bomber_equipment  Tupolev Tu-2S Airframe
+1943 ad_tu_2_scout_equipment_1                     scout_plane_equipment  Tupolev Tu-2F Airframe
+1943 ad_yak_9_equipment_2                          fighter_alt_equipment  Yakovlev 9T Airframe
+1943 ad_yer_2_bomber_equipment_2                   tac_bomber_equipment   Yermolayev Yer-2/ACh-30B Airframe
+1944 ad_i_185_equipment_1                          mr_fighter_equipment   Polikarpov I-185 Airframe
+1944 ad_il_10_equipment_1                          CAS_equipment          Ilyushin Il-10 Airframe
+1944 ad_lagg_7_equipment_1                         fighter_equipment      Lavochkin 7 Airframe
+1944 ad_mig_5_fighter_equipment_1                  heavy_fighter_equipment Mikoyan-Gurevich MiG-5 Airframe
+1944 ad_soviet_cvnav_equipment_2                   cv_nav_bomber_equipment Sukhoi SU-6Tk Airframe
+1944 ad_tu_2_scout_equipment_2                     scout_plane_equipment  Tupolev Tu-2R Airframe
+1944 ad_yak_3_equipment_1                          interceptor_equipment  Yakovlev 3 Airframe
+1944 ad_yak_9_equipment_3                          fighter_alt_equipment  Yakovlev 9U Airframe
+1945 ad_i_211_equipment_1                          interceptor_equipment  Mikoyan-Gurevich I-211 Airframe
+1945 ad_tu_2t_bomber_equipment_1                   nav_bomber_equipment   Tupolev Tu-2T Airframe
+1945 ad_yak_cv_fighter_equipment_2                 cv_fighter_equipment   Yakovlev 3k Airframe
+1946 ad_lagg_9_equipment_1                         fighter_equipment      Lavochkin 9 Airframe
+1946 ad_mig_9_fighter_equipment_1                  jet_fighter_equipment  Mikoyan-Gurevich 9 Airframe
+1946 ad_yak_3_equipment_2                          interceptor_equipment  Yakovlev 3P Airframe
+1946 ad_yak_9_equipment_4                          fighter_alt_equipment  Yakovlev 9P Airframe
+
+### USA_airframes.txt
+1926 ad_curtiss_p1_equipment_1                     interceptor_equipment  Curtiss P-1A Hawk Airframe
+1927 ad_curtiss_falcon_equipment_1                 CAS_equipment          Curtiss Falcon Airframe
+1927 ad_curtiss_p1_equipment_2                     interceptor_equipment  Curtiss P-1B Hawk Airframe
+1928 ad_curtiss_hawk1_int_equipment_1              interceptor_equipment  Curtiss Hawk I Airframe
+1929 ad_curtiss_falcon_equipment_2                 CAS_equipment          Curtiss Falcon (B) Airframe
+1930 ad_boeing_256_equipment_1                     mr_fighter_equipment   Boeing 256 Airframe
+1930 ad_boeing_f4b4_equipment_1                    cv_fighter_equipment   Boeing F4B-4 Airframe
+1930 ad_boeing_p12_equipment_1                     fighter_equipment      Boeing P-12 Airframe
+1930 ad_douglas_o2mc_equipment_1                   CAS_equipment          Douglas O-2MC-2 Airframe
+1930 ad_douglas_o2mc_equipment_2                   CAS_equipment          Douglas O-2MC-4 Airframe
+1930 ad_douglas_o2mc_equipment_3                   CAS_equipment          Douglas O-2MC-5 Airframe
+1930 ad_douglas_o2mc_equipment_4                   CAS_equipment          Douglas O-2MC-6 Airframe
+1930 ad_great_lakes_tg_equipment_1                 cv_nav_bomber_equipment Great Lakes TG-2 Airframe
+1930 ad_keystone_bomber_equipment_1                light_bomber_equipment Keystone B-3A Airframe
+1930 ad_vought_o2u_equipment_1                     mr_fighter_equipment   Vought O2U-1 Corsair Airframe
+1930 ad_vought_o2u_equipment_2                     mr_fighter_equipment   Vought O2U-2M Corsair Airframe
+1930 ad_vought_o2u_export_equipment_1              mr_fighter_equipment   Vought V-65 Corsair Airframe
+1930 ad_vought_o2u_export_equipment_2              mr_fighter_equipment   Vought V-66B Corsair Airframe
+1930 ad_vought_o2u_export_equipment_3              mr_fighter_equipment   Vought V-80 Airframe
+1930 ad_vought_o2u_export_equipment_4              mr_fighter_equipment   Vought V-92c Airframe
+1931 ad_curtiss_p6_equipment_1                     interceptor_equipment  Curtiss P-6E Hawk Airframe
+1931 ad_keystone_bomber_equipment_2                light_bomber_equipment Keystone B-4A Airframe
+1931 ad_keystone_bomber_equipment_3                light_bomber_equipment Keystone B-5A Airframe
+1931 ad_keystone_bomber_equipment_4                light_bomber_equipment Keystone B-6A Airframe
+1931 ad_martin_bm_equipment_1                      cv_nav_bomber_equipment Martin BM Airframe
+1932 ad_boeing_p12_equipment_2                     fighter_equipment      Boeing P-12E Airframe
+1932 ad_curtiss_a8_equipment_1                     CAS_equipment          Curtiss A-8 Airframe
+1932 ad_curtiss_hawk1_mr_equipment_1               mr_fighter_equipment   Curtiss Hawk I Airframe
+1932 ad_curtiss_hawk2_mr_equipment_1               mr_fighter_equipment   Curtiss Sea Hawk II Airframe
+1932 ad_curtiss_p6_equipment_2                     interceptor_equipment  Curtiss P-6S Hawk Airframe
+1933 ad_consolidated_p2y_equipment_1               flying_boat_equipment  Consolidated P2Y Commodore Airframe
+1933 ad_curtiss_cw14r_equipment_1                  mr_fighter_equipment   Curtiss-Wright CW-14R Osprey Airframe
+1933 ad_curtiss_hawk3_mr_equipment_1               mr_fighter_equipment   Curtiss Hawk III Airframe
+1933 ad_grumman_ff_equipment_1                     cv_fighter_equipment   Grumman FF 'Fifi' Airframe
+1933 ad_vought_o2u_int_export_equipment_1          interceptor_equipment  Vought V-99M Airframe
+1934 ad_consolidated_a11_equipment_1               CAS_equipment          Consolidated A-11 Airframe
+1934 ad_curtiss_a12_equipment_1                    CAS_equipment          Curtiss A-12 Airframe
+1934 ad_curtiss_condor_equipment_1                 tac_bomber_equipment   Curtiss BT-32 Condor II Airframe
+1934 ad_lakes_bg_equipment_1                       cv_CAS_equipment       Great Lakes BG-1 Airframe
+1934 ad_martin_b10_bomber_equipment_1              light_bomber_equipment Martin B-10 Airframe
+1934 ad_northrop_gamma_2e_equipment_1              CAS_equipment          Northrop Gamma 2E Airframe
+1934 ad_usa_boeing_p26_equipment_1                 interceptor_equipment  Boeing P-26 Peashooter Airframe
+1934 ad_usa_boeing_p26_equipment_2                 fighter_equipment      Boeing P-26C Peashooter Airframe
+1935 ad_consolidated_p30_equipment_1               mr_fighter_equipment   Consolidated P-30 Airframe
+1935 ad_grumman_f2f_equipment_1                    cv_fighter_equipment   Grumman F2F Airframe
+1935 ad_martin_b10_bomber_equipment_2              light_bomber_equipment Martin 139W Airframe
+1935 ad_martin_b10_bomber_equipment_3              light_bomber_equipment Martin 166 Airframe
+1935 ad_northrop_a17_equipment_1                   CAS_equipment          Northrop A-17 Nomad Airframe
+1935 ad_vought_sbu_equipment_1                     cv_CAS_equipment       Vought SBU Corsair Airframe
+1935 ad_vought_v142_equipment_1                    CAS_equipment          Vought V-142A Airframe
+1936 ad_consolidated_pby_equipment_1               flying_boat_equipment  Consolidated PBY Catalina Airframe
+1936 ad_douglas_b18_equipment_1                    tac_bomber_equipment   Douglas B-18 Bolo Airframe
+1936 ad_douglas_o46_scout_equipment_1              scout_plane_equipment  Douglas O-46 Airframe
+1936 ad_grumman_f3f_equipment_1                    cv_fighter_equipment   Grumman F3F Flying Barrel Airframe
+1936 ad_martin_b10_bomber_equipment_4              light_bomber_equipment Martin B-10B Airframe
+1937 ad_curtiss_a18_equipment_1                    twin_cas_equipment     Curtiss A-18 Airframe
+1937 ad_douglas_tbd_equipment_1                    cv_nav_bomber_equipment Douglas TBD Devastator Airframe
+1937 ad_northrop_bt_equipment_1                    cv_CAS_equipment       Northrop BT Airframe
+1937 ad_seversky_a8v1_equipment_1                  mr_fighter_equipment   Seversky A8V1 Airframe
+1937 ad_seversky_p35_equipment_1                   interceptor_equipment  Seversky P-35 Airframe
+1937 ad_vultee_a19_equipment_1                     CAS_equipment          Vultee A-19 Airframe
+1938 ad_curtiss_p36_equipment_1                    fighter_equipment      Curtiss P-36 Hawk Airframe
+1938 ad_vought_vindicator_equipment_1              cv_CAS_equipment       Vought SB2U Vindicator Airframe
+1939 ad_bell_yfm1_equipment_1                      heavy_fighter_equipment Bell FM-1 Airacuda Airframe
+1939 ad_boeing_b17_equipment_1                     quad_engine_bomber_equipment Boeing B-17 Flying Fortress Airframe
+1939 ad_brewster_b239_equipment_1                  fighter_equipment      Brewster Model 239 Airframe
+1939 ad_brewster_f2a_equipment_1                   cv_fighter_equipment   Brewster F2A Buffalo Airframe
+1939 ad_consolidated_pby_equipment_2               flying_boat_equipment  Consolidated PBY-3 Catalina Airframe
+1939 ad_curtiss_sbc_equipment_1                    cv_CAS_equipment       Curtiss SBC Helldiver Airframe
+1939 ad_douglas_b23_equipment_1                    tac_bomber_equipment   Douglas B-23 Dragon Airframe
+1939 ad_lockheed_a28_equipment_1                   nav_bomber_equipment   Lockheed A-28 Hudson Airframe
+1939 ad_martin_a22_equipment_1                     light_bomber_equipment Martin A-22 Maryland Airframe
+1940 ad_beechcraft_f2_scout_equipment_1            scout_plane_equipment  Beechcraft F-2 Twin Beech Airframe
+1940 ad_bell_p39_equipment_1                       mr_fighter_equipment   Bell P-39 Airacobra Airframe
+1940 ad_consolidated_b24_equipment_1               quad_engine_bomber_equipment Consolidated B-24 Liberator Airframe
+1940 ad_curtiss_p40_equipment_1                    fighter_equipment      Curtiss P-40B Warhawk Airframe
+1940 ad_douglas_a20_equipment_1                    fast_bomber_equipment  Douglas A-20 Havoc Airframe
+1940 ad_douglas_dauntless_equipment_1              cv_CAS_equipment       Douglas SBD Dauntless Airframe
+1940 ad_grumman_f4f_equipment_1                    cv_fighter_equipment   Grumman F4F Wildcat Airframe
+1940 ad_martin_pbm_equipment_1                     flying_boat_equipment  Martin PBM Mariner Airframe
+1941 ad_boeing_b17_equipment_2                     quad_engine_bomber_equipment Boeing B-17E Flying Fortress Airframe
+1941 ad_brewster_sb2a_equipment_1                  cv_CAS_equipment       Brewster SB2A Buccaneer Airframe
+1941 ad_curtiss_p40_equipment_2                    fighter_equipment      Curtiss P-40E Warhawk Airframe
+1941 ad_curtiss_p40f_equipment_1                   fighter_equipment      Curtiss P-40F Warhawk Airframe
+1941 ad_douglas_a20_equipment_2                    fast_bomber_equipment  Douglas A-20C Havoc Airframe
+1941 ad_douglas_a20_scout_equipment_1              scout_plane_equipment  Douglas F-3A Havoc Airframe
+1941 ad_douglas_a24_equipment_1                    CAS_equipment          Douglas A-24 Banshee Airframe
+1941 ad_lockheed_a28_equipment_2                   nav_bomber_equipment   Lockheed PBO-1 Hudson Airframe
+1941 ad_lockheed_p38_equipment_1                   heavy_fighter_equipment Lockheed P-38 Lightning Airframe
+1941 ad_martin_b26_equipment_1                     tac_bomber_equipment   Martin B-26 Marauder Airframe
+1941 ad_northamerican_b25_equipment_1              light_bomber_equipment North American B-25 Mitchell Airframe
+1941 ad_republic_p43_equipment_1                   interceptor_equipment  Republic P-43 Lancer Airframe
+1942 ad_bell_p39_equipment_2                       interceptor_equipment  Bell P-39N Airacobra Airframe
+1942 ad_boeing_b17_equipment_3                     quad_engine_bomber_equipment Boeing B-17F Flying Fortress Airframe
+1942 ad_consolidated_pb2y_equipment_1              flying_boat_equipment  Consolidated PB2Y Coronado Airframe
+1942 ad_consolidated_pb4y_equipment_1              heavy_nav_bomber_equipment Consolidated PB4Y-1 Liberator Airframe
+1942 ad_douglas_p70_equipment_1                    night_fighter_equipment Douglas P-70 Havoc Airframe
+1942 ad_grumman_f4f_equipment_2                    cv_fighter_equipment   Grumman F4F-4 Wildcat Airframe
+1942 ad_grumman_tbf_equipment_1                    cv_nav_bomber_equipment Grumman TBF-1 Avenger Airframe
+1942 ad_lockheed_p38_scout_equipment_1             scout_plane_equipment  Lockheed F-4 Lightning Airframe
+1942 ad_lockheed_p38g_equipment_1                  heavy_fighter_equipment Lockheed P-38G Lightning Airframe
+1942 ad_lockheed_pv1_equipment_1                   nav_bomber_equipment   Lockheed PV-1 Ventura Airframe
+1942 ad_martin_b26_equipment_2                     tac_bomber_equipment   Martin B-26B Marauder Airframe
+1942 ad_northamerican_a36_equipment_1              CAS_equipment          North American A-36 Apache Airframe
+1942 ad_northamerican_b25_equipment_2              light_bomber_equipment North American B-25C Mitchell Airframe
+1942 ad_northamerican_mustang_equipment_1          fighter_equipment      North American P-51 Mustang Airframe
+1942 ad_republic_p47_equipment_1                   mr_fighter_equipment   Republic P-47C Thunderbolt Airframe
+1942 ad_vought_corsair_equipment_1                 fighter_navy_equipment Vought F4U-1 Corsair Airframe
+1942 ad_vultee_a31_equipment_1                     CAS_equipment          Vultee A-31 Airframe
+1943 ad_bell_p63_equipment_1                       interceptor_equipment  Bell P-63 Kingcobra Airframe
+1943 ad_boeing_b17_equipment_4                     quad_engine_bomber_equipment Boeing B-17G Flying Fortress Airframe
+1943 ad_consolidated_b24_equipment_2               quad_engine_bomber_equipment Consolidated B-24J Liberator Airframe
+1943 ad_curtiss_a25_equipment_1                    CAS_equipment          Curtiss A-25A Shrike Airframe
+1943 ad_curtiss_sb2c_equipment_1                   cv_CAS_equipment       Curtiss SB2C Helldiver Airframe
+1943 ad_curtiss_sb2c_equipment_2                   cv_CAS_equipment       Curtiss SB2C-3 Helldiver Airframe
+1943 ad_douglas_a20_equipment_3                    twin_cas_equipment     Douglas A-20G Havoc Airframe
+1943 ad_douglas_a26_equipment_1                    fast_bomber_equipment  Douglas A-26 Invader Airframe
+1943 ad_grumman_f6f_equipment_1                    cv_fighter_equipment   Grumman F6F Hellcat Airframe
+1943 ad_lockheed_p38_scout_equipment_2             scout_plane_equipment  Lockheed F-5 Lightning Airframe
+1943 ad_lockheed_p38j_equipment_1                  heavy_fighter_equipment Lockheed P-38J Lightning Airframe
+1943 ad_northamerican_p51b_equipment_1             fighter_equipment      North American P-51B Mustang Airframe
+1943 ad_northamerican_pbj1_equipment_1             nav_bomber_equipment   North American PBJ-1 Mitchell Airframe
+1943 ad_republic_p47d_equipment_1                  mr_fighter_equipment   Republic P-47D Thunderbolt Airframe
+1943 ad_vought_corsair_cv_equipment_1              cv_mr_fighter_equipment Vought F4U-1A Corsair Airframe
+1944 ad_boeing_b29_equipment_1                     quad_engine_bomber_equipment Boeing B-29 Superfortress Airframe
+1944 ad_consolidated_pb4y_equipment_2              heavy_nav_bomber_equipment Consolidated PB4Y-2 Privateer Airframe
+1944 ad_grumman_f6f_equipment_2                    cv_fighter_equipment   Grumman F6F-5 Hellcat Airframe
+1944 ad_grumman_tbf_equipment_2                    cv_nav_bomber_equipment Grumman TBM-3 Avenger Airframe
+1944 ad_lockheed_p38l_equipment_1                  heavy_fighter_equipment Lockheed P-38L Lightning Airframe
+1944 ad_lockheed_pv2_equipment_1                   nav_bomber_equipment   Lockheed PV-2 Harpoon Airframe
+1944 ad_martin_b26_equipment_3                     tac_bomber_equipment   Martin B-26F Marauder Airframe
+1944 ad_northamerican_b25_equipment_3              light_bomber_equipment North American B-25J Mitchell Airframe
+1944 ad_northamerican_p51_scout_equipment_1        scout_plane_equipment  North American F-6 Mustang Airframe
+1944 ad_northamerican_p51d_equipment_1             fighter_equipment      North American P-51D Mustang Airframe
+1944 ad_northrop_p61_equipment_1                   night_fighter_equipment Northrop P-61 Black Widow Airframe
+1944 ad_republic_p47m_equipment_1                  interceptor_equipment  Republic P-47M Thunderbolt Airframe
+1944 ad_vought_corsair_cv_equipment_2              cv_mr_fighter_equipment Vought F4U-1D Corsair Airframe
+1944 ad_vought_corsair_equipment_2                 fighter_navy_equipment Vought F4U-1C Corsair Airframe
+1945 ad_beechcraft_a38_equipment_1                 twin_cas_equipment     Beechcraft A-38 Grizzly Airframe
+1945 ad_btd_destroyer_equipment_1                  cv_nav_bomber_equipment Douglas BTD-1 Destroyer Airframe
+1945 ad_consolidated_b32_equipment_1               quad_engine_bomber_equipment Consolidated B-32 Dominator Airframe
+1945 ad_consolidated_pb4y_gb_equipment_1           nav_bomber_gb_equipment Consolidated PB4Y-2 Privateer (Guided Bomb) Airframe
+1945 ad_grumman_f7f_equipment_1                    night_fighter_equipment Grumman F7F-1 Tigercat Airframe
+1945 ad_grumman_f8f_equipment_1                    cv_fighter_equipment   Grumman F8F Bearcat Airframe
+1945 ad_lockheed_p80_equipment_1                   jet_mr_fighter_equipment Lockheed P-80A Shooting Star Airframe
+1945 ad_northamerican_p51h_equipment_1             fighter_equipment      North American P-51H Mustang Airframe
+1945 ad_northrop_p61_scout_equipment_1             scout_plane_equipment  Northrop F-15 Reporter Airframe
+1945 ad_republic_p47n_equipment_1                  mr_fighter_equipment   Republic P-47N Thunderbolt Airframe
+1945 ad_vought_corsair_cv_equipment_3              cv_mr_fighter_equipment Vought F4U-4 Corsair Airframe
+1945 ad_vought_supercorsair_equipment_1            fighter_navy_equipment Goodyear F2G Super Corsair Airframe
+1946 ad_douglas_ad1_equipment_1                    cv_CAS_equipment       Douglas AD Skyraider Airframe
+1946 ad_grumman_f7f_equipment_2                    night_fighter_equipment Grumman F7F-3 Tigercat Airframe
+1946 ad_northamerican_p82_equipment_1              heavy_fighter_equipment North American P-82B Twin Mustang Airframe
+1947 ad_douglas_b42_equipment_1                    tac_bomber_equipment   Douglas B-42 Mixmaster Airframe
+
+### _airframe_cas.txt
+1925 potez_25_equipment_1                          CAS_equipment          
+1927 curtiss_falcon_equipment_1                    CAS_equipment          
+1928 aw_atlas_equipment_1                          CAS_equipment          
+1928 ro1_cas_equipment_1                           CAS_equipment          
+1928 westland_wapiti_equipment_1                   CAS_equipment          
+1929 curtiss_falcon_equipment_2                    CAS_equipment          
+1930 breguet_27_equipment_1                        CAS_equipment          
+1930 breguet_27_equipment_2                        CAS_equipment          
+1930 breguet_27_equipment_3                        CAS_equipment          
+1930 douglas_o2mc_equipment_1                      CAS_equipment          
+1930 douglas_o2mc_equipment_2                      CAS_equipment          
+1930 douglas_o2mc_equipment_3                      CAS_equipment          
+1930 douglas_o2mc_equipment_4                      CAS_equipment          
+1930 prewar_cas_equipment_1                        CAS_equipment          
+1930 r_5_bomber_equipment_1                        CAS_equipment          
+1931 fairey_gordon_equipment_1                     CAS_equipment          
+1931 hawker_audax_equipment_1                      CAS_equipment          
+1931 hawker_hart_equipment_1                       CAS_equipment          
+1931 hawker_hartebeest_equipment_1                 CAS_equipment          
+1932 curtiss_a8_equipment_1                        CAS_equipment          
+1933 CAS_equipment_1933                            CAS_equipment          
+1933 ar_66_equipment_1                             CAS_equipment          
+1934 consolidated_a11_equipment_1                  CAS_equipment          
+1934 curtiss_a12_equipment_1                       CAS_equipment          
+1934 he_45_equipment_1                             CAS_equipment          
+1934 he_46_equipment_1                             CAS_equipment          
+1934 hs_126_equipment_1                            CAS_equipment          
+1934 nakajima_ki_4_equipment_1                     CAS_equipment          
+1934 northrop_gamma_2e_equipment_1                 CAS_equipment          
+1934 r_5_bomber_equipment_2                        CAS_equipment          
+1934 ro37_cas_equipment_1                          CAS_equipment          
+1935 ar_81_equipment_1                             CAS_equipment          
+1935 hawker_hind_equipment_1                       CAS_equipment          
+1935 he_50_equipment_1                             CAS_equipment          
+1935 hs_123_equipment_1                            CAS_equipment          
+1935 mureaux_115_equipment_1                       CAS_equipment          
+1935 mureaux_115_equipment_2                       CAS_equipment          
+1935 northrop_a17_equipment_1                      CAS_equipment          
+1935 r_5_bomber_equipment_3                        CAS_equipment          
+1935 ro37_cas_equipment_2                          CAS_equipment          
+1935 vought_v142_equipment_1                       CAS_equipment          
+1936 CAS_equipment_1936                            CAS_equipment          
+1936 he_118_equipment_1                            CAS_equipment          
+1936 ju_87_equipment_1                             CAS_equipment          
+1937 fairey_battle_equipment_1                     CAS_equipment          
+1937 ju_87_equipment_2                             CAS_equipment          
+1937 r_10_bomber_equipment_1                       CAS_equipment          
+1937 vultee_a19_equipment_1                        CAS_equipment          
+1938 CAS_equipment_1938                            CAS_equipment          
+1938 tachikawa_ki_36_equipment_1                   CAS_equipment          
+1939 ju_87_equipment_3                             CAS_equipment          
+1939 ln_411_CAS_equipment_1                        CAS_equipment          
+1939 su_2_equipment_1                              CAS_equipment          
+1940 CAS_equipment_1940                            CAS_equipment          
+1940 ca355_cas_equipment_1                         CAS_equipment          
+1940 ln_42_CAS_equipment_1                         CAS_equipment          
+1940 mitsubishi_ki_51_equipment_1                  CAS_equipment          
+1940 su_2_equipment_2                              CAS_equipment          
+1941 ba201_cas_equipment_1                         CAS_equipment          
+1941 douglas_a24_equipment_1                       CAS_equipment          
+1941 hawker_hurricane_iic_equipment_1              CAS_equipment          
+1941 il_2_equipment_1                              CAS_equipment          
+1941 ju_87_equipment_4                             CAS_equipment          
+1942 CAS_equipment_1942                            CAS_equipment          
+1942 fw_190_f_equipment_1                          CAS_equipment          
+1942 ju_87_equipment_5                             CAS_equipment          
+1942 mansyu_ki_71_equipment_1                      CAS_equipment          
+1942 northamerican_a36_equipment_1                 CAS_equipment          
+1942 re2002_multirole_equipment_1                  CAS_equipment          
+1942 su_6_equipment_1                              CAS_equipment          
+1942 vultee_a31_equipment_1                        CAS_equipment          
+1943 curtiss_a25_equipment_1                       CAS_equipment          
+1943 fw_190_g_equipment_1                          CAS_equipment          
+1943 hawker_hurricane_iv_equipment_1               CAS_equipment          
+1943 il_2_equipment_2                              CAS_equipment          
+1943 re2004_multirole_equipment_1                  CAS_equipment          
+1944 CAS_equipment_1944                            CAS_equipment          
+1944 il_10_equipment_1                             CAS_equipment          
+1944 sm93_cas_equipment_1                          CAS_equipment          
+
+### _airframe_cv_cas.txt
+1930 fairey_iiif_equipment_1                       cv_CAS_equipment       
+1930 prewar_cv_CAS_equipment_1                     cv_CAS_equipment       
+1933 fairey_seal_equipment_1                       cv_CAS_equipment       
+1934 aichi_d1a_equipment_1                         cv_CAS_equipment       
+1934 he_66_equipment_1                             cv_CAS_equipment       
+1934 lakes_bg_equipment_1                          cv_CAS_equipment       
+1935 aichi_d1a_equipment_2                         cv_CAS_equipment       
+1935 vought_sbu_equipment_1                        cv_CAS_equipment       
+1936 cv_CAS_equipment_1936                         cv_CAS_equipment       
+1937 northrop_bt_equipment_1                       cv_CAS_equipment       
+1938 blackburn_skua_equipment_1                    cv_CAS_equipment       
+1938 cv_CAS_equipment_1938                         cv_CAS_equipment       
+1938 ju_87_cv_equipment_1                          cv_CAS_equipment       
+1938 vought_vindicator_equipment_1                 cv_CAS_equipment       
+1939 aichi_d3a_equipment_1                         cv_CAS_equipment       
+1939 curtiss_sbc_equipment_1                       cv_CAS_equipment       
+1939 ln_401_CAS_equipment_1                        cv_CAS_equipment       
+1940 cv_CAS_equipment_1940                         cv_CAS_equipment       
+1940 douglas_dauntless_equipment_1                 cv_CAS_equipment       
+1941 brewster_sb2a_equipment_1                     cv_CAS_equipment       
+1941 ln_402_CAS_equipment_1                        cv_CAS_equipment       
+1942 cv_CAS_equipment_1942                         cv_CAS_equipment       
+1942 fairey_barracuda_equipment_1                  cv_CAS_equipment       
+1942 ju_87_cv_equipment_3                          cv_CAS_equipment       
+1942 yokosuka_d4y_equipment_1                      cv_CAS_equipment       
+1943 curtiss_sb2c_equipment_1                      cv_CAS_equipment       
+1943 curtiss_sb2c_equipment_2                      cv_CAS_equipment       
+1943 fairey_barracuda_equipment_2                  cv_CAS_equipment       
+1944 cv_CAS_equipment_1944                         cv_CAS_equipment       
+1944 yokosuka_d4y_equipment_2                      cv_CAS_equipment       
+1945 blackburn_firebrand_equipment_1               cv_CAS_equipment       
+1946 douglas_ad1_equipment_1                       cv_CAS_equipment       
+
+### _airframe_cv_fighter.txt
+1930 boeing_f4b4_equipment_1                       cv_fighter_equipment   
+1930 pre_war_cv_fighter_equipment_1                cv_fighter_equipment   
+1932 hawker_osprey_fighter_equipment_1             cv_fighter_equipment   
+1932 nakajima_a2n_equipment_1                      cv_fighter_equipment   
+1933 cv_fighter_equipment_1933                     cv_fighter_equipment   
+1933 grumman_ff_equipment_1                        cv_fighter_equipment   
+1933 nimrod_fighter_equipment_1                    cv_fighter_equipment   
+1935 grumman_f2f_equipment_1                       cv_fighter_equipment   
+1935 hawker_osprey_fighter_equipment_2             cv_fighter_equipment   
+1935 nakajima_a2n_equipment_2                      cv_fighter_equipment   
+1936 cv_fighter_equipment_1936                     cv_fighter_equipment   
+1936 d_373_fighter_equipment_1                     cv_fighter_equipment   
+1936 grumman_f3f_equipment_1                       cv_fighter_equipment   
+1936 mitsubishi_a5m_equipment_1                    cv_fighter_equipment   
+1937 i_15_cv_fighter_equipment_1                   cv_fighter_equipment   
+1937 ro44_cv_fighter_equipment_1                   cv_fighter_equipment   
+1937 sea_gladiator_equipment_1                     cv_fighter_equipment   
+1938 ar_197_fighter_equipment_1                    cv_fighter_equipment   
+1938 cv_fighter_equipment_1938                     cv_fighter_equipment   
+1938 mitsubishi_a5m_equipment_2                    cv_fighter_equipment   
+1939 blackburn_roc_equipment_1                     cv_fighter_equipment   
+1939 brewster_f2a_equipment_1                      cv_fighter_equipment   
+1939 g50_cv_fighter_equipment_1                    cv_fighter_equipment   
+1939 i_15_cv_fighter_equipment_2                   cv_fighter_equipment   
+1940 cv_fighter_equipment_1940                     cv_fighter_equipment   
+1940 grumman_f4f_equipment_1                       cv_fighter_equipment   
+1941 hawker_sea_hurricane_equipment_1              cv_fighter_equipment   
+1941 me_109_t_fighter_equipment_1                  cv_fighter_equipment   
+1941 mitsubishi_a6m_equipment_1                    cv_fighter_equipment   
+1942 cv_fighter_equipment_1942                     cv_fighter_equipment   
+1942 grumman_f4f_equipment_2                       cv_fighter_equipment   
+1942 mitsubishi_a6m3_equipment_1                   cv_fighter_equipment   
+1942 re2001_cv_fighter_equipment_1                 cv_fighter_equipment   
+1942 supermarine_seafire_equipment_1               cv_fighter_equipment   
+1942 yak_cv_fighter_equipment_1                    cv_fighter_equipment   
+1943 grumman_f6f_equipment_1                       cv_fighter_equipment   
+1943 me_155_fighter_equipment_1                    cv_fighter_equipment   
+1943 supermarine_seafire_iii_equipment_1           cv_fighter_equipment   
+1944 cv_fighter_equipment_1944                     cv_fighter_equipment   
+1944 g55_cv_fighter_equipment_1                    cv_fighter_equipment   
+1944 grumman_f6f_equipment_2                       cv_fighter_equipment   
+1944 mitsubishi_a6m5c_equipment_1                  cv_fighter_equipment   
+1944 supermarine_seafire_xv_equipment_1            cv_fighter_equipment   
+1945 grumman_f8f_equipment_1                       cv_fighter_equipment   
+1945 mitsubishi_a7m2_equipment_1                   cv_fighter_equipment   
+1945 yak_cv_fighter_equipment_2                    cv_fighter_equipment   
+1946 sea_fire45_equipment_1                        cv_fighter_equipment   
+
+### _airframe_cv_multirole.txt
+1940 fairey_fulmar_equipment_1                     cv_mr_fighter_equipment 
+1941 fairey_fulmar_equipment_2                     cv_mr_fighter_equipment 
+1943 fairey_firefly_equipment_1                    cv_mr_fighter_equipment 
+1943 vought_corsair_cv_equipment_1                 cv_mr_fighter_equipment 
+1944 mitsubishi_a6m7_equipment_1                   cv_mr_fighter_equipment 
+1944 vought_corsair_cv_equipment_2                 cv_mr_fighter_equipment 
+1945 kawanishi_n1k4a_equipment_1                   cv_mr_fighter_equipment 
+1945 vought_corsair_cv_equipment_3                 cv_mr_fighter_equipment 
+1946 hawker_seafury_equipment_1                    cv_mr_fighter_equipment 
+
+### _airframe_cv_nav_bomber.txt
+1930 great_lakes_tg_equipment_1                    cv_nav_bomber_equipment 
+1930 pl_7_nav_bomber_equipment_1                   cv_nav_bomber_equipment 
+1930 prewar_cv_nav_bomber_equipment_1              cv_nav_bomber_equipment 
+1931 martin_bm_equipment_1                         cv_nav_bomber_equipment 
+1932 mitsubishi_b2m_equipment_1                    cv_nav_bomber_equipment 
+1933 blackburn_baffin_equipment_1                  cv_nav_bomber_equipment 
+1933 mitsubishi_b2m_equipment_2                    cv_nav_bomber_equipment 
+1934 blackburn_shark_equipment_1                   cv_nav_bomber_equipment 
+1934 yokosuka_b3y_equipment_1                      cv_nav_bomber_equipment 
+1935 r_5_nav_bomber_equipment_1                    cv_nav_bomber_equipment 
+1936 cv_nav_bomber_equipment_1936                  cv_nav_bomber_equipment 
+1936 fairey_swordfish_equipment_1                  cv_nav_bomber_equipment 
+1936 soviet_cvnav_equipment_0                      cv_nav_bomber_equipment 
+1936 yokosuka_b4y_equipment_1                      cv_nav_bomber_equipment 
+1937 douglas_tbd_equipment_1                       cv_nav_bomber_equipment 
+1937 nakajima_b5n_equipment_1                      cv_nav_bomber_equipment 
+1937 pl_107_bomber_equipment_1                     cv_nav_bomber_equipment 
+1938 cv_nav_bomber_equipment_1938                  cv_nav_bomber_equipment 
+1938 fi_167_bomber_equipment_1                     cv_nav_bomber_equipment 
+1939 g50_cv_nav_bomber_equipment_1                 cv_nav_bomber_equipment 
+1939 nakajima_b5n_equipment_2                      cv_nav_bomber_equipment 
+1939 pl_108_bomber_equipment_1                     cv_nav_bomber_equipment 
+1940 cv_nav_bomber_equipment_1940                  cv_nav_bomber_equipment 
+1940 fairey_albacore_equipment_1                   cv_nav_bomber_equipment 
+1940 soviet_cvnav_equipment_1                      cv_nav_bomber_equipment 
+1941 d_750_bomber_equipment_1                      cv_nav_bomber_equipment 
+1942 cv_nav_bomber_equipment_1942                  cv_nav_bomber_equipment 
+1942 grumman_tbf_equipment_1                       cv_nav_bomber_equipment 
+1942 ju_87_cv_equipment_2                          cv_nav_bomber_equipment 
+1942 re2001_cv_nav_bomber_equipment_1              cv_nav_bomber_equipment 
+1943 nakajima_b6n_equipment_1                      cv_nav_bomber_equipment 
+1943 supermarine_dumbo_equipment_1                 cv_nav_bomber_equipment 
+1944 aichi_b7a_equipment_1                         cv_nav_bomber_equipment 
+1944 cv_nav_bomber_equipment_1944                  cv_nav_bomber_equipment 
+1944 g55s_cv_nav_bomber_equipment_1                cv_nav_bomber_equipment 
+1944 grumman_tbf_equipment_2                       cv_nav_bomber_equipment 
+1944 ju_87_cv_equipment_4                          cv_nav_bomber_equipment 
+1944 soviet_cvnav_equipment_2                      cv_nav_bomber_equipment 
+1945 btd_destroyer_equipment_1                     cv_nav_bomber_equipment 
+1946 fairey_spearfish_equipment_1                  cv_nav_bomber_equipment 
+
+### _airframe_fast_bomber.txt
+1930 prewar_fast_bomber_equipment_1                fast_bomber_equipment  
+1933 mitsubishi_ki_1_equipment_1                   fast_bomber_equipment  
+1935 he_70_bomber_equipment_1                      fast_bomber_equipment  
+1935 mitsubishi_ki_1_equipment_2                   fast_bomber_equipment  
+1937 do_17_bomber_equipment_1                      fast_bomber_equipment  
+1938 do_17_bomber_equipment_2                      fast_bomber_equipment  
+1938 mitsubishi_ki_21_equipment_1                  fast_bomber_equipment  
+1938 potez_633_bomber_equipment_1                  fast_bomber_equipment  
+1939 douglas_db7_equipment_1                       fast_bomber_equipment  
+1939 ju_88_bomber_equipment_1                      fast_bomber_equipment  
+1940 douglas_a20_equipment_1                       fast_bomber_equipment  
+1940 mitsubishi_ki_21_equipment_2                  fast_bomber_equipment  
+1940 yak_2_bomber_equipment_1                      fast_bomber_equipment  
+1941 douglas_a20_equipment_2                       fast_bomber_equipment  
+1941 ju_88_a4_bomber_equipment_1                   fast_bomber_equipment  
+1941 mosquito_fsb_equipment_1                      fast_bomber_equipment  
+1941 nakajima_ki_49_equipment_1                    fast_bomber_equipment  
+1941 yak_2_bomber_equipment_2                      fast_bomber_equipment  
+1941 z1018a_bomber_equipment_1                     fast_bomber_equipment  
+1942 nakajima_ki_49_equipment_2                    fast_bomber_equipment  
+1942 tu_2_bomber_equipment_1                       fast_bomber_equipment  
+1942 z1018_bomber_equipment_1                      fast_bomber_equipment  
+1943 douglas_a26_equipment_1                       fast_bomber_equipment  
+1943 ju_88_s_bomber_equipment_1                    fast_bomber_equipment  
+1943 mosquito_fsb_equipment_2                      fast_bomber_equipment  
+1943 tu_2_bomber_equipment_2                       fast_bomber_equipment  
+1944 bz301_bomber_equipment_1                      fast_bomber_equipment  
+1944 ju_288_bomber_equipment_1                     fast_bomber_equipment  
+1944 mitsubishi_ki_67_equipment_1                  fast_bomber_equipment  
+
+### _airframe_fighter.txt
+1925 nid_42_fighter_equipment_1                    fighter_equipment      
+1928 nid_52_fighter_equipment_1                    fighter_equipment      
+1930 boeing_p12_equipment_1                        fighter_equipment      
+1930 pre_war_fighter_equipment_1                   fighter_equipment      
+1931 armstrong_aw16_equipment_1                    fighter_equipment      
+1931 armstrong_scimitar_equipment_1                fighter_equipment      
+1931 hawker_hornet_equipment_1                     fighter_equipment      
+1931 nid_62_fighter_equipment_1                    fighter_equipment      
+1932 boeing_p12_equipment_2                        fighter_equipment      
+1932 nid_62_fighter_equipment_2                    fighter_equipment      
+1933 fighter_equipment_1933                        fighter_equipment      
+1933 nid_62_fighter_equipment_3                    fighter_equipment      
+1934 aw_siskin_equipment_1                         fighter_equipment      
+1934 hawker_demon_equipment_1                      fighter_equipment      
+1934 usa_boeing_p26_equipment_2                    fighter_equipment      
+1935 ar_68_equipment_1                             fighter_equipment      
+1935 ar_76_equipment_1                             fighter_equipment      
+1935 he_51_equipment_1                             fighter_equipment      
+1935 he_51_equipment_2                             fighter_equipment      
+1935 i_16_equipment_1                              fighter_equipment      
+1935 ro41_interceptor_equipment_1                  fighter_equipment      
+1935 spad_510_fighter_equipment_1                  fighter_equipment      
+1936 fighter_equipment_1936                        fighter_equipment      
+1936 i_16_equipment_2                              fighter_equipment      
+1936 me_109_fighter_equipment_1                    fighter_equipment      
+1936 ms_405_fighter_equipment_1                    fighter_equipment      
+1937 i_16_equipment_3                              fighter_equipment      
+1937 me_109_fighter_equipment_2                    fighter_equipment      
+1938 curtiss_p36_equipment_1                       fighter_equipment      
+1938 fighter_equipment_1938                        fighter_equipment      
+1938 g50_fighter_equipment_1                       fighter_equipment      
+1938 i_16_equipment_4                              fighter_equipment      
+1938 me_109_early_fighter_equipment_1              fighter_equipment      
+1938 ms_406_fighter_equipment_1                    fighter_equipment      
+1938 spitfire_equipment_1                          fighter_equipment      
+1939 brewster_b239_equipment_1                     fighter_equipment      
+1939 brewster_b339_equipment_1                     fighter_equipment      
+1939 me_109_mid_fighter_equipment_1                fighter_equipment      
+1939 spitfire_equipment_2                          fighter_equipment      
+1940 curtiss_p40_equipment_1                       fighter_equipment      
+1940 fighter_equipment_1940                        fighter_equipment      
+1940 lagg_1_equipment_1                            fighter_equipment      
+1940 me_109_late_fighter_equipment_1               fighter_equipment      
+1940 ms_410_fighter_equipment_1                    fighter_equipment      
+1941 curtiss_p40_equipment_2                       fighter_equipment      
+1941 curtiss_p40f_equipment_1                      fighter_equipment      
+1941 g50v_fighter_equipment_1                      fighter_equipment      
+1941 lagg_3_equipment_1                            fighter_equipment      
+1941 me_109_late_fighter_equipment_2               fighter_equipment      
+1941 mid_spitfire_equipment_1                      fighter_equipment      
+1941 ms_450_fighter_equipment_1                    fighter_equipment      
+1942 fighter_equipment_1942                        fighter_equipment      
+1942 kawasaki_ki_61_equipment_1                    fighter_equipment      
+1942 lagg_5_equipment_1                            fighter_equipment      
+1942 late_spitfire_equipment_1                     fighter_equipment      
+1942 me_109_late_fighter_equipment_3               fighter_equipment      
+1942 northamerican_mustang_equipment_1             fighter_equipment      
+1943 g55_fighter_equipment_1                       fighter_equipment      
+1943 griffon_fighter_equipment_1                   fighter_equipment      
+1943 kawasaki_ki_61_equipment_2                    fighter_equipment      
+1943 lagg_5_equipment_2                            fighter_equipment      
+1943 me_109_late_fighter_equipment_4               fighter_equipment      
+1943 northamerican_p51b_equipment_1                fighter_equipment      
+1944 fighter_equipment_1944                        fighter_equipment      
+1944 g56_fighter_equipment_1                       fighter_equipment      
+1944 griffon_spitfire_equipment_1                  fighter_equipment      
+1944 lagg_7_equipment_1                            fighter_equipment      
+1944 me_109_late_fighter_equipment_5               fighter_equipment      
+1944 nakajima_ki_84_equipment_1                    fighter_equipment      
+1944 northamerican_p51d_equipment_1                fighter_equipment      
+1945 griffon_spitfire_equipment_2                  fighter_equipment      
+1945 nakajima_ki_84_equipment_2                    fighter_equipment      
+1945 northamerican_p51h_equipment_1                fighter_equipment      
+1946 kawasaki_ki_87_equipment_1                    fighter_equipment      
+1946 lagg_9_equipment_1                            fighter_equipment      
+1946 spitfire_24_equipment_1                       fighter_equipment      
+
+### _airframe_fighter_alt.txt
+1924 cr_series_fighter_equipment_1                 fighter_alt_equipment  
+1927 cr_series_fighter_equipment_2                 fighter_alt_equipment  
+1930 cr_series_fighter_equipment_3                 fighter_alt_equipment  
+1930 pre_war_fighter_alt_equipment_1               fighter_alt_equipment  
+1931 i_5_equipment_1                               fighter_alt_equipment  
+1932 cr_series_fighter_equipment_4                 fighter_alt_equipment  
+1932 i_7_equipment_1                               fighter_alt_equipment  
+1932 kawasaki_t92_equipment_1                      fighter_alt_equipment  
+1933 cr_32_fighter_equipment_1                     fighter_alt_equipment  
+1934 cr_32_fighter_equipment_2                     fighter_alt_equipment  
+1934 kawasaki_t92_equipment_2                      fighter_alt_equipment  
+1935 di_6_equipment_1                              fighter_alt_equipment  
+1935 i_15_equipment_1                              fighter_alt_equipment  
+1935 kawasaki_ki_10_equipment_1                    fighter_alt_equipment  
+1936 cr_41_fighter_equipment_1                     fighter_alt_equipment  
+1936 i_15_equipment_2                              fighter_alt_equipment  
+1936 kawasaki_ki_10_equipment_2                    fighter_alt_equipment  
+1937 cr_33_fighter_equipment_1                     fighter_alt_equipment  
+1937 i_152_equipment_1                             fighter_alt_equipment  
+1937 nakajima_ki_27_equipment_1                    fighter_alt_equipment  
+1938 i_153_equipment_1                             fighter_alt_equipment  
+1939 cr_42_fighter_equipment_1                     fighter_alt_equipment  
+1940 nakajima_ki_43_equipment_1                    fighter_alt_equipment  
+1940 yak_1_equipment_1                             fighter_alt_equipment  
+1941 cr_42_daimler_fighter_equipment_1             fighter_alt_equipment  
+1941 nakajima_ki_43_equipment_2                    fighter_alt_equipment  
+1941 ss4_fighter_equipment_1                       fighter_alt_equipment  
+1941 yak_7_equipment_1                             fighter_alt_equipment  
+1942 sai207_fighter_equipment_1                    fighter_alt_equipment  
+1942 yak_9_equipment_1                             fighter_alt_equipment  
+1943 nakajima_ki_43_equipment_3                    fighter_alt_equipment  
+1943 sai403_fighter_equipment_1                    fighter_alt_equipment  
+1943 yak_9_equipment_2                             fighter_alt_equipment  
+1944 yak_9_equipment_3                             fighter_alt_equipment  
+1945 kawasaki_ki_100_equipment_1                   fighter_alt_equipment  
+1946 yak_9_equipment_4                             fighter_alt_equipment  
+
+### _airframe_flying_boats.txt
+1921 m18ar_flying_boat_equipment_1                 flying_boat_equipment  
+1925 supermarine_southampton_equipment_1           flying_boat_equipment  
+1931 do_wal_equipment_1                            flying_boat_equipment  
+1933 consolidated_p2y_equipment_1                  flying_boat_equipment  
+1933 hiro_h4h_equipment_1                          flying_boat_equipment  
+1934 beriev_mbr_2_equipment_1                      flying_boat_equipment  
+1934 supermarine_scapa_equipment_1                 flying_boat_equipment  
+1935 beriev_mbr_2_equipment_2                      flying_boat_equipment  
+1935 z501_flying_boat_equipment_1                  flying_boat_equipment  
+1936 consolidated_pby_equipment_1                  flying_boat_equipment  
+1936 saro_london_equipment_1                       flying_boat_equipment  
+1937 do_18_equipment_1                             flying_boat_equipment  
+1937 kawanishi_h6k_equipment_1                     flying_boat_equipment  
+1938 do_24_equipment_1                             flying_boat_equipment  
+1938 mc99_flying_boat_equipment_1                  flying_boat_equipment  
+1938 short_sunderland_equipment_1                  flying_boat_equipment  
+1938 tupolev_mdr_4_equipment_1                     flying_boat_equipment  
+1939 consolidated_pby_equipment_2                  flying_boat_equipment  
+1939 kawanishi_h6k_equipment_2                     flying_boat_equipment  
+1940 bv_138_equipment_1                            flying_boat_equipment  
+1940 martin_pbm_equipment_1                        flying_boat_equipment  
+1941 bv_222_equipment_1                            flying_boat_equipment  
+1941 chetverikov_mdr_6_equipment_1                 flying_boat_equipment  
+1941 kawanishi_h8k_equipment_1                     flying_boat_equipment  
+1942 consolidated_pb2y_equipment_1                 flying_boat_equipment  
+1942 short_sunderland_equipment_2                  flying_boat_equipment  
+1943 kawanishi_h8k_equipment_2                     flying_boat_equipment  
+1944 bv_238_equipment_1                            flying_boat_equipment  
+1945 short_seaford_equipment_1                     flying_boat_equipment  
+
+### _airframe_heavy_cas.txt
+1930 prewar_twin_cas_equipment_1                   twin_cas_equipment     
+1937 ca309_light_bomber_equipment_1                twin_cas_equipment     
+1937 curtiss_a18_equipment_1                       twin_cas_equipment     
+1938 breguet_691_bomber_equipment_1                twin_cas_equipment     
+1938 ca310_light_bomber_equipment_1                twin_cas_equipment     
+1938 twin_cas_equipment_1938                       twin_cas_equipment     
+1939 breguet_691_bomber_equipment_2                twin_cas_equipment     
+1939 ca311_light_bomber_equipment_1                twin_cas_equipment     
+1939 po_63_11_cas_equipment_1                      twin_cas_equipment     
+1940 ca313_light_bomber_equipment_1                twin_cas_equipment     
+1940 twin_cas_equipment_1940                       twin_cas_equipment     
+1941 bristol_beaufighter_cas_equipment_1           twin_cas_equipment     
+1941 hs_129_equipment_1                            twin_cas_equipment     
+1942 bristol_beaufighter_cas_equipment_2           twin_cas_equipment     
+1942 ca314_light_bomber_equipment_1                twin_cas_equipment     
+1942 hs_129_equipment_2                            twin_cas_equipment     
+1942 twin_cas_equipment_1942                       twin_cas_equipment     
+1943 douglas_a20_equipment_3                       twin_cas_equipment     
+1943 fc20_cas_equipment_1                          twin_cas_equipment     
+1944 ju_88_p_equipment_1                           twin_cas_equipment     
+1944 kawasaki_ki_102_equipment_2                   twin_cas_equipment     
+1944 mosquito_cas_equipment_1                      twin_cas_equipment     
+1944 sm89_cas_equipment_1                          twin_cas_equipment     
+1944 twin_cas_equipment_1944                       twin_cas_equipment     
+1945 beechcraft_a38_equipment_1                    twin_cas_equipment     
+1945 rikugun_ki_93_equipment_1                     twin_cas_equipment     
+1946 bristol_brigand_equipment_1                   twin_cas_equipment     
+
+### _airframe_heavy_fighter.txt
+1930 pre_war_heavy_fighter_equipment_1             heavy_fighter_equipment 
+1932 i_z_equipment_1                               heavy_fighter_equipment 
+1932 r_6_fighter_equipment_1                       heavy_fighter_equipment 
+1935 i_14_fighter_equipment_1                      heavy_fighter_equipment 
+1936 ip_1_fighter_equipment_1                      heavy_fighter_equipment 
+1937 bf_110_fighter_equipment_1                    heavy_fighter_equipment 
+1938 bf_110_c_fighter_equipment_1                  heavy_fighter_equipment 
+1938 cr25_fighter_equipment_1                      heavy_fighter_equipment 
+1938 heavy_fighter_equipment_1938                  heavy_fighter_equipment 
+1938 potez_630_fighter_equipment_1                 heavy_fighter_equipment 
+1939 bell_yfm1_equipment_1                         heavy_fighter_equipment 
+1939 bf_110_d_fighter_equipment_1                  heavy_fighter_equipment 
+1939 fw_187_fighter_equipment_1                    heavy_fighter_equipment 
+1939 potez_631_fighter_equipment_1                 heavy_fighter_equipment 
+1940 bf_110_e_fighter_equipment_1                  heavy_fighter_equipment 
+1940 bristol_beaufighter_equipment_1               heavy_fighter_equipment 
+1940 heavy_fighter_equipment_1940                  heavy_fighter_equipment 
+1940 kawasaki_ki_45_equipment_1                    heavy_fighter_equipment 
+1940 nc_600_fighter_equipment_1                    heavy_fighter_equipment 
+1940 pe_1_fighter_equipment_1                      heavy_fighter_equipment 
+1941 bf_110_f_fighter_equipment_1                  heavy_fighter_equipment 
+1941 lockheed_p38_equipment_1                      heavy_fighter_equipment 
+1941 me_210_fighter_equipment_1                    heavy_fighter_equipment 
+1941 pe_3_fighter_equipment_1                      heavy_fighter_equipment 
+1941 ro57_fighter_equipment_1                      heavy_fighter_equipment 
+1942 arsenal_vb10_fighter_equipment_1              heavy_fighter_equipment 
+1942 bf_110_g_fighter_equipment_1                  heavy_fighter_equipment 
+1942 heavy_fighter_equipment_1942                  heavy_fighter_equipment 
+1942 kawasaki_ki_45_kai_equipment_1                heavy_fighter_equipment 
+1942 lockheed_p38g_equipment_1                     heavy_fighter_equipment 
+1942 pe_3_fighter_equipment_2                      heavy_fighter_equipment 
+1943 bristol_beaufighter_equipment_2               heavy_fighter_equipment 
+1943 lockheed_p38j_equipment_1                     heavy_fighter_equipment 
+1943 me_410_fighter_equipment_1                    heavy_fighter_equipment 
+1943 mosquito_hvf_equipment_1                      heavy_fighter_equipment 
+1943 ro58_fighter_equipment_1                      heavy_fighter_equipment 
+1944 bf_109_z_fighter_equipment_1                  heavy_fighter_equipment 
+1944 do_335_fighter_equipment_1                    heavy_fighter_equipment 
+1944 heavy_fighter_equipment_1944                  heavy_fighter_equipment 
+1944 kawasaki_ki_102_equipment_1                   heavy_fighter_equipment 
+1944 lockheed_p38l_equipment_1                     heavy_fighter_equipment 
+1944 mig_5_fighter_equipment_1                     heavy_fighter_equipment 
+1944 sm91_fighter_equipment_1                      heavy_fighter_equipment 
+1945 ca380_fighter_equipment_1                     heavy_fighter_equipment 
+1945 do_335_fighter_equipment_2                    heavy_fighter_equipment 
+1945 mitsubishi_ki_83_equipment_1                  heavy_fighter_equipment 
+1945 sm92_fighter_equipment_1                      heavy_fighter_equipment 
+1946 hornet_equipment_1                            heavy_fighter_equipment 
+1946 northamerican_p82_equipment_1                 heavy_fighter_equipment 
+
+### _airframe_heavy_nav_bomber.txt
+1930 prewar_heavy_nav_bomber_equipment_1           heavy_nav_bomber_equipment 
+1939 aw_whitley_gr_equipment_1                     heavy_nav_bomber_equipment 
+1939 z506b_naval_bomber_equipment_1                heavy_nav_bomber_equipment 
+1940 fw_200_bomber_equipment_1                     heavy_nav_bomber_equipment 
+1941 fw_200_bomber_equipment_2                     heavy_nav_bomber_equipment 
+1941 handley_halifax_gr_equipment_1                heavy_nav_bomber_equipment 
+1942 consolidated_pb4y_equipment_1                 heavy_nav_bomber_equipment 
+1943 avro_lancaster_gr_equipment_1                 heavy_nav_bomber_equipment 
+1943 fw_200_c8_bomber_equipment_1                  heavy_nav_bomber_equipment 
+1943 p108_naval_bomber_equipment_1                 heavy_nav_bomber_equipment 
+1944 consolidated_pb4y_equipment_2                 heavy_nav_bomber_equipment 
+1944 ju_290_bomber_equipment_1                     heavy_nav_bomber_equipment 
+
+### _airframe_interceptor.txt
+1926 curtiss_p1_equipment_1                        interceptor_equipment  
+1927 curtiss_p1_equipment_2                        interceptor_equipment  
+1928 curtiss_hawk1_int_equipment_1                 interceptor_equipment  
+1930 pre_war_interceptor_equipment_1               interceptor_equipment  
+1931 bristol_bulldog_equipment_1                   interceptor_equipment  
+1931 bristol_bulldog_equipment_2                   interceptor_equipment  
+1931 curtiss_p6_equipment_1                        interceptor_equipment  
+1932 curtiss_p6_equipment_2                        interceptor_equipment  
+1933 ar_65_equipment_1                             interceptor_equipment  
+1933 ar_65_fighter_equipment_1                     interceptor_equipment  
+1933 ca114_interceptor_equipment_1                 interceptor_equipment  
+1933 mureaux_113_fighter_equipment_1               interceptor_equipment  
+1933 vought_o2u_int_export_equipment_1             interceptor_equipment  
+1934 ba27m_interceptor_equipment_1                 interceptor_equipment  
+1934 d_371_fighter_equipment_1                     interceptor_equipment  
+1934 usa_boeing_p26_equipment_1                    interceptor_equipment  
+1935 d_500_fighter_equipment_1                     interceptor_equipment  
+1935 d_500_fighter_equipment_2                     interceptor_equipment  
+1935 gauntlet_fighter_equipment_1                  interceptor_equipment  
+1936 d_500_fighter_equipment_3                     interceptor_equipment  
+1936 gladiator_fighter_equipment_1                 interceptor_equipment  
+1936 interceptor_equipment_1936                    interceptor_equipment  
+1936 loire_46_fighter_equipment_1                  interceptor_equipment  
+1937 seversky_p35_equipment_1                      interceptor_equipment  
+1938 bloch_151_fighter_equipment_1                 interceptor_equipment  
+1938 ca165_interceptor_equipment_1                 interceptor_equipment  
+1938 interceptor_equipment_1938                    interceptor_equipment  
+1939 bloch_152_fighter_equipment_1                 interceptor_equipment  
+1939 defiant_fighter_equipment_1                   interceptor_equipment  
+1939 he_100_equipment_1                            interceptor_equipment  
+1939 mc200_fighter_equipment_1                     interceptor_equipment  
+1940 interceptor_equipment_1940                    interceptor_equipment  
+1940 mig_1_equipment_1                             interceptor_equipment  
+1940 westland_whirlwind_equipment_1                interceptor_equipment  
+1941 mc202_fighter_equipment_1                     interceptor_equipment  
+1941 mig_3_equipment_1                             interceptor_equipment  
+1941 nakajima_ki_44_equipment_1                    interceptor_equipment  
+1941 republic_p43_equipment_1                      interceptor_equipment  
+1942 bell_p39_equipment_2                          interceptor_equipment  
+1942 bloch_157_fighter_equipment_1                 interceptor_equipment  
+1942 interceptor_equipment_1942                    interceptor_equipment  
+1942 mc205_fighter_equipment_1                     interceptor_equipment  
+1942 nakajima_ki_44_equipment_2                    interceptor_equipment  
+1943 bell_p63_equipment_1                          interceptor_equipment  
+1943 bf_109_h_equipment_1                          interceptor_equipment  
+1943 mc205n_fighter_equipment_1                    interceptor_equipment  
+1944 fw_190_interceptor_equipment_1                interceptor_equipment  
+1944 interceptor_equipment_1944                    interceptor_equipment  
+1944 mc207_fighter_equipment_1                     interceptor_equipment  
+1944 nakajima_ki_44_equipment_3                    interceptor_equipment  
+1944 republic_p47m_equipment_1                     interceptor_equipment  
+1944 welkin_equipment_1                            interceptor_equipment  
+1944 yak_3_equipment_1                             interceptor_equipment  
+1945 bv_155_fighter_equipment_1                    interceptor_equipment  
+1945 i_211_equipment_1                             interceptor_equipment  
+1945 martinbaker_fighter_equipment_1               interceptor_equipment  
+1945 ta_152_fighter_equipment_2                    interceptor_equipment  
+1946 tachikawa_ki_94_equipment_1                   interceptor_equipment  
+1946 yak_3_equipment_2                             interceptor_equipment  
+
+### _airframe_jet_cas.txt
+1944 me_262_cas_equipment_1                        jet_cas_equipment      
+1945 hs_132_cas_equipment_1                        jet_cas_equipment      
+
+### _airframe_jet_fighter.txt
+1944 gloster_meteor_equipment_1                    jet_fighter_equipment  
+1945 ca_183_fighter_equipment_1                    jet_fighter_equipment  
+1945 he_162_fighter_equipment_1                    jet_fighter_equipment  
+1946 jet_fighter_equipment_1946                    jet_fighter_equipment  
+1946 mig_9_fighter_equipment_1                     jet_fighter_equipment  
+1946 nakajima_ki_201_equipment_1                   jet_fighter_equipment  
+1946 vampire_equipment_1                           jet_fighter_equipment  
+
+### _airframe_jet_multirole.txt
+1944 me_262_fighter_equipment_1                    jet_mr_fighter_equipment 
+1945 gloster_meteor_equipment_2                    jet_mr_fighter_equipment 
+1945 lockheed_p80_equipment_1                      jet_mr_fighter_equipment 
+1945 nakajima_kikka_equipment_1                    jet_mr_fighter_equipment 
+1946 gloster_meteor_equipment_3                    jet_mr_fighter_equipment 
+
+### _airframe_jet_tacbomber.txt
+1944 ar_234_equipment_1                            jet_tac_bomber_equipment 
+1945 ar_234_equipment_2                            jet_tac_bomber_equipment 
+
+### _airframe_light_bomber.txt
+1928 bolton_sidestrand_equipment_1                 light_bomber_equipment 
+1930 br3_bomber_equipment_1                        light_bomber_equipment 
+1930 ca101_bomber_equipment_1                      light_bomber_equipment 
+1930 keystone_bomber_equipment_1                   light_bomber_equipment 
+1930 prewar_lt_bomber_equipment_1                  light_bomber_equipment 
+1931 ca101_bomber_equipment_2                      light_bomber_equipment 
+1931 keystone_bomber_equipment_2                   light_bomber_equipment 
+1931 keystone_bomber_equipment_3                   light_bomber_equipment 
+1931 keystone_bomber_equipment_4                   light_bomber_equipment 
+1932 ca101_bomber_equipment_3                      light_bomber_equipment 
+1933 ca102_bomber_equipment_1                      light_bomber_equipment 
+1933 ca111_bomber_equipment_1                      light_bomber_equipment 
+1933 lt_bomber_equipment_1933                      light_bomber_equipment 
+1933 mitsubishi_ki_2_equipment_1                   light_bomber_equipment 
+1934 bolton_overstrand_equipment_1                 light_bomber_equipment 
+1934 ca111_bomber_equipment_2                      light_bomber_equipment 
+1934 handley_heyford_equipment_1                   light_bomber_equipment 
+1934 kawasaki_ki_3_equipment_1                     light_bomber_equipment 
+1934 martin_b10_bomber_equipment_1                 light_bomber_equipment 
+1934 mitsubishi_ki_2_equipment_2                   light_bomber_equipment 
+1934 po_2_equipment_1                              light_bomber_equipment 
+1935 ca111_bomber_equipment_3                      light_bomber_equipment 
+1935 ca133_light_bomber_equipment_1                light_bomber_equipment 
+1935 handley_heyford_equipment_2                   light_bomber_equipment 
+1935 handley_heyford_equipment_3                   light_bomber_equipment 
+1935 martin_b10_bomber_equipment_2                 light_bomber_equipment 
+1935 martin_b10_bomber_equipment_3                 light_bomber_equipment 
+1935 vickers_valentia_equipment_1                  light_bomber_equipment 
+1936 ju_86_bomber_equipment_1                      light_bomber_equipment 
+1936 lt_bomber_equipment_1936                      light_bomber_equipment 
+1936 martin_b10_bomber_equipment_4                 light_bomber_equipment 
+1936 sb_2m_bomber_equipment_1                      light_bomber_equipment 
+1936 sm79_light_bomber_equipment_1                 light_bomber_equipment 
+1937 bloch_131_bomber_equipment_1                  light_bomber_equipment 
+1937 bristol_blenheim_equipment_1                  light_bomber_equipment 
+1937 ju_86_bomber_equipment_2                      light_bomber_equipment 
+1937 vickers_wellesley_equipment_1                 light_bomber_equipment 
+1938 kawasaki_ki_32_equipment_1                    light_bomber_equipment 
+1938 lt_bomber_equipment_1938                      light_bomber_equipment 
+1938 mitsubishi_ki_30_equipment_1                  light_bomber_equipment 
+1938 z1007_bomber_equipment_1                      light_bomber_equipment 
+1939 bristol_blenheim_equipment_2                  light_bomber_equipment 
+1939 do_17_z_bomber_equipment_1                    light_bomber_equipment 
+1939 martin_a22_equipment_1                        light_bomber_equipment 
+1939 sb_2m_bomber_equipment_2                      light_bomber_equipment 
+1939 z1007bis_bomber_equipment_1                   light_bomber_equipment 
+1940 amiot_351_bomber_equipment_1                  light_bomber_equipment 
+1940 ar_2_bomber_equipment_1                       light_bomber_equipment 
+1940 bristol_beaufort_equipment_1                  light_bomber_equipment 
+1940 do_215_bomber_equipment_1                     light_bomber_equipment 
+1940 ju_86_p_bomber_equipment_1                    light_bomber_equipment 
+1940 kawasaki_ki_48_equipment_1                    light_bomber_equipment 
+1940 lt_bomber_equipment_1940                      light_bomber_equipment 
+1941 amiot_351_bomber_equipment_2                  light_bomber_equipment 
+1941 do_217_bomber_equipment_1                     light_bomber_equipment 
+1941 northamerican_b25_equipment_1                 light_bomber_equipment 
+1941 pe_2_bomber_equipment_1                       light_bomber_equipment 
+1941 po_2_equipment_2                              light_bomber_equipment 
+1942 do_217_bomber_equipment_2                     light_bomber_equipment 
+1942 kawasaki_ki_48_equipment_2                    light_bomber_equipment 
+1942 lt_bomber_equipment_1942                      light_bomber_equipment 
+1942 northamerican_b25_equipment_2                 light_bomber_equipment 
+1942 z1007ter_bomber_equipment_1                   light_bomber_equipment 
+1943 bristol_buckingham_equipment_1                light_bomber_equipment 
+1943 ju_188_bomber_equipment_1                     light_bomber_equipment 
+1943 pe_2_bomber_equipment_2                       light_bomber_equipment 
+1944 ju_388_bomber_equipment_1                     light_bomber_equipment 
+1944 lt_bomber_equipment_1944                      light_bomber_equipment 
+1944 northamerican_b25_equipment_3                 light_bomber_equipment 
+
+### _airframe_multi_role.txt
+1930 boeing_256_equipment_1                        mr_fighter_equipment   
+1930 m41_boat_fighter_equipment_1                  mr_fighter_equipment   
+1930 pre_war_mr_equipment_1                        mr_fighter_equipment   
+1930 vought_o2u_equipment_1                        mr_fighter_equipment   
+1930 vought_o2u_equipment_2                        mr_fighter_equipment   
+1930 vought_o2u_export_equipment_1                 mr_fighter_equipment   
+1930 vought_o2u_export_equipment_2                 mr_fighter_equipment   
+1930 vought_o2u_export_equipment_3                 mr_fighter_equipment   
+1930 vought_o2u_export_equipment_4                 mr_fighter_equipment   
+1931 hawker_fury_equipment_1                       mr_fighter_equipment   
+1932 curtiss_hawk1_mr_equipment_1                  mr_fighter_equipment   
+1932 curtiss_hawk2_mr_equipment_1                  mr_fighter_equipment   
+1933 curtiss_cw14r_equipment_1                     mr_fighter_equipment   
+1933 curtiss_hawk3_mr_equipment_1                  mr_fighter_equipment   
+1933 m71_fighter_equipment_1                       mr_fighter_equipment   
+1935 ap1_multirole_equipment_1                     mr_fighter_equipment   
+1935 ba64_multirole_equipment_1                    mr_fighter_equipment   
+1935 consolidated_p30_equipment_1                  mr_fighter_equipment   
+1935 he_51_equipment_3                             mr_fighter_equipment   
+1936 ba65_multirole_equipment_1                    mr_fighter_equipment   
+1936 mr_fighter_equipment_1936                     mr_fighter_equipment   
+1937 hawker_hurricane_equipment_1                  mr_fighter_equipment   
+1937 he_112_equipment_1                            mr_fighter_equipment   
+1937 seversky_a8v1_equipment_1                     mr_fighter_equipment   
+1938 g50_multirole_equipment_1                     mr_fighter_equipment   
+1938 he_112_equipment_2                            mr_fighter_equipment   
+1938 mr_fighter_equipment_1938                     mr_fighter_equipment   
+1939 ca335_multirole_equipment_1                   mr_fighter_equipment   
+1939 i_16_equipment_5                              mr_fighter_equipment   
+1940 bell_p39_equipment_1                          mr_fighter_equipment   
+1940 d_520_fighter_equipment_1                     mr_fighter_equipment   
+1940 hawker_hurricane_equipment_2                  mr_fighter_equipment   
+1940 i_180_equipment_1                             mr_fighter_equipment   
+1940 mr_fighter_equipment_1940                     mr_fighter_equipment   
+1940 re2000_multirole_equipment_1                  mr_fighter_equipment   
+1941 fw_190_fighter_equipment_1                    mr_fighter_equipment   
+1941 hawker_typhoon_equipment_1                    mr_fighter_equipment   
+1941 i_180_equipment_2                             mr_fighter_equipment   
+1941 re2001_multirole_equipment_1                  mr_fighter_equipment   
+1942 fw_190_fighter_equipment_2                    mr_fighter_equipment   
+1942 hawker_typhoon1b_equipment_1                  mr_fighter_equipment   
+1942 mr_fighter_equipment_1942                     mr_fighter_equipment   
+1942 re2001bis_multirole_equipment_1               mr_fighter_equipment   
+1942 republic_p47_equipment_1                      mr_fighter_equipment   
+1943 fw_190_fighter_equipment_3                    mr_fighter_equipment   
+1943 hawker_typhoon1b_equipment_2                  mr_fighter_equipment   
+1943 lagg_3_equipment_2                            mr_fighter_equipment   
+1943 re2005_multirole_equipment_1                  mr_fighter_equipment   
+1943 republic_p47d_equipment_1                     mr_fighter_equipment   
+1944 hawker_tempest_equipment_1                    mr_fighter_equipment   
+1944 i_185_equipment_1                             mr_fighter_equipment   
+1944 mr_fighter_equipment_1944                     mr_fighter_equipment   
+1944 re2006_multirole_equipment_1                  mr_fighter_equipment   
+1945 republic_p47n_equipment_1                     mr_fighter_equipment   
+1945 ta_152_fighter_equipment_1                    mr_fighter_equipment   
+1946 hawker_monofury_equipment_1                   mr_fighter_equipment   
+
+### _airframe_nav_bomber.txt
+1929 tb_1_naval_bomber_equipment_1                 nav_bomber_equipment   
+1930 prewar_nav_bomber_equipment_1                 nav_bomber_equipment   
+1932 tb_3_naval_bomber_equipment_1                 nav_bomber_equipment   
+1933 pl_15_nav_bomber_equipment_1                  nav_bomber_equipment   
+1933 r_6_naval_bomber_equipment_1                  nav_bomber_equipment   
+1934 ca111idro_naval_bomber_equipment_1            nav_bomber_equipment   
+1934 latecoere_290_nav_bomber_equipment_1          nav_bomber_equipment   
+1935 he_59_bomber_equipment_1                      nav_bomber_equipment   
+1935 leo_257_nav_bomber_equipment_1                nav_bomber_equipment   
+1935 leo_258_nav_bomber_equipment_1                nav_bomber_equipment   
+1936 nav_bomber_equipment_1936                     nav_bomber_equipment   
+1937 ar_95_bomber_equipment_1                      nav_bomber_equipment   
+1937 avro_anson_equipment_1                        nav_bomber_equipment   
+1937 do_22_bomber_equipment_1                      nav_bomber_equipment   
+1938 db_3t_bomber_equipment_1                      nav_bomber_equipment   
+1938 he_115_bomber_equipment_1                     nav_bomber_equipment   
+1938 latecoere_298_nav_bomber_equipment_1          nav_bomber_equipment   
+1938 nav_bomber_equipment_1938                     nav_bomber_equipment   
+1938 sm79_naval_bomber_equipment_1                 nav_bomber_equipment   
+1939 bristol_bolingbroke_equipment_1               nav_bomber_equipment   
+1939 he_111_j_bomber_equipment_1                   nav_bomber_equipment   
+1939 lockheed_a28_equipment_1                      nav_bomber_equipment   
+1940 latecoere_299_nav_bomber_equipment_1          nav_bomber_equipment   
+1940 nav_bomber_equipment_1940                     nav_bomber_equipment   
+1940 sm84_naval_bomber_equipment_1                 nav_bomber_equipment   
+1941 lockheed_a28_equipment_2                      nav_bomber_equipment   
+1941 vickers_wellington_gr_bomber_equipment_1      nav_bomber_equipment   
+1942 il_4t_bomber_equipment_1                      nav_bomber_equipment   
+1942 lockheed_pv1_equipment_1                      nav_bomber_equipment   
+1942 nav_bomber_equipment_1942                     nav_bomber_equipment   
+1942 sm79_naval_bomber_equipment_2                 nav_bomber_equipment   
+1943 ju_88_a17_bomber_equipment_1                  nav_bomber_equipment   
+1943 northamerican_pbj1_equipment_1                nav_bomber_equipment   
+1943 vickers_wellington_gr_bomber_equipment_2      nav_bomber_equipment   
+1944 ju_188_nav_bomber_equipment_1                 nav_bomber_equipment   
+1944 lockheed_pv2_equipment_1                      nav_bomber_equipment   
+1944 nav_bomber_equipment_1944                     nav_bomber_equipment   
+1944 vickers_warwick_equipment_1                   nav_bomber_equipment   
+1945 tu_2t_bomber_equipment_1                      nav_bomber_equipment   
+
+### _airframe_nav_bomber_guided.txt
+1943 do_217_gb_bomber_equipment_1                  nav_bomber_gb_equipment 
+1944 he_177_gb_bomber_equipment_1                  nav_bomber_gb_equipment 
+1944 mitsubishi_g4m2_gb_equipment_1                nav_bomber_gb_equipment 
+1945 consolidated_pb4y_gb_equipment_1              nav_bomber_gb_equipment 
+1945 ju_290_gb_bomber_equipment_1                  nav_bomber_gb_equipment 
+1945 yokosuka_p1_gb_equipment_1                    nav_bomber_gb_equipment 
+
+### _airframe_navy_fighter.txt
+1938 a7he_equipment_1                              fighter_navy_equipment 
+1942 vought_corsair_equipment_1                    fighter_navy_equipment 
+1943 kawanishi_n1k1j_equipment_1                   fighter_navy_equipment 
+1944 kawanishi_n1k2j_equipment_1                   fighter_navy_equipment 
+1944 vought_corsair_equipment_2                    fighter_navy_equipment 
+1945 kawanishi_n1k4j_equipment_1                   fighter_navy_equipment 
+1945 vought_supercorsair_equipment_1               fighter_navy_equipment 
+
+### _airframe_navy_interceptor.txt
+1939 axhe_equipment_1                              interceptor_navy_equipment 
+1942 mitsubishi_j2m_equipment_1                    interceptor_navy_equipment 
+1944 mitsubishi_j2m_equipment_2                    interceptor_navy_equipment 
+1946 kyushu_j7w_equipment_1                        interceptor_navy_equipment 
+
+### _airframe_night_fighter.txt
+1930 pre_war_night_fighter_equipment_1             night_fighter_equipment 
+1938 bristol_blenheim_f_equipment_1                night_fighter_equipment 
+1939 bristol_blenheim_f_equipment_2                night_fighter_equipment 
+1940 do_17_night_fighter_equipment_1               night_fighter_equipment 
+1941 ju_88_c6b_night_fighter_equipment_1           night_fighter_equipment 
+1942 ca331_night_fighter_equipment_1               night_fighter_equipment 
+1942 do_217_night_fighter_equipment_1              night_fighter_equipment 
+1942 douglas_p70_equipment_1                       night_fighter_equipment 
+1942 mosquito_nf_equipment_1                       night_fighter_equipment 
+1942 nakajima_j1n_equipment_1                      night_fighter_equipment 
+1943 he_219_night_fighter_equipment_1              night_fighter_equipment 
+1943 z1018_night_fighter_equipment_1               night_fighter_equipment 
+1944 bz303_night_fighter_equipment_1               night_fighter_equipment 
+1944 mosquito_nf_equipment_2                       night_fighter_equipment 
+1944 nakajima_j5n_equipment_1                      night_fighter_equipment 
+1944 northrop_p61_equipment_1                      night_fighter_equipment 
+1944 ta_154_night_fighter_equipment_1              night_fighter_equipment 
+1945 aichi_s1a_equipment_1                         night_fighter_equipment 
+1945 grumman_f7f_equipment_1                       night_fighter_equipment 
+1945 ta_254_night_fighter_equipment_1              night_fighter_equipment 
+1946 grumman_f7f_equipment_2                       night_fighter_equipment 
+
+### _airframe_rocketinterceptor.txt
+1944 me_163_equipment_1                            rocket_interceptor_equipment 
+1945 me_163_equipment_2                            rocket_interceptor_equipment 
+1945 mitsubishi_j8m_equipment_1                    rocket_interceptor_equipment 
+
+### _airframe_scout_plane.txt
+1930 prewar_scout_plane_equipment_1                scout_plane_equipment  
+1930 r_5_scout_equipment_1                         scout_plane_equipment  
+1931 hawker_audax_scout_equipment_1                scout_plane_equipment  
+1931 r_6_scout_equipment_1                         scout_plane_equipment  
+1932 mitsubishi_t92_scout_equipment_1              scout_plane_equipment  
+1933 mureaux_113_scout_equipment_1                 scout_plane_equipment  
+1934 ca111_scout_equipment_1                       scout_plane_equipment  
+1934 he_46_scout_equipment_1                       scout_plane_equipment  
+1935 hawker_hector_scout_equipment_1               scout_plane_equipment  
+1935 mureaux_115_scout_equipment_1                 scout_plane_equipment  
+1935 r_5_scout_equipment_2                         scout_plane_equipment  
+1936 douglas_o46_scout_equipment_1                 scout_plane_equipment  
+1936 he_70_scout_equipment_1                       scout_plane_equipment  
+1936 scout_plane_equipment_1936                    scout_plane_equipment  
+1937 avro_anson_scout_equipment_1                  scout_plane_equipment  
+1937 ca309_scout_equipment_1                       scout_plane_equipment  
+1937 hs_126_scout_equipment_1                      scout_plane_equipment  
+1937 mitsubishi_ki_15_scout_equipment_1            scout_plane_equipment  
+1937 r_10_scout_equipment_1                        scout_plane_equipment  
+1938 bloch_131_scout_equipment_1                   scout_plane_equipment  
+1938 ca310_scout_equipment_1                       scout_plane_equipment  
+1938 do_17_scout_equipment_1                       scout_plane_equipment  
+1939 mitsubishi_ki_15_scout_equipment_2            scout_plane_equipment  
+1939 potez_637_scout_equipment_1                   scout_plane_equipment  
+1940 beechcraft_f2_scout_equipment_1               scout_plane_equipment  
+1940 bloch_174_scout_equipment_1                   scout_plane_equipment  
+1940 ca313_scout_equipment_1                       scout_plane_equipment  
+1940 ju_86_scout_equipment_1                       scout_plane_equipment  
+1940 scout_plane_equipment_1937                    scout_plane_equipment  
+1941 douglas_a20_scout_equipment_1                 scout_plane_equipment  
+1941 fw_189_scout_equipment_1                      scout_plane_equipment  
+1941 mitsubishi_ki_46_scout_equipment_1            scout_plane_equipment  
+1941 mosquito_scout_equipment_1                    scout_plane_equipment  
+1941 spitfire_scout_equipment_1                    scout_plane_equipment  
+1941 spitfire_scout_equipment_2                    scout_plane_equipment  
+1942 ca331_scout_equipment_1                       scout_plane_equipment  
+1942 ju_88_d_scout_equipment_1                     scout_plane_equipment  
+1942 lockheed_p38_scout_equipment_1                scout_plane_equipment  
+1942 pe_2_scout_equipment_1                        scout_plane_equipment  
+1942 yokosuka_d4y_scout_equipment_1                scout_plane_equipment  
+1943 lockheed_p38_scout_equipment_2                scout_plane_equipment  
+1943 mitsubishi_ki_46_scout_equipment_2            scout_plane_equipment  
+1943 mosquito_scout_equipment_2                    scout_plane_equipment  
+1943 re2003_scout_equipment_1                      scout_plane_equipment  
+1943 tu_2_scout_equipment_1                        scout_plane_equipment  
+1944 ar_234_scout_equipment_1                      scout_plane_equipment  
+1944 ju_88_t_scout_equipment_1                     scout_plane_equipment  
+1944 nakajima_c6n_scout_equipment_1                scout_plane_equipment  
+1944 northamerican_p51_scout_equipment_1           scout_plane_equipment  
+1944 scout_plane_equipment_1938                    scout_plane_equipment  
+1944 tu_2_scout_equipment_2                        scout_plane_equipment  
+1945 mosquito_scout_equipment_3                    scout_plane_equipment  
+1945 northrop_p61_scout_equipment_1                scout_plane_equipment  
+
+### _airframe_stratbomber.txt
+1929 tb_1_bomber_equipment_1                       quad_engine_bomber_equipment 
+1930 prewar_strat_bomber_equipment_1               quad_engine_bomber_equipment 
+1932 mitsubishi_ki_20_equipment_1                  quad_engine_bomber_equipment 
+1932 tb_3_bomber_equipment_1                       quad_engine_bomber_equipment 
+1934 tb_3_bomber_equipment_2                       quad_engine_bomber_equipment 
+1935 tb_3_bomber_equipment_3                       quad_engine_bomber_equipment 
+1935 tb_3_bomber_equipment_4                       quad_engine_bomber_equipment 
+1936 farman_221_bomber_equipment_1                 quad_engine_bomber_equipment 
+1936 hendon_equipment_1                            quad_engine_bomber_equipment 
+1936 tb_3_bomber_equipment_5                       quad_engine_bomber_equipment 
+1937 aw_whitley_equipment_1                        quad_engine_bomber_equipment 
+1937 farman_221_bomber_equipment_2                 quad_engine_bomber_equipment 
+1938 handley_hampden_bomber_equipment_1            quad_engine_bomber_equipment 
+1938 ju_89_bomber_equipment_1                      quad_engine_bomber_equipment 
+1938 p50_heavy_bomber_equipment_1                  quad_engine_bomber_equipment 
+1938 strat_bomber_equipment_1938                   quad_engine_bomber_equipment 
+1939 boeing_b17_equipment_1                        quad_engine_bomber_equipment 
+1939 farman_221_bomber_equipment_3                 quad_engine_bomber_equipment 
+1940 avro_manchester_bomber_equipment_1            quad_engine_bomber_equipment 
+1940 consolidated_b24_equipment_1                  quad_engine_bomber_equipment 
+1940 pe_8_bomber_equipment_1                       quad_engine_bomber_equipment 
+1940 short_stirling_equipment_1                    quad_engine_bomber_equipment 
+1940 sm82_heavy_bomber_equipment_1                 quad_engine_bomber_equipment 
+1940 strat_bomber_equipment_1940                   quad_engine_bomber_equipment 
+1941 bloch_162_bomber_equipment_1                  quad_engine_bomber_equipment 
+1941 boeing_b17_equipment_2                        quad_engine_bomber_equipment 
+1941 handley_halifax_equipment_1                   quad_engine_bomber_equipment 
+1941 he_177_bomber_equipment_1                     quad_engine_bomber_equipment 
+1942 avro_lancaster_equipment_1                    quad_engine_bomber_equipment 
+1942 boeing_b17_equipment_3                        quad_engine_bomber_equipment 
+1942 he_177_bomber_equipment_2                     quad_engine_bomber_equipment 
+1942 nakajima_g5n_equipment_1                      quad_engine_bomber_equipment 
+1942 p108_heavy_bomber_equipment_1                 quad_engine_bomber_equipment 
+1942 strat_bomber_equipment_1942                   quad_engine_bomber_equipment 
+1943 boeing_b17_equipment_4                        quad_engine_bomber_equipment 
+1943 consolidated_b24_equipment_2                  quad_engine_bomber_equipment 
+1943 he_177_bomber_equipment_3                     quad_engine_bomber_equipment 
+1943 pe_8_bomber_equipment_2                       quad_engine_bomber_equipment 
+1944 avro_lancaster_equipment_2                    quad_engine_bomber_equipment 
+1944 boeing_b29_equipment_1                        quad_engine_bomber_equipment 
+1944 me_264_bomber_equipment_1                     quad_engine_bomber_equipment 
+1944 nakajima_g8n_equipment_1                      quad_engine_bomber_equipment 
+1944 p133_heavy_bomber_equipment_1                 quad_engine_bomber_equipment 
+1944 strat_bomber_equipment_1944                   quad_engine_bomber_equipment 
+1945 avro_lincoln_equipment_1                      quad_engine_bomber_equipment 
+1945 consolidated_b32_equipment_1                  quad_engine_bomber_equipment 
+1945 he_277_bomber_equipment_1                     quad_engine_bomber_equipment 
+1945 ju_488_bomber_equipment_1                     quad_engine_bomber_equipment 
+1946 kawasaki_ki91_equipment_1                     quad_engine_bomber_equipment 
+
+### _airframe_suicide_craft.txt
+1943 sm79_guided_equipment_1                       suicide_craft_equipment 
+1944 ar4_guided_equipment_1                        suicide_craft_equipment 
+1944 rocket_suicide_equipment_1                    suicide_craft_equipment 
+1945 nakajima_ki_115_equipment_1                   suicide_craft_equipment 
+
+### _airframe_tacbomber.txt
+1924 vickers_virginia_bomber_equipment_1           tac_bomber_equipment   
+1924 vickers_virginia_bomber_equipment_2           tac_bomber_equipment   
+1930 prewar_tac_bomber_equipment_1                 tac_bomber_equipment   
+1933 do_11_bomber_equipment_1                      tac_bomber_equipment   
+1933 ju_52_bomber_equipment_1                      tac_bomber_equipment   
+1933 tac_bomber_equipment_1933                     tac_bomber_equipment   
+1934 bloch_200_bomber_equipment_1                  tac_bomber_equipment   
+1934 curtiss_condor_equipment_1                    tac_bomber_equipment   
+1934 do_23_bomber_equipment_1                      tac_bomber_equipment   
+1934 sm72_bomber_equipment_1                       tac_bomber_equipment   
+1935 amiot_143_bomber_equipment_1                  tac_bomber_equipment   
+1935 amiot_143_bomber_equipment_2                  tac_bomber_equipment   
+1935 he_111_bomber_equipment_1                     tac_bomber_equipment   
+1935 mitsubishi_g3m_equipment_1                    tac_bomber_equipment   
+1935 sm81_bomber_equipment_1                       tac_bomber_equipment   
+1936 bloch_210_bomber_equipment_1                  tac_bomber_equipment   
+1936 br20_bomber_equipment_1                       tac_bomber_equipment   
+1936 db_3_bomber_equipment_1                       tac_bomber_equipment   
+1936 douglas_b18_equipment_1                       tac_bomber_equipment   
+1936 he_111_bomber_equipment_2                     tac_bomber_equipment   
+1936 tac_bomber_equipment_1936                     tac_bomber_equipment   
+1937 ca135_bomber_equipment_1                      tac_bomber_equipment   
+1937 handley_harrow_bomber_equipment_1             tac_bomber_equipment   
+1937 he_111_bomber_equipment_3                     tac_bomber_equipment   
+1938 ca135bis_bomber_equipment_1                   tac_bomber_equipment   
+1938 he_111_bomber_equipment_4                     tac_bomber_equipment   
+1938 leo_451_bomber_equipment_1                    tac_bomber_equipment   
+1938 mitsubishi_g3m_equipment_2                    tac_bomber_equipment   
+1938 tac_bomber_equipment_1938                     tac_bomber_equipment   
+1938 vickers_wellington_bomber_equipment_1         tac_bomber_equipment   
+1939 db_3_bomber_equipment_2                       tac_bomber_equipment   
+1939 douglas_b23_equipment_1                       tac_bomber_equipment   
+1939 he_111_bomber_equipment_5                     tac_bomber_equipment   
+1940 br20m_bomber_equipment_1                      tac_bomber_equipment   
+1940 he_111_h_bomber_equipment_1                   tac_bomber_equipment   
+1940 leo_455_bomber_equipment_1                    tac_bomber_equipment   
+1940 tac_bomber_equipment_1940                     tac_bomber_equipment   
+1940 vickers_wellington_bomber_equipment_2         tac_bomber_equipment   
+1941 he_111_h6_bomber_equipment_1                  tac_bomber_equipment   
+1941 il_4_bomber_equipment_1                       tac_bomber_equipment   
+1941 martin_b26_equipment_1                        tac_bomber_equipment   
+1941 mitsubishi_g4m_equipment_1                    tac_bomber_equipment   
+1941 yer_2_bomber_equipment_1                      tac_bomber_equipment   
+1942 he_111_h16_bomber_equipment_1                 tac_bomber_equipment   
+1942 martin_b26_equipment_2                        tac_bomber_equipment   
+1942 tac_bomber_equipment_1942                     tac_bomber_equipment   
+1942 vickers_wellington_bomber_equipment_3         tac_bomber_equipment   
+1943 br20bis_bomber_equipment_1                    tac_bomber_equipment   
+1943 mitsubishi_g4m2_equipment_1                   tac_bomber_equipment   
+1943 yer_2_bomber_equipment_2                      tac_bomber_equipment   
+1944 do_317_bomber_equipment_1                     tac_bomber_equipment   
+1944 martin_b26_equipment_3                        tac_bomber_equipment   
+1944 tac_bomber_equipment_1944                     tac_bomber_equipment   
+1944 yokosuka_p1_equipment_1                       tac_bomber_equipment   
+1947 douglas_b42_equipment_1                       tac_bomber_equipment   
+
+### _airframe_transport_plane.txt
+1929 tb_1_transport_equipment_1                    transport_plane_equipment 
+1930 transport_ju_52_equipment_1                   transport_plane_equipment 
+1932 ant_9_transport_equipment_1                   transport_plane_equipment 
+1932 tb_3_transport_equipment_1                    transport_plane_equipment 
+1933 s73_transport_plane_equipment_1               transport_plane_equipment 
+1933 transport_plane_equipment_1                   transport_plane_equipment 
+1935 ca133_transport_plane_equipment_1             transport_plane_equipment 
+1935 vickers_valentia_transport_equipment_1        transport_plane_equipment 
+1936 douglas_dc2_transport_equipment_1             transport_plane_equipment 
+1936 douglas_dc3_transport_equipment_1             transport_plane_equipment 
+1936 sm81_transport_plane_equipment_1              transport_plane_equipment 
+1937 handley_harrow_transport_equipment_1          transport_plane_equipment 
+1937 transport_ki_34_equipment_1                   transport_plane_equipment 
+1937 transport_nakjima_l1n_equipment_1             transport_plane_equipment 
+1938 lockheed_c36_transport_equipment_1            transport_plane_equipment 
+1938 sm75_transport_plane_equipment_1              transport_plane_equipment 
+1939 bristol_bombay_transport_equipment_1          transport_plane_equipment 
+1939 li_2_transport_equipment_1                    transport_plane_equipment 
+1939 sm82_transport_plane_equipment_1              transport_plane_equipment 
+1939 transport_nakjima_l2d3_equipment_1            transport_plane_equipment 
+1940 dehavilland_flamingo_transport_equipment_1    transport_plane_equipment 
+1940 fw_200_transport_equipment_1                  transport_plane_equipment 
+1940 lockheed_c60_transport_equipment_1            transport_plane_equipment 
+1940 transport_ki_56_equipment_1                   transport_plane_equipment 
+1940 transport_yokosuka_l3y_equipment_1            transport_plane_equipment 
+1941 armstrong_albemarle_transport_equipment_1     transport_plane_equipment 
+1941 curtiss_c46_transport_equipment_1             transport_plane_equipment 
+1941 g12_transport_plane_equipment_1               transport_plane_equipment 
+1941 transport_ki_57_equipment_1                   transport_plane_equipment 
+1942 douglas_c47_transport_equipment_1             transport_plane_equipment 
+1942 douglas_c54_transport_equipment_1             transport_plane_equipment 
+1942 p108t_transport_plane_equipment_1             transport_plane_equipment 
+1942 transport_ki_57_equipment_2                   transport_plane_equipment 
+1942 transport_nakajima_g5nl_equipment_1           transport_plane_equipment 
+1942 vickers_wellington_transport_equipment_1      transport_plane_equipment 
+1943 avro_york_transport_equipment_1               transport_plane_equipment 
+1943 consolidated_c87_transport_equipment_1        transport_plane_equipment 
+1943 lockheed_c69_transport_equipment_1            transport_plane_equipment 
+1943 sm95_transport_plane_equipment_1              transport_plane_equipment 
+1943 transport_he_111_h20_equipment_1              transport_plane_equipment 
+1943 transport_ki_49_equipment_1                   transport_plane_equipment 
+1943 transport_plane_equipment_2                   transport_plane_equipment 
+1944 pe_8_transport_equipment_1                    transport_plane_equipment 
+1944 transport_nakajima_g8nl_equipment_1           transport_plane_equipment 
+1944 vickers_warwick_transport_equipment_1         transport_plane_equipment 
+1945 avro_lancastrian_transport_equipment_1        transport_plane_equipment 
+1946 il_12_transport_equipment_1                   transport_plane_equipment 

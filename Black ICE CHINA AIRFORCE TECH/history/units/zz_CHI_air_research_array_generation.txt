@@ -1,0 +1,3 @@
+# 中系飞机科技树 / Chinese Aircraft Tech Tree
+# history/units 兜底入口（黑冰 replace_path 了 history/units，可能不执行，保留无害）
+instant_effect = { CHI_air_build_research_arrays = yes }

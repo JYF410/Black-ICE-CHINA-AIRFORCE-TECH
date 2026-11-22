@@ -1,2 +1,0 @@
-# Black-ICE-CHINA-AIRFORCE-TECH
-黑冰中国空军科技
