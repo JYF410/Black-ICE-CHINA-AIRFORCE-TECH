@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import os as _os
 import sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
-from config import MOD
+from config import MOD, GENERATE_TAB_PLACEHOLDER
 FONT_CN = r"C:\Windows\Fonts\msyhbd.ttc"
 FONT_EN = r"C:\Windows\Fonts\msyhbd.ttc"
 
@@ -65,6 +65,9 @@ def tab_frame(active):
 
 
 def make_tab():
+    if not GENERATE_TAB_PLACEHOLDER:
+        print("skip tab placeholder (GENERATE_TAB_PLACEHOLDER=False, using custom DDS)")
+        return None
     a = tab_frame(False)
     b = tab_frame(True)
     out = Image.new("RGBA", (364, 61), (0, 0, 0, 0))

@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """Generate the "Chinese Aircraft Tech Tree" submod for Black ICE / BIAD.
 
 Outputs into the session workspace (mod root):
@@ -30,6 +30,10 @@ from config import (
     SLOT, YEAR_BASE, YEAR_STEP, PIXEL_ORIGIN_X, PIXEL_ORIGIN_Y,
     CANVAS_W, CANVAS_H, COLUMNS,
     MOD_VERSION, MOD_NAME_CN, MOD_NAME_EN, SUPPORTED_VERSION, DEPENDENCIES,
+    HIDE_GENERIC_AIR, AVAILABLE_BY_FLAG_ONLY,
+    TIP_EVENT_ENABLED, TIP_EVENT_ID, TIP_EVENT_NAMESPACE, TIP_FLAG,
+    TAB_TEXTURE, TAB_FRAMES, REQUEST_FOLDER, CANDIDATE_FLAG, REQUEST_GATE,
+    TANK_FOLDER, TANK_FLAG, ARMOR_TT_FIX,
 )
 
 TECH_DIR = os.path.join(MOD, "common", "technologies")
@@ -454,22 +458,53 @@ def write_text(path, text, bom=False):
 
 
 def emit_technology_tags():
-    tag_or = "\n".join(f"\t\t\t\toriginal_tag = {t}" for t in CHINESE_TAGS)
-    tag_or_not = "\n".join(f"\t\t\t\t\toriginal_tag = {t}" for t in CHINESE_TAGS)
-    text = f"""# 中系飞机科技树 / Chinese Aircraft Tech Tree
-# 中国（含中共及内战分裂政权）显示专属空军科技标签页，
-# 同时把黑冰通用空军页对中国隐藏，避免出现两个空军页。
-# 判定方式：{FLAG} 标志（on_startup 设置）或 original_tag，双重保险。
-technology_folders = {{
-	{FOLDER} = {{
+    """生成 technology_folders 覆盖。
+
+    重点（0.3.0）：中系判定改用 original_tag，让「显示中国空军页 / 隐藏通用空军页」
+    在**读档那一帧**就已经成立——BIAD 对德意日美英法苏就是这么做的（写在国家历史里）。
+    之前用 on_startup 挂标志，科技视图在标志生效前就建好了，于是隐藏通用页会导致
+    科研界面闪一下就关。
+    """
+    tags_or = "\n".join(f"\t\t\t\t\toriginal_tag = {t}" for t in CHINESE_TAGS)
+
+    if REQUEST_GATE:
+        gate = f"\t\t\thas_country_flag = {FLAG}"
+        request_block = f"""
+	{REQUEST_FOLDER} = {{
 		ledger = air
 		available = {{
+			has_country_flag = {CANDIDATE_FLAG}
+			NOT = {{ has_country_flag = {FLAG} }}
+		}}
+	}}"""
+    else:
+        gate = f"""\t\t\tOR = {{
+\t\t\t\thas_country_flag = {FLAG}
+{tags_or}
+\t\t\t}}"""
+        request_block = ""
+
+    # 坦克子模文件夹：哪怕坦克子模没启用也注册一份（条件相同），
+    # 这样 gui 里它的页签是「未解锁」而不是「文件夹不存在」，不会留下死页签。
+    # 0.4.7 起改为「标志 或 四条条件」，满足条件即自动解锁（不再依赖请求面板点击）。
+    tank_block = f"""
+	{TANK_FOLDER} = {{
+		ledger = army
+		available = {{
+			# 静态判定：装着坦克子模就一直可见。
+			# 动态条件（工厂/国策/科技）会让文件夹可用性在游戏中途翻转，
+			# 实测会直接把黑冰科研界面弄崩，所以不再用条件解锁。
+			# 静态判定：original_tag 在读档那一刻就成立，不会中途翻转
 			OR = {{
-				has_country_flag = {FLAG}
-{tag_or}
+				original_tag = CHI
+				original_tag = PRC
 			}}
 		}}
-	}}
+	}}"""
+
+    hide_block = ""
+    if HIDE_GENERIC_AIR:
+        hide_block = f"""
 	air_techs_folder = {{
 		ledger = air
 		available = {{
@@ -483,22 +518,48 @@ technology_folders = {{
 					has_country_flag = FRA_air
 					has_country_flag = SOV_air
 					has_country_flag = {FLAG}
-{tag_or_not}
+{tags_or}
 				}}
 			}}
 		}}
-	}}
+	}}"""
+
+    import config as _cfg
+    if getattr(_cfg, "GUI_MINIMAL", False):
+        # 诊断模式：只保留坦克文件夹，不注册中国空军页（否则会 Window not found）
+        text = f"""# 诊断模式：只注册坦克文件夹
+technology_folders = {{
+{tank_block}
+}}
+"""
+        path = os.path.join(MOD, "common", "technology_tags", "zz_CHI_air_technology.txt")
+        write_text(path, text)
+        log("technology_tags (MINIMAL) ->", path)
+        return
+
+    text = f"""# 中系飞机科技树 / Chinese Aircraft Tech Tree
+# REQUEST_GATE={REQUEST_GATE}，HIDE_GENERIC_AIR={HIDE_GENERIC_AIR}
+# 中系判定用 original_tag，保证读档时状态一致（见函数注释）
+technology_folders = {{
+	{FOLDER} = {{
+		ledger = air
+		available = {{
+{gate}
+		}}
+	}}{request_block}{hide_block}
 }}
 """
     path = os.path.join(MOD, "common", "technology_tags", "zz_CHI_air_technology.txt")
     write_text(path, text)
-    log("technology_tags ->", path)
+    log("technology_tags ->", path, f"(hide_generic={HIDE_GENERIC_AIR}, tag_based=True)")
 
 
 def emit_on_actions():
     tag_or = "\n".join(f"\t\t\t\t\t\toriginal_tag = {t}" for t in CHINESE_TAGS)
     text = f"""# 中系飞机科技树 / Chinese Aircraft Tech Tree
-# 开局给中国（含中共）挂上 {FLAG} 标志，科技树标签页据此显示。
+# 解锁不再由 on_startup 自动授予：玩家需在「+」请求页提交申请并满足条件，
+# 由 common/scripted_guis/CHI_air_request.txt 授予 {FLAG}。
+# 这里只留一条日志方便确认模组已加载。
 on_actions = {{
 	on_startup = {{
 		effect = {{
@@ -509,7 +570,21 @@ on_actions = {{
 					}}
 				}}
 				set_country_flag = {FLAG}
-				log = "{LOG_MARKER}: {FLAG} granted to [THIS.GetTag]"
+				set_country_flag = CHI_armor
+				log = "{LOG_MARKER} v{MOD_VERSION}: China air tree loaded for [THIS.GetTag]"
+			}}
+			# 一次性提示：装甲科技页首次打开可能缺图标/连线，需存档读档一次
+			every_country = {{
+				limit = {{
+					is_player = yes
+					NOT = {{ has_country_flag = CHI_armor_tip_shown }}
+					OR = {{
+						original_tag = CHI
+						original_tag = PRC
+					}}
+				}}
+				set_country_flag = CHI_armor_tip_shown
+				news_event = {{ id = CHI_air_unlock.2 days = 1 }}
 			}}
 		}}
 	}}
@@ -518,6 +593,82 @@ on_actions = {{
     path = os.path.join(MOD, "common", "on_actions", "zz_CHI_air_startup.txt")
     write_text(path, text)
     log("on_actions ->", path)
+
+
+def emit_events():
+    if not TIP_EVENT_ENABLED:
+        return
+    text = f"""# 中系飞机科技树 / Chinese Aircraft Tech Tree
+# 「飞机科技研究权已获得」解锁事件（AUTO-GENERATED）
+# 与坦克科技子模同款原因：黑冰科研界面会缓存布局，
+# 首次打开新科技页时科技之间的连线/箭头可能不显示，存档再读档一次即可。
+add_namespace = {TIP_EVENT_NAMESPACE}
+
+country_event = {{
+	id = {TIP_EVENT_ID}
+	title = {TIP_EVENT_ID}.t
+	desc = {TIP_EVENT_ID}.d
+	is_triggered_only = yes
+	option = {{
+		name = {TIP_EVENT_ID}.a
+	}}
+}}
+
+# 带图片的版本：走 news_event 窗口（黑冰的普通事件窗口没有可用的图片控件）
+news_event = {{
+	id = CHI_air_unlock.2
+	title = CHI_air_unlock.2.t
+	desc = CHI_air_unlock.2.d
+	picture = GFX_chi_armor_tip
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {{
+		name = CHI_air_unlock.2.a
+	}}
+}}
+"""
+    path = os.path.join(MOD, "events", "zz_CHI_air_tip.txt")
+    write_text(path, text)
+    log("events ->", path)
+
+
+def emit_request_gui():
+    """「+」请求页的 scripted GUI：按钮点击后授予 CHI_air 并触发解锁事件。"""
+    path = os.path.join(MOD, "common", "scripted_guis", "CHI_air_request.txt")
+    if not REQUEST_GATE:
+        # 关掉请求页时必须删除旧文件，否则它会引用不存在的窗口
+        if os.path.isfile(path):
+            os.remove(path)
+            log("request gui -> removed (REQUEST_GATE=False)")
+        return
+    text = f"""# 中系飞机科技树 / Chinese Aircraft Tech Tree
+# 「+」请求页交互（AUTO-GENERATED）
+scripted_gui = {{
+	CHI_air_request = {{
+		context_type = player_context
+
+		window_name = "{REQUEST_FOLDER}"
+
+		effects = {{
+			request_air_click = {{
+				if = {{
+					limit = {{ CHI_air_request_ready = yes }}
+					set_country_flag = {FLAG}
+					country_event = {{ id = {TIP_EVENT_ID} }}
+				}}
+			}}
+		}}
+
+		triggers = {{
+			request_air_click_enabled = {{
+				CHI_air_request_ready = yes
+			}}
+		}}
+	}}
+}}
+"""
+    write_text(path, text)
+    log("request gui ->", path)
 
 
 def emit_scripted_triggers():
@@ -566,12 +717,30 @@ def emit_gfx():
         log("WARN missing airframe icon:", ", ".join(missing))
 
     lines = ["spriteTypes = {", ""]
+
+    # 页签贴图：使用自制 DDS（gfx/interface/techtree/techtree_chiair_tab.dds），缺文件直接报错
+    if not os.path.isfile(os.path.join(MOD, TAB_TEXTURE)):
+        raise SystemExit(
+            f"缺少页签贴图 {TAB_TEXTURE}。请把自制 DDS 放到 gfx/interface/techtree/ 下，"
+            "或修改 config.TAB_TEXTURE。"
+        )
+    log("tab icon ->", TAB_TEXTURE)
     lines.append("\t### 中国空军科技树标签页按钮（2 帧：常态 / 选中）")
     lines.append("\tspriteType = {")
     lines.append(f'\t\tname = "GFX_{FOLDER}_tab"')
-    lines.append('\t\ttextureFile = "gfx/interface/techtree/techtree_china_air_tab.tga"')
-    lines.append("\t\tnoOfFrames = 2")
+    lines.append(f'\t\ttextureFile = "{TAB_TEXTURE}"')
+    lines.append(f"\t\tnoOfFrames = {TAB_FRAMES}")
     lines.append("\t}")
+
+    # 事件配图（坦克科技树使用提示）
+    lines.append("\t### 事件配图")
+    lines.append("\tspriteType = {")
+    lines.append('\t\tname = "GFX_chi_armor_tip"')
+    lines.append('\t\ttexturefile = "gfx/event_pictures/chi_armor_tip.dds"')
+    lines.append("\t}")
+    lines.append("")
+    # 不注册 GFX_chi_tank_folder_tab：该 sprite 由坦克子模提供。
+    # 我们重复定义同名 sprite 可能与坦克子模的 gfx 冲突（实测坦克页图标会消失），故移除。
     lines.append("")
     lines.append("\t### 科技图标：直接引用原版 / 黑冰 / BIAD 已有的机种与配件图标")
     for tid, tex in sprites:
@@ -616,6 +785,25 @@ def find_block(text, anchor_regex, open_kind="containerWindowType"):
     return (start, i)
 
 
+def extract_container(text, name):
+    """Return the whole `containerWindowType = { ... }` block whose name is `name`."""
+    marker = f'name = "{name}"'
+    i = text.find(marker)
+    if i < 0:
+        raise SystemExit(f"container '{name}' not found in source GUI")
+    start = text.rfind("containerWindowType", 0, i)
+    brace = text.index("{", start)
+    depth = 1
+    j = brace + 1
+    while j < len(text) and depth:
+        if text[j] == "{":
+            depth += 1
+        elif text[j] == "}":
+            depth -= 1
+        j += 1
+    return text[start:j]
+
+
 def gui_folder_container(sprites):
     year_labels = []
     for year in range(YEAR_BASE, YEAR_BASE + 13):
@@ -636,15 +824,29 @@ def gui_folder_container(sprites):
 				}}"""
         )
     grid = []
+    # 小格科技（发动机/枪炮/挂载）需要额外的 <tech>_small_tree 格子，
+    # 引擎才会用 72×72 的 small_item 模板渲染（与坦克子模的弹药科技一致）。
+    small_tids = {tech_id("engine", t["key"]) for t in D.ENGINES}
+    small_tids |= {tech_id("gun", t["key"]) for t in D.GUNS}
+    small_tids |= {tech_id("ord", t["key"]) for t in D.ORDNANCE}
     for tid, _tex in sprites:
         grid.append(
-            f"""				gridboxtype = {{
-					name = "{tid}_tree"
-					position = {{ x = 190 y = 172 }}
-					slotsize = {{ width = 70 height = 70 }}
-					format = "UP"
-				}}"""
+            f"""			gridboxtype = {{
+				name = "{tid}_tree"
+				position = {{ x = 190 y = 172 }}
+				slotsize = {{ width = 70 height = 70 }}
+				format = "UP"
+			}}"""
         )
+        if tid in small_tids:
+            grid.append(
+                f"""			gridboxtype = {{
+				name = "{tid}_small_tree"
+				position = {{ x = 190 y = 172 }}
+				slotsize = {{ width = 70 height = 70 }}
+				format = "UP"
+			}}"""
+            )
     body = f"""
 		containerWindowType = {{
 			name = "{FOLDER}"
@@ -684,12 +886,73 @@ def gui_folder_container(sprites):
 				}}
 
 {chr(10).join(year_labels)}
-
-{chr(10).join(grid)}
 			}}
+
+			# gridbox 必须是 folder 容器的直接子节点（与 BIAD 国家空军树一致），
+			# 放进 techtree_stripes 里引擎会找不到，报 "Found no grid box for tech"。
+{chr(10).join(grid)}
 		}}
 """
     return body
+
+
+def gui_request_container():
+    """「+」请求页：解锁前取代正片页，里面只有一个申请按钮。"""
+    return f"""
+		containerWindowType = {{
+			name = "{REQUEST_FOLDER}"
+			position = {{ x=@TECH_X_OFFSET y=47 }}
+			size = {{ width = 100%% height = 100%% }}
+			margin = {{ top = 13 left = 13 bottom = 24 right = 25}}
+
+			background = {{
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_2b_border"
+			}}
+
+			containerWindowType = {{
+				name = "techtree_stripes"
+				position = {{ x= 0 y= 0 }}
+				size = {{ width = 1400 height = 900 min = {{ width = 100% height = 100% }} }}
+				clipping = no
+
+				background = {{
+					name = "Background"
+					quadTextureSprite = "GFX_techtree_stripes"
+				}}
+
+				instantTextBoxType = {{
+					name = "request_title"
+					position = {{ x = 300 y = 180 }}
+					font = "hoi_36header"
+					text = "CHI_air_request_title"
+					maxWidth = 800
+					maxHeight = 60
+					format = left
+				}}
+
+				instantTextBoxType = {{
+					name = "request_desc"
+					position = {{ x = 300 y = 260 }}
+					font = "hoi_16mbs"
+					text = "CHI_air_request_desc"
+					maxWidth = 820
+					maxHeight = 220
+					format = left
+				}}
+
+				buttonType = {{
+					name = "request_air"
+					position = {{ x = 300 y = 520 }}
+					spriteType = "GFX_button_150x34"
+					buttonfont = "hoi_18mbs"
+					buttontext = "CHI_air_request_button"
+					pdx_tooltip = "CHI_air_request_tooltip"
+					clicksound = click_default
+				}}
+			}}
+		}}
+"""
 
 
 def read_gui_lines(path):
@@ -709,6 +972,15 @@ def read_gui_lines(path):
     return out
 
 
+def shift_folder_tabs(text):
+    """不动页签位置。
+
+    0.6.2 起开局就给中国挂 CHI_armor，坦克子模自己的 BI_research_tabs 覆盖会把
+    「请求装甲 +」对 CHI 隐藏，所以 340 那一格空出来给坦克页签，不需要再挤别的页签。
+    """
+    return text
+
+
 def emit_gui(sprites, base_override=None, out_path=None):
     base = base_override or os.path.join(TANK, "interface", "countrytechtreeview.gui")
     base_name = "中国坦克科技子模"
@@ -718,6 +990,14 @@ def emit_gui(sprites, base_override=None, out_path=None):
         base = os.path.join(BIAD, "interface", "countrytechtreeview.gui")
         base_name = "BlackICE Aircraft Designer"
     lines = read_gui_lines(base)
+    import config as _cfg
+    if getattr(_cfg, "GUI_MINIMAL", False):
+        # 诊断模式：原样输出坦克子模的 gui（不插入我们的页签/文件夹/模板）
+        text = "\n".join(lines)
+        path = out_path or os.path.join(MOD, "interface", "countrytechtreeview.gui")
+        write_text(path, text)
+        log("GUI (MINIMAL, no insertions) ->", path)
+        return
     text = "\n".join(lines)
     log(f"GUI base: {base_name} ({len(lines)} lines)")
 
@@ -738,6 +1018,16 @@ def emit_gui(sprites, base_override=None, out_path=None):
         '\t\t\t\tclicksound = click_default\n'
         '\t\t\t}\n'
     )
+    if REQUEST_GATE:
+        button += (
+            '\t\t\tbuttonType = {\n'
+            '\t\t\t\tposition = { x=880 y = 0 }\n'
+            f'\t\t\t\tname = "{REQUEST_FOLDER}_tab"\n'
+            '\t\t\t\tquadTextureSprite = "GFX_techtree_tabs"\n'
+            '\t\t\t\tframe = 2\n'
+            '\t\t\t\tclicksound = click_default\n'
+            '\t\t\t}\n'
+        )
     text = text[:line_start] + button + text[line_start:]
 
     # 2) folder container: insert on its own line right after the usair_folder block
@@ -748,11 +1038,36 @@ def emit_gui(sprites, base_override=None, out_path=None):
     line_start = text.find("\n", insert_at)
     if line_start < 0:
         line_start = len(text)
-    text = text[:line_start + 1] + gui_folder_container(sprites) + "\n" + text[line_start + 1:]
+    extra = "\n" + gui_request_container() if REQUEST_GATE else ""
+    text = (
+        text[:line_start + 1]
+        + gui_folder_container(sprites)
+        + extra
+        + "\n"
+        + text[line_start + 1:]
+    )
 
+    # 3) per-folder tech item templates.
+    # 引擎按 "techtree_<folder>_item" / "techtree_<folder>_small_item" 取模板；
+    # 缺了会报 "Undefined GUI_TYPE ... Failed to create containerWindowType"，
+    # 科技页表现为闪烁一下就打不开。模板是 guiTypes 下的顶层 containerWindowType。
+    item_src = os.path.join(BIAD, "interface", "countrytechtreeview.gui")
+    item_text = "\n".join(read_gui_lines(item_src))
+    blocks = []
+    for suffix in ("_item", "_small_item"):
+        name = f"techtree_luftwaffe_folder{suffix}"
+        blocks.append(extract_container(item_text, name))
+    templates = "\n\n".join(
+        b.replace("techtree_luftwaffe_folder", f"techtree_{FOLDER}") for b in blocks
+    )
+    # insert before the final closing brace (end of guiTypes)
+    last = text.rstrip().rfind("}")
+    text = text[:last] + templates + "\n" + text[last:]
+
+    text = shift_folder_tabs(text)
     path = out_path or os.path.join(MOD, "interface", "countrytechtreeview.gui")
     write_text(path, text)
-    log("GUI ->", path)
+    log("GUI ->", path, f"(+2 item templates: techtree_{FOLDER}_item / _small_item)")
 
 
 # ==========================================================================
@@ -791,6 +1106,104 @@ def loc_lines(lang):
         out.append(f' SLOT_{FOLDER}:0 "§Y中国空军§!\\n"')
         out.append(f' {FOLDER}:0 "中国空军"')
         out.append(f' {FOLDER}_tab:0 "中国空军"')
+    if TIP_EVENT_ENABLED:
+        if lang == "english":
+            out.append(f' {TIP_EVENT_ID}.t:0 "Aircraft Research Rights Acquired"')
+            out.append(
+                f' {TIP_EVENT_ID}.d:0 "The Republic of China has secured its own aircraft research '
+                f'programme. A new \\"Chinese Air Force\\" page is now available in the research screen.\\n\\n'
+                f'Because the Black ICE research interface caches its layout, the connection lines '
+                f'(arrows) between technologies may not appear the first time you open it. Please save '
+                f'the game and load it again once - the lines and icon positions will then display correctly."'
+            )
+            out.append(f' {TIP_EVENT_ID}.a:0 "Understood."')
+            out.append(' CHI_air_request_title:0 "Request Aircraft Research Assistance"')
+            out.append(
+                ' CHI_air_request_desc:0 "Our air force has no independent research programme yet. '
+                'If we can show a real industrial base - or a sufficiently determined government - '
+                'our allies and advisors will help us set one up.\\n\\n'
+                'Requirements (any one):\\n'
+                '  - at least 2 aircraft assembly plants, or\\n'
+                '  - at least 2 engine assembly plants, or\\n'
+                '  - the ruling party follows an absolutist / despotic ideology."'
+            )
+            out.append(' CHI_air_request_button:0 "Submit the request"')
+            out.append(
+                ' CHI_air_request_tooltip:0 "Once the requirements are met, this unlocks the '
+                'Chinese Air Force tech tree. Remember to save and reload once so the tech tree '
+                'draws its connection lines."'
+            )
+            out.append(f' SLOT_{REQUEST_FOLDER}:0 "§YRequest Air Research§!\\n"')
+        else:
+            out.append(f' {TIP_EVENT_ID}.t:0 "飞机科技研究权已获得"')
+            out.append(
+                f' {TIP_EVENT_ID}.d:0 "中华民国已经获得独立的航空科技研究权，科研界面中新增了'
+                f'「中国空军」科技页。\\n\\n由于黑冰的科研界面会缓存布局，第一次打开该页时，'
+                f'科技之间的连线（箭头）可能不显示。请先保存游戏并重新载入一次，连线与图标位置'
+                f'就会恢复正常。"'
+            )
+            out.append(f' {TIP_EVENT_ID}.a:0 "明白了。"')
+            out.append(' CHI_air_request_title:0 "申请航空科技研究权"')
+            out.append(
+                ' CHI_air_request_desc:0 "我们的空军还没有独立的研究体系。只要能证明我们拥有'
+                '像样的工业基础——或者足够坚定的政府——盟国与顾问就会帮我们建立起来。\\n\\n'
+                '满足以下任意一项即可申请：\\n'
+                '  · 至少 2 座飞机装配厂，或\\n'
+                '  · 至少 2 座发动机装配厂，或\\n'
+                '  · 当前执政党奉行专制主义 / 专制统治意识形态。"'
+            )
+            out.append(' CHI_air_request_button:0 "提交申请"')
+            out.append(
+                ' CHI_air_request_tooltip:0 "满足条件后提交，即可解锁中国空军科技树。'
+                '解锁后记得先存档再读档一次，科技连线才会正常绘制。"'
+            )
+            out.append(f' SLOT_{REQUEST_FOLDER}:0 "§Y申请航空科技研究权§!\\n"')
+    out.append(
+        ' CHI_ARMOR_REQ_TT:0 "需要其中之一：\\n'
+        '· 坦克装配厂 ≥2 且发动机装配厂 ≥2\\n'
+        '· 已完成「早期拖拉机」研究\\n'
+        '· 已完成国策「中国装甲部队」\\n'
+        '· 已完成国策「聘请苏联设计商」"'
+        if lang == "simp_chinese"
+        else ' CHI_ARMOR_REQ_TT:0 "Requires any one of:\\n'
+        '· at least 2 tank assembly plants AND at least 2 engine assembly plants\\n'
+        '· researched Early Tractors\\n'
+        '· completed focus Chinese Armoured Forces\\n'
+        '· completed focus Hire Soviet Designers"'
+    )
+    if lang == "simp_chinese":
+        out.append(' CHI_armor_unlock.1.t:0 "中国坦克科技树使用提示"')
+        out.append(
+            ' CHI_armor_unlock.1.d:0 "£chi_armor_tip\\n\\n「中国空军」与「中国坦克」科技页已经可用。'
+            '\\n\\n由于黑冰的科研界面会缓存布局，第一次打开这些科技页时，'
+            '图标、名字与科技之间的连线可能不显示。请先保存游戏并重新载入一次，之后就会恢复正常。"'
+        )
+        out.append(' CHI_armor_unlock.1.a:0 "明白了。"')
+        out.append(' CHI_air_unlock.2.t:0 "中国坦克科技树使用提示"')
+        out.append(
+            ' CHI_air_unlock.2.d:0 "「中国空军」与「中国坦克」科技页已经可用。'
+            '\\n\\n由于黑冰的科研界面会缓存布局，第一次打开这些科技页时，'
+            '图标、名字与科技之间的连线可能不显示。请先保存游戏并重新载入一次，之后就会恢复正常。"'
+        )
+        out.append(' CHI_air_unlock.2.a:0 "明白了。"')
+    else:
+        out.append(' CHI_armor_unlock.1.t:0 "Chinese Armour Tech Tree - Usage Notes"')
+        out.append(
+            ' CHI_armor_unlock.1.d:0 "£chi_armor_tip\\n\\nThe \\"Chinese Air Force\\" and \\"Chinese Armour\\" technology '
+            'pages are available.\\n\\nBecause the Black ICE research interface caches its layout, '
+            'the first time you open them the icons, names and connection lines may be missing. '
+            'Please save the game and load it again once; after that they display correctly."'
+        )
+        out.append(' CHI_armor_unlock.1.a:0 "Understood."')
+        out.append(' CHI_air_unlock.2.t:0 "Chinese Armour Tech Tree - Usage Notes"')
+        out.append(
+            ' CHI_air_unlock.2.d:0 "The \"Chinese Air Force\" and \"Chinese Armour\" technology '
+            'pages are available.\\n\\nBecause the Black ICE research interface caches its layout, '
+            'the first time you open them the icons, names and connection lines may be missing. '
+            'Please save the game and load it again once; after that they display correctly."'
+        )
+        out.append(' CHI_air_unlock.2.a:0 "Understood."')
+        out.append(' CHI_air_unlock.2.t:0 "Chinese Armour Tech Tree - Usage Notes"') if False else None
     return out
 
 
@@ -823,6 +1236,283 @@ supported_version="{SUPPORTED_VERSION}"
     log("descriptor ->", path)
 
 
+def emit_armor_tt_fix():
+    """（已停用）曾用于覆盖 BI 的 BI_request_armor_tab。
+
+    黑冰"请求装甲"面板里那面本国旗其实是页签按钮，点击路径在不同版本里不稳定，
+    直接改面板风险太高。现在改为「文件夹可用性 OR 四条条件」自动解锁，
+    不再需要点击任何旗帜；这里保留函数只负责清理旧文件。
+    """
+    path = os.path.join(MOD, "common", "scripted_guis", "zz_CHI_air_armor_request.txt")
+    if os.path.isfile(path):
+        os.remove(path)
+        log("armor panel patch -> removed (auto-unlock mode)")
+    return
+
+
+def _emit_armor_tt_fix_unused():
+    """覆盖 BI 的 BI_request_armor_tab：把 CHI 专属条件包进 hidden_trigger。
+
+    黑冰那句 `ROOT = { tag = CHI has_completed_focus = KMT_request_american_tanks }`
+    会出现在所有捐赠国图标的提示文字里（REQUEST_ARMOR_TOOLTIP = [!flag_click_enabled]），
+    看起来像"每个国家都要求中国完成那个国策"。包一层 hidden_trigger 后逻辑不变、提示不再显示。
+    """
+    path = os.path.join(MOD, "common", "scripted_guis", "zz_CHI_air_armor_request.txt")
+    if not ARMOR_TT_FIX:
+        if os.path.isfile(path):
+            os.remove(path)
+            log("armor tt fix -> removed (ARMOR_TT_FIX=False)")
+        return
+
+    src = os.path.join(BI, "common", "scripted_guis", "BI_research_tabs_scripted_gui.txt")
+    with open(src, encoding="utf-8-sig", errors="replace") as fh:
+        text = fh.read()
+    marker = "BI_request_armor_tab = {"
+    i = text.find(marker)
+    if i < 0:
+        raise SystemExit("BI_request_armor_tab not found in BI sources")
+    brace = text.index("{", i)
+    depth, j = 1, brace + 1
+    while j < len(text) and depth:
+        if text[j] == "{":
+            depth += 1
+        elif text[j] == "}":
+            depth -= 1
+        j += 1
+    block = text[i:j]
+
+    import re as _re
+    pattern = _re.compile(
+        r"NOT\s*=\s*\{\s*AND\s*=\s*\{\s*tag\s*=\s*USA\s*"
+        r"ROOT\s*=\s*\{\s*tag\s*=\s*CHI\s*has_completed_focus\s*=\s*KMT_request_american_tanks\s*\}\s*\}\s*\}",
+        _re.S,
+    )
+    m = pattern.search(block)
+    if not m:
+        log("WARN armor tt: CHI clause not found, 覆盖文件仍会生成但不改动")
+        fixed = block
+    else:
+        fixed = block[:m.start()] + "NOT = {\n\t\t\t\t\t\t\t\t\thidden_trigger = {\n\t\t\t\t\t\t\t\t\t\tAND = {\n\t\t\t\t\t\t\t\t\t\t\ttag = USA\n\t\t\t\t\t\t\t\t\t\t\tROOT = { tag = CHI has_completed_focus = KMT_request_american_tanks }\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t}" + block[m.end():]
+        log("armor tt fix: CHI clause wrapped in hidden_trigger")
+
+    # ---- 中国自己那面旗（entry 版）：只看四条解锁条件；别国旗仍走黑冰原版 ----
+    def _inner2(text, key):
+        k = text.find(key)
+        b = text.index("{", k)
+        d, q = 1, b + 1
+        while q < len(text) and d:
+            if text[q] == "{":
+                d += 1
+            elif text[q] == "}":
+                d -= 1
+            q += 1
+        return b + 1, q - 1
+
+    t0, t1 = _inner2(fixed, "flag_click_enabled = {")
+    original_enabled = fixed[t0:t1]
+    chi_enabled = (
+        "\n\t\t\t\tif = {\n"
+        "\t\t\t\t\tlimit = {\n"
+        "\t\t\t\t\t\tROOT = { tag = CHI }\n"
+        "\t\t\t\t\t\ttag = CHI\n"
+        "\t\t\t\t\t}\n"
+        "\t\t\t\t\tROOT = {\n"
+        "\t\t\t\t\t\tcustom_trigger_tooltip = {\n"
+        "\t\t\t\t\t\t\ttooltip = CHI_ARMOR_REQ_TT\n"
+        "\t\t\t\t\t\t\tOR = {\n"
+        "\t\t\t\t\t\t\t\tAND = { tank_assembly > 1 engine_assembly > 1 }\n"
+        "\t\t\t\t\t\t\t\thas_tech = early_tractors\n"
+        "\t\t\t\t\t\t\t\thas_completed_focus = KMT_chinese_panzers\n"
+        "\t\t\t\t\t\t\t\thas_completed_focus = KMT_hire_soviet_designer\n"
+        "\t\t\t\t\t\t\t}\n"
+        "\t\t\t\t\t\t}\n"
+        "\t\t\t\t\t}\n"
+        "\t\t\t\t}\n"
+        "\t\t\t\telse = {\n"
+        + original_enabled +
+        "\n\t\t\t\t}\n\t\t\t"
+    )
+    fixed = fixed[:t0] + chi_enabled + fixed[t1:]
+    log("armor tt fix: CHI self entry uses 4 conditions, others BI original")
+
+    # ---- 中国点自己的旗帜（=请求页签图标）时直接授予 CHI_armor ----
+    # 这一格不是捐赠国条目，而是 request_armor 按钮（显示本国国旗），
+    # 它的点击效果是 request_armor_click，不是 flag_click。所以在这里分流。
+    def _inner(text, key):
+        k = text.find(key)
+        b = text.index("{", k)
+        d, q = 1, b + 1
+        while q < len(text) and d:
+            if text[q] == "{":
+                d += 1
+            elif text[q] == "}":
+                d -= 1
+            q += 1
+        return b + 1, q - 1
+
+    s0, e0 = _inner(fixed, "request_armor_click = {")
+    original_click = fixed[s0:e0]
+    chi_click = (
+        "\n\t\t\t\tif = {\n"
+        "\t\t\t\t\tlimit = {\n"
+        "\t\t\t\t\t\tROOT = {\n"
+        "\t\t\t\t\t\t\ttag = CHI\n"
+        "\t\t\t\t\t\t\tOR = {\n"
+        "\t\t\t\t\t\t\t\tAND = { tank_assembly > 1 engine_assembly > 1 }\n"
+        "\t\t\t\t\t\t\t\thas_tech = early_tractors\n"
+        "\t\t\t\t\t\t\t\thas_completed_focus = KMT_chinese_panzers\n"
+        "\t\t\t\t\t\t\t\thas_completed_focus = KMT_hire_soviet_designer\n"
+        "\t\t\t\t\t\t\t}\n"
+        "\t\t\t\t\t\t}\n"
+        "\t\t\t\t\t}\n"
+        "\t\t\t\t\tROOT = {\n"
+        "\t\t\t\t\t\tset_country_flag = CHI_armor\n"
+        "\t\t\t\t\t\tlog = \"CHI_ARMOR_TRIGGERED by [THIS.GetTag]\"\n"
+        "\t\t\t\t\t\tcountry_event = CHI_armor_unlock.1\n"
+        "\t\t\t\t\t}\n"
+        "\t\t\t\t}\n"
+        "\t\t\t\telse = {\n"
+        + original_click +
+        "\n\t\t\t\t}\n\t\t\t"
+    )
+    fixed = fixed[:s0] + chi_click + fixed[e0:]
+    log("armor tt fix: CHI tab click grants CHI_armor (4 conditions)")
+
+    # 若“旗帜”其实是 donor 条目（不同 BI 版本布局不同），flag_click 也分流一次：
+    s1, e1 = _inner(fixed, "flag_click = {")
+    original_flag_click = fixed[s1:e1]
+    chi_flag_click = (
+        "\n\t\t\t\tif = {\n"
+        "\t\t\t\t\tlimit = {\n"
+        "\t\t\t\t\t\tROOT = {\n"
+        "\t\t\t\t\t\t\ttag = CHI\n"
+        "\t\t\t\t\t\t\tOR = {\n"
+        "\t\t\t\t\t\t\t\tAND = { tank_assembly > 1 engine_assembly > 1 }\n"
+        "\t\t\t\t\t\t\t\thas_tech = early_tractors\n"
+        "\t\t\t\t\t\t\t\thas_completed_focus = KMT_chinese_panzers\n"
+        "\t\t\t\t\t\t\t\thas_completed_focus = KMT_hire_soviet_designer\n"
+        "\t\t\t\t\t\t\t}\n"
+        "\t\t\t\t\t\t}\n"
+        "\t\t\t\t\t}\n"
+        "\t\t\t\t\tROOT = {\n"
+        "\t\t\t\t\t\tset_country_flag = CHI_armor\n"
+        "\t\t\t\t\t\tlog = \"CHI_ARMOR_TRIGGERED via flag_click by [THIS.GetTag]\"\n"
+        "\t\t\t\t\t\tcountry_event = CHI_armor_unlock.1\n"
+        "\t\t\t\t\t}\n"
+        "\t\t\t\t}\n"
+        "\t\t\t\telse = {\n"
+        + original_flag_click +
+        "\n\t\t\t\t}\n\t\t\t"
+    )
+    fixed = fixed[:s1] + chi_flag_click + fixed[e1:]
+    log("armor tt fix: CHI flag click also grants CHI_armor")
+
+    out = "scripted_gui = {\n" + fixed + "\n}\n"
+    write_text(path, out)
+    log("armor tt fix ->", path)
+
+
+def emit_armor_tab_hide():
+    """（停用）曾用于对中系隐藏「请求装甲 +」。
+    隐藏后 + 的容器仍会挡住 340 格的坦克页签，实测反而更糟，改回移动页签的方案。
+    """
+    path = os.path.join(MOD, "common", "scripted_guis", "zz_CHI_air_armor_hide.txt")
+    if os.path.isfile(path):
+        os.remove(path)
+        log("armor tab hide -> removed")
+    return
+
+
+def _emit_armor_tab_hide_unused():
+    """对中系隐藏黑冰的「请求外国装甲科技」+ 页签。
+
+    该 + 按钮固定在 (345,6)、宽约 182，正好压住 340 那一格的页签。
+    中国已经有自己的坦克页（静态可见），这个请求入口是多余的，隐藏它让坦克页签露出来。
+    """
+    path = os.path.join(MOD, "common", "scripted_guis", "zz_CHI_air_armor_hide.txt")
+    src = os.path.join(BI, "common", "scripted_guis", "BI_research_tabs_scripted_gui.txt")
+    with open(src, encoding="utf-8-sig", errors="replace") as fh:
+        text = fh.read()
+    marker = "BI_request_armor_tab = {"
+    i = text.find(marker)
+    if i < 0:
+        raise SystemExit("BI_request_armor_tab not found")
+    brace = text.index("{", i)
+    depth, j = 1, brace + 1
+    while j < len(text) and depth:
+        if text[j] == "{":
+            depth += 1
+        elif text[j] == "}":
+            depth -= 1
+        j += 1
+    block = text[i:j]
+
+    import re as _re
+    # 在 visible 的 NOT OR 列表里加 tag = CHI，令中国看不到这个页签
+    block2, n = _re.subn(
+        r"(visible\s*=\s*\{\s*NOT\s*=\s*\{)",
+        r"\1\n\t\t\t\ttag = CHI",
+        block,
+        count=1,
+    )
+    if n == 0:
+        log("WARN armor tab hide: visible block not matched")
+    write_text(path, "scripted_gui = {\n" + block2 + "\n}\n")
+    log("armor tab hide ->", path)
+
+
+def emit_legacy_stubs():
+    """把历史遗留的覆盖文件全部改写成空 scripted_gui。
+
+    压缩包解压不会删除已存在的文件：老版本留下的 zz_CHI_air_armor_request.txt /
+    zz_CHI_air_armor_hide.txt / CHI_air_request.txt 会一直留在工坊副本里，
+    引用已不存在的窗口或旧逻辑，导致科研界面打不开。这里每次构建都用空块覆盖它们。
+    """
+    for name in ("CHI_air_request.txt", "zz_CHI_air_armor_request.txt", "zz_CHI_air_armor_hide.txt"):
+        path = os.path.join(MOD, "common", "scripted_guis", name)
+        write_text(path, "# 已停用（占位文件，防止旧副本残留生效）\nscripted_gui = {\n}\n")
+        log("legacy stub ->", name)
+
+
+def emit_armor_unlock_event():
+    text = """# 中系飞机科技树 / Chinese Aircraft Tech Tree
+# 中国点击「请求外国装甲科技」后获得装甲研究权的通知（AUTO-GENERATED）
+add_namespace = CHI_armor_unlock
+
+country_event = {
+	id = CHI_armor_unlock.1
+	title = CHI_armor_unlock.1.t
+	desc = CHI_armor_unlock.1.d
+	is_triggered_only = yes
+	option = {
+		name = CHI_armor_unlock.1.a
+	}
+}
+"""
+    path = os.path.join(MOD, "events", "zz_CHI_armor_unlock.txt")
+    write_text(path, text)
+    log("armor unlock event ->", path)
+
+
+def emit_build_info():
+    import datetime
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    text = f"""中系飞机科技树 / Chinese Aircraft Tech Tree — build info
+version : {MOD_VERSION}
+built   : {now}
+folder  : {FOLDER}
+techs   : {len(D.AIRFRAMES) + len(D.ENGINES) + len(D.GUNS) + len(D.ORDNANCE)}
+          aircraft {len(D.AIRFRAMES)} / engines {len(D.ENGINES)} / guns {len(D.GUNS)} / ordnance {len(D.ORDNANCE)}
+gui     : countrytechtreeview.gui 已插入 {FOLDER} 容器 + 76 个直接子级 gridbox
+
+提示：如果游戏加载的副本里这个文件的版本/时间与工作区不一致，
+说明加载的是旧副本（例如工坊目录 3844078670），需要更新发布或覆盖文件。
+"""
+    path = os.path.join(MOD, "build_info.txt")
+    write_text(path, text)
+    log("build_info ->", path, f"(v{MOD_VERSION})")
+
+
 def main():
     used = None
     try:
@@ -832,11 +1522,17 @@ def main():
             log(f"grid cells used: {len(used)}")
     emit_technology_tags()
     emit_on_actions()
+    emit_events()
+    emit_request_gui()
+    emit_armor_tt_fix()
+    emit_armor_unlock_event()
+    emit_legacy_stubs()
     emit_scripted_triggers()
     sprites = emit_gfx()
     emit_gui(sprites)
     emit_loc()
     emit_descriptor()
+    emit_build_info()
     path = os.path.join(DATA, "build_report.txt")
     write_text(path, "\n".join(report) + "\n")
     log("report ->", path)

@@ -1,5 +1,7 @@
 # 中系飞机科技树 / Chinese Aircraft Tech Tree
-# 开局给中国（含中共）挂上 CHI_air 标志，科技树标签页据此显示。
+# 解锁不再由 on_startup 自动授予：玩家需在「+」请求页提交申请并满足条件，
+# 由 common/scripted_guis/CHI_air_request.txt 授予 CHI_air。
+# 这里只留一条日志方便确认模组已加载。
 on_actions = {
 	on_startup = {
 		effect = {
@@ -11,7 +13,21 @@ on_actions = {
 					}
 				}
 				set_country_flag = CHI_air
-				log = "CHI_AIR_TREE: CHI_air granted to [THIS.GetTag]"
+				set_country_flag = CHI_armor
+				log = "CHI_AIR_TREE v1.0.0: China air tree loaded for [THIS.GetTag]"
+			}
+			# 一次性提示：装甲科技页首次打开可能缺图标/连线，需存档读档一次
+			every_country = {
+				limit = {
+					is_player = yes
+					NOT = { has_country_flag = CHI_armor_tip_shown }
+					OR = {
+						original_tag = CHI
+						original_tag = PRC
+					}
+				}
+				set_country_flag = CHI_armor_tip_shown
+				news_event = { id = CHI_air_unlock.2 days = 1 }
 			}
 		}
 	}

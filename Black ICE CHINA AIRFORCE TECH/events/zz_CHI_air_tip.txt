@@ -1,0 +1,28 @@
+# 中系飞机科技树 / Chinese Aircraft Tech Tree
+# 「飞机科技研究权已获得」解锁事件（AUTO-GENERATED）
+# 与坦克科技子模同款原因：黑冰科研界面会缓存布局，
+# 首次打开新科技页时科技之间的连线/箭头可能不显示，存档再读档一次即可。
+add_namespace = CHI_air_unlock
+
+country_event = {
+	id = CHI_air_unlock.1
+	title = CHI_air_unlock.1.t
+	desc = CHI_air_unlock.1.d
+	is_triggered_only = yes
+	option = {
+		name = CHI_air_unlock.1.a
+	}
+}
+
+# 带图片的版本：走 news_event 窗口（黑冰的普通事件窗口没有可用的图片控件）
+news_event = {
+	id = CHI_air_unlock.2
+	title = CHI_air_unlock.2.t
+	desc = CHI_air_unlock.2.d
+	picture = GFX_chi_armor_tip
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = CHI_air_unlock.2.a
+	}
+}

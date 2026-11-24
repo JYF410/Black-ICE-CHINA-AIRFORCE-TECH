@@ -3,9 +3,15 @@ spriteTypes = {
 	### 中国空军科技树标签页按钮（2 帧：常态 / 选中）
 	spriteType = {
 		name = "GFX_chinaair_folder_tab"
-		textureFile = "gfx/interface/techtree/techtree_china_air_tab.tga"
+		textureFile = "gfx/interface/techtree/techtree_chiair_tab.dds"
 		noOfFrames = 2
 	}
+	### 事件配图
+	spriteType = {
+		name = "GFX_chi_armor_tip"
+		texturefile = "gfx/event_pictures/chi_armor_tip.dds"
+	}
+
 
 	### 科技图标：直接引用原版 / 黑冰 / BIAD 已有的机种与配件图标
 	spriteType = {

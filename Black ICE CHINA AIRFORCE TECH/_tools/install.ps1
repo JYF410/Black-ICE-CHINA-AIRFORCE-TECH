@@ -42,7 +42,7 @@ if (-not (Test-Path $modDir)) {
 }
 $modFile = Join-Path $modDir $ModFileName
 $content = @'
-version="0.1.0"
+version="0.1.1"
 tags={
 	"Technologies"
 	"Military"

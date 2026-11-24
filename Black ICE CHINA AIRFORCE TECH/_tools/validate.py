@@ -11,7 +11,13 @@ import json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(HERE, 'build'))
 import cw_parse as C
+try:
+    from config import HIDE_GENERIC_AIR, REQUEST_GATE
+except Exception:
+    HIDE_GENERIC_AIR = True
+    REQUEST_GATE = False
 
 MOD = r"D:\Steam\steamapps\workshop\content\394360\中系飞机科技树"
 BIAD = r"D:\Steam\steamapps\workshop\content\394360\3808452657"
@@ -272,6 +278,10 @@ def main():
         # gui gridbox
         if f'name = "{tid}_tree"' not in read(gui_file):
             err(f"{tid}: GUI 中缺少 gridbox / missing gridbox {tid}_tree")
+        # 小格科技（发动机/枪炮/挂载）还需要 _small_tree 才会用 72×72 模板
+        if tid.startswith(("ad_chi_tech_engine_", "ad_chi_tech_gun_", "ad_chi_tech_ord_")):
+            if f'name = "{tid}_small_tree"' not in read(gui_file):
+                err(f"{tid}: 小格科技缺少 gridbox / missing gridbox {tid}_small_tree")
 
     # ---- required-slot coverage (can the plane actually be built?) ------
     # For every airframe tech we need:
@@ -417,6 +427,92 @@ def main():
         err(f"前置关系存在环 / dependency cycle: {cycle[0]}")
     info(f"起始科技 / root techs: {len(roots)}")
 
+    # ---- 每个 folder 需要 item / small_item 模板 -------------------------
+    # 引擎按 "techtree_<folder>_item" / "techtree_<folder>_small_item" 建科技格子；
+    # 缺了会刷 "Undefined GUI_TYPE ... Failed to create containerWindowType"，
+    # 表现是科研界面闪烁一下打不开。
+    gui_text = read(gui_file)
+    if len(folder_names) == 1:
+        _folder = next(iter(folder_names))
+        for suffix in ("_item", "_small_item"):
+            tpl = f"techtree_{_folder}{suffix}"
+            pos_tpl = gui_text.find(f'name = "{tpl}"')
+            if pos_tpl < 0:
+                err(f"缺少科技条目模板 / missing tech item template: {tpl}")
+            else:
+                d = gui_text[:pos_tpl].count("{") - gui_text[:pos_tpl].count("}")
+                if d != 2:
+                    err(f"{tpl}: 模板必须是 guiTypes 下的顶层 containerWindowType（当前 name 深度 {d}）")
+
+    # ---- gridbox 必须是 folder 容器的直接子节点 -------------------------
+    # 放进 techtree_stripes 里引擎找不到，会刷 "Found no grid box for tech"，
+    # 表现是科技页空白（甚至看起来没打开）。
+    gui_text = read(gui_file)
+    if len(folder_names) == 1:
+        _folder = next(iter(folder_names))
+        anchor = gui_text.find(f'name = "{_folder}"')
+        if anchor >= 0:
+            folder_depth = gui_text[:anchor].count("{") - gui_text[:anchor].count("}")
+            for tid, blk in techs.items():
+                if not isinstance(blk, C.Node):
+                    continue
+                pos = gui_text.find(f'name = "{tid}_tree"')
+                if pos < 0:
+                    continue
+                depth = gui_text[:pos].count("{") - gui_text[:pos].count("}")
+                if depth != folder_depth + 1:
+                    err(f"{tid}: gridbox 层级不对 / gridbox is nested too deep "
+                        f"(depth {depth}, expected {folder_depth + 1}) — 必须直接放在 {_folder} 下")
+                    break
+
+    # ---- 「+」请求页 / 解锁链路 ----------------------------------------
+    req_folder = "chinaair_request_folder"
+    if not REQUEST_GATE:
+        req_folder = ""  # 请求页方案已关闭，跳过相关检查
+    tags_txt = read(os.path.join(MOD, "common", "technology_tags", "zz_CHI_air_technology.txt"))
+    if "trm_armour_chi_folder" in tags_txt and "has_country_flag = CHI_armor" not in tags_txt:
+        err("technology_tags 里坦克文件夹缺少 CHI_armor 判定")
+    if req_folder:
+        if f"{req_folder} = {{" not in tags_txt:
+            err(f"technology_tags 缺少请求页 / missing folder {req_folder}")
+        if f'name = "{req_folder}"' not in gui_text:
+            err(f"{req_folder}: GUI 中缺少请求页容器")
+        if f'name = "{req_folder}_tab"' not in gui_text:
+            err(f"{req_folder}: GUI 中缺少「+」页签按钮")
+        req_gui = os.path.join(MOD, "common", "scripted_guis", "CHI_air_request.txt")
+        if not os.path.isfile(req_gui):
+            err("缺少请求页 scripted GUI / missing CHI_air_request.txt")
+        else:
+            rg = read(req_gui)
+            if f'window_name = "{req_folder}"' not in rg:
+                err("请求页 scripted GUI 的 window_name 与容器名不一致")
+            if "set_country_flag = CHI_air" not in rg:
+                err("请求页 scripted GUI 没有授予 CHI_air 标志")
+            if "CHI_air_request_ready" not in rg:
+                err("请求页 scripted GUI 没有引用 CHI_air_request_ready 条件")
+    if REQUEST_GATE:
+        trig = read(os.path.join(MOD, "common", "scripted_triggers", "zz_CHI_air_triggers.txt"))
+        if "CHI_air_request_ready" not in trig:
+            err("zz_CHI_air_triggers.txt 缺少 CHI_air_request_ready")
+
+    # ---- 一次性提示事件（与坦克子模同款） ------------------------------
+    ev_file = os.path.join(MOD, "events", "zz_CHI_air_tip.txt")
+    if os.path.isfile(ev_file):
+        ev = read(ev_file)
+        for needle in ("add_namespace = CHI_air_unlock", "id = CHI_air_unlock.1", "is_triggered_only = yes"):
+            if needle not in ev:
+                err(f"提示事件文件缺少 / event file missing '{needle}'")
+        for suffix in ("t", "d", "a"):
+            key = f"CHI_air_unlock.1.{suffix}"
+            for lang in ("english", "simp_chinese"):
+                if key not in loc.get(lang, set()):
+                    err(f"缺少提示事件本地化键 / missing {lang} key: {key}")
+        # 解锁事件由请求页触发；请求页方案关闭时跳过
+        if REQUEST_GATE:
+            oa = read(os.path.join(MOD, "common", "scripted_guis", "CHI_air_request.txt"))
+            if "CHI_air_unlock.1" not in oa:
+                err("请求页未触发解锁事件 / request gui does not fire CHI_air_unlock.1")
+
     # ---- Black ICE research arrays + scripted GUI registration ---------
     eff_file = os.path.join(MOD, "common", "scripted_effects", "zz_CHI_air_research_arrays.txt")
     oa_arr = os.path.join(MOD, "common", "on_actions", "zz_CHI_air_array_gen.txt")
@@ -473,7 +569,7 @@ def main():
         txt = read(tags_file)
         if folder not in txt:
             err(f"technology_tags 未声明 {folder}")
-        if "air_techs_folder" not in txt:
+        if HIDE_GENERIC_AIR and "air_techs_folder" not in txt:
             err("technology_tags 未重定义 air_techs_folder（中国会出现两个空军页）")
 
     # ---- gfx texture files exist --------------------------------------

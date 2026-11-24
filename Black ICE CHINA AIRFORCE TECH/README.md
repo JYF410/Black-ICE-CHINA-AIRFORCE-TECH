@@ -6,6 +6,9 @@
 - 子模组结构：`3808452657 BlackICE Aircraft Designer`（`descriptor.mod` + `common/` + `interface/` + `gfx/` + `localisation/` + `history/` + `events/`）。
 - 机型取材：`战争雷霆中系空军科技树参考.png`（中系 I–V 级线），并按 1935–1947 年实际入华时间排序。
 
+> **维护者请先读 [`_DSH/`](_DSH/README.md)**：那里记录了黑冰科研界面的 15 条实测雷区、
+> 定版配置快照与发布流程。该目录不参与游戏加载。
+
 ---
 
 ## 1. 目录结构
@@ -134,7 +137,14 @@ BlackICE Aircraft Designer
 ```
 
 - 必须启用 **黑冰本体** 与 **BlackICE Aircraft Designer**（机体原型、模块、共享组件科技都来自它们）。
-- 第三个依赖用于 **界面合并**：本模组的 `countrytechtreeview.gui` 是在「中国坦克科技」子模的界面文件基础上追加「中国空军」页生成的，这样两边的科技页能同时存在。若不使用坦克子模，请把依赖行删掉，并把 `interface/countrytechtreeview.gui` 换成基于 BIAD 原版界面的版本（重新运行 `_tools/build/build_chi.py` 时会自动优先使用坦克子模的界面作为底稿；把坦克模组移出后再跑一次即可）。
+- 第三个依赖（坦克子模）**只是为了让它在启动器里排在本模组前面**，这样两边对 `countrytechtreeview.gui` 的整份覆盖顺序是「坦克 → 本模组」，合并后的界面同时含两个科技页。
+- **可以只启用飞机模组、不启用坦克模组**：启动器会提示缺少依赖，忽略即可继续启动。此时：
+  - 中国空军页正常；
+  - 本模组会**照样注册坦克子模的 `trm_armour_chi_folder`**（条件同为 `has_country_flag = CHI_armor`）。
+    坦克子模没启用时这个标志永远不为真，于是该页签被引擎当作「未解锁」自动隐藏——不会留死页签；
+    坦克子模启用时，我们的定义与它完全一致，行为不变；
+  - 黑冰自带的「请求各国装甲科技」页签**不受影响**（它来自 BI 本体，不是坦克子模）。
+- 如果启动器拒绝在缺少依赖时启用，请把本仓库 `descriptor.mod` 里的坦克依赖行删掉，并手动保证播放列表里「坦克科技在本模组之上」。
 - 加载顺序（启动器从左到右，后者覆盖前者）：
   `黑冰本体 → BlackICE Aircraft Designer → 中国坦克科技 → 本模组`。
 
@@ -167,6 +177,38 @@ powershell -ExecutionPolicy Bypass -File _tools\install.ps1
 
 安装完成后可在 `logs/system.log` 里确认 `Active Mod Count` 比之前 +1 且出现
 `Active Mod: 黑冰：中系飞机科技树…`。
+
+---
+
+## 4.5 更新已发布副本（重要）
+
+Paradox 启动器「发布」时会把模组**复制**一份到工坊目录，游戏加载的是那份副本，不是工作区。
+本例中副本是 `D:/Steam/steamapps/workshop/content/394360/3844078670`。
+
+所以：**改了工作区不等于游戏里生效**。改完代码后，任选一种方式同步：
+
+- 在启动器里对工坊条目重新「更新/发布」，让它重新复制；
+- 或把 `_install/update_game_files.zip` 解压覆盖到工坊目录（zip 由 `python _tools/package_update.py` 生成，
+  只含 `common/ interface/ gfx/ localisation/ history/` 和 `build_info.txt`，不含 `descriptor.mod`）。
+
+判断游戏实际加载的是哪份文件：
+
+1. 看工坊副本里的 `build_info.txt` 版本与时间是否和工作区一致；
+2. 看 `logs/game.log` 有没有 `CHI_AIR_TREE v0.1.2:` 这类带版本号的启动日志；
+3. 看 `logs/error.log` 是否还有 `Found no grid box for tech ad_chi_tech_*`。
+
+---
+
+## 4.6 首次打开科研界面的一次性提示
+
+黑冰的科研界面会缓存布局：新开的科技页第一次打开时，科技之间的连线（箭头）可能不画出来，
+存档再读档一次就正常。这是黑冰/坦克科技子模共有的现象。
+
+本模组用**一次性事件**提醒玩家（`events/zz_CHI_air_tip.txt`，事件 `CHI_air_tip.1`）：
+
+- 在 `on_startup` 里延迟 1 天触发，只对玩家生效；
+- 用国家标志 `CHI_air_tip_shown` 保证每个存档只弹一次；
+- 读档同样会触发 `on_startup`，所以旧存档第一次载入也能看到提示。
 
 ---
 
@@ -247,17 +289,18 @@ log = "CHI_AIR_TREE: CHI_air granted to [THIS.GetTag]"
 
 ## 7. 后续可做
 
-已经补掉的：黑冰自定义科技页的注册层（`common/scripted_guis` 文件夹块 + 研究数组全局变量），见 2.5 节。
+已经完成：黑冰自定义科技页的注册层（`common/scripted_guis` 文件夹块 + 研究数组全局变量，见 2.5 节）、
+本页页签图标、配件小方格（`_small_tree`）、坦克子模可开关、装甲请求提示修正。
 
-还剩的工作，按优先级：
+**已取消**：把 BIAD 的 58 项配件科技迁进中国空军页。该工作原本是为了脱离 BIAD 依赖；
+既然依赖保留，这些科技继续留在「空军技术」页即可，不需要迁移。
 
-1. **游戏内验证**（唯一阻塞项）：先在 `logs/system.log` 确认 `Active Mod Count: 38` 与
-   `Active Mod: 黑冰：中系飞机科技树…`，再看空军页是否被「中国空军」替换、格子/连线/研究按钮是否正常。
-2. **相机校对**：确认 `tech_x/tech_y` 像素映射（327 + 列×70 / 165 + 行×70）在 4000×2600 容器里的观感，
-   必要时微调原点或行距；确认箭头（`tech_dependents`）方向正确。
-3. **兼容性**：分别测「有坦克子模」和「无坦克子模」两套 `countrytechtreeview.gui`（后者用 `_install/countrytechtreeview.gui.biad_base`）。
-4. **发布准备**：更新 `thumbnail.png`、加 `remote_file_id`、写创意工坊说明与更新日志。
-5. **内容扩展 v0.2**：F-86F、米格-15、轰-5 的自制机体原型（含 frame_config 模块与图标）；
-   CW-21、P-66、银河（P1Y）；国产发动机/武器线细化（按厂牌分叉）。
-6. **AI**：为 CHI 增加 air AI 策略与 `ai_will_do` 调优，避免 AI 只造步兵；确认 AI 会研究本树并创建变体。
-7. **联动**：与「黑冰：东亚补充」等国策模组联动，通过国策解锁 `CHI_air` 或额外科技。
+还剩的工作：
+
+1. **「研究天数」角标位置**：移到科技图标左下方（BI 的 `days` 属性，需要实机调 `dx/dy` 偏移）。
+2. **内容扩展**：F-86F、米格-15、轰-5 等后期机型；CW-21、P-66、银河（P1Y）；国产发动机/武器线细化。
+3. **AI**：为 CHI 增加空军 AI 策略与 `ai_will_do` 调优，避免 AI 只造步兵。
+4. **联动**：与国策模组联动，通过国策解锁 `CHI_air` 或额外科技。
+5. **已知限制**：中系会同时有「中国空军」和「通用空军」两个空军页——已实测，
+   用 `technology_folders` 隐藏通用空军页会让黑冰科研界面打不开，此路不通；
+   若要单页，只能等黑冰本体提供别的入口机制。

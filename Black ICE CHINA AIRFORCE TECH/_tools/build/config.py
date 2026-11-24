@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """中系飞机科技树 —— 构建配置（单一事实来源）
 
 所有"会变的常量"集中在这里：模组路径、父模组路径、文件夹名、国家标志、
@@ -60,7 +60,7 @@ COLUMNS = {
 }
 
 # ---------------------------------------------------------------- 元数据
-MOD_VERSION = "0.1.0"
+MOD_VERSION = "1.0.0"
 MOD_NAME_CN = "黑冰：中系飞机科技树"
 MOD_NAME_EN = "Black ICE Chinese Aircraft Tech Tree"
 SUPPORTED_VERSION = "1.20.*"
@@ -69,3 +69,49 @@ DEPENDENCIES = [
     "BlackICE Aircraft Designer",
     "黑冰：中国国民革命军坦克科技 Black ICE CHINA TANK TECH",
 ]
+
+# ---------------------------------------------------------------- 诊断开关
+# 排查「科技树窗口闪一下打不开」时的二分开关：
+#   HIDE_GENERIC_AIR = False 时不重定义 air_techs_folder（中系会同时有两个空军页），
+#   用于判断问题是否出在"隐藏通用空军页"这一步。
+HIDE_GENERIC_AIR = False
+
+# 文件夹可用性判定：True 只用 CHI_air 标志（与 BIAD 写法一致），
+# False 额外允许 original_tag = CHI/PRC。
+AVAILABLE_BY_FLAG_ONLY = True
+# ---------------------------------------------------------------- 提示事件
+# 与坦克科技子模同款：科研界面会缓存布局，首次打开后科技连线/箭头可能不显示，
+# 需要存档再读档一次。开一个新局时弹一次提示（仅玩家）。
+TIP_EVENT_ENABLED = True
+TIP_EVENT_ID = "CHI_air_unlock.1"
+TIP_EVENT_NAMESPACE = "CHI_air_unlock"
+TIP_FLAG = "CHI_air_unlock_shown"
+
+# 「+」请求页签：解锁前显示 + 页，满足条件点击后授予 CHI_air
+REQUEST_FOLDER = "chinaair_request_folder"
+# 0.2.0 的"独立请求页文件夹"方案会让引擎报 Window not found、整个科技树打不开，
+# 关掉它，改为后续用 scripted GUI 覆盖层实现「+」。
+REQUEST_GATE = False
+# 中系候选标志：开局给 CHI/PRC 挂上，用于显示「+」请求页（避免在 technology_folders 里用 original_tag）
+CANDIDATE_FLAG = "CHI_air_candidate"
+
+# 坦克子模的文件夹：即使坦克子模没启用也注册一份（条件相同），
+# 这样它就是「未解锁」而不是「文件夹不存在」，页签自动隐藏，不会留死页签。
+TANK_FOLDER = "trm_armour_chi_folder"
+TANK_FLAG = "CHI_armor"
+# ---------------------------------------------------------------- 页签图标
+# 用户自制的中国空军页签贴图（2 帧、每帧 182x61，可直接用 DDS）。
+# 文件存在时优先使用；不存在时回退到程序生成的占位 TGA。
+TAB_TEXTURE = "gfx/interface/techtree/techtree_chiair_tab.dds"
+TAB_FRAMES = 2
+# 占位图只在用户尚未提供自制页签时生成；现已使用自制 DDS，不再生成 TGA
+GENERATE_TAB_PLACEHOLDER = False
+# ---------------------------------------------------------------- 装甲请求提示修正
+# 黑冰的「请求外国装甲科技」触发器里有一句 CHI 专属条件（对美请求需完成国策），
+# 它会出现在所有捐赠国图标的提示里。开启后我们覆盖该 block，把这句话包进
+# hidden_trigger，逻辑不变、提示里不再显示。
+ARMOR_TT_FIX = True
+# ---------------------------------------------------------------- 诊断开关
+# True 时 countrytechtreeview.gui 原样输出坦克子模版本（不插入中国空军页），
+# 用于判断坦克页图标丢失是否由我们的 gui 改动引起。
+GUI_MINIMAL = False

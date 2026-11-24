@@ -1,0 +1,13 @@
+# 中系飞机科技树 / Chinese Aircraft Tech Tree
+# 中国点击「请求外国装甲科技」后获得装甲研究权的通知（AUTO-GENERATED）
+add_namespace = CHI_armor_unlock
+
+country_event = {
+	id = CHI_armor_unlock.1
+	title = CHI_armor_unlock.1.t
+	desc = CHI_armor_unlock.1.d
+	is_triggered_only = yes
+	option = {
+		name = CHI_armor_unlock.1.a
+	}
+}
