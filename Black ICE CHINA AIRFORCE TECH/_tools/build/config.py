@@ -33,6 +33,12 @@ SLOT = 70
 YEAR_BASE = 1935
 YEAR_STEP = 2      # 每年占几格（1 格 = 70px）
 DY_STEP = 1        # 同一年第二架往下错开几格（1 格 = 70px）
+YEAR_LABEL_X = 5  # 年份列（1935~1945）的横向位置
+YEAR_LABEL_Y = 140   # 年份列第一行（1935）的纵向起点
+YEAR_LABEL_RIGHT = True   # 是否在最右边也加一列年份（True/False）
+YEAR_LABEL_X_RIGHT = 5000 # 右侧年份列的横向位置   # 年份列第一行（1935）的纵向起点
+COL_HEADER_X = 20   # 顶部列标题的横向偏移（正=右移）
+COL_HEADER_Y = 55  # 顶部列标题的纵向位置（正=下移）
 
 # 文件夹坐标 -> 黑冰自定义科技页的像素坐标
 # 由 BIAD 的 ad_research_array_generation.txt 与坦克子模反推
@@ -91,16 +97,16 @@ COLUMNS = {
     "ordnance": 22,
     "ordnance_2": 24,
     # 机种列（严格按大类，顺序参考战争雷霆中系树）
-    "ftr": 28,           # 战斗机
-    "hvy_ftr": 34,       # 重型战斗机
-    "cv_ftr": 38,        # 舰载战斗机
-    "cas": 42,           # 近距支援机
-    "l_bomber": 46,      # 轻型轰炸机
-    "tac_bomber": 50,    # 中型轰炸机
-    "strat_bomber": 54,  # 重型轰炸机
-    "fly_bts": 58,       # 水上飞机
-    "recon": 62,         # 侦察机
-    "trpt": 66,          # 运输机
+    "ftr": 4,           # 战斗机
+    "hvy_ftr": 10,       # 重型战斗机
+    "cv_ftr": 14,        # 舰载战斗机
+    "cas": 18,           # 近距支援机
+    "l_bomber": 22,      # 轻型轰炸机
+    "tac_bomber": 26,    # 中型轰炸机
+    "strat_bomber": 30,  # 重型轰炸机
+    "fly_bts": 34,       # 水上飞机
+    "recon": 38,         # 侦察机
+    "trpt": 42,          # 运输机
 }
 
 # ---------------------------------------------------------------- 元数据

@@ -1,4 +1,4 @@
-version="0.2.0"
+version="0.9.6"
 tags={
 	"Technologies"
 	"Military"
@@ -13,4 +13,4 @@ dependencies={
 }
 supported_version="1.20.*"
 path="C:/Users/JYF/Documents/Paradox Interactive/Hearts of Iron IV/mod/Black ICE CHINA AIRFORCE TECH"
-remote_file_id="3844078670"
+remote_file_id="3846728804"

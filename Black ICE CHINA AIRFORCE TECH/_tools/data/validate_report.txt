@@ -1,5 +1,29 @@
-error: 0 warn: 0 info: 4
-[INFO] 科技总数 / techs: 73
+error: 24 warn: 0 info: 4
+[ERROR] ad_chi_tech_hawk3: 必需槽位 ad_airforce_powerplant 无可用模块（ad_curtiss_hawk3_mr_equipment_1 需要 ['ad_engine_usa_type']，本树未解锁）
+[ERROR] ad_chi_tech_hawk75m: 必需槽位 ad_airforce_powerplant 无可用模块（ad_curtiss_p36_equipment_1 需要 ['ad_engine_usa_type']，本树未解锁）
+[ERROR] ad_chi_tech_p40b: 必需槽位 ad_airforce_powerplant 无可用模块（ad_curtiss_p40_equipment_1 需要 ['ad_engine_usa_type']，本树未解锁）
+[ERROR] ad_chi_tech_p40e: 必需槽位 ad_airforce_powerplant 无可用模块（ad_curtiss_p40_equipment_2 需要 ['ad_engine_usa_type']，本树未解锁）
+[ERROR] ad_chi_tech_p47d: 必需槽位 ad_airforce_powerplant 无可用模块（ad_republic_p47d_equipment_1 需要 ['ad_engine_usa_type']，本树未解锁）
+[ERROR] ad_chi_tech_p51d: 必需槽位 ad_airforce_powerplant 无可用模块（ad_northamerican_p51d_equipment_1 需要 ['ad_engine_usa_type']，本树未解锁）
+[ERROR] ad_chi_tech_la9: 必需槽位 ad_airforce_powerplant 无可用模块（ad_lagg_9_equipment_1 需要 ['ad_engine_sov_type']，本树未解锁）
+[ERROR] ad_chi_tech_p80a: 必需槽位 ad_airforce_powerplant 无可用模块（ad_lockheed_p80_equipment_1 需要 ['ad_engine_usa_jet_type']，本树未解锁）
+[ERROR] ad_chi_tech_mig9: 必需槽位 ad_airforce_powerplant 无可用模块（ad_mig_9_fighter_equipment_1 需要 ['ad_engine_sov_jet_type_2x']，本树未解锁）
+[ERROR] ad_chi_tech_hs123: 必需槽位 ad_airforce_powerplant 无可用模块（ad_hs_123_equipment_1 需要 ['ad_engine_ger_type']，本树未解锁）
+[ERROR] ad_chi_tech_v11: 必需槽位 ad_airforce_powerplant 无可用模块（ad_vultee_a19_equipment_1 需要 ['ad_engine_usa_type']，本树未解锁）
+[ERROR] ad_chi_tech_v12d: 必需槽位 ad_airforce_powerplant 无可用模块（ad_vultee_a31_equipment_1 需要 ['ad_engine_usa_type']，本树未解锁）
+[ERROR] ad_chi_tech_mosquito_fb26: 必需槽位 ad_airforce_powerplant 无可用模块（ad_mosquito_fsb_equipment_2 需要 ['ad_engine_eng_type_2x']，本树未解锁）
+[ERROR] ad_chi_tech_sb2m: 必需槽位 ad_airforce_powerplant 无可用模块（ad_sb_2m_bomber_equipment_1 需要 ['ad_engine_sov_type_2x']，本树未解锁）
+[ERROR] ad_chi_tech_he111a: 必需槽位 ad_airforce_powerplant 无可用模块（ad_he_111_bomber_equipment_1 需要 ['ad_engine_ger_type_2x']，本树未解锁）
+[ERROR] ad_chi_tech_db3: 必需槽位 ad_airforce_powerplant 无可用模块（ad_db_3_bomber_equipment_1 需要 ['ad_engine_sov_type_2x']，本树未解锁）
+[ERROR] ad_chi_tech_b25c: 必需槽位 ad_airforce_powerplant 无可用模块（ad_northamerican_b25_equipment_2 需要 ['ad_engine_usa_type_2x']，本树未解锁）
+[ERROR] ad_chi_tech_tu2: 必需槽位 ad_airforce_powerplant 无可用模块（ad_tu_2_bomber_equipment_1 需要 ['ad_engine_sov_type_2x']，本树未解锁）
+[ERROR] ad_chi_tech_martin139: 必需槽位 ad_airforce_powerplant 无可用模块（ad_martin_b10_bomber_equipment_1 需要 ['ad_engine_usa_type_2x']，本树未解锁）
+[ERROR] ad_chi_tech_db3h: 必需槽位 ad_airforce_powerplant 无可用模块（ad_db_3_bomber_equipment_2 需要 ['ad_engine_sov_type_2x']，本树未解锁）
+[ERROR] ad_chi_tech_b24j: 必需槽位 ad_airforce_powerplant 无可用模块（ad_consolidated_b24_equipment_2 需要 ['ad_engine_usa_type_4x']，本树未解锁）
+[ERROR] ad_chi_tech_pby5: 必需槽位 ad_airforce_powerplant 无可用模块（ad_consolidated_pby_equipment_2 需要 ['ad_engine_usa_type_2x']，本树未解锁）
+[ERROR] ad_chi_tech_f5: 必需槽位 ad_airforce_powerplant 无可用模块（ad_lockheed_p38_scout_equipment_2 需要 ['ad_engine_usa_type_2x']，本树未解锁）
+[ERROR] ad_chi_tech_mosquito_pr: 必需槽位 ad_airforce_powerplant 无可用模块（ad_mosquito_scout_equipment_2 需要 ['ad_engine_eng_type_2x']，本树未解锁）
+[INFO] 科技总数 / techs: 32
 [INFO] 必需槽位覆盖检查 / required slot checks: 54
-[INFO] 起始科技 / root techs: 18
-[INFO] 研究数组条目 / research array techs: 73
+[INFO] 起始科技 / root techs: 10
+[INFO] 研究数组条目 / research array techs: 32

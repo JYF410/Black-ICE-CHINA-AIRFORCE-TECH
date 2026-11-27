@@ -27,7 +27,7 @@ import data_chi as D
 from config import (
     MOD, BI, BIAD, TANK, MOD_LINK, MOD_FILE_NAME,
     FOLDER, FLAG, ARRAY_FLAG, ARRAY_EFFECT, LOG_MARKER, CHINESE_TAGS,
-    SLOT, YEAR_BASE, YEAR_STEP, DY_STEP, PIXEL_ORIGIN_X, PIXEL_ORIGIN_Y,
+    SLOT, YEAR_BASE, YEAR_STEP, DY_STEP, YEAR_LABEL_X, YEAR_LABEL_Y, YEAR_LABEL_RIGHT, YEAR_LABEL_X_RIGHT, COL_HEADER_X, COL_HEADER_Y, PIXEL_ORIGIN_X, PIXEL_ORIGIN_Y,
     CANVAS_W, CANVAS_H, COLUMNS, GRIDBOX_X, GRIDBOX_Y, LAYOUT_SHIFT_X, ITEM_POS_LARGE, ITEM_POS_SMALL,
     DAYS_LARGE_DX, DAYS_LARGE_DY, DAYS_SMALL_DX, DAYS_SMALL_DY, ARROW_LARGE_DX, ARROW_LARGE_DY, ARROW_SMALL_DX, ARROW_SMALL_DY,
     MOD_VERSION, MOD_NAME_CN, MOD_NAME_EN, SUPPORTED_VERSION, DEPENDENCIES,
@@ -848,15 +848,6 @@ def extract_container(text, name):
 
 COLUMN_HEADERS = [
     # (列 key, 中文, 英文)
-    ("engine_usa",       "美制发动机",        "US inline engines"),
-    ("engine_usa_multi", "美制多发/喷气",     "US multi & jet"),
-    ("engine_sov",       "苏制单发",          "Soviet inline"),
-    ("engine_sov_multi", "苏制多发/喷气",     "Soviet multi & jet"),
-    ("engine_jap",       "日制发动机",        "Japanese engines"),
-    ("engine_other",     "德英发动机",        "German & British"),
-    ("gun",              "航空枪炮",          "Guns"),
-    ("ordnance",         "航空炸弹",          "Bombs"),
-    ("ordnance_2",       "火箭/特种炸弹",     "Rockets"),
     ("ftr",              "战斗机",            "Fighters"),
     ("hvy_ftr",          "重型战斗机",        "Heavy fighters"),
     ("cv_ftr",           "舰载战斗机",        "Carrier fighters"),
@@ -872,12 +863,13 @@ COLUMN_HEADERS = [
 
 def gui_folder_container(sprites):
     year_labels = []
+    year_labels_right = []
     for year in range(YEAR_BASE, YEAR_BASE + 13):
         yv = (year - YEAR_BASE) * YEAR_STEP
         year_labels.append(
             f"""				instantTextBoxType = {{
 					name = "china_air_year_{year}"
-					position = {{ x = 1700 y = {140 + yv * SLOT} }}
+					position = {{ x = {YEAR_LABEL_X} y = {YEAR_LABEL_Y + yv * SLOT} }}
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {{ x = 0 y = 0 }}
@@ -889,17 +881,30 @@ def gui_folder_container(sprites):
 					orientation = "UPPER_LEFT"
 				}}"""
         )
+        if YEAR_LABEL_RIGHT:
+            year_labels_right.append(
+                f"""				instantTextBoxType = {{
+					name = "china_air_year_r_{year}"
+					position = {{ x = {YEAR_LABEL_X_RIGHT} y = {YEAR_LABEL_Y + yv * SLOT} }}
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {{ x = 0 y = 0 }}
+					text = "{year}"
+					maxWidth = 220
+					maxHeight = 140
+					vertical_alignment = centre
+					format = right
+					orientation = "UPPER_LEFT"
+				}}"""
+            )
     header_labels = []
-    SMALL_COLS = {"engine_usa", "engine_usa_multi", "engine_sov", "engine_sov_multi",
-                  "engine_jap", "engine_other", "gun", "ordnance", "ordnance_2"}
     for key, zh, _en in COLUMN_HEADERS:
-        # 标题中心对齐该列第一个图标的中心：
-        # 小格（72×72）中心在锚点左侧约 36px，大格（203×84）约 101px
-        hx = 190 + LAYOUT_SHIFT_X + 35 + COLUMNS[key] * SLOT - 120
+        # 标题中心对齐该列图标中心：gridbox 190 + 图标中心偏移 35 + 列x*70 - 文本框一半 120
+        hx = 190 + LAYOUT_SHIFT_X + 35 + COLUMNS[key] * SLOT - 120 + COL_HEADER_X
         header_labels.append(
             f"""				instantTextBoxType = {{
 					name = "china_air_col_{key}"
-					position = {{ x = {hx} y = 55 }}
+					position = {{ x = {hx} y = {COL_HEADER_Y} }}
 					textureFile = ""
 					font = "hoi_18mbs"
 					borderSize = {{ x = 0 y = 2 }}
@@ -969,6 +974,7 @@ def gui_folder_container(sprites):
 				}}
 
 {chr(10).join(year_labels)}
+{chr(10).join(year_labels_right)}
 {chr(10).join(header_labels)}
 			}}
 

@@ -5,458 +5,220 @@ CHI_air_build_research_arrays = {
 	if = {
 		limit = { NOT = { has_global_flag = CHI_air_arrays_done } }
 		set_global_flag = CHI_air_arrays_done
-		# 73 项科技注册进黑冰研究数组
+		# 32 项科技注册进黑冰研究数组
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_hawk3 }
-		set_variable = { global.tech_x@ad_chi_tech_hawk3 = 2294 }
+		set_variable = { global.tech_x@ad_chi_tech_hawk3 = 614 }
 		set_variable = { global.tech_y@ad_chi_tech_hawk3 = 165 }
 		set_variable = { global.tech_cost@ad_chi_tech_hawk3 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_hawk3 = 1935 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_hawk3 = token:ad_curtiss_hawk3_mr_equipment_1 }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_hawk75m }
-		set_variable = { global.tech_x@ad_chi_tech_hawk75m = 2294 }
+		set_variable = { global.tech_x@ad_chi_tech_hawk75m = 614 }
 		set_variable = { global.tech_y@ad_chi_tech_hawk75m = 445 }
 		set_variable = { global.tech_cost@ad_chi_tech_hawk75m = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_hawk75m = 1937 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_hawk75m = token:ad_curtiss_p36_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_hawk3 = token:ad_chi_tech_hawk75m } } } add_to_array = { global.tech_dependents@ad_chi_tech_hawk3 = token:ad_chi_tech_hawk75m } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_p40b }
-		set_variable = { global.tech_x@ad_chi_tech_p40b = 2294 }
+		set_variable = { global.tech_x@ad_chi_tech_p40b = 614 }
 		set_variable = { global.tech_y@ad_chi_tech_p40b = 1005 }
 		set_variable = { global.tech_cost@ad_chi_tech_p40b = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_p40b = 1941 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_p40b = token:ad_curtiss_p40_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_hawk75m = token:ad_chi_tech_p40b } } } add_to_array = { global.tech_dependents@ad_chi_tech_hawk75m = token:ad_chi_tech_p40b } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_p40e }
-		set_variable = { global.tech_x@ad_chi_tech_p40e = 2294 }
+		set_variable = { global.tech_x@ad_chi_tech_p40e = 614 }
 		set_variable = { global.tech_y@ad_chi_tech_p40e = 1145 }
 		set_variable = { global.tech_cost@ad_chi_tech_p40e = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_p40e = 1942 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_p40e = token:ad_curtiss_p40_equipment_2 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_p40b = token:ad_chi_tech_p40e } } } add_to_array = { global.tech_dependents@ad_chi_tech_p40b = token:ad_chi_tech_p40e } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_p47d }
-		set_variable = { global.tech_x@ad_chi_tech_p47d = 2294 }
+		set_variable = { global.tech_x@ad_chi_tech_p47d = 614 }
 		set_variable = { global.tech_y@ad_chi_tech_p47d = 1285 }
 		set_variable = { global.tech_cost@ad_chi_tech_p47d = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_p47d = 1943 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_p47d = token:ad_republic_p47d_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_p40e = token:ad_chi_tech_p47d } } } add_to_array = { global.tech_dependents@ad_chi_tech_p40e = token:ad_chi_tech_p47d } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_p51d }
-		set_variable = { global.tech_x@ad_chi_tech_p51d = 2294 }
+		set_variable = { global.tech_x@ad_chi_tech_p51d = 614 }
 		set_variable = { global.tech_y@ad_chi_tech_p51d = 1425 }
 		set_variable = { global.tech_cost@ad_chi_tech_p51d = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_p51d = 1944 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_p51d = token:ad_northamerican_p51d_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_p47d = token:ad_chi_tech_p51d } } } add_to_array = { global.tech_dependents@ad_chi_tech_p47d = token:ad_chi_tech_p51d } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_la9 }
-		set_variable = { global.tech_x@ad_chi_tech_la9 = 2294 }
+		set_variable = { global.tech_x@ad_chi_tech_la9 = 614 }
 		set_variable = { global.tech_y@ad_chi_tech_la9 = 1705 }
 		set_variable = { global.tech_cost@ad_chi_tech_la9 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_la9 = 1946 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_la9 = token:ad_lagg_9_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_p51d = token:ad_chi_tech_la9 } } } add_to_array = { global.tech_dependents@ad_chi_tech_p51d = token:ad_chi_tech_la9 } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_p80a }
-		set_variable = { global.tech_x@ad_chi_tech_p80a = 2294 }
+		set_variable = { global.tech_x@ad_chi_tech_p80a = 614 }
 		set_variable = { global.tech_y@ad_chi_tech_p80a = 1775 }
 		set_variable = { global.tech_cost@ad_chi_tech_p80a = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_p80a = 1946 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_p80a = token:ad_lockheed_p80_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_p51d = token:ad_chi_tech_p80a } } } add_to_array = { global.tech_dependents@ad_chi_tech_p51d = token:ad_chi_tech_p80a } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_mig9 }
-		set_variable = { global.tech_x@ad_chi_tech_mig9 = 2294 }
+		set_variable = { global.tech_x@ad_chi_tech_mig9 = 614 }
 		set_variable = { global.tech_y@ad_chi_tech_mig9 = 1845 }
 		set_variable = { global.tech_cost@ad_chi_tech_mig9 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_mig9 = 1947 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_mig9 = token:ad_mig_9_fighter_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_p80a = token:ad_chi_tech_mig9 } } } add_to_array = { global.tech_dependents@ad_chi_tech_p80a = token:ad_chi_tech_mig9 } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_ki45 }
-		set_variable = { global.tech_x@ad_chi_tech_ki45 = 2714 }
+		set_variable = { global.tech_x@ad_chi_tech_ki45 = 1034 }
 		set_variable = { global.tech_y@ad_chi_tech_ki45 = 1565 }
 		set_variable = { global.tech_cost@ad_chi_tech_ki45 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_ki45 = 1945 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_ki45 = token:ad_kawasaki_ki_45_equipment_1 }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_a5m }
-		set_variable = { global.tech_x@ad_chi_tech_a5m = 2994 }
+		set_variable = { global.tech_x@ad_chi_tech_a5m = 1314 }
 		set_variable = { global.tech_y@ad_chi_tech_a5m = 445 }
 		set_variable = { global.tech_cost@ad_chi_tech_a5m = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_a5m = 1937 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_a5m = token:ad_mitsubishi_a5m_equipment_1 }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_a6m2 }
-		set_variable = { global.tech_x@ad_chi_tech_a6m2 = 2994 }
+		set_variable = { global.tech_x@ad_chi_tech_a6m2 = 1314 }
 		set_variable = { global.tech_y@ad_chi_tech_a6m2 = 1005 }
 		set_variable = { global.tech_cost@ad_chi_tech_a6m2 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_a6m2 = 1941 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_a6m2 = token:ad_mitsubishi_a6m_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_a5m = token:ad_chi_tech_a6m2 } } } add_to_array = { global.tech_dependents@ad_chi_tech_a5m = token:ad_chi_tech_a6m2 } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_a6m3 }
-		set_variable = { global.tech_x@ad_chi_tech_a6m3 = 2994 }
+		set_variable = { global.tech_x@ad_chi_tech_a6m3 = 1314 }
 		set_variable = { global.tech_y@ad_chi_tech_a6m3 = 1565 }
 		set_variable = { global.tech_cost@ad_chi_tech_a6m3 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_a6m3 = 1945 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_a6m3 = token:ad_mitsubishi_a6m3_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_a6m2 = token:ad_chi_tech_a6m3 } } } add_to_array = { global.tech_dependents@ad_chi_tech_a6m2 = token:ad_chi_tech_a6m3 } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_hs123 }
-		set_variable = { global.tech_x@ad_chi_tech_hs123 = 3274 }
+		set_variable = { global.tech_x@ad_chi_tech_hs123 = 1594 }
 		set_variable = { global.tech_y@ad_chi_tech_hs123 = 165 }
 		set_variable = { global.tech_cost@ad_chi_tech_hs123 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_hs123 = 1935 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_hs123 = token:ad_hs_123_equipment_1 }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_v11 }
-		set_variable = { global.tech_x@ad_chi_tech_v11 = 3274 }
+		set_variable = { global.tech_x@ad_chi_tech_v11 = 1594 }
 		set_variable = { global.tech_y@ad_chi_tech_v11 = 445 }
 		set_variable = { global.tech_cost@ad_chi_tech_v11 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_v11 = 1937 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_v11 = token:ad_vultee_a19_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_hs123 = token:ad_chi_tech_v11 } } } add_to_array = { global.tech_dependents@ad_chi_tech_hs123 = token:ad_chi_tech_v11 } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_v12d }
-		set_variable = { global.tech_x@ad_chi_tech_v12d = 3274 }
+		set_variable = { global.tech_x@ad_chi_tech_v12d = 1594 }
 		set_variable = { global.tech_y@ad_chi_tech_v12d = 585 }
 		set_variable = { global.tech_cost@ad_chi_tech_v12d = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_v12d = 1938 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_v12d = token:ad_vultee_a31_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_v11 = token:ad_chi_tech_v12d } } } add_to_array = { global.tech_dependents@ad_chi_tech_v11 = token:ad_chi_tech_v12d } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_mosquito_fb26 }
-		set_variable = { global.tech_x@ad_chi_tech_mosquito_fb26 = 3274 }
+		set_variable = { global.tech_x@ad_chi_tech_mosquito_fb26 = 1594 }
 		set_variable = { global.tech_y@ad_chi_tech_mosquito_fb26 = 1565 }
 		set_variable = { global.tech_cost@ad_chi_tech_mosquito_fb26 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_mosquito_fb26 = 1945 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_mosquito_fb26 = token:ad_mosquito_fsb_equipment_2 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_v12d = token:ad_chi_tech_mosquito_fb26 } } } add_to_array = { global.tech_dependents@ad_chi_tech_v12d = token:ad_chi_tech_mosquito_fb26 } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_sb2m }
-		set_variable = { global.tech_x@ad_chi_tech_sb2m = 3554 }
+		set_variable = { global.tech_x@ad_chi_tech_sb2m = 1874 }
 		set_variable = { global.tech_y@ad_chi_tech_sb2m = 445 }
 		set_variable = { global.tech_cost@ad_chi_tech_sb2m = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_sb2m = 1937 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_sb2m = token:ad_sb_2m_bomber_equipment_1 }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_br20 }
-		set_variable = { global.tech_x@ad_chi_tech_br20 = 3554 }
+		set_variable = { global.tech_x@ad_chi_tech_br20 = 1874 }
 		set_variable = { global.tech_y@ad_chi_tech_br20 = 725 }
 		set_variable = { global.tech_cost@ad_chi_tech_br20 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_br20 = 1939 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_br20 = token:br20_bomber_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_sb2m = token:ad_chi_tech_br20 } } } add_to_array = { global.tech_dependents@ad_chi_tech_sb2m = token:ad_chi_tech_br20 } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_he111a }
-		set_variable = { global.tech_x@ad_chi_tech_he111a = 3834 }
+		set_variable = { global.tech_x@ad_chi_tech_he111a = 2154 }
 		set_variable = { global.tech_y@ad_chi_tech_he111a = 305 }
 		set_variable = { global.tech_cost@ad_chi_tech_he111a = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_he111a = 1936 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_he111a = token:ad_he_111_bomber_equipment_1 }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_db3 }
-		set_variable = { global.tech_x@ad_chi_tech_db3 = 3834 }
+		set_variable = { global.tech_x@ad_chi_tech_db3 = 2154 }
 		set_variable = { global.tech_y@ad_chi_tech_db3 = 865 }
 		set_variable = { global.tech_cost@ad_chi_tech_db3 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_db3 = 1940 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_db3 = token:ad_db_3_bomber_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_he111a = token:ad_chi_tech_db3 } } } add_to_array = { global.tech_dependents@ad_chi_tech_he111a = token:ad_chi_tech_db3 } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_b25c }
-		set_variable = { global.tech_x@ad_chi_tech_b25c = 3834 }
+		set_variable = { global.tech_x@ad_chi_tech_b25c = 2154 }
 		set_variable = { global.tech_y@ad_chi_tech_b25c = 1145 }
 		set_variable = { global.tech_cost@ad_chi_tech_b25c = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_b25c = 1942 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_b25c = token:ad_northamerican_b25_equipment_2 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_db3 = token:ad_chi_tech_b25c } } } add_to_array = { global.tech_dependents@ad_chi_tech_db3 = token:ad_chi_tech_b25c } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_tu2 }
-		set_variable = { global.tech_x@ad_chi_tech_tu2 = 3834 }
+		set_variable = { global.tech_x@ad_chi_tech_tu2 = 2154 }
 		set_variable = { global.tech_y@ad_chi_tech_tu2 = 1285 }
 		set_variable = { global.tech_cost@ad_chi_tech_tu2 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_tu2 = 1943 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_tu2 = token:ad_tu_2_bomber_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_b25c = token:ad_chi_tech_tu2 } } } add_to_array = { global.tech_dependents@ad_chi_tech_b25c = token:ad_chi_tech_tu2 } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_g4m2 }
-		set_variable = { global.tech_x@ad_chi_tech_g4m2 = 3834 }
+		set_variable = { global.tech_x@ad_chi_tech_g4m2 = 2154 }
 		set_variable = { global.tech_y@ad_chi_tech_g4m2 = 1565 }
 		set_variable = { global.tech_cost@ad_chi_tech_g4m2 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_g4m2 = 1945 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_g4m2 = token:ad_mitsubishi_g4m2_equipment_1 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_tu2 = token:ad_chi_tech_g4m2 } } } add_to_array = { global.tech_dependents@ad_chi_tech_tu2 = token:ad_chi_tech_g4m2 } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_martin139 }
-		set_variable = { global.tech_x@ad_chi_tech_martin139 = 4114 }
+		set_variable = { global.tech_x@ad_chi_tech_martin139 = 2434 }
 		set_variable = { global.tech_y@ad_chi_tech_martin139 = 305 }
 		set_variable = { global.tech_cost@ad_chi_tech_martin139 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_martin139 = 1936 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_martin139 = token:ad_martin_b10_bomber_equipment_1 }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_db3h }
-		set_variable = { global.tech_x@ad_chi_tech_db3h = 4114 }
+		set_variable = { global.tech_x@ad_chi_tech_db3h = 2434 }
 		set_variable = { global.tech_y@ad_chi_tech_db3h = 725 }
 		set_variable = { global.tech_cost@ad_chi_tech_db3h = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_db3h = 1939 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_db3h = token:ad_db_3_bomber_equipment_2 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_martin139 = token:ad_chi_tech_db3h } } } add_to_array = { global.tech_dependents@ad_chi_tech_martin139 = token:ad_chi_tech_db3h } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_b24j }
-		set_variable = { global.tech_x@ad_chi_tech_b24j = 4114 }
+		set_variable = { global.tech_x@ad_chi_tech_b24j = 2434 }
 		set_variable = { global.tech_y@ad_chi_tech_b24j = 1425 }
 		set_variable = { global.tech_cost@ad_chi_tech_b24j = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_b24j = 1944 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_b24j = token:ad_consolidated_b24_equipment_2 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_db3h = token:ad_chi_tech_b24j } } } add_to_array = { global.tech_dependents@ad_chi_tech_db3h = token:ad_chi_tech_b24j } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_pby5 }
-		set_variable = { global.tech_x@ad_chi_tech_pby5 = 4394 }
+		set_variable = { global.tech_x@ad_chi_tech_pby5 = 2714 }
 		set_variable = { global.tech_y@ad_chi_tech_pby5 = 1145 }
 		set_variable = { global.tech_cost@ad_chi_tech_pby5 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_pby5 = 1942 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_pby5 = token:ad_consolidated_pby_equipment_2 }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_ki15 }
-		set_variable = { global.tech_x@ad_chi_tech_ki15 = 4674 }
+		set_variable = { global.tech_x@ad_chi_tech_ki15 = 2994 }
 		set_variable = { global.tech_y@ad_chi_tech_ki15 = 445 }
 		set_variable = { global.tech_cost@ad_chi_tech_ki15 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_ki15 = 1937 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_ki15 = token:ad_mitsubishi_ki_15_scout_equipment_1 }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_f5 }
-		set_variable = { global.tech_x@ad_chi_tech_f5 = 4674 }
+		set_variable = { global.tech_x@ad_chi_tech_f5 = 2994 }
 		set_variable = { global.tech_y@ad_chi_tech_f5 = 1285 }
 		set_variable = { global.tech_cost@ad_chi_tech_f5 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_f5 = 1943 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_f5 = token:ad_lockheed_p38_scout_equipment_2 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_ki15 = token:ad_chi_tech_f5 } } } add_to_array = { global.tech_dependents@ad_chi_tech_ki15 = token:ad_chi_tech_f5 } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_mosquito_pr }
-		set_variable = { global.tech_x@ad_chi_tech_mosquito_pr = 4674 }
+		set_variable = { global.tech_x@ad_chi_tech_mosquito_pr = 2994 }
 		set_variable = { global.tech_y@ad_chi_tech_mosquito_pr = 1425 }
 		set_variable = { global.tech_cost@ad_chi_tech_mosquito_pr = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_mosquito_pr = 1944 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_mosquito_pr = token:ad_mosquito_scout_equipment_2 }
 		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_f5 = token:ad_chi_tech_mosquito_pr } } } add_to_array = { global.tech_dependents@ad_chi_tech_f5 = token:ad_chi_tech_mosquito_pr } }
 		add_to_array = { global.chinaair_folder = token:ad_chi_tech_c47 }
-		set_variable = { global.tech_x@ad_chi_tech_c47 = 4954 }
+		set_variable = { global.tech_x@ad_chi_tech_c47 = 3274 }
 		set_variable = { global.tech_y@ad_chi_tech_c47 = 1145 }
 		set_variable = { global.tech_cost@ad_chi_tech_c47 = 105 }
 		set_variable = { global.tech_date@ad_chi_tech_c47 = 1942 }
 		add_to_array = { global.tech_unlocks@ad_chi_tech_c47 = token:douglas_c47_transport_equipment_1 }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_r1820 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_r1820 = 340 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_r1820 = 165 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_r1820 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_r1820 = 1935 }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_v1710 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_v1710 = 340 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_v1710 = 865 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_v1710 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_v1710 = 1940 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_r1820 = token:ad_chi_tech_engine_v1710 } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_r1820 = token:ad_chi_tech_engine_v1710 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_r2800 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_r2800 = 340 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_r2800 = 1285 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_r2800 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_r2800 = 1943 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_v1710 = token:ad_chi_tech_engine_r2800 } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_v1710 = token:ad_chi_tech_engine_r2800 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_v1650 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_v1650 = 340 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_v1650 = 1425 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_v1650 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_v1650 = 1944 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_r2800 = token:ad_chi_tech_engine_v1650 } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_r2800 = token:ad_chi_tech_engine_v1650 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_r2600 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_r2600 = 480 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_r2600 = 1005 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_r2600 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_r2600 = 1941 }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_r1830 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_r1830 = 480 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_r1830 = 1145 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_r1830 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_r1830 = 1942 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_r2600 = token:ad_chi_tech_engine_r1830 } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_r2600 = token:ad_chi_tech_engine_r1830 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_j33 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_j33 = 480 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_j33 = 1705 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_j33 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_j33 = 1946 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_r1830 = token:ad_chi_tech_engine_j33 } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_r1830 = token:ad_chi_tech_engine_j33 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_m25 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_m25 = 620 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_m25 = 305 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_m25 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_m25 = 1936 }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_m62 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_m62 = 620 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_m62 = 585 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_m62 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_m62 = 1938 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_m25 = token:ad_chi_tech_engine_m62 } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_m25 = token:ad_chi_tech_engine_m62 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_m82 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_m82 = 620 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_m82 = 1285 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_m82 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_m82 = 1943 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_m62 = token:ad_chi_tech_engine_m82 } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_m62 = token:ad_chi_tech_engine_m82 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_am42 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_am42 = 620 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_am42 = 1425 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_am42 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_am42 = 1944 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_m82 = token:ad_chi_tech_engine_am42 } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_m82 = token:ad_chi_tech_engine_am42 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_m103 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_m103 = 760 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_m103 = 445 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_m103 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_m103 = 1937 }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_m34 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_m34 = 760 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_m34 = 725 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_m34 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_m34 = 1939 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_m103 = token:ad_chi_tech_engine_m34 } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_m103 = token:ad_chi_tech_engine_m34 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_rd20 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_rd20 = 760 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_rd20 = 1705 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_rd20 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_rd20 = 1946 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_m34 = token:ad_chi_tech_engine_rd20 } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_m34 = token:ad_chi_tech_engine_rd20 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_kotobuki }
-		set_variable = { global.tech_x@ad_chi_tech_engine_kotobuki = 900 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_kotobuki = 445 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_kotobuki = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_kotobuki = 1937 }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_sakae }
-		set_variable = { global.tech_x@ad_chi_tech_engine_sakae = 900 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_sakae = 865 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_sakae = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_sakae = 1940 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_kotobuki = token:ad_chi_tech_engine_sakae } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_kotobuki = token:ad_chi_tech_engine_sakae } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_homare }
-		set_variable = { global.tech_x@ad_chi_tech_engine_homare = 900 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_homare = 1425 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_homare = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_homare = 1944 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_sakae = token:ad_chi_tech_engine_homare } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_sakae = token:ad_chi_tech_engine_homare } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_kasei }
-		set_variable = { global.tech_x@ad_chi_tech_engine_kasei = 900 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_kasei = 1285 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_kasei = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_kasei = 1943 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_sakae = token:ad_chi_tech_engine_kasei } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_sakae = token:ad_chi_tech_engine_kasei } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_bmw132 }
-		set_variable = { global.tech_x@ad_chi_tech_engine_bmw132 = 1180 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_bmw132 = 165 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_bmw132 = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_bmw132 = 1935 }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_bmw_vi }
-		set_variable = { global.tech_x@ad_chi_tech_engine_bmw_vi = 1180 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_bmw_vi = 305 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_bmw_vi = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_bmw_vi = 1936 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_bmw132 = token:ad_chi_tech_engine_bmw_vi } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_bmw132 = token:ad_chi_tech_engine_bmw_vi } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_engine_merlin }
-		set_variable = { global.tech_x@ad_chi_tech_engine_merlin = 1180 }
-		set_variable = { global.tech_y@ad_chi_tech_engine_merlin = 1285 }
-		set_variable = { global.tech_cost@ad_chi_tech_engine_merlin = 100 }
-		set_variable = { global.tech_date@ad_chi_tech_engine_merlin = 1943 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_engine_bmw_vi = token:ad_chi_tech_engine_merlin } } } add_to_array = { global.tech_dependents@ad_chi_tech_engine_bmw_vi = token:ad_chi_tech_engine_merlin } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_gun_m1919 }
-		set_variable = { global.tech_x@ad_chi_tech_gun_m1919 = 1460 }
-		set_variable = { global.tech_y@ad_chi_tech_gun_m1919 = 165 }
-		set_variable = { global.tech_cost@ad_chi_tech_gun_m1919 = 75 }
-		set_variable = { global.tech_date@ad_chi_tech_gun_m1919 = 1935 }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_gun_shkas }
-		set_variable = { global.tech_x@ad_chi_tech_gun_shkas = 1460 }
-		set_variable = { global.tech_y@ad_chi_tech_gun_shkas = 305 }
-		set_variable = { global.tech_cost@ad_chi_tech_gun_shkas = 75 }
-		set_variable = { global.tech_date@ad_chi_tech_gun_shkas = 1936 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_gun_m1919 = token:ad_chi_tech_gun_shkas } } } add_to_array = { global.tech_dependents@ad_chi_tech_gun_m1919 = token:ad_chi_tech_gun_shkas } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_gun_mg17 }
-		set_variable = { global.tech_x@ad_chi_tech_gun_mg17 = 1460 }
-		set_variable = { global.tech_y@ad_chi_tech_gun_mg17 = 375 }
-		set_variable = { global.tech_cost@ad_chi_tech_gun_mg17 = 75 }
-		set_variable = { global.tech_date@ad_chi_tech_gun_mg17 = 1936 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_gun_m1919 = token:ad_chi_tech_gun_mg17 } } } add_to_array = { global.tech_dependents@ad_chi_tech_gun_m1919 = token:ad_chi_tech_gun_mg17 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_gun_m2 }
-		set_variable = { global.tech_x@ad_chi_tech_gun_m2 = 1460 }
-		set_variable = { global.tech_y@ad_chi_tech_gun_m2 = 445 }
-		set_variable = { global.tech_cost@ad_chi_tech_gun_m2 = 75 }
-		set_variable = { global.tech_date@ad_chi_tech_gun_m2 = 1937 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_gun_shkas = token:ad_chi_tech_gun_m2 } } } add_to_array = { global.tech_dependents@ad_chi_tech_gun_shkas = token:ad_chi_tech_gun_m2 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_gun_type89 }
-		set_variable = { global.tech_x@ad_chi_tech_gun_type89 = 1460 }
-		set_variable = { global.tech_y@ad_chi_tech_gun_type89 = 585 }
-		set_variable = { global.tech_cost@ad_chi_tech_gun_type89 = 75 }
-		set_variable = { global.tech_date@ad_chi_tech_gun_type89 = 1938 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_gun_mg17 = token:ad_chi_tech_gun_type89 } } } add_to_array = { global.tech_dependents@ad_chi_tech_gun_mg17 = token:ad_chi_tech_gun_type89 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_gun_shvak20 }
-		set_variable = { global.tech_x@ad_chi_tech_gun_shvak20 = 1460 }
-		set_variable = { global.tech_y@ad_chi_tech_gun_shvak20 = 865 }
-		set_variable = { global.tech_cost@ad_chi_tech_gun_shvak20 = 75 }
-		set_variable = { global.tech_date@ad_chi_tech_gun_shvak20 = 1940 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_gun_m2 = token:ad_chi_tech_gun_shvak20 } } } add_to_array = { global.tech_dependents@ad_chi_tech_gun_m2 = token:ad_chi_tech_gun_shvak20 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_gun_ubs }
-		set_variable = { global.tech_x@ad_chi_tech_gun_ubs = 1460 }
-		set_variable = { global.tech_y@ad_chi_tech_gun_ubs = 1005 }
-		set_variable = { global.tech_cost@ad_chi_tech_gun_ubs = 75 }
-		set_variable = { global.tech_date@ad_chi_tech_gun_ubs = 1941 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_gun_shvak20 = token:ad_chi_tech_gun_ubs } } } add_to_array = { global.tech_dependents@ad_chi_tech_gun_shvak20 = token:ad_chi_tech_gun_ubs } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_gun_type99 }
-		set_variable = { global.tech_x@ad_chi_tech_gun_type99 = 1460 }
-		set_variable = { global.tech_y@ad_chi_tech_gun_type99 = 1075 }
-		set_variable = { global.tech_cost@ad_chi_tech_gun_type99 = 75 }
-		set_variable = { global.tech_date@ad_chi_tech_gun_type99 = 1941 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_gun_type89 = token:ad_chi_tech_gun_type99 } } } add_to_array = { global.tech_dependents@ad_chi_tech_gun_type89 = token:ad_chi_tech_gun_type99 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_gun_hispano }
-		set_variable = { global.tech_x@ad_chi_tech_gun_hispano = 1460 }
-		set_variable = { global.tech_y@ad_chi_tech_gun_hispano = 1285 }
-		set_variable = { global.tech_cost@ad_chi_tech_gun_hispano = 75 }
-		set_variable = { global.tech_date@ad_chi_tech_gun_hispano = 1943 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_gun_type99 = token:ad_chi_tech_gun_hispano } } } add_to_array = { global.tech_dependents@ad_chi_tech_gun_type99 = token:ad_chi_tech_gun_hispano } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_gun_ho103 }
-		set_variable = { global.tech_x@ad_chi_tech_gun_ho103 = 1460 }
-		set_variable = { global.tech_y@ad_chi_tech_gun_ho103 = 1425 }
-		set_variable = { global.tech_cost@ad_chi_tech_gun_ho103 = 75 }
-		set_variable = { global.tech_date@ad_chi_tech_gun_ho103 = 1944 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_gun_hispano = token:ad_chi_tech_gun_ho103 } } } add_to_array = { global.tech_dependents@ad_chi_tech_gun_hispano = token:ad_chi_tech_gun_ho103 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_gun_ns23 }
-		set_variable = { global.tech_x@ad_chi_tech_gun_ns23 = 1460 }
-		set_variable = { global.tech_y@ad_chi_tech_gun_ns23 = 1565 }
-		set_variable = { global.tech_cost@ad_chi_tech_gun_ns23 = 75 }
-		set_variable = { global.tech_date@ad_chi_tech_gun_ns23 = 1945 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_gun_ho103 = token:ad_chi_tech_gun_ns23 } } } add_to_array = { global.tech_dependents@ad_chi_tech_gun_ho103 = token:ad_chi_tech_gun_ns23 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_ord_fab100 }
-		set_variable = { global.tech_x@ad_chi_tech_ord_fab100 = 1740 }
-		set_variable = { global.tech_y@ad_chi_tech_ord_fab100 = 445 }
-		set_variable = { global.tech_cost@ad_chi_tech_ord_fab100 = 60 }
-		set_variable = { global.tech_date@ad_chi_tech_ord_fab100 = 1937 }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_ord_ao10 }
-		set_variable = { global.tech_x@ad_chi_tech_ord_ao10 = 1880 }
-		set_variable = { global.tech_y@ad_chi_tech_ord_ao10 = 585 }
-		set_variable = { global.tech_cost@ad_chi_tech_ord_ao10 = 60 }
-		set_variable = { global.tech_date@ad_chi_tech_ord_ao10 = 1938 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_ord_fab100 = token:ad_chi_tech_ord_ao10 } } } add_to_array = { global.tech_dependents@ad_chi_tech_ord_fab100 = token:ad_chi_tech_ord_ao10 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_ord_fab250 }
-		set_variable = { global.tech_x@ad_chi_tech_ord_fab250 = 1740 }
-		set_variable = { global.tech_y@ad_chi_tech_ord_fab250 = 585 }
-		set_variable = { global.tech_cost@ad_chi_tech_ord_fab250 = 60 }
-		set_variable = { global.tech_date@ad_chi_tech_ord_fab250 = 1938 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_ord_fab100 = token:ad_chi_tech_ord_fab250 } } } add_to_array = { global.tech_dependents@ad_chi_tech_ord_fab100 = token:ad_chi_tech_ord_fab250 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_ord_fab500 }
-		set_variable = { global.tech_x@ad_chi_tech_ord_fab500 = 1740 }
-		set_variable = { global.tech_y@ad_chi_tech_ord_fab500 = 1005 }
-		set_variable = { global.tech_cost@ad_chi_tech_ord_fab500 = 60 }
-		set_variable = { global.tech_date@ad_chi_tech_ord_fab500 = 1941 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_ord_fab250 = token:ad_chi_tech_ord_fab500 } } } add_to_array = { global.tech_dependents@ad_chi_tech_ord_fab250 = token:ad_chi_tech_ord_fab500 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_ord_anm30 }
-		set_variable = { global.tech_x@ad_chi_tech_ord_anm30 = 1740 }
-		set_variable = { global.tech_y@ad_chi_tech_ord_anm30 = 1145 }
-		set_variable = { global.tech_cost@ad_chi_tech_ord_anm30 = 60 }
-		set_variable = { global.tech_date@ad_chi_tech_ord_anm30 = 1942 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_ord_fab500 = token:ad_chi_tech_ord_anm30 } } } add_to_array = { global.tech_dependents@ad_chi_tech_ord_fab500 = token:ad_chi_tech_ord_anm30 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_ord_rs82 }
-		set_variable = { global.tech_x@ad_chi_tech_ord_rs82 = 1880 }
-		set_variable = { global.tech_y@ad_chi_tech_ord_rs82 = 1285 }
-		set_variable = { global.tech_cost@ad_chi_tech_ord_rs82 = 60 }
-		set_variable = { global.tech_date@ad_chi_tech_ord_rs82 = 1943 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_ord_anm30 = token:ad_chi_tech_ord_rs82 } } } add_to_array = { global.tech_dependents@ad_chi_tech_ord_anm30 = token:ad_chi_tech_ord_rs82 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_ord_type92 }
-		set_variable = { global.tech_x@ad_chi_tech_ord_type92 = 1740 }
-		set_variable = { global.tech_y@ad_chi_tech_ord_type92 = 1215 }
-		set_variable = { global.tech_cost@ad_chi_tech_ord_type92 = 60 }
-		set_variable = { global.tech_date@ad_chi_tech_ord_type92 = 1942 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_ord_anm30 = token:ad_chi_tech_ord_type92 } } } add_to_array = { global.tech_dependents@ad_chi_tech_ord_anm30 = token:ad_chi_tech_ord_type92 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_ord_anm57 }
-		set_variable = { global.tech_x@ad_chi_tech_ord_anm57 = 1740 }
-		set_variable = { global.tech_y@ad_chi_tech_ord_anm57 = 1285 }
-		set_variable = { global.tech_cost@ad_chi_tech_ord_anm57 = 60 }
-		set_variable = { global.tech_date@ad_chi_tech_ord_anm57 = 1943 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_ord_type92 = token:ad_chi_tech_ord_anm57 } } } add_to_array = { global.tech_dependents@ad_chi_tech_ord_type92 = token:ad_chi_tech_ord_anm57 } }
-		add_to_array = { global.chinaair_folder = token:ad_chi_tech_ord_hvar }
-		set_variable = { global.tech_x@ad_chi_tech_ord_hvar = 1740 }
-		set_variable = { global.tech_y@ad_chi_tech_ord_hvar = 1425 }
-		set_variable = { global.tech_cost@ad_chi_tech_ord_hvar = 60 }
-		set_variable = { global.tech_date@ad_chi_tech_ord_hvar = 1944 }
-		if = { limit = { NOT = { is_in_array = { global.tech_dependents@ad_chi_tech_ord_anm57 = token:ad_chi_tech_ord_hvar } } } add_to_array = { global.tech_dependents@ad_chi_tech_ord_anm57 = token:ad_chi_tech_ord_hvar } }
 	}
 }
