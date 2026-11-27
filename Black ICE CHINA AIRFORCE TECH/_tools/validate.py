@@ -14,7 +14,7 @@ sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(HERE, 'build'))
 import cw_parse as C
 try:
-    from config import HIDE_GENERIC_AIR, REQUEST_GATE
+    from config import HIDE_GENERIC_AIR, REQUEST_GATE, CANVAS_W, CANVAS_H
 except Exception:
     HIDE_GENERIC_AIR = True
     REQUEST_GATE = False
@@ -275,13 +275,12 @@ def main():
         if f"GFX_{tid}_medium" not in sprites:
             err(f"{tid}: 缺少图标 sprite / missing icon sprite GFX_{tid}_medium")
 
-        # gui gridbox
-        if f'name = "{tid}_tree"' not in read(gui_file):
-            err(f"{tid}: GUI 中缺少 gridbox / missing gridbox {tid}_tree")
-        # 小格科技（发动机/枪炮/挂载）还需要 _small_tree 才会用 72×72 模板
-        if tid.startswith(("ad_chi_tech_engine_", "ad_chi_tech_gun_", "ad_chi_tech_ord_")):
-            if f'name = "{tid}_small_tree"' not in read(gui_file):
-                err(f"{tid}: 小格科技缺少 gridbox / missing gridbox {tid}_small_tree")
+        # gui gridbox：大格是 <tech>_tree，小格科技用 BIAD 的 <tech>_large_tree + _small_tree
+        _gui = read(gui_file)
+        _expect = f"{tid}_tree"
+        if f'name = "{_expect}"' not in _gui:
+            err(f"{tid}: GUI 中缺少 gridbox / missing gridbox {_expect}")
+        # 小格科技靠 force_use_small_tech_layout，不再需要额外的 _small_tree 格子
 
     # ---- required-slot coverage (can the plane actually be built?) ------
     # For every airframe tech we need:
@@ -536,9 +535,9 @@ def main():
                     err(f"{tid}: 研究数组缺少 {key} / missing {key}")
         if missing:
             err(f"未注册进 global.chinaair_folder 的科技: {len(missing)} 个，例如 {missing[:5]}")
-        # pixel bounds: the folder container is 4000x2600
+        # pixel bounds: the folder container size comes from config
         for m_px, m_py in re.findall(r"tech_x@\w+ = (\d+) \}\s*\n\s*set_variable = \{ global\.tech_y@\w+ = (\d+)", txt):
-            if not (0 <= int(m_px) <= 4000) or not (0 <= int(m_py) <= 2600):
+            if not (0 <= int(m_px) <= CANVAS_W) or not (0 <= int(m_py) <= CANVAS_H):
                 err(f"研究数组坐标越界 / tech position out of container: x={m_px} y={m_py}")
         info(f"研究数组条目 / research array techs: {txt.count('global.chinaair_folder = token:')}")
     if os.path.isfile(sg_file):

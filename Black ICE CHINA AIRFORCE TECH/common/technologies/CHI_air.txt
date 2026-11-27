@@ -27,14 +27,14 @@ technologies = {
 			ad_frame_config_curtiss_hawk3_mr_equipment_1
 		}
 		path = {
-			leads_to_tech = ad_chi_tech_i152
+			leads_to_tech = ad_chi_tech_hawk75m
 			research_cost_coeff = 1
 		}
 		research_cost = 1.05
-		start_year = 1936
+		start_year = 1935
 		folder = {
 			name = chinaair_folder
-			position = { x = 26 y = 2 }
+			position = { x = 28 y = 0 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -57,15 +57,15 @@ technologies = {
 			air_equipment
 		}
 	}
-	ad_chi_tech_i152 = {
+	ad_chi_tech_hawk75m = {
 		enable_equipments = {
-			ad_i_152_equipment_1
+			ad_curtiss_p36_equipment_1
 		}
 		enable_equipment_modules = {
-			ad_frame_config_i_152_equipment_1
+			ad_frame_config_curtiss_p36_equipment_1
 		}
 		path = {
-			leads_to_tech = ad_chi_tech_i16t10
+			leads_to_tech = ad_chi_tech_p40b
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -75,7 +75,7 @@ technologies = {
 		start_year = 1937
 		folder = {
 			name = chinaair_folder
-			position = { x = 26 y = 4 }
+			position = { x = 28 y = 4 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -84,98 +84,16 @@ technologies = {
 			factor = 1
 		}
 		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_i152 }
+			set_temp_variable = { tech = token:ad_chi_tech_hawk75m }
 			on_air_tech_research_complete = yes
 			custom_effect_tooltip = tech_category_tt
 			custom_effect_tooltip = air_equipment_tt
 			custom_effect_tooltip = light_fighter_tt
-			custom_effect_tooltip = polikarpov_air_tt
+			custom_effect_tooltip = curtiss_air_tt
 		}
 
 		categories = {
-			polikarpov_air
-			light_fighter
-			air_equipment
-		}
-	}
-	ad_chi_tech_i16t10 = {
-		enable_equipments = {
-			ad_i_16_equipment_3
-		}
-		enable_equipment_modules = {
-			ad_frame_config_i_16_equipment_3
-		}
-		path = {
-			leads_to_tech = ad_chi_tech_i16t24
-			research_cost_coeff = 1
-		}
-		dependencies = {
-			ad_chi_tech_i152 = 1
-		}
-		research_cost = 1.05
-		start_year = 1938
-		folder = {
-			name = chinaair_folder
-			position = { x = 26 y = 6 }
-		}
-
-		special_project_specialization = { specialization_air }
-
-		ai_will_do = {
-			factor = 1
-		}
-		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_i16t10 }
-			on_air_tech_research_complete = yes
-			custom_effect_tooltip = tech_category_tt
-			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = light_fighter_tt
-			custom_effect_tooltip = polikarpov_air_tt
-		}
-
-		categories = {
-			polikarpov_air
-			light_fighter
-			air_equipment
-		}
-	}
-	ad_chi_tech_i16t24 = {
-		enable_equipments = {
-			ad_i_16_equipment_4
-		}
-		enable_equipment_modules = {
-			ad_frame_config_i_16_equipment_4
-		}
-		path = {
-			leads_to_tech = ad_chi_tech_p40b
-			research_cost_coeff = 1
-		}
-		dependencies = {
-			ad_chi_tech_i16t10 = 1
-		}
-		research_cost = 1.05
-		start_year = 1940
-		folder = {
-			name = chinaair_folder
-			position = { x = 26 y = 10 }
-		}
-
-		special_project_specialization = { specialization_air }
-
-		ai_will_do = {
-			factor = 1
-		}
-		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_i16t24 }
-			on_air_tech_research_complete = yes
-			custom_effect_tooltip = tech_category_tt
-			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = light_fighter_tt
-			custom_effect_tooltip = polikarpov_air_tt
-		}
-
-		categories = {
-			polikarpov_air
+			curtiss_air
 			light_fighter
 			air_equipment
 		}
@@ -192,13 +110,13 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		dependencies = {
-			ad_chi_tech_i16t24 = 1
+			ad_chi_tech_hawk75m = 1
 		}
 		research_cost = 1.05
 		start_year = 1941
 		folder = {
 			name = chinaair_folder
-			position = { x = 26 y = 12 }
+			position = { x = 28 y = 12 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -239,7 +157,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = chinaair_folder
-			position = { x = 26 y = 14 }
+			position = { x = 28 y = 14 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -280,7 +198,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = chinaair_folder
-			position = { x = 26 y = 16 }
+			position = { x = 28 y = 16 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -311,7 +229,7 @@ technologies = {
 			ad_frame_config_northamerican_p51d_equipment_1
 		}
 		path = {
-			leads_to_tech = ad_chi_tech_p80a
+			leads_to_tech = ad_chi_tech_la9
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -321,7 +239,7 @@ technologies = {
 		start_year = 1944
 		folder = {
 			name = chinaair_folder
-			position = { x = 26 y = 18 }
+			position = { x = 28 y = 18 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -344,12 +262,12 @@ technologies = {
 			air_equipment
 		}
 	}
-	ad_chi_tech_p80a = {
+	ad_chi_tech_la9 = {
 		enable_equipments = {
-			ad_lockheed_p80_equipment_1
+			ad_lagg_9_equipment_1
 		}
 		enable_equipment_modules = {
-			ad_frame_config_lockheed_p80_equipment_1
+			ad_frame_config_lagg_9_equipment_1
 		}
 		dependencies = {
 			ad_chi_tech_p51d = 1
@@ -358,291 +276,7 @@ technologies = {
 		start_year = 1946
 		folder = {
 			name = chinaair_folder
-			position = { x = 26 y = 22 }
-		}
-
-		special_project_specialization = { specialization_air }
-
-		ai_will_do = {
-			factor = 1
-		}
-		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_p80a }
-			on_air_tech_research_complete = yes
-			custom_effect_tooltip = tech_category_tt
-			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = jet_aircraft_tt
-			custom_effect_tooltip = lockheed_air_tt
-		}
-
-		categories = {
-			lockheed_air
-			jet_aircraft
-			air_equipment
-		}
-	}
-	ad_chi_tech_ki27 = {
-		enable_equipments = {
-			ad_nakajima_ki_27_equipment_1
-		}
-		enable_equipment_modules = {
-			ad_frame_config_nakajima_ki_27_equipment_1
-		}
-		path = {
-			leads_to_tech = ad_chi_tech_i153
-			research_cost_coeff = 1
-		}
-		research_cost = 1.05
-		start_year = 1938
-		folder = {
-			name = chinaair_folder
-			position = { x = 30 y = 6 }
-		}
-
-		special_project_specialization = { specialization_air }
-
-		ai_will_do = {
-			factor = 1
-		}
-		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_ki27 }
-			on_air_tech_research_complete = yes
-			custom_effect_tooltip = tech_category_tt
-			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = light_fighter_tt
-			custom_effect_tooltip = nakajima_air_tt
-		}
-
-		categories = {
-			nakajima_air
-			light_fighter
-			air_equipment
-		}
-	}
-	ad_chi_tech_i153 = {
-		enable_equipments = {
-			ad_i_153_equipment_1
-		}
-		enable_equipment_modules = {
-			ad_frame_config_i_153_equipment_1
-		}
-		path = {
-			leads_to_tech = ad_chi_tech_ki43
-			research_cost_coeff = 1
-		}
-		dependencies = {
-			ad_chi_tech_ki27 = 1
-		}
-		research_cost = 1.05
-		start_year = 1939
-		folder = {
-			name = chinaair_folder
-			position = { x = 30 y = 8 }
-		}
-
-		special_project_specialization = { specialization_air }
-
-		ai_will_do = {
-			factor = 1
-		}
-		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_i153 }
-			on_air_tech_research_complete = yes
-			custom_effect_tooltip = tech_category_tt
-			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = light_fighter_tt
-			custom_effect_tooltip = polikarpov_air_tt
-		}
-
-		categories = {
-			polikarpov_air
-			light_fighter
-			air_equipment
-		}
-	}
-	ad_chi_tech_ki43 = {
-		enable_equipments = {
-			ad_nakajima_ki_43_equipment_1
-		}
-		enable_equipment_modules = {
-			ad_frame_config_nakajima_ki_43_equipment_1
-		}
-		path = {
-			leads_to_tech = ad_chi_tech_a6m2
-			research_cost_coeff = 1
-		}
-		dependencies = {
-			ad_chi_tech_i153 = 1
-		}
-		research_cost = 1.05
-		start_year = 1941
-		folder = {
-			name = chinaair_folder
-			position = { x = 30 y = 12 }
-		}
-
-		special_project_specialization = { specialization_air }
-
-		ai_will_do = {
-			factor = 1
-		}
-		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_ki43 }
-			on_air_tech_research_complete = yes
-			custom_effect_tooltip = tech_category_tt
-			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = light_fighter_tt
-			custom_effect_tooltip = nakajima_air_tt
-		}
-
-		categories = {
-			nakajima_air
-			light_fighter
-			air_equipment
-		}
-	}
-	ad_chi_tech_a6m2 = {
-		enable_equipments = {
-			ad_mitsubishi_a6m_equipment_1
-		}
-		enable_equipment_modules = {
-			ad_frame_config_mitsubishi_a6m_equipment_1
-		}
-		path = {
-			leads_to_tech = ad_chi_tech_ki61
-			research_cost_coeff = 1
-		}
-		dependencies = {
-			ad_chi_tech_ki43 = 1
-		}
-		research_cost = 1.05
-		start_year = 1942
-		folder = {
-			name = chinaair_folder
-			position = { x = 30 y = 14 }
-		}
-
-		special_project_specialization = { specialization_air }
-
-		ai_will_do = {
-			factor = 1
-		}
-		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_a6m2 }
-			on_air_tech_research_complete = yes
-			custom_effect_tooltip = tech_category_tt
-			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = light_fighter_tt
-			custom_effect_tooltip = mitsubishi_air_tt
-		}
-
-		categories = {
-			mitsubishi_air
-			light_fighter
-			air_equipment
-		}
-	}
-	ad_chi_tech_ki61 = {
-		enable_equipments = {
-			ad_kawasaki_ki_61_equipment_1
-		}
-		enable_equipment_modules = {
-			ad_frame_config_kawasaki_ki_61_equipment_1
-		}
-		path = {
-			leads_to_tech = ad_chi_tech_ki84
-			research_cost_coeff = 1
-		}
-		dependencies = {
-			ad_chi_tech_a6m2 = 1
-		}
-		research_cost = 1.05
-		start_year = 1943
-		folder = {
-			name = chinaair_folder
-			position = { x = 30 y = 16 }
-		}
-
-		special_project_specialization = { specialization_air }
-
-		ai_will_do = {
-			factor = 1
-		}
-		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_ki61 }
-			on_air_tech_research_complete = yes
-			custom_effect_tooltip = tech_category_tt
-			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = light_fighter_tt
-			custom_effect_tooltip = kawasaki_air_tt
-		}
-
-		categories = {
-			kawasaki_air
-			light_fighter
-			air_equipment
-		}
-	}
-	ad_chi_tech_ki84 = {
-		enable_equipments = {
-			ad_nakajima_ki_84_equipment_1
-		}
-		enable_equipment_modules = {
-			ad_frame_config_nakajima_ki_84_equipment_1
-		}
-		path = {
-			leads_to_tech = ad_chi_tech_la9
-			research_cost_coeff = 1
-		}
-		dependencies = {
-			ad_chi_tech_ki61 = 1
-		}
-		research_cost = 1.05
-		start_year = 1944
-		folder = {
-			name = chinaair_folder
-			position = { x = 30 y = 18 }
-		}
-
-		special_project_specialization = { specialization_air }
-
-		ai_will_do = {
-			factor = 1
-		}
-		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_ki84 }
-			on_air_tech_research_complete = yes
-			custom_effect_tooltip = tech_category_tt
-			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = light_fighter_tt
-			custom_effect_tooltip = nakajima_air_tt
-		}
-
-		categories = {
-			nakajima_air
-			light_fighter
-			air_equipment
-		}
-	}
-	ad_chi_tech_la9 = {
-		enable_equipments = {
-			ad_lagg_9_equipment_1
-		}
-		enable_equipment_modules = {
-			ad_frame_config_lagg_9_equipment_1
-		}
-		path = {
-			leads_to_tech = ad_chi_tech_mig9
-			research_cost_coeff = 1
-		}
-		dependencies = {
-			ad_chi_tech_ki84 = 1
-		}
-		research_cost = 1.05
-		start_year = 1946
-		folder = {
-			name = chinaair_folder
-			position = { x = 30 y = 22 }
+			position = { x = 28 y = 22 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -665,6 +299,47 @@ technologies = {
 			air_equipment
 		}
 	}
+	ad_chi_tech_p80a = {
+		enable_equipments = {
+			ad_lockheed_p80_equipment_1
+		}
+		enable_equipment_modules = {
+			ad_frame_config_lockheed_p80_equipment_1
+		}
+		path = {
+			leads_to_tech = ad_chi_tech_mig9
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			ad_chi_tech_p51d = 1
+		}
+		research_cost = 1.05
+		start_year = 1946
+		folder = {
+			name = chinaair_folder
+			position = { x = 28 y = 23 }
+		}
+
+		special_project_specialization = { specialization_air }
+
+		ai_will_do = {
+			factor = 1
+		}
+		on_research_complete = {
+			set_temp_variable = { tech = token:ad_chi_tech_p80a }
+			on_air_tech_research_complete = yes
+			custom_effect_tooltip = tech_category_tt
+			custom_effect_tooltip = air_equipment_tt
+			custom_effect_tooltip = jet_aircraft_tt
+			custom_effect_tooltip = lockheed_air_tt
+		}
+
+		categories = {
+			lockheed_air
+			jet_aircraft
+			air_equipment
+		}
+	}
 	ad_chi_tech_mig9 = {
 		enable_equipments = {
 			ad_mig_9_fighter_equipment_1
@@ -673,13 +348,13 @@ technologies = {
 			ad_frame_config_mig_9_fighter_equipment_1
 		}
 		dependencies = {
-			ad_chi_tech_la9 = 1
+			ad_chi_tech_p80a = 1
 		}
 		research_cost = 1.05
 		start_year = 1947
 		folder = {
 			name = chinaair_folder
-			position = { x = 30 y = 24 }
+			position = { x = 28 y = 24 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -702,22 +377,18 @@ technologies = {
 			air_equipment
 		}
 	}
-	ad_chi_tech_gamma2e = {
+	ad_chi_tech_ki45 = {
 		enable_equipments = {
-			ad_northrop_gamma_2e_equipment_1
+			ad_kawasaki_ki_45_equipment_1
 		}
 		enable_equipment_modules = {
-			ad_frame_config_northrop_gamma_2e_equipment_1
-		}
-		path = {
-			leads_to_tech = ad_chi_tech_hs123
-			research_cost_coeff = 1
+			ad_frame_config_kawasaki_ki_45_equipment_1
 		}
 		research_cost = 1.05
-		start_year = 1936
+		start_year = 1945
 		folder = {
 			name = chinaair_folder
-			position = { x = 34 y = 2 }
+			position = { x = 34 y = 20 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -726,17 +397,133 @@ technologies = {
 			factor = 1
 		}
 		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_gamma2e }
+			set_temp_variable = { tech = token:ad_chi_tech_ki45 }
 			on_air_tech_research_complete = yes
 			custom_effect_tooltip = tech_category_tt
 			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = cas_bomber_tt
-			custom_effect_tooltip = northrop_air_tt
+			custom_effect_tooltip = cat_heavy_fighter_tt
+			custom_effect_tooltip = kawasaki_air_tt
 		}
 
 		categories = {
-			northrop_air
-			cas_bomber
+			kawasaki_air
+			cat_heavy_fighter
+			air_equipment
+		}
+	}
+	ad_chi_tech_a5m = {
+		enable_equipments = {
+			ad_mitsubishi_a5m_equipment_1
+		}
+		enable_equipment_modules = {
+			ad_frame_config_mitsubishi_a5m_equipment_1
+		}
+		path = {
+			leads_to_tech = ad_chi_tech_a6m2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.05
+		start_year = 1937
+		folder = {
+			name = chinaair_folder
+			position = { x = 38 y = 4 }
+		}
+
+		special_project_specialization = { specialization_air }
+
+		ai_will_do = {
+			factor = 1
+		}
+		on_research_complete = {
+			set_temp_variable = { tech = token:ad_chi_tech_a5m }
+			on_air_tech_research_complete = yes
+			custom_effect_tooltip = tech_category_tt
+			custom_effect_tooltip = air_equipment_tt
+			custom_effect_tooltip = light_fighter_tt
+			custom_effect_tooltip = mitsubishi_air_tt
+		}
+
+		categories = {
+			mitsubishi_air
+			light_fighter
+			air_equipment
+		}
+	}
+	ad_chi_tech_a6m2 = {
+		enable_equipments = {
+			ad_mitsubishi_a6m_equipment_1
+		}
+		enable_equipment_modules = {
+			ad_frame_config_mitsubishi_a6m_equipment_1
+		}
+		path = {
+			leads_to_tech = ad_chi_tech_a6m3
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			ad_chi_tech_a5m = 1
+		}
+		research_cost = 1.05
+		start_year = 1941
+		folder = {
+			name = chinaair_folder
+			position = { x = 38 y = 12 }
+		}
+
+		special_project_specialization = { specialization_air }
+
+		ai_will_do = {
+			factor = 1
+		}
+		on_research_complete = {
+			set_temp_variable = { tech = token:ad_chi_tech_a6m2 }
+			on_air_tech_research_complete = yes
+			custom_effect_tooltip = tech_category_tt
+			custom_effect_tooltip = air_equipment_tt
+			custom_effect_tooltip = light_fighter_tt
+			custom_effect_tooltip = mitsubishi_air_tt
+		}
+
+		categories = {
+			mitsubishi_air
+			light_fighter
+			air_equipment
+		}
+	}
+	ad_chi_tech_a6m3 = {
+		enable_equipments = {
+			ad_mitsubishi_a6m3_equipment_1
+		}
+		enable_equipment_modules = {
+			ad_frame_config_mitsubishi_a6m3_equipment_1
+		}
+		dependencies = {
+			ad_chi_tech_a6m2 = 1
+		}
+		research_cost = 1.05
+		start_year = 1945
+		folder = {
+			name = chinaair_folder
+			position = { x = 38 y = 20 }
+		}
+
+		special_project_specialization = { specialization_air }
+
+		ai_will_do = {
+			factor = 1
+		}
+		on_research_complete = {
+			set_temp_variable = { tech = token:ad_chi_tech_a6m3 }
+			on_air_tech_research_complete = yes
+			custom_effect_tooltip = tech_category_tt
+			custom_effect_tooltip = air_equipment_tt
+			custom_effect_tooltip = light_fighter_tt
+			custom_effect_tooltip = mitsubishi_air_tt
+		}
+
+		categories = {
+			mitsubishi_air
+			light_fighter
 			air_equipment
 		}
 	}
@@ -748,17 +535,14 @@ technologies = {
 			ad_frame_config_hs_123_equipment_1
 		}
 		path = {
-			leads_to_tech = ad_chi_tech_a19
+			leads_to_tech = ad_chi_tech_v11
 			research_cost_coeff = 1
 		}
-		dependencies = {
-			ad_chi_tech_gamma2e = 1
-		}
 		research_cost = 1.05
-		start_year = 1937
+		start_year = 1935
 		folder = {
 			name = chinaair_folder
-			position = { x = 34 y = 4 }
+			position = { x = 42 y = 0 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -781,7 +565,7 @@ technologies = {
 			air_equipment
 		}
 	}
-	ad_chi_tech_a19 = {
+	ad_chi_tech_v11 = {
 		enable_equipments = {
 			ad_vultee_a19_equipment_1
 		}
@@ -789,17 +573,17 @@ technologies = {
 			ad_frame_config_vultee_a19_equipment_1
 		}
 		path = {
-			leads_to_tech = ad_chi_tech_mosquito_fb6
+			leads_to_tech = ad_chi_tech_v12d
 			research_cost_coeff = 1
 		}
 		dependencies = {
 			ad_chi_tech_hs123 = 1
 		}
 		research_cost = 1.05
-		start_year = 1938
+		start_year = 1937
 		folder = {
 			name = chinaair_folder
-			position = { x = 34 y = 6 }
+			position = { x = 42 y = 4 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -808,7 +592,7 @@ technologies = {
 			factor = 1
 		}
 		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_a19 }
+			set_temp_variable = { tech = token:ad_chi_tech_v11 }
 			on_air_tech_research_complete = yes
 			custom_effect_tooltip = tech_category_tt
 			custom_effect_tooltip = air_equipment_tt
@@ -822,25 +606,25 @@ technologies = {
 			air_equipment
 		}
 	}
-	ad_chi_tech_mosquito_fb6 = {
+	ad_chi_tech_v12d = {
 		enable_equipments = {
-			ad_mosquito_hvf_equipment_1
+			ad_vultee_a31_equipment_1
 		}
 		enable_equipment_modules = {
-			ad_frame_config_mosquito_hvf_equipment_1
+			ad_frame_config_vultee_a31_equipment_1
 		}
 		path = {
-			leads_to_tech = ad_chi_tech_il10
+			leads_to_tech = ad_chi_tech_mosquito_fb26
 			research_cost_coeff = 1
 		}
 		dependencies = {
-			ad_chi_tech_a19 = 1
+			ad_chi_tech_v11 = 1
 		}
 		research_cost = 1.05
-		start_year = 1944
+		start_year = 1938
 		folder = {
 			name = chinaair_folder
-			position = { x = 34 y = 18 }
+			position = { x = 42 y = 6 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -849,35 +633,35 @@ technologies = {
 			factor = 1
 		}
 		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_mosquito_fb6 }
+			set_temp_variable = { tech = token:ad_chi_tech_v12d }
 			on_air_tech_research_complete = yes
 			custom_effect_tooltip = tech_category_tt
 			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = cat_heavy_fighter_tt
-			custom_effect_tooltip = de_havilland_air_tt
+			custom_effect_tooltip = cas_bomber_tt
+			custom_effect_tooltip = vultee_air_tt
 		}
 
 		categories = {
-			de_havilland_air
-			cat_heavy_fighter
+			vultee_air
+			cas_bomber
 			air_equipment
 		}
 	}
-	ad_chi_tech_il10 = {
+	ad_chi_tech_mosquito_fb26 = {
 		enable_equipments = {
-			ad_il_10_equipment_1
+			ad_mosquito_fsb_equipment_2
 		}
 		enable_equipment_modules = {
-			ad_frame_config_il_10_equipment_1
+			ad_frame_config_mosquito_fsb_equipment_2
 		}
 		dependencies = {
-			ad_chi_tech_mosquito_fb6 = 1
+			ad_chi_tech_v12d = 1
 		}
 		research_cost = 1.05
 		start_year = 1945
 		folder = {
 			name = chinaair_folder
-			position = { x = 34 y = 20 }
+			position = { x = 42 y = 20 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -886,54 +670,16 @@ technologies = {
 			factor = 1
 		}
 		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_il10 }
-			on_air_tech_research_complete = yes
-			custom_effect_tooltip = tech_category_tt
-			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = cas_bomber_tt
-			custom_effect_tooltip = ilyushin_air_tt
-		}
-
-		categories = {
-			ilyushin_air
-			cas_bomber
-			air_equipment
-		}
-	}
-	ad_chi_tech_he111a = {
-		enable_equipments = {
-			ad_he_111_bomber_equipment_1
-		}
-		enable_equipment_modules = {
-			ad_frame_config_he_111_bomber_equipment_1
-		}
-		path = {
-			leads_to_tech = ad_chi_tech_sb2m
-			research_cost_coeff = 1
-		}
-		research_cost = 1.05
-		start_year = 1936
-		folder = {
-			name = chinaair_folder
-			position = { x = 38 y = 2 }
-		}
-
-		special_project_specialization = { specialization_air }
-
-		ai_will_do = {
-			factor = 1
-		}
-		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_he111a }
+			set_temp_variable = { tech = token:ad_chi_tech_mosquito_fb26 }
 			on_air_tech_research_complete = yes
 			custom_effect_tooltip = tech_category_tt
 			custom_effect_tooltip = air_equipment_tt
 			custom_effect_tooltip = tactical_bomber_tt
-			custom_effect_tooltip = heinkel_air_tt
+			custom_effect_tooltip = de_havilland_air_tt
 		}
 
 		categories = {
-			heinkel_air
+			de_havilland_air
 			tactical_bomber
 			air_equipment
 		}
@@ -949,14 +695,11 @@ technologies = {
 			leads_to_tech = ad_chi_tech_br20
 			research_cost_coeff = 1
 		}
-		dependencies = {
-			ad_chi_tech_he111a = 1
-		}
 		research_cost = 1.05
 		start_year = 1937
 		folder = {
 			name = chinaair_folder
-			position = { x = 38 y = 4 }
+			position = { x = 46 y = 4 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -983,10 +726,6 @@ technologies = {
 		enable_equipments = {
 			br20_bomber_equipment_1
 		}
-		path = {
-			leads_to_tech = ad_chi_tech_db3
-			research_cost_coeff = 1
-		}
 		dependencies = {
 			ad_chi_tech_sb2m = 1
 		}
@@ -994,7 +733,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = chinaair_folder
-			position = { x = 38 y = 8 }
+			position = { x = 46 y = 8 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1017,6 +756,44 @@ technologies = {
 			air_equipment
 		}
 	}
+	ad_chi_tech_he111a = {
+		enable_equipments = {
+			ad_he_111_bomber_equipment_1
+		}
+		enable_equipment_modules = {
+			ad_frame_config_he_111_bomber_equipment_1
+		}
+		path = {
+			leads_to_tech = ad_chi_tech_db3
+			research_cost_coeff = 1
+		}
+		research_cost = 1.05
+		start_year = 1936
+		folder = {
+			name = chinaair_folder
+			position = { x = 50 y = 2 }
+		}
+
+		special_project_specialization = { specialization_air }
+
+		ai_will_do = {
+			factor = 1
+		}
+		on_research_complete = {
+			set_temp_variable = { tech = token:ad_chi_tech_he111a }
+			on_air_tech_research_complete = yes
+			custom_effect_tooltip = tech_category_tt
+			custom_effect_tooltip = air_equipment_tt
+			custom_effect_tooltip = tactical_bomber_tt
+			custom_effect_tooltip = heinkel_air_tt
+		}
+
+		categories = {
+			heinkel_air
+			tactical_bomber
+			air_equipment
+		}
+	}
 	ad_chi_tech_db3 = {
 		enable_equipments = {
 			ad_db_3_bomber_equipment_1
@@ -1029,13 +806,13 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		dependencies = {
-			ad_chi_tech_br20 = 1
+			ad_chi_tech_he111a = 1
 		}
 		research_cost = 1.05
 		start_year = 1940
 		folder = {
 			name = chinaair_folder
-			position = { x = 38 y = 10 }
+			position = { x = 50 y = 10 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1076,7 +853,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = chinaair_folder
-			position = { x = 38 y = 14 }
+			position = { x = 50 y = 14 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1107,7 +884,7 @@ technologies = {
 			ad_frame_config_tu_2_bomber_equipment_1
 		}
 		path = {
-			leads_to_tech = ad_chi_tech_b24j
+			leads_to_tech = ad_chi_tech_g4m2
 			research_cost_coeff = 1
 		}
 		dependencies = {
@@ -1117,7 +894,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = chinaair_folder
-			position = { x = 38 y = 16 }
+			position = { x = 50 y = 16 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1140,47 +917,6 @@ technologies = {
 			air_equipment
 		}
 	}
-	ad_chi_tech_b24j = {
-		enable_equipments = {
-			ad_consolidated_b24_equipment_2
-		}
-		enable_equipment_modules = {
-			ad_frame_config_consolidated_b24_equipment_2
-		}
-		path = {
-			leads_to_tech = ad_chi_tech_g4m2
-			research_cost_coeff = 1
-		}
-		dependencies = {
-			ad_chi_tech_tu2 = 1
-		}
-		research_cost = 1.05
-		start_year = 1944
-		folder = {
-			name = chinaair_folder
-			position = { x = 38 y = 18 }
-		}
-
-		special_project_specialization = { specialization_air }
-
-		ai_will_do = {
-			factor = 1
-		}
-		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_b24j }
-			on_air_tech_research_complete = yes
-			custom_effect_tooltip = tech_category_tt
-			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = cat_strategic_bomber_tt
-			custom_effect_tooltip = consolidated_air_tt
-		}
-
-		categories = {
-			consolidated_air
-			cat_strategic_bomber
-			air_equipment
-		}
-	}
 	ad_chi_tech_g4m2 = {
 		enable_equipments = {
 			ad_mitsubishi_g4m2_equipment_1
@@ -1189,13 +925,13 @@ technologies = {
 			ad_frame_config_mitsubishi_g4m2_equipment_1
 		}
 		dependencies = {
-			ad_chi_tech_b24j = 1
+			ad_chi_tech_tu2 = 1
 		}
 		research_cost = 1.05
 		start_year = 1945
 		folder = {
 			name = chinaair_folder
-			position = { x = 38 y = 20 }
+			position = { x = 50 y = 20 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1218,22 +954,22 @@ technologies = {
 			air_equipment
 		}
 	}
-	ad_chi_tech_ki15 = {
+	ad_chi_tech_martin139 = {
 		enable_equipments = {
-			ad_mitsubishi_ki_15_scout_equipment_1
+			ad_martin_b10_bomber_equipment_1
 		}
 		enable_equipment_modules = {
-			ad_frame_config_mitsubishi_ki_15_scout_equipment_1
+			ad_frame_config_martin_b10_bomber_equipment_1
 		}
 		path = {
-			leads_to_tech = ad_chi_tech_pby5
+			leads_to_tech = ad_chi_tech_db3h
 			research_cost_coeff = 1
 		}
 		research_cost = 1.05
-		start_year = 1937
+		start_year = 1936
 		folder = {
 			name = chinaair_folder
-			position = { x = 42 y = 4 }
+			position = { x = 54 y = 2 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1242,15 +978,95 @@ technologies = {
 			factor = 1
 		}
 		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_ki15 }
+			set_temp_variable = { tech = token:ad_chi_tech_martin139 }
 			on_air_tech_research_complete = yes
 			custom_effect_tooltip = tech_category_tt
 			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = mitsubishi_air_tt
+			custom_effect_tooltip = tactical_bomber_tt
+			custom_effect_tooltip = martin_air_tt
 		}
 
 		categories = {
-			mitsubishi_air
+			martin_air
+			tactical_bomber
+			air_equipment
+		}
+	}
+	ad_chi_tech_db3h = {
+		enable_equipments = {
+			ad_db_3_bomber_equipment_2
+		}
+		enable_equipment_modules = {
+			ad_frame_config_db_3_bomber_equipment_2
+		}
+		path = {
+			leads_to_tech = ad_chi_tech_b24j
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			ad_chi_tech_martin139 = 1
+		}
+		research_cost = 1.05
+		start_year = 1939
+		folder = {
+			name = chinaair_folder
+			position = { x = 54 y = 8 }
+		}
+
+		special_project_specialization = { specialization_air }
+
+		ai_will_do = {
+			factor = 1
+		}
+		on_research_complete = {
+			set_temp_variable = { tech = token:ad_chi_tech_db3h }
+			on_air_tech_research_complete = yes
+			custom_effect_tooltip = tech_category_tt
+			custom_effect_tooltip = air_equipment_tt
+			custom_effect_tooltip = tactical_bomber_tt
+			custom_effect_tooltip = ilyushin_air_tt
+		}
+
+		categories = {
+			ilyushin_air
+			tactical_bomber
+			air_equipment
+		}
+	}
+	ad_chi_tech_b24j = {
+		enable_equipments = {
+			ad_consolidated_b24_equipment_2
+		}
+		enable_equipment_modules = {
+			ad_frame_config_consolidated_b24_equipment_2
+		}
+		dependencies = {
+			ad_chi_tech_db3h = 1
+		}
+		research_cost = 1.05
+		start_year = 1944
+		folder = {
+			name = chinaair_folder
+			position = { x = 54 y = 18 }
+		}
+
+		special_project_specialization = { specialization_air }
+
+		ai_will_do = {
+			factor = 1
+		}
+		on_research_complete = {
+			set_temp_variable = { tech = token:ad_chi_tech_b24j }
+			on_air_tech_research_complete = yes
+			custom_effect_tooltip = tech_category_tt
+			custom_effect_tooltip = air_equipment_tt
+			custom_effect_tooltip = cat_strategic_bomber_tt
+			custom_effect_tooltip = consolidated_air_tt
+		}
+
+		categories = {
+			consolidated_air
+			cat_strategic_bomber
 			air_equipment
 		}
 	}
@@ -1261,18 +1077,11 @@ technologies = {
 		enable_equipment_modules = {
 			ad_frame_config_consolidated_pby_equipment_2
 		}
-		path = {
-			leads_to_tech = ad_chi_tech_f5
-			research_cost_coeff = 1
-		}
-		dependencies = {
-			ad_chi_tech_ki15 = 1
-		}
 		research_cost = 1.05
 		start_year = 1942
 		folder = {
 			name = chinaair_folder
-			position = { x = 42 y = 14 }
+			position = { x = 58 y = 14 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1295,18 +1104,22 @@ technologies = {
 			air_equipment
 		}
 	}
-	ad_chi_tech_c47 = {
+	ad_chi_tech_ki15 = {
 		enable_equipments = {
-			douglas_c47_transport_equipment_1
+			ad_mitsubishi_ki_15_scout_equipment_1
 		}
-		dependencies = {
-			ad_chi_tech_ki15 = 1
+		enable_equipment_modules = {
+			ad_frame_config_mitsubishi_ki_15_scout_equipment_1
+		}
+		path = {
+			leads_to_tech = ad_chi_tech_f5
+			research_cost_coeff = 1
 		}
 		research_cost = 1.05
-		start_year = 1942
+		start_year = 1937
 		folder = {
 			name = chinaair_folder
-			position = { x = 42 y = 15 }
+			position = { x = 62 y = 4 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1315,15 +1128,15 @@ technologies = {
 			factor = 1
 		}
 		on_research_complete = {
-			set_temp_variable = { tech = token:ad_chi_tech_c47 }
+			set_temp_variable = { tech = token:ad_chi_tech_ki15 }
 			on_air_tech_research_complete = yes
 			custom_effect_tooltip = tech_category_tt
 			custom_effect_tooltip = air_equipment_tt
-			custom_effect_tooltip = douglas_air_tt
+			custom_effect_tooltip = mitsubishi_air_tt
 		}
 
 		categories = {
-			douglas_air
+			mitsubishi_air
 			air_equipment
 		}
 	}
@@ -1339,13 +1152,13 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		dependencies = {
-			ad_chi_tech_pby5 = 1
+			ad_chi_tech_ki15 = 1
 		}
 		research_cost = 1.05
 		start_year = 1943
 		folder = {
 			name = chinaair_folder
-			position = { x = 42 y = 16 }
+			position = { x = 62 y = 16 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1380,7 +1193,7 @@ technologies = {
 		start_year = 1944
 		folder = {
 			name = chinaair_folder
-			position = { x = 42 y = 18 }
+			position = { x = 62 y = 18 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1401,6 +1214,35 @@ technologies = {
 			air_equipment
 		}
 	}
+	ad_chi_tech_c47 = {
+		enable_equipments = {
+			douglas_c47_transport_equipment_1
+		}
+		research_cost = 1.05
+		start_year = 1942
+		folder = {
+			name = chinaair_folder
+			position = { x = 66 y = 14 }
+		}
+
+		special_project_specialization = { specialization_air }
+
+		ai_will_do = {
+			factor = 1
+		}
+		on_research_complete = {
+			set_temp_variable = { tech = token:ad_chi_tech_c47 }
+			on_air_tech_research_complete = yes
+			custom_effect_tooltip = tech_category_tt
+			custom_effect_tooltip = air_equipment_tt
+			custom_effect_tooltip = douglas_air_tt
+		}
+
+		categories = {
+			douglas_air
+			air_equipment
+		}
+	}
 	####################################################################
 	##  航空发动机
 	####################################################################
@@ -1417,7 +1259,7 @@ technologies = {
 		start_year = 1935
 		folder = {
 			name = chinaair_folder
-			position = { x = 0 y = 0 }
+			position = { x = 2 y = 0 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1453,7 +1295,7 @@ technologies = {
 		start_year = 1940
 		folder = {
 			name = chinaair_folder
-			position = { x = 0 y = 10 }
+			position = { x = 2 y = 10 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1489,7 +1331,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = chinaair_folder
-			position = { x = 0 y = 16 }
+			position = { x = 2 y = 16 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1521,7 +1363,7 @@ technologies = {
 		start_year = 1944
 		folder = {
 			name = chinaair_folder
-			position = { x = 0 y = 18 }
+			position = { x = 2 y = 18 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1554,7 +1396,7 @@ technologies = {
 		start_year = 1941
 		folder = {
 			name = chinaair_folder
-			position = { x = 2 y = 12 }
+			position = { x = 4 y = 12 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1591,7 +1433,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = chinaair_folder
-			position = { x = 2 y = 14 }
+			position = { x = 4 y = 14 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1623,7 +1465,7 @@ technologies = {
 		start_year = 1946
 		folder = {
 			name = chinaair_folder
-			position = { x = 2 y = 22 }
+			position = { x = 4 y = 22 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1656,7 +1498,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = chinaair_folder
-			position = { x = 4 y = 2 }
+			position = { x = 6 y = 2 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1692,7 +1534,7 @@ technologies = {
 		start_year = 1938
 		folder = {
 			name = chinaair_folder
-			position = { x = 4 y = 6 }
+			position = { x = 6 y = 6 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1729,7 +1571,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = chinaair_folder
-			position = { x = 4 y = 16 }
+			position = { x = 6 y = 16 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1761,7 +1603,7 @@ technologies = {
 		start_year = 1944
 		folder = {
 			name = chinaair_folder
-			position = { x = 4 y = 18 }
+			position = { x = 6 y = 18 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1794,7 +1636,7 @@ technologies = {
 		start_year = 1937
 		folder = {
 			name = chinaair_folder
-			position = { x = 6 y = 4 }
+			position = { x = 8 y = 4 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1830,7 +1672,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = chinaair_folder
-			position = { x = 6 y = 8 }
+			position = { x = 8 y = 8 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1862,7 +1704,7 @@ technologies = {
 		start_year = 1946
 		folder = {
 			name = chinaair_folder
-			position = { x = 6 y = 22 }
+			position = { x = 8 y = 22 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1895,7 +1737,7 @@ technologies = {
 		start_year = 1937
 		folder = {
 			name = chinaair_folder
-			position = { x = 8 y = 4 }
+			position = { x = 10 y = 4 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1931,7 +1773,7 @@ technologies = {
 		start_year = 1940
 		folder = {
 			name = chinaair_folder
-			position = { x = 8 y = 10 }
+			position = { x = 10 y = 10 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1963,7 +1805,7 @@ technologies = {
 		start_year = 1944
 		folder = {
 			name = chinaair_folder
-			position = { x = 8 y = 18 }
+			position = { x = 10 y = 18 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -1995,7 +1837,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = chinaair_folder
-			position = { x = 8 y = 16 }
+			position = { x = 10 y = 16 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2028,7 +1870,7 @@ technologies = {
 		start_year = 1935
 		folder = {
 			name = chinaair_folder
-			position = { x = 12 y = 0 }
+			position = { x = 14 y = 0 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2064,7 +1906,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = chinaair_folder
-			position = { x = 12 y = 2 }
+			position = { x = 14 y = 2 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2096,7 +1938,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = chinaair_folder
-			position = { x = 12 y = 16 }
+			position = { x = 14 y = 16 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2135,7 +1977,7 @@ technologies = {
 		start_year = 1935
 		folder = {
 			name = chinaair_folder
-			position = { x = 16 y = 0 }
+			position = { x = 18 y = 0 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2173,7 +2015,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = chinaair_folder
-			position = { x = 16 y = 2 }
+			position = { x = 18 y = 2 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2212,7 +2054,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = chinaair_folder
-			position = { x = 16 y = 3 }
+			position = { x = 18 y = 3 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2251,7 +2093,7 @@ technologies = {
 		start_year = 1937
 		folder = {
 			name = chinaair_folder
-			position = { x = 16 y = 4 }
+			position = { x = 18 y = 4 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2288,7 +2130,7 @@ technologies = {
 		start_year = 1938
 		folder = {
 			name = chinaair_folder
-			position = { x = 16 y = 6 }
+			position = { x = 18 y = 6 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2326,7 +2168,7 @@ technologies = {
 		start_year = 1940
 		folder = {
 			name = chinaair_folder
-			position = { x = 16 y = 10 }
+			position = { x = 18 y = 10 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2359,7 +2201,7 @@ technologies = {
 		start_year = 1941
 		folder = {
 			name = chinaair_folder
-			position = { x = 16 y = 12 }
+			position = { x = 18 y = 12 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2398,7 +2240,7 @@ technologies = {
 		start_year = 1941
 		folder = {
 			name = chinaair_folder
-			position = { x = 16 y = 13 }
+			position = { x = 18 y = 13 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2436,7 +2278,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = chinaair_folder
-			position = { x = 16 y = 16 }
+			position = { x = 18 y = 16 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2473,7 +2315,7 @@ technologies = {
 		start_year = 1944
 		folder = {
 			name = chinaair_folder
-			position = { x = 16 y = 18 }
+			position = { x = 18 y = 18 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2507,7 +2349,7 @@ technologies = {
 		start_year = 1945
 		folder = {
 			name = chinaair_folder
-			position = { x = 16 y = 20 }
+			position = { x = 18 y = 20 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2545,7 +2387,7 @@ technologies = {
 		start_year = 1937
 		folder = {
 			name = chinaair_folder
-			position = { x = 20 y = 4 }
+			position = { x = 22 y = 4 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2579,7 +2421,7 @@ technologies = {
 		start_year = 1938
 		folder = {
 			name = chinaair_folder
-			position = { x = 20 y = 6 }
+			position = { x = 24 y = 6 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2616,7 +2458,7 @@ technologies = {
 		start_year = 1938
 		folder = {
 			name = chinaair_folder
-			position = { x = 20 y = 7 }
+			position = { x = 22 y = 6 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2653,7 +2495,7 @@ technologies = {
 		start_year = 1941
 		folder = {
 			name = chinaair_folder
-			position = { x = 20 y = 12 }
+			position = { x = 22 y = 12 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2694,7 +2536,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = chinaair_folder
-			position = { x = 20 y = 14 }
+			position = { x = 22 y = 14 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2728,7 +2570,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = chinaair_folder
-			position = { x = 20 y = 16 }
+			position = { x = 24 y = 16 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2766,7 +2608,7 @@ technologies = {
 		start_year = 1942
 		folder = {
 			name = chinaair_folder
-			position = { x = 20 y = 15 }
+			position = { x = 22 y = 15 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2807,7 +2649,7 @@ technologies = {
 		start_year = 1943
 		folder = {
 			name = chinaair_folder
-			position = { x = 20 y = 17 }
+			position = { x = 22 y = 16 }
 		}
 
 		special_project_specialization = { specialization_air }
@@ -2841,7 +2683,7 @@ technologies = {
 		start_year = 1944
 		folder = {
 			name = chinaair_folder
-			position = { x = 20 y = 18 }
+			position = { x = 22 y = 18 }
 		}
 
 		special_project_specialization = { specialization_air }

@@ -1,6 +1,6 @@
-data check ok: 35 aircraft, 21 engines, 11 guns, 9 ordnance
-technologies: 76 techs -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\common\technologies\CHI_air.txt
-grid cells used: 76
+data check ok: 32 aircraft, 21 engines, 11 guns, 9 ordnance
+technologies: 73 techs -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\common\technologies\CHI_air.txt
+grid cells used: 73
 technology_tags -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\common\technology_tags\zz_CHI_air_technology.txt (hide_generic=False, tag_based=True)
 on_actions -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\common\on_actions\zz_CHI_air_startup.txt
 events -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\events\zz_CHI_air_tip.txt
@@ -12,10 +12,10 @@ legacy stub -> zz_CHI_air_armor_request.txt
 legacy stub -> zz_CHI_air_armor_hide.txt
 scripted_triggers -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\common\scripted_triggers\zz_CHI_air_triggers.txt
 tab icon -> gfx/interface/techtree/techtree_chiair_tab.dds
-gfx: 76 tech icons -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\interface\chi_air_technology.gfx
+gfx: 73 tech icons -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\interface\chi_air_technology.gfx
 GUI base: 中国坦克科技子模 (28150 lines)
 GUI -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\interface\countrytechtreeview.gui (+2 item templates: techtree_chinaair_folder_item / _small_item)
 loc -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\localisation\english\chi_air_l_english.yml
 loc -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\localisation\simp_chinese\chi_air_l_simp_chinese.yml
 descriptor -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\descriptor.mod
-build_info -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\build_info.txt (v1.0.0)
+build_info -> D:\Steam\steamapps\workshop\content\394360\中系飞机科技树\build_info.txt (v0.9.5)

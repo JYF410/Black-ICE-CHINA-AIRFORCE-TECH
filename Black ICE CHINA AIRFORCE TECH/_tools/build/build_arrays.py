@@ -26,9 +26,17 @@ sys.path.insert(0, HERE)
 import cw_parse as C
 from config import (
     MOD, BIAD, FOLDER, ARRAY_EFFECT as EFFECT_NAME,
-    ARRAY_FLAG as FLAG, PIXEL_ORIGIN_X as X0, PIXEL_ORIGIN_Y as Y0, SLOT,
+    ARRAY_FLAG as FLAG, PIXEL_ORIGIN_X as X0, PIXEL_ORIGIN_X_SMALL as X0_SMALL,
+    PIXEL_ORIGIN_Y as Y0, SLOT,
     CANVAS_W, CANVAS_H,
 )
+
+SMALL_PREFIXES = ("ad_chi_tech_engine_", "ad_chi_tech_gun_", "ad_chi_tech_ord_")
+
+
+def _x0(tid):
+    """配件列用独立基准，飞机列用大格基准。"""
+    return X0_SMALL if tid.startswith(SMALL_PREFIXES) else X0
 
 
 def parse_our_techs():
@@ -64,7 +72,7 @@ def array_body(techs, indent):
     lines = []
     lines.append(f"{i}# {len(techs)} 项科技注册进黑冰研究数组")
     for t in techs:
-        px = X0 + t["x"] * SLOT
+        px = _x0(t["id"]) + t["x"] * SLOT
         py = Y0 + t["y"] * SLOT
         cost = int(round(float(t["cost"]) * 100))
         lines.append(f"{i}add_to_array = {{ global.{FOLDER} = token:{t['id']} }}")
@@ -72,6 +80,11 @@ def array_body(techs, indent):
         lines.append(f"{i}set_variable = {{ global.tech_y@{t['id']} = {py} }}")
         lines.append(f"{i}set_variable = {{ global.tech_cost@{t['id']} = {cost} }}")
         lines.append(f"{i}set_variable = {{ global.tech_date@{t['id']} = {t['year']} }}")
+        # 与 BIAD / 坦克子模一致：写入解锁装备数组。
+        # 黑冰的 ui_research_time_estimate 靠 tech_unlocks 判断天数位置，
+        # 缺了它条目上的箭头/天数/气泡都会对不齐。
+        for eq in t["unlocks"]:
+            lines.append(f"{i}add_to_array = {{ global.tech_unlocks@{t['id']} = token:{eq} }}")
         for prev in t["deps"]:
             lines.append(
                 f"{i}if = {{ limit = {{ NOT = {{ is_in_array = {{ global.tech_dependents@{prev} "
@@ -160,6 +173,21 @@ def emit_scripted_gui():
     block = extract_block(text, marker)
     block = block.replace("BI_tech_queue_luftwaffe_folder", "BI_tech_queue_chinaair_folder")
     block = block.replace("luftwaffe_folder", FOLDER)
+    # 箭头(add_to_queue)被引擎硬编码读 tech_x/tech_y，改 ax/ay 会整块失效导致箭头消失，
+    # 因此箭头位置只能用 PIXEL_ORIGIN_X/Y 整体平移；天数仍用 dx/dy（我们的触发器覆盖）。
+    # 把我们的触发器追加到 triggers 块最后，确保覆盖黑冰默认值
+    ti = block.find("triggers = {")
+    if ti >= 0:
+        brace = block.index("{", ti)
+        depth = 1
+        j = brace + 1
+        while j < len(block) and depth:
+            if block[j] == "{":
+                depth += 1
+            elif block[j] == "}":
+                depth -= 1
+            j += 1
+        block = block[: j - 1] + "\n\t\t\tCHI_air_time_estimate = yes\n\t\t" + block[j - 1 :]
     out = [
         "# 中系飞机科技树 / Chinese Aircraft Tech Tree",
         "# 让黑冰的自定义科技界面把 chinaair_folder 画出来",

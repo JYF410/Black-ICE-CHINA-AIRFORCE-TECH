@@ -1,0 +1,77 @@
+﻿kind,key,zh,year,x,column,y,prev
+air,hawk3,霍克 III,1936,26,ftr,2,
+air,i152,伊-15 比斯,1937,26,ftr,4,hawk3
+air,i16t10,伊-16 10 型,1938,26,ftr,6,i152
+air,i16t24,伊-16 24 型,1940,30,int,10,
+air,p40b,P-40B 战鹰,1941,26,ftr,12,
+air,p40e,P-40E 战鹰,1942,26,ftr,14,p40b
+air,p47d,P-47D 雷电,1943,26,ftr,16,p40e
+air,p51d,P-51D 野马,1944,26,ftr,18,p47d
+air,p80a,P-80A 流星,1946,48,jet_ftr,22,
+air,ki27,九七式战斗机,1938,26,ftr,7,
+air,i153,伊-153 海鸥,1939,26,ftr,8,ki27
+air,ki43,一式战斗机二型,1941,26,ftr,13,i153
+air,a6m2,零式舰战二一型,1942,26,ftr,15,ki43
+air,ki61,三式战斗机一型,1943,26,ftr,17,a6m2
+air,ki84,四式战斗机一型,1944,26,ftr,19,ki61
+air,la9,拉-9,1946,26,ftr,22,ki84
+air,mig9,米格-9,1947,48,jet_ftr,24,
+air,gamma2e,诺斯罗普 伽马 2E,1936,34,cas,2,
+air,hs123,亨舍尔 Hs 123,1937,34,cas,4,gamma2e
+air,a19,伏尔梯 A-19,1938,34,cas,6,hs123
+air,mosquito_fb6,蚊式 FB Mk VI,1944,32,hvy_ftr,18,
+air,il10,伊尔-10,1945,34,cas,20,
+air,he111a,亨克尔 He 111A,1936,40,tac_bomber,2,
+air,sb2m,图波列夫 SB 2M,1937,38,l_bomber,4,
+air,br20,菲亚特 BR.20 鹳,1939,38,l_bomber,8,sb2m
+air,db3,伊尔-4（DB-3）,1940,40,tac_bomber,10,
+air,b25c,B-25C 米切尔,1942,40,tac_bomber,14,db3
+air,tu2,图-2,1943,40,tac_bomber,16,b25c
+air,b24j,B-24J 解放者,1944,42,strat_bomber,18,
+air,g4m2,一式陆攻二二型,1945,40,tac_bomber,20,
+air,ki15,九七式司令部侦察机,1937,36,recon,4,
+air,pby5,PBY-5 卡特琳娜,1942,46,fly_bts,14,
+air,c47,C-47 空中列车,1942,44,trpt,14,
+air,f5,F-5 闪电侦察机,1943,36,recon,16,
+air,mosquito_pr,蚊式 PR Mk IX,1944,36,recon,18,f5
+engine,r1820,莱特 R-1820 旋风,1935,0,engine_usa,0,
+engine,v1710,艾利森 V-1710,1940,0,engine_usa,10,r1820
+engine,r2800,普惠 R-2800 双黄蜂,1943,0,engine_usa,16,v1710
+engine,v1650,帕卡德 V-1650 梅林,1944,0,engine_usa,18,r2800
+engine,r2600,莱特 R-2600 双旋风,1941,2,engine_usa_multi,12,
+engine,r1830,普惠 R-1830 双黄蜂,1942,2,engine_usa_multi,14,r2600
+engine,j33,通用电气 J33 涡喷发动机,1946,2,engine_usa_multi,22,r1830
+engine,m25,什韦佐夫 M-25,1936,4,engine_sov,2,
+engine,m62,什韦佐夫 M-62,1938,4,engine_sov,6,m25
+engine,m82,什韦佐夫 M-82 / ASh-82,1943,4,engine_sov,16,m62
+engine,am42,米库林 AM-42,1944,4,engine_sov,18,m82
+engine,m103,克里莫夫 M-103,1937,6,engine_sov_multi,4,
+engine,m34,米库林 M-34 / AM-34,1939,6,engine_sov_multi,8,m103
+engine,rd20,米库林 RD-20 涡喷发动机,1946,6,engine_sov_multi,22,m34
+engine,kotobuki,中岛 Ha-1 寿,1937,8,engine_jap,4,
+engine,sakae,中岛 Ha-35 荣,1940,8,engine_jap,10,kotobuki
+engine,homare,中岛 Ha-45 誉,1944,8,engine_jap,18,sakae
+engine,kasei,三菱 Ha-32 火星,1943,8,engine_jap,16,sakae
+engine,bmw132,宝马 132 星型发动机,1935,12,engine_other,0,
+engine,bmw_vi,宝马 VI,1936,12,engine_other,2,bmw132
+engine,merlin,罗尔斯-罗伊斯 梅林 XX,1943,12,engine_other,16,bmw_vi
+gun,m1919,7.62 毫米 M1919 勃朗宁机枪,1935,16,gun,0,
+gun,shkas,ShKAS 7.62 毫米机枪,1936,16,gun,2,m1919
+gun,mg17,MG 17 7.92 毫米机枪,1936,16,gun,2,m1919
+gun,m2,12.7 毫米 M2 勃朗宁机枪,1937,16,gun,4,shkas
+gun,type89,八九式 7.7 毫米机枪,1938,16,gun,6,mg17
+gun,shvak20,ShVAK 20 毫米机关炮,1940,16,gun,10,m2
+gun,ubs,别列津 UB 12.7 毫米机枪,1941,16,gun,12,shvak20
+gun,type99,九九式 20 毫米机关炮,1941,16,gun,12,type89
+gun,hispano,西斯潘诺 20 毫米机关炮,1943,16,gun,16,type99
+gun,ho103,Ho-103 12.7 毫米机枪,1944,16,gun,18,hispano
+gun,ns23,NS-23 23 毫米机关炮,1945,16,gun,20,ho103
+ord,fab100,FAB-100 航空炸弹,1937,20,ordnance,4,
+ord,ao10,AO-10 杀伤炸弹,1938,20,ordnance,6,fab100
+ord,fab250,FAB-250 航空炸弹,1938,20,ordnance,6,fab100
+ord,fab500,FAB-500 航空炸弹,1941,20,ordnance,12,fab250
+ord,anm30,AN-M30 100 磅炸弹,1942,20,ordnance,14,fab500
+ord,rs82,RS-82 火箭弹,1943,20,ordnance,16,anm30
+ord,type92,九二式 250 公斤炸弹,1942,20,ordnance,14,anm30
+ord,anm57,AN-M57 250 磅炸弹,1943,20,ordnance,16,type92
+ord,hvar,5 英寸 HVAR 火箭弹,1944,20,ordnance,18,anm57

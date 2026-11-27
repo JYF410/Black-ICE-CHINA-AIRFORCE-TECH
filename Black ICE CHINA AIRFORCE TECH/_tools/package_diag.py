@@ -34,6 +34,9 @@ def collect():
     info = os.path.join(ROOT, "build_info.txt")
     if os.path.isfile(info):
         yield info, "build_info.txt"
+    thumb = os.path.join(ROOT, "thumbnail.png")
+    if os.path.isfile(thumb):
+        yield thumb, "thumbnail.png"
 
 
 def write_zip(path, overrides=None):

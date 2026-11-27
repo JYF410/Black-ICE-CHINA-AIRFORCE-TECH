@@ -14,7 +14,7 @@ on_actions = {
 				}
 				set_country_flag = CHI_air
 				set_country_flag = CHI_armor
-				log = "CHI_AIR_TREE v1.0.0: China air tree loaded for [THIS.GetTag]"
+				log = "CHI_AIR_TREE v0.9.5: China air tree loaded for [THIS.GetTag]"
 			}
 			# 一次性提示：装甲科技页首次打开可能缺图标/连线，需存档读档一次
 			every_country = {

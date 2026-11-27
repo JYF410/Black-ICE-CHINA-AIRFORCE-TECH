@@ -6,6 +6,39 @@ spriteTypes = {
 		textureFile = "gfx/interface/techtree/techtree_chiair_tab.dds"
 		noOfFrames = 2
 	}
+	### 小格条目背景（按文件夹命名）
+	spriteType = {
+		name = "GFX_technology_chinaair_folder_small_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_trm_unavailable_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_chinaair_folder_small_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_trm_available_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_chinaair_folder_small_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_trm_researched_item_bg.dds"
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_chinaair_folder_small_currently_researching_item_bg"
+		texturefile = "gfx/interface/techtree/tech_trm_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	spriteType = {
+		name = "GFX_technology_chinaair_folder_special_project_small_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/technology_special_project_small_unavailable_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_chinaair_folder_special_project_small_available_item_bg"
+		textureFile = "gfx/interface/techtree/technology_special_project_small_available_item_bg.dds"
+	}
+
 	### 事件配图
 	spriteType = {
 		name = "GFX_chi_armor_tip"
@@ -23,28 +56,12 @@ spriteTypes = {
 		textureFile = "gfx/interface/technologies/USA_early_fighter.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_i152_medium"
-		textureFile = "gfx/interface/technologies/air/SOV/sov_fighter_i15_bis.dds"
+		name = "GFX_ad_chi_tech_hawk75m_medium"
+		textureFile = "gfx/interface/technologies/air/USA/USA_fighter_p36_hawk.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_i152"
-		textureFile = "gfx/interface/technologies/air/SOV/sov_fighter_i15_bis.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_i16t10_medium"
-		textureFile = "gfx/interface/technologies/air/SOV/SOV_fighter_i16_type10.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_i16t10"
-		textureFile = "gfx/interface/technologies/air/SOV/SOV_fighter_i16_type10.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_i16t24_medium"
-		textureFile = "gfx/interface/technologies/air/SOV/SOV_fighter_i16_type24.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_i16t24"
-		textureFile = "gfx/interface/technologies/air/SOV/SOV_fighter_i16_type24.dds"
+		name = "GFX_ad_chi_tech_hawk75m"
+		textureFile = "gfx/interface/technologies/air/USA/USA_fighter_p36_hawk.dds"
 	}
 	spriteType = {
 		name = "GFX_ad_chi_tech_p40b_medium"
@@ -79,68 +96,20 @@ spriteTypes = {
 		textureFile = "gfx/interface/technologies/air/USA/USA_fighter_p51d_mustang.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_p80a_medium"
-		textureFile = "gfx/interface/technologies/air/USA/USA_fighter_p80_shooting_star.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_p80a"
-		textureFile = "gfx/interface/technologies/air/USA/USA_fighter_p80_shooting_star.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_ki27_medium"
-		textureFile = "gfx/interface/technologies/air/JAP/JAP_fighter_ki27.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_ki27"
-		textureFile = "gfx/interface/technologies/air/JAP/JAP_fighter_ki27.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_i153_medium"
-		textureFile = "gfx/interface/technologies/air/SOV/sov_fighter_i153.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_i153"
-		textureFile = "gfx/interface/technologies/air/SOV/sov_fighter_i153.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_ki43_medium"
-		textureFile = "gfx/interface/technologies/air/JAP/JAP_fighter_ki43_i.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_ki43"
-		textureFile = "gfx/interface/technologies/air/JAP/JAP_fighter_ki43_i.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_a6m2_medium"
-		textureFile = "gfx/interface/technologies/air/JAP/JAP_cv_fighter_a6m2.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_a6m2"
-		textureFile = "gfx/interface/technologies/air/JAP/JAP_cv_fighter_a6m2.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_ki61_medium"
-		textureFile = "gfx/interface/technologies/air/JAP/JAP_fighter_ki61.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_ki61"
-		textureFile = "gfx/interface/technologies/air/JAP/JAP_fighter_ki61.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_ki84_medium"
-		textureFile = "gfx/interface/technologies/air/JAP/JAP_fighter_ki84.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_ki84"
-		textureFile = "gfx/interface/technologies/air/JAP/JAP_fighter_ki84.dds"
-	}
-	spriteType = {
 		name = "GFX_ad_chi_tech_la9_medium"
 		textureFile = "gfx/interface/technologies/air/SOV/sov_fighter_la9.dds"
 	}
 	spriteType = {
 		name = "GFX_ad_chi_tech_la9"
 		textureFile = "gfx/interface/technologies/air/SOV/sov_fighter_la9.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_p80a_medium"
+		textureFile = "gfx/interface/technologies/air/USA/USA_fighter_p80_shooting_star.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_p80a"
+		textureFile = "gfx/interface/technologies/air/USA/USA_fighter_p80_shooting_star.dds"
 	}
 	spriteType = {
 		name = "GFX_ad_chi_tech_mig9_medium"
@@ -151,12 +120,36 @@ spriteTypes = {
 		textureFile = "gfx/interface/technologies/air/SOV/sov_jet_fighter_mig9.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_gamma2e_medium"
-		textureFile = "gfx/interface/technologies/USA_CAS1.dds"
+		name = "GFX_ad_chi_tech_ki45_medium"
+		textureFile = "gfx/interface/technologies/air/JAP/JAP_fighter_ki45.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_gamma2e"
-		textureFile = "gfx/interface/technologies/USA_CAS1.dds"
+		name = "GFX_ad_chi_tech_ki45"
+		textureFile = "gfx/interface/technologies/air/JAP/JAP_fighter_ki45.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_a5m_medium"
+		textureFile = "gfx/interface/technologies/air/JAP/JAP_cv_fighter_a5m.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_a5m"
+		textureFile = "gfx/interface/technologies/air/JAP/JAP_cv_fighter_a5m.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_a6m2_medium"
+		textureFile = "gfx/interface/technologies/air/JAP/JAP_cv_fighter_a6m2.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_a6m2"
+		textureFile = "gfx/interface/technologies/air/JAP/JAP_cv_fighter_a6m2.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_a6m3_medium"
+		textureFile = "gfx/interface/technologies/air/JAP/JAP_cv_fighter_a6m3.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_a6m3"
+		textureFile = "gfx/interface/technologies/air/JAP/JAP_cv_fighter_a6m3.dds"
 	}
 	spriteType = {
 		name = "GFX_ad_chi_tech_hs123_medium"
@@ -167,36 +160,28 @@ spriteTypes = {
 		textureFile = "gfx/interface/technologies/air/GER/ger_cas_hs123.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_a19_medium"
+		name = "GFX_ad_chi_tech_v11_medium"
 		textureFile = "gfx/interface/technologies/air/USA/USA_cas_a19.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_a19"
+		name = "GFX_ad_chi_tech_v11"
 		textureFile = "gfx/interface/technologies/air/USA/USA_cas_a19.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_mosquito_fb6_medium"
-		textureFile = "gfx/interface/technologies/air/ENG/ENG_heavy_fighter_mosquito_mk6.dds"
+		name = "GFX_ad_chi_tech_v12d_medium"
+		textureFile = "gfx/interface/technologies/air/USA/USA_cas_a31_vengeance.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_mosquito_fb6"
-		textureFile = "gfx/interface/technologies/air/ENG/ENG_heavy_fighter_mosquito_mk6.dds"
+		name = "GFX_ad_chi_tech_v12d"
+		textureFile = "gfx/interface/technologies/air/USA/USA_cas_a31_vengeance.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_il10_medium"
-		textureFile = "gfx/interface/technologies/air/SOV/sov_cas_il10.dds"
+		name = "GFX_ad_chi_tech_mosquito_fb26_medium"
+		textureFile = "gfx/interface/technologies/air/ENG/ENG_fast_bomber_mosquito.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_il10"
-		textureFile = "gfx/interface/technologies/air/SOV/sov_cas_il10.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_he111a_medium"
-		textureFile = "gfx/interface/technologies/air/GER/GER_med_bomber_he111_a.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_he111a"
-		textureFile = "gfx/interface/technologies/air/GER/GER_med_bomber_he111_a.dds"
+		name = "GFX_ad_chi_tech_mosquito_fb26"
+		textureFile = "gfx/interface/technologies/air/ENG/ENG_fast_bomber_mosquito.dds"
 	}
 	spriteType = {
 		name = "GFX_ad_chi_tech_sb2m_medium"
@@ -213,6 +198,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ad_chi_tech_br20"
 		textureFile = "gfx/interface/technologies/air/ITA/ita_bomber_medium_br20.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_he111a_medium"
+		textureFile = "gfx/interface/technologies/air/GER/GER_med_bomber_he111_a.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_he111a"
+		textureFile = "gfx/interface/technologies/air/GER/GER_med_bomber_he111_a.dds"
 	}
 	spriteType = {
 		name = "GFX_ad_chi_tech_db3_medium"
@@ -239,14 +232,6 @@ spriteTypes = {
 		textureFile = "gfx/interface/technologies/air/SOV/sov_med_bomber_tu2.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_b24j_medium"
-		textureFile = "gfx/interface/technologies/air/USA/USA_strategic_bomber_b24_liberator.dds"
-	}
-	spriteType = {
-		name = "GFX_ad_chi_tech_b24j"
-		textureFile = "gfx/interface/technologies/air/USA/USA_strategic_bomber_b24_liberator.dds"
-	}
-	spriteType = {
 		name = "GFX_ad_chi_tech_g4m2_medium"
 		textureFile = "gfx/interface/technologies/air/JAP/JAP_medium_bomber_g4m2.dds"
 	}
@@ -255,12 +240,28 @@ spriteTypes = {
 		textureFile = "gfx/interface/technologies/air/JAP/JAP_medium_bomber_g4m2.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_ki15_medium"
-		textureFile = "gfx/interface/technologies/air/JAP/JAP_recon_plane_ki15.dds"
+		name = "GFX_ad_chi_tech_martin139_medium"
+		textureFile = "gfx/interface/technologies/air/USA/USA_medium_bomber_b10.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_ki15"
-		textureFile = "gfx/interface/technologies/air/JAP/JAP_recon_plane_ki15.dds"
+		name = "GFX_ad_chi_tech_martin139"
+		textureFile = "gfx/interface/technologies/air/USA/USA_medium_bomber_b10.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_db3h_medium"
+		textureFile = "gfx/interface/technologies/air/SOV/SOV_medium_bomber_db3m.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_db3h"
+		textureFile = "gfx/interface/technologies/air/SOV/SOV_medium_bomber_db3m.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_b24j_medium"
+		textureFile = "gfx/interface/technologies/air/USA/USA_strategic_bomber_b24_liberator.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_b24j"
+		textureFile = "gfx/interface/technologies/air/USA/USA_strategic_bomber_b24_liberator.dds"
 	}
 	spriteType = {
 		name = "GFX_ad_chi_tech_pby5_medium"
@@ -271,12 +272,12 @@ spriteTypes = {
 		textureFile = "gfx/interface/technologies/air/USA/USA_naval_bomber_pbn_nomad.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_c47_medium"
-		textureFile = "gfx/interface/technologies/air/USA/USA_transport_plane_c47_skytrain.dds"
+		name = "GFX_ad_chi_tech_ki15_medium"
+		textureFile = "gfx/interface/technologies/air/JAP/JAP_recon_plane_ki15.dds"
 	}
 	spriteType = {
-		name = "GFX_ad_chi_tech_c47"
-		textureFile = "gfx/interface/technologies/air/USA/USA_transport_plane_c47_skytrain.dds"
+		name = "GFX_ad_chi_tech_ki15"
+		textureFile = "gfx/interface/technologies/air/JAP/JAP_recon_plane_ki15.dds"
 	}
 	spriteType = {
 		name = "GFX_ad_chi_tech_f5_medium"
@@ -293,6 +294,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ad_chi_tech_mosquito_pr"
 		textureFile = "gfx/interface/technologies/air/ENG/ENG_recon_plane_mosquito_pr_mk9.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_c47_medium"
+		textureFile = "gfx/interface/technologies/air/USA/USA_transport_plane_c47_skytrain.dds"
+	}
+	spriteType = {
+		name = "GFX_ad_chi_tech_c47"
+		textureFile = "gfx/interface/technologies/air/USA/USA_transport_plane_c47_skytrain.dds"
 	}
 	spriteType = {
 		name = "GFX_ad_chi_tech_engine_r1820_medium"

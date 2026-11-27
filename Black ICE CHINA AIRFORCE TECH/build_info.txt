@@ -1,9 +1,9 @@
 中系飞机科技树 / Chinese Aircraft Tech Tree — build info
-version : 1.0.0
-built   : 2026-11-24 21:15:59
+version : 0.9.5
+built   : 2026-11-27 21:19:50
 folder  : chinaair_folder
-techs   : 76
-          aircraft 35 / engines 21 / guns 11 / ordnance 9
+techs   : 73
+          aircraft 32 / engines 21 / guns 11 / ordnance 9
 gui     : countrytechtreeview.gui 已插入 chinaair_folder 容器 + 76 个直接子级 gridbox
 
 提示：如果游戏加载的副本里这个文件的版本/时间与工作区不一致，

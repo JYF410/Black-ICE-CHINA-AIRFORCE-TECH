@@ -443,6 +443,8 @@ BI_tech_queue_chinaair_folder = {
 				}
 				check_variable = { ROOT.research_folder@var:v = token:air_techs_folder }
 			}
+		
+			CHI_air_time_estimate = yes
 		}
 		
 		effects = {

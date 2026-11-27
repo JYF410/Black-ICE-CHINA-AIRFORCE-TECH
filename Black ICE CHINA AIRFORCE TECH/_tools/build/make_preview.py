@@ -14,11 +14,17 @@ FONT_B = r"C:\Windows\Fonts\msyhbd.ttc"
 
 COL_W, ROW_H = 172, 46
 LEFT, TOP = 190, 96
-COLS = {
-    0: "美制发动机", 2: "美制多发/喷气", 4: "苏制单发", 6: "苏制多发/喷气",
-    8: "日制发动机", 12: "德英发动机", 16: "航空枪炮", 20: "炸弹火箭",
-    26: "战斗机", 30: "截击/缴获", 34: "攻击机", 38: "轰炸机", 42: "支援",
+from config import COLUMNS
+LABELS = {
+    "engine_usa": "美制发动机", "engine_usa_multi": "美制多发/喷气",
+    "engine_sov": "苏制单发", "engine_sov_multi": "苏制多发/喷气",
+    "engine_jap": "日制发动机", "engine_other": "德英发动机",
+    "gun": "航空枪炮", "ordnance": "航空炸弹", "ordnance_2": "火箭/特种炸弹",
+    "ftr": "战斗机", "hvy_ftr": "重型战斗机", "cv_ftr": "舰载战斗机",
+    "cas": "近距支援机", "l_bomber": "轻型轰炸机", "tac_bomber": "中型轰炸机",
+    "strat_bomber": "重型轰炸机", "fly_bts": "水上飞机", "recon": "侦察机", "trpt": "运输机",
 }
+COLS = {COLUMNS[k]: v for k, v in LABELS.items()}
 COLOR = {
     0: (52, 84, 120), 2: (52, 84, 120), 4: (110, 62, 52), 6: (110, 62, 52),
     8: (118, 108, 54), 12: (70, 96, 70), 16: (92, 74, 110), 20: (108, 86, 60),

@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """中系飞机科技树 —— 构建配置（单一事实来源）
 
 所有"会变的常量"集中在这里：模组路径、父模组路径、文件夹名、国家标志、
@@ -31,38 +31,82 @@ CHINESE_TAGS = ("CHI", "PRC")
 # 科技网格：1 格 = 70px；每年 2 行（与 BIAD 国家空军树一致）
 SLOT = 70
 YEAR_BASE = 1935
-YEAR_STEP = 2
+YEAR_STEP = 2      # 每年占几格（1 格 = 70px）
+DY_STEP = 1        # 同一年第二架往下错开几格（1 格 = 70px）
 
 # 文件夹坐标 -> 黑冰自定义科技页的像素坐标
 # 由 BIAD 的 ad_research_array_generation.txt 与坦克子模反推
-PIXEL_ORIGIN_X = 327
-PIXEL_ORIGIN_Y = 165
+# ---- 布局微调：改这里就够了（单位：像素，70px = 1 格）----
+# ★ 全局平移：改这两个数，图标、箭头、天数、蓝气泡会一起动
+# ---- 「研究天数」位置（相对 tech_x / tech_y，可分别调大格/小格）----
+# ---- 箭头位置（相对 tech_x / tech_y，可分别调大格/小格）----
+ARROW_LARGE_DX = 0     # 只针对「大图标」X轴位置的两组数（正数 = 往右；负数 = 往左）
+ARROW_LARGE_DY = 0     # 只针对「大图标」Y轴位置的两组数（正数 = 往下；负数 = 往上）
+ARROW_SMALL_DX = 0     # 只针对「小图标」X轴位置的两组数（正数 = 往右；负数 = 往左）
+ARROW_SMALL_DY = 0     # 只针对「小图标」Y轴位置的两组数（正数 = 往下；负数 = 往上）
 
-# 科技页容器尺寸（interface/countrytechtreeview.gui）
-CANVAS_W = 4000
-CANVAS_H = 2600
+# ---- 蓝色「研究中」气泡位置（相对 tech_x / tech_y，大小格可分开调）----
+# 目标：气泡中心压在图标上；偏左半个图标宽 = 小格 +36 / 大格 +101
+BUBBLE_LARGE_DX = 101
+BUBBLE_LARGE_DY = -8
+BUBBLE_SMALL_DX = 36
+BUBBLE_SMALL_DY = -8
+
+DAYS_LARGE_DX = -170   # 「大图标」（203×84）：天数相对 tech_x 的横向偏移
+DAYS_LARGE_DY = 4      # 「大图标」：纵向偏移
+DAYS_SMALL_DX = -40    # 「小图标」（72×72）：横向偏移
+DAYS_SMALL_DY = 4      # 「小图标」：纵向偏移
+
+LAYOUT_SHIFT_X = 0
+LAYOUT_SHIFT_Y = 0
+
+# ★ 只想「图标 + 天数 + 箭头 + 气泡」一起整体平移，就改这两个（正数=右/下）★
+ICON_SHIFT_X = 0
+ICON_SHIFT_Y = 0
+
+GRIDBOX_X = 172 + LAYOUT_SHIFT_X + ICON_SHIFT_X   # 科技格子横向起点
+GRIDBOX_Y = 172 + LAYOUT_SHIFT_Y + ICON_SHIFT_Y   # 科技格子纵向起点
+ITEM_POS_LARGE = (-66 + ICON_SHIFT_X, -7 + ICON_SHIFT_Y)   # 大格条目模板偏移
+ITEM_POS_SMALL = (0 + ICON_SHIFT_X, 0 + ICON_SHIFT_Y)      # 小格条目模板偏移
+
+PIXEL_ORIGIN_X = 334 + LAYOUT_SHIFT_X + ICON_SHIFT_X   # 大格锚点（箭头/天数/气泡）
+PIXEL_ORIGIN_Y = 165 + LAYOUT_SHIFT_Y + ICON_SHIFT_Y
+PIXEL_ORIGIN_X_SMALL = 200 + LAYOUT_SHIFT_X + ICON_SHIFT_X   # 小格锚点
+
+# 科技页画布尺寸（interface/countrytechtreeview.gui）
+CANVAS_W = 5200
+CANVAS_H = 2500  #YEAR_STEP=4→3640px  YEAR_STEP=3→2730px  YEAR_STEP=2→1820px
 
 # 列定义：名字 -> 文件夹 x 坐标
+# 列定义（对齐黑冰美国/德国空军树的“按机种纵向排列”）：
+#   左侧配件列（发动机/枪炮/挂载）→ 右侧机种列，每列只放同一类机型
 COLUMNS = {
-    "engine_usa": 0,
-    "engine_usa_multi": 2,
-    "engine_sov": 4,
-    "engine_sov_multi": 6,
-    "engine_jap": 8,
-    "engine_other": 12,
-    "gun": 16,
-    "ordnance": 20,
-    "fighter": 26,
-    "interceptor": 30,
-    "cas": 34,
-    "bomber": 38,
-    "support": 42,
+    "engine_usa": 2,
+    "engine_usa_multi": 4,
+    "engine_sov": 6,
+    "engine_sov_multi": 8,
+    "engine_jap": 10,
+    "engine_other": 14,
+    "gun": 18,
+    "ordnance": 22,
+    "ordnance_2": 24,
+    # 机种列（严格按大类，顺序参考战争雷霆中系树）
+    "ftr": 28,           # 战斗机
+    "hvy_ftr": 34,       # 重型战斗机
+    "cv_ftr": 38,        # 舰载战斗机
+    "cas": 42,           # 近距支援机
+    "l_bomber": 46,      # 轻型轰炸机
+    "tac_bomber": 50,    # 中型轰炸机
+    "strat_bomber": 54,  # 重型轰炸机
+    "fly_bts": 58,       # 水上飞机
+    "recon": 62,         # 侦察机
+    "trpt": 66,          # 运输机
 }
 
 # ---------------------------------------------------------------- 元数据
-MOD_VERSION = "1.0.0"
-MOD_NAME_CN = "黑冰：中系飞机科技树"
-MOD_NAME_EN = "Black ICE Chinese Aircraft Tech Tree"
+MOD_VERSION = "0.9.5"
+MOD_NAME_CN = "黑冰：中国空军科技"
+MOD_NAME_EN = "Black ICE CHINA AIRFORCE TECH"
 SUPPORTED_VERSION = "1.20.*"
 DEPENDENCIES = [
     "Blackice HOI IV TEST",
@@ -106,6 +150,8 @@ TAB_TEXTURE = "gfx/interface/techtree/techtree_chiair_tab.dds"
 TAB_FRAMES = 2
 # 占位图只在用户尚未提供自制页签时生成；现已使用自制 DDS，不再生成 TGA
 GENERATE_TAB_PLACEHOLDER = False
+# 封面由用户提供，构建时不要重绘（否则会覆盖掉用户的 thumbnail.png）
+GENERATE_THUMBNAIL = False
 # ---------------------------------------------------------------- 装甲请求提示修正
 # 黑冰的「请求外国装甲科技」触发器里有一句 CHI 专属条件（对美请求需完成国策），
 # 它会出现在所有捐赠国图标的提示里。开启后我们覆盖该 block，把这句话包进

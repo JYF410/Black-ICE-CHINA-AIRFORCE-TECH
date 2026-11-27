@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import os as _os
 import sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
-from config import MOD, GENERATE_TAB_PLACEHOLDER
+from config import MOD, GENERATE_TAB_PLACEHOLDER, GENERATE_THUMBNAIL
 FONT_CN = r"C:\Windows\Fonts\msyhbd.ttc"
 FONT_EN = r"C:\Windows\Fonts\msyhbd.ttc"
 
@@ -80,6 +80,9 @@ def make_tab():
 
 
 def make_thumbnail():
+    if not GENERATE_THUMBNAIL:
+        print("skip thumbnail (GENERATE_THUMBNAIL=False, 使用用户提供的封面)")
+        return None
     W = H = 512
     img = Image.new("RGB", (W, H), (14, 22, 34))
     d = ImageDraw.Draw(img)

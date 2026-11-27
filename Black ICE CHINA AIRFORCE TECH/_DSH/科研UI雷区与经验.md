@@ -147,6 +147,68 @@ AND = { has_global_flag = X  OR = { original_tag = CHI  original_tag = PRC } }
 （它的 `BI_research_tabs_scripted_gui.txt` 在 `CHI_armor` 存在时隐藏 +），
 于是 340 格空出来，坦克页签留在 340 即可，其它页签一个都不用动。
 
+### R10.5 同一页里大小格混排：三个条件缺一不可（已实测确认）
+
+黑冰的科技页**支持**同一文件夹里大格（203×84）与小格（72×72）混排，已在本模组验证
+（中国空军页左边是 72×72 的发动机/枪炮/挂载，右边是 203×84 的飞机）。
+
+要让某个科技渲染成**小格**，必须同时满足：
+
+1. **科技上**写 `force_use_small_tech_layout = yes`；
+2. **GUI 里该科技只有一个** gridboxtype，名字是 `<tech>_tree`
+   （不要加 `_small_tree`，也不要改成 `_large_tree`——前者引擎不认，后者条目直接不生成）；
+3. **文件夹级的小格底图 sprite 必须全部注册**，名字按文件夹命名：
+
+```
+GFX_technology_<folder>_small_unavailable_item_bg
+GFX_technology_<folder>_small_available_item_bg
+GFX_technology_<folder>_small_researched_item_bg
+GFX_technology_<folder>_small_currently_researching_item_bg   # frameAnimatedSpriteType，9 帧
+GFX_technology_<folder>_special_project_small_unavailable_item_bg
+GFX_technology_<folder>_special_project_small_available_item_bg
+```
+
+缺第 3 条时，小格条目**没有底框**，视觉上就像"图标全部消失、只剩角标和箭头"。
+
+贴图可以复用黑冰本体已有的：
+`gfx/interface/techtree/tech_trm_{unavailable,available,researched}_item_bg.dds`、
+`tech_trm_researching_anim_strip.dds`、`technology_special_project_small_{unavailable,available}_item_bg.dds`
+（都在 BI 本体里，不依赖坦克子模）。
+
+**参考实现**（照抄它们即可）：
+- 坦克子模 `interface/countrytechtreeview_CHI.gfx`：`GFX_technology_trm_armour_chi_folder_small_*`
+- BIAD `interface/ad_ger_equipment_tech_bg.gfx`：`GFX_technology_luftwaffe_folder_small_*`
+- BIAD `interface/ad_air_component_tech_bg.gfx`：`GFX_technology_ad_air_component_folder_small_*`
+
+**踩过的弯路（不要再试）**：
+| 尝试 | 结果 |
+|---|---|
+| 只给 `_small_tree` 格子 | 条目窗口不生成，全消失 |
+| 给 `_large_tree` + `_small_tree` | 同上，全消失 |
+| `_tree` + `_small_tree` 两个格子 | 引擎按 `_tree` 走大格 |
+| 有 `force_use_small_tech_layout` 但没注册文件夹级小格底图 | 小格无底框 → 看起来像消失 |
+
+**本模组的实现**：`_tools/build/build_chi.py` 的 `emit_gfx()` 会为 `chinaair_folder` 自动注册上述
+6 个 sprite；`gui_folder_container()` 对每个科技只输出一个 `<tech>_tree`。
+
+### R10.6 图标与「箭头 / 天数 / 气泡」是两套坐标，必须用同一常量对齐
+
+- **图标**位置 = `GRIDBOX_X/Y`（gridboxtype 的 position）+ 条目模板 `ITEM_POS_*` + 模板内图标自身偏移；
+- **箭头 / 天数 / 蓝气泡**位置 = `PIXEL_ORIGIN_X/Y + 70 × 列x`（由 scripted GUI 的 properties 计算）。
+
+两者都随列号线性移动（每列 70px），所以**差值是一个常数**。把这个常数调成 0 之后，
+以后改列距/间距，两边会一直绑在一起。
+
+本模组的做法：`GRIDBOX_X = 190 + LAYOUT_SHIFT_X`、`PIXEL_ORIGIN_X = 230 + LAYOUT_SHIFT_X`，
+只改 `LAYOUT_SHIFT_X/Y` 即可整体平移，相对关系不变。
+
+**天数的大/小格分开调**：研究数组给每个科技写 `global.tech_small@`（0/1），
+自定义触发器 `CHI_air_time_estimate` 按它分两支设置 `dx/dy`；
+`config.py` 的 `DAYS_LARGE_DX/DY`、`DAYS_SMALL_DX/DY` 就是这四个数。
+
+> 教训：让触发器块失效的写法是 `check_variable` 查一个**未定义的全局变量**；
+> 给所有科技都写 `tech_small@`（哪怕是 0）之后就稳定了。
+
 ### R11 事件弹窗带图片：必须用 news_event
 
 - 黑冰的普通事件窗口 `interface/eventwindow.gui` 里，`event_picture` 控件是**注释掉的**

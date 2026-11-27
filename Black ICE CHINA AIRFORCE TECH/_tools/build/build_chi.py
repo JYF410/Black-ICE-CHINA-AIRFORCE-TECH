@@ -27,8 +27,9 @@ import data_chi as D
 from config import (
     MOD, BI, BIAD, TANK, MOD_LINK, MOD_FILE_NAME,
     FOLDER, FLAG, ARRAY_FLAG, ARRAY_EFFECT, LOG_MARKER, CHINESE_TAGS,
-    SLOT, YEAR_BASE, YEAR_STEP, PIXEL_ORIGIN_X, PIXEL_ORIGIN_Y,
-    CANVAS_W, CANVAS_H, COLUMNS,
+    SLOT, YEAR_BASE, YEAR_STEP, DY_STEP, PIXEL_ORIGIN_X, PIXEL_ORIGIN_Y,
+    CANVAS_W, CANVAS_H, COLUMNS, GRIDBOX_X, GRIDBOX_Y, LAYOUT_SHIFT_X, ITEM_POS_LARGE, ITEM_POS_SMALL,
+    DAYS_LARGE_DX, DAYS_LARGE_DY, DAYS_SMALL_DX, DAYS_SMALL_DY, ARROW_LARGE_DX, ARROW_LARGE_DY, ARROW_SMALL_DX, ARROW_SMALL_DY,
     MOD_VERSION, MOD_NAME_CN, MOD_NAME_EN, SUPPORTED_VERSION, DEPENDENCIES,
     HIDE_GENERIC_AIR, AVAILABLE_BY_FLAG_ONLY,
     TIP_EVENT_ENABLED, TIP_EVENT_ID, TIP_EVENT_NAMESPACE, TIP_FLAG,
@@ -357,7 +358,7 @@ def emit_technologies():
         if dy in taken:
             raise SystemExit(f"duplicate cell x={x} year={year} dy={dy}")
         used_cells[(x, year, dy)] = True
-        return (year - YEAR_BASE) * YEAR_STEP + dy
+        return (year - YEAR_BASE) * YEAR_STEP + dy * DY_STEP
 
     # ---- airframes -------------------------------------------------------
     out.append("\t####################################################################")
@@ -690,6 +691,21 @@ scripted_triggers = {{
 			CHI_is_chinese_country = yes
 		}}
 	}}
+
+	# 天数(dx/dy)位置：用「有无解锁装备」区分大小格，与黑冰自己的判定一致。
+	# 箭头(add_to_queue)无法用变量覆盖，只能靠 PIXEL_ORIGIN_X/Y 整体平移。
+	CHI_air_time_estimate = {{
+		if = {{
+			limit = {{ check_variable = {{ global.tech_unlocks@var:v^num > 0 }} }}
+			set_temp_variable = {{ dx = {{ value = global.tech_x@var:v  add = {DAYS_LARGE_DX} }} }}
+			set_temp_variable = {{ dy = {{ value = global.tech_y@var:v  add = {DAYS_LARGE_DY} }} }}
+		}}
+		else = {{
+			set_temp_variable = {{ dx = {{ value = global.tech_x@var:v  add = {DAYS_SMALL_DX} }} }}
+			set_temp_variable = {{ dy = {{ value = global.tech_y@var:v  add = {DAYS_SMALL_DY} }} }}
+		}}
+	}}
+
 }}
 """
     path = os.path.join(MOD, "common", "scripted_triggers", "zz_CHI_air_triggers.txt")
@@ -731,6 +747,32 @@ def emit_gfx():
     lines.append(f'\t\ttextureFile = "{TAB_TEXTURE}"')
     lines.append(f"\t\tnoOfFrames = {TAB_FRAMES}")
     lines.append("\t}")
+
+    # 本文件夹的小格条目背景：引擎按 GFX_technology_<folder>_small_*_item_bg 取图，
+    # 不注册就会出现"小格科技没有底框/图标"（条目像消失了一样）。
+    lines.append("\t### 小格条目背景（按文件夹命名）")
+    for state in ("unavailable", "available", "researched"):
+        lines.append("\tspriteType = {")
+        lines.append(f'\t\tname = "GFX_technology_{FOLDER}_small_{state}_item_bg"')
+        lines.append(f'\t\ttextureFile = "gfx/interface/techtree/tech_trm_{state}_item_bg.dds"')
+        lines.append("\t}")
+    lines.append("\tframeAnimatedSpriteType = {")
+    lines.append(f'\t\tname = "GFX_technology_{FOLDER}_small_currently_researching_item_bg"')
+    lines.append('\t\ttexturefile = "gfx/interface/techtree/tech_trm_researching_anim_strip.dds"')
+    lines.append("\t\tnoOfFrames = 9")
+    lines.append('\t\tloadType = "INGAME"')
+    lines.append("\t\ttransparencecheck = yes")
+    lines.append("\t\tanimation_rate_fps = 15")
+    lines.append("\t\tlooping = yes")
+    lines.append("\t\tplay_on_show = yes")
+    lines.append("\t\tpause_on_loop = 0.0")
+    lines.append("\t}")
+    for state in ("unavailable", "available"):
+        lines.append("\tspriteType = {")
+        lines.append(f'\t\tname = "GFX_technology_{FOLDER}_special_project_small_{state}_item_bg"')
+        lines.append(f'\t\ttextureFile = "gfx/interface/techtree/technology_special_project_small_{state}_item_bg.dds"')
+        lines.append("\t}")
+    lines.append("")
 
     # 事件配图（坦克科技树使用提示）
     lines.append("\t### 事件配图")
@@ -804,6 +846,30 @@ def extract_container(text, name):
     return text[start:j]
 
 
+COLUMN_HEADERS = [
+    # (列 key, 中文, 英文)
+    ("engine_usa",       "美制发动机",        "US inline engines"),
+    ("engine_usa_multi", "美制多发/喷气",     "US multi & jet"),
+    ("engine_sov",       "苏制单发",          "Soviet inline"),
+    ("engine_sov_multi", "苏制多发/喷气",     "Soviet multi & jet"),
+    ("engine_jap",       "日制发动机",        "Japanese engines"),
+    ("engine_other",     "德英发动机",        "German & British"),
+    ("gun",              "航空枪炮",          "Guns"),
+    ("ordnance",         "航空炸弹",          "Bombs"),
+    ("ordnance_2",       "火箭/特种炸弹",     "Rockets"),
+    ("ftr",              "战斗机",            "Fighters"),
+    ("hvy_ftr",          "重型战斗机",        "Heavy fighters"),
+    ("cv_ftr",           "舰载战斗机",        "Carrier fighters"),
+    ("cas",              "近距支援机",        "Close support"),
+    ("l_bomber",         "轻型轰炸机",        "Light bombers"),
+    ("tac_bomber",       "中型轰炸机",        "Medium bombers"),
+    ("strat_bomber",     "重型轰炸机",        "Heavy bombers"),
+    ("fly_bts",          "水上飞机",          "Flying boats"),
+    ("recon",            "侦察机",            "Reconnaissance"),
+    ("trpt",             "运输机",            "Transports"),
+]
+
+
 def gui_folder_container(sprites):
     year_labels = []
     for year in range(YEAR_BASE, YEAR_BASE + 13):
@@ -823,6 +889,28 @@ def gui_folder_container(sprites):
 					orientation = "UPPER_LEFT"
 				}}"""
         )
+    header_labels = []
+    SMALL_COLS = {"engine_usa", "engine_usa_multi", "engine_sov", "engine_sov_multi",
+                  "engine_jap", "engine_other", "gun", "ordnance", "ordnance_2"}
+    for key, zh, _en in COLUMN_HEADERS:
+        # 标题中心对齐该列第一个图标的中心：
+        # 小格（72×72）中心在锚点左侧约 36px，大格（203×84）约 101px
+        hx = 190 + LAYOUT_SHIFT_X + 35 + COLUMNS[key] * SLOT - 120
+        header_labels.append(
+            f"""				instantTextBoxType = {{
+					name = "china_air_col_{key}"
+					position = {{ x = {hx} y = 55 }}
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = {{ x = 0 y = 2 }}
+					text = "CHI_air_col_{key}"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}}"""
+        )
+
     grid = []
     # 小格科技（发动机/枪炮/挂载）需要额外的 <tech>_small_tree 格子，
     # 引擎才会用 72×72 的 small_item 模板渲染（与坦克子模的弹药科技一致）。
@@ -830,23 +918,18 @@ def gui_folder_container(sprites):
     small_tids |= {tech_id("gun", t["key"]) for t in D.GUNS}
     small_tids |= {tech_id("ord", t["key"]) for t in D.ORDNANCE}
     for tid, _tex in sprites:
+        # 格子名的后缀决定用哪套条目模板：_small_tree → 72×72 小格，_tree → 203×84 大格。
+        # 黑冰自己的小格科技（如 tech_trm_ammo_chi_apcr）就只有一个 <tech>_small_tree。
+        grid_name = f"{tid}_tree"
+        slot_w, slot_h = (70, 70)
         grid.append(
             f"""			gridboxtype = {{
-				name = "{tid}_tree"
-				position = {{ x = 190 y = 172 }}
-				slotsize = {{ width = 70 height = 70 }}
+				name = "{grid_name}"
+				position = {{ x = {GRIDBOX_X} y = {GRIDBOX_Y} }}
+				slotsize = {{ width = {slot_w} height = {slot_h} }}
 				format = "UP"
 			}}"""
         )
-        if tid in small_tids:
-            grid.append(
-                f"""			gridboxtype = {{
-				name = "{tid}_small_tree"
-				position = {{ x = 190 y = 172 }}
-				slotsize = {{ width = 70 height = 70 }}
-				format = "UP"
-			}}"""
-            )
     body = f"""
 		containerWindowType = {{
 			name = "{FOLDER}"
@@ -886,6 +969,7 @@ def gui_folder_container(sprites):
 				}}
 
 {chr(10).join(year_labels)}
+{chr(10).join(header_labels)}
 			}}
 
 			# gridbox 必须是 folder 容器的直接子节点（与 BIAD 国家空军树一致），
@@ -1060,6 +1144,11 @@ def emit_gui(sprites, base_override=None, out_path=None):
     templates = "\n\n".join(
         b.replace("techtree_luftwaffe_folder", f"techtree_{FOLDER}") for b in blocks
     )
+    # 条目模板的位置偏移（大格/小格分开调）
+    lx, ly = ITEM_POS_LARGE
+    sx, sy = ITEM_POS_SMALL
+    templates = templates.replace("position = { x=-66 y=-7 }", f"position = {{ x={lx} y={ly} }}", 1)
+    templates = templates.replace("position = { x=0 y=0 }", f"position = {{ x={sx} y={sy} }}", 1)
     # insert before the final closing brace (end of guiTypes)
     last = text.rstrip().rfind("}")
     text = text[:last] + templates + "\n" + text[last:]
@@ -1075,6 +1164,10 @@ def emit_gui(sprites, base_override=None, out_path=None):
 # ==========================================================================
 def loc_lines(lang):
     out = []
+    # 科研面板顶端的列标题
+    for key, zh, en in COLUMN_HEADERS:
+        text = en if lang == "english" else zh
+        out.append(f' CHI_air_col_{key}:0 "{text}"')
     for a in D.AIRFRAMES:
         tid = tech_id("air", a["key"])
         if lang == "english":

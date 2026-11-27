@@ -13014,7 +13014,7 @@ guiTypes = {
 				name = "techtree_stripes"
 				position = { x= 0 y= 0 }
 				size = {
-					width = 4000 height = 2600
+					width = 5200 height = 2500
 					min = { width = 100% height = 100% }
 				}
 				clipping = no
@@ -13200,709 +13200,673 @@ guiTypes = {
 					format = left
 					orientation = "UPPER_LEFT"
 				}
+				instantTextBoxType = {
+					name = "china_air_col_engine_usa"
+					position = { x = 245 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_engine_usa"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_engine_usa_multi"
+					position = { x = 385 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_engine_usa_multi"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_engine_sov"
+					position = { x = 525 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_engine_sov"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_engine_sov_multi"
+					position = { x = 665 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_engine_sov_multi"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_engine_jap"
+					position = { x = 805 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_engine_jap"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_engine_other"
+					position = { x = 1085 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_engine_other"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_gun"
+					position = { x = 1365 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_gun"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_ordnance"
+					position = { x = 1645 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_ordnance"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_ordnance_2"
+					position = { x = 1785 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_ordnance_2"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_ftr"
+					position = { x = 2065 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_ftr"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_hvy_ftr"
+					position = { x = 2485 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_hvy_ftr"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_cv_ftr"
+					position = { x = 2765 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_cv_ftr"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_cas"
+					position = { x = 3045 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_cas"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_l_bomber"
+					position = { x = 3325 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_l_bomber"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_tac_bomber"
+					position = { x = 3605 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_tac_bomber"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_strat_bomber"
+					position = { x = 3885 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_strat_bomber"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_fly_bts"
+					position = { x = 4165 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_fly_bts"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_recon"
+					position = { x = 4445 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_recon"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
+				instantTextBoxType = {
+					name = "china_air_col_trpt"
+					position = { x = 4725 y = 55 }
+					textureFile = ""
+					font = "hoi_18mbs"
+					borderSize = { x = 0 y = 2 }
+					text = "CHI_air_col_trpt"
+					maxWidth = 240
+					maxHeight = 40
+					format = centre
+					orientation = "UPPER_LEFT"
+				}
 			}
 
 			# gridbox 必须是 folder 容器的直接子节点（与 BIAD 国家空军树一致），
 			# 放进 techtree_stripes 里引擎会找不到，报 "Found no grid box for tech"。
 			gridboxtype = {
 				name = "ad_chi_tech_hawk3_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
-				name = "ad_chi_tech_i152_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_i16t10_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_i16t24_tree"
-				position = { x = 190 y = 172 }
+				name = "ad_chi_tech_hawk75m_tree"
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_p40b_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_p40e_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_p47d_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_p51d_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_p80a_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ki27_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_i153_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ki43_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_a6m2_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ki61_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ki84_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_la9_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "ad_chi_tech_p80a_tree"
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_mig9_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
-				name = "ad_chi_tech_gamma2e_tree"
-				position = { x = 190 y = 172 }
+				name = "ad_chi_tech_ki45_tree"
+				position = { x = 172 y = 172 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "ad_chi_tech_a5m_tree"
+				position = { x = 172 y = 172 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "ad_chi_tech_a6m2_tree"
+				position = { x = 172 y = 172 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "ad_chi_tech_a6m3_tree"
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_hs123_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
-				name = "ad_chi_tech_a19_tree"
-				position = { x = 190 y = 172 }
+				name = "ad_chi_tech_v11_tree"
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
-				name = "ad_chi_tech_mosquito_fb6_tree"
-				position = { x = 190 y = 172 }
+				name = "ad_chi_tech_v12d_tree"
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
-				name = "ad_chi_tech_il10_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_he111a_tree"
-				position = { x = 190 y = 172 }
+				name = "ad_chi_tech_mosquito_fb26_tree"
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_sb2m_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_br20_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "ad_chi_tech_he111a_tree"
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_db3_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_b25c_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_tu2_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_b24j_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_g4m2_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
-				name = "ad_chi_tech_ki15_tree"
-				position = { x = 190 y = 172 }
+				name = "ad_chi_tech_martin139_tree"
+				position = { x = 172 y = 172 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "ad_chi_tech_db3h_tree"
+				position = { x = 172 y = 172 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "ad_chi_tech_b24j_tree"
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_pby5_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
-				name = "ad_chi_tech_c47_tree"
-				position = { x = 190 y = 172 }
+				name = "ad_chi_tech_ki15_tree"
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_f5_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_mosquito_pr_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "ad_chi_tech_c47_tree"
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_r1820_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_r1820_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_v1710_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_v1710_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_r2800_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_r2800_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_v1650_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_v1650_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_r2600_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_r2600_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_r1830_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_r1830_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_j33_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_j33_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_m25_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_m25_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_m62_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_m62_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_m82_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_m82_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_am42_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_am42_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_m103_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_m103_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_m34_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_m34_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_rd20_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_rd20_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_kotobuki_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_kotobuki_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_sakae_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_sakae_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_homare_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_homare_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_kasei_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_kasei_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_bmw132_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_bmw132_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_bmw_vi_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_bmw_vi_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_engine_merlin_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_engine_merlin_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_gun_m1919_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_gun_m1919_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_gun_shkas_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_gun_shkas_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_gun_mg17_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_gun_mg17_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_gun_m2_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_gun_m2_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_gun_type89_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_gun_type89_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_gun_shvak20_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_gun_shvak20_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_gun_ubs_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_gun_ubs_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_gun_type99_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_gun_type99_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_gun_hispano_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_gun_hispano_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_gun_ho103_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_gun_ho103_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_gun_ns23_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_gun_ns23_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_ord_fab100_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ord_fab100_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_ord_ao10_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ord_ao10_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_ord_fab250_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ord_fab250_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_ord_fab500_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ord_fab500_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_ord_anm30_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ord_anm30_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_ord_rs82_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ord_rs82_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_ord_type92_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ord_type92_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_ord_anm57_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ord_anm57_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "ad_chi_tech_ord_hvar_tree"
-				position = { x = 190 y = 172 }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			gridboxtype = {
-				name = "ad_chi_tech_ord_hvar_small_tree"
-				position = { x = 190 y = 172 }
+				position = { x = 172 y = 172 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}

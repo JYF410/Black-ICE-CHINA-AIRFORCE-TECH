@@ -1,5 +1,217 @@
 # 更新日志 / Changelog
 
+## 0.6.1 — 2026-11-27 · 天数/箭头定位定版
+
+**实测通过**：天数与箭头位置正常。
+
+- 所有布局坐标集中到 `_tools/build/config.py`：
+  - `LAYOUT_SHIFT_X/Y`：图标 + 箭头 + 天数 + 气泡 + 标题一起平移；
+  - `GRIDBOX_X/Y`、`ITEM_POS_LARGE/SMALL`：格子与条目模板的基准/偏移；
+  - `PIXEL_ORIGIN_X/Y`：箭头/天数/气泡锚点；
+  - `DAYS_LARGE_DX/DY`、`DAYS_SMALL_DX/DY`：大格/小格天数分别可调；
+  - `COLUMNS`、`YEAR_STEP`、`CANVAS_W/H`：列距、年距、画布。
+- 研究数组给每个科技写 `global.tech_small@`（0=大格 / 1=小格），
+  自定义触发器 `CHI_air_time_estimate` 据此分别设置天数位置；黑冰默认触发器保留兜底。
+- 此前 0.5.0–0.5.7 的反复偏移问题已定位：图标（gridbox + 条目模板）与
+  箭头/天数/气泡（`PIXEL_ORIGIN_X + 70×列`）是两套线性基准，必须用同一常量对齐；
+  现在两者共用 `LAYOUT_SHIFT`，调间距不会再互相跑偏。
+- 版本 0.6.1。
+
+## 0.6.0 — 2026-11-27
+
+- 新增 `LAYOUT_SHIFT_X/Y`，图标与箭头/天数/气泡/标题统一平移。
+
+## 0.5.9 — 2026-11-27
+
+- 布局旋钮集中到 `config.py`（`GRIDBOX_X/Y`、`ITEM_POS_LARGE/SMALL`）。
+
+## 0.5.2 — 2026-11-27
+
+- **回退 0.5.0/0.5.1 的「研究天数」改动**：自定义触发器 `CHI_air_time_estimate` 放进
+  `triggers` 块后整个触发器块失效，导致天数全部不显示。已改回黑冰默认的
+  `ui_research_time_estimate = yes`，天数恢复原位置（图标左侧、箭头左边）。
+- 间距调整保留（机种列 6 格 / 每年 280px / 同年错行 140px）。
+- 版本 0.5.2。
+
+## 0.5.0 — 2026-11-27 · 间距与「研究天数」位置
+
+针对你截图里的 5 个问题：
+
+1. **横向太挤**：机种列间距从 4 格（280px）加到 6 格（420px）：
+   战斗机 26 / 重型战斗机 32 / 舰载战斗机 36 / 近距支援机 40 / 轻型轰炸机 44 /
+   中型轰炸机 48 / 重型轰炸机 52 / 水上飞机 56 / 侦察机 60 / 运输机 64；
+   画布加宽到 5600×3800。
+2. **纵向重叠**：`YEAR_STEP` 2 → 4（每年 280px），同年第二架的错行量 70 → 140px，
+   图标高 84px，上下留 56px 间隙。
+3. **「研究天数」位置**：新建 `CHI_air_time_estimate` 触发器替代黑冰默认的
+   `ui_research_time_estimate`——大格（203×84）放右下（+52/+60），
+   小格（72×72）贴小格右下（+6/+46）；研究数组额外给配件科技写 `global.tech_small@` 标记。
+4. **顶部标题居中**：列标题 x 偏移从 `-110` 改为 `-20`（按 240 宽、居中计算），
+   仍为 `hoi_18mbs`、`format = centre`。
+5. 版本 0.5.0。
+
+## 0.4.0 — 2026-11-27 · 按 PPT 重写机树 + 列标题
+
+按你改好的 `科技树布局_可编辑.pptx` 重写中国空军树，并在科研面板顶端加上各列标题。
+
+**列标题（19 个）**：美制发动机 / 美制多发·喷气 / 苏制单发 / 苏制多发·喷气 /
+日制发动机 / 德英发动机 / 航空枪炮 / 航空炸弹 / 火箭·特种炸弹 /
+战斗机 / 重型战斗机 / 舰载战斗机 / 近距支援机 / 轻型轰炸机 / 中型轰炸机 /
+重型轰炸机 / 水上飞机 / 侦察机 / 运输机。
+
+标题控件参照坦克子模 `countrytechtreeview.gui` 第 23360 行的写法
+（`containerWindowType` + `instantTextBoxType`，`font = "hoi_18mbs"`、`format = centre`），
+放在 `chinaair_folder` 的 `techtree_stripes` 里，y = 55，逐列居中。
+
+**机种与数量**：32 架作战飞机（原 35 架 → 按 PPT 删除 I-15bis、I-16 10/24、I-153、
+九七式战、一式战、三式战、四式战；新增 H-75M、Ki-45、九六舰战、零战三二、V-11、V-12D、
+马丁 139WC、蚊式 FB.26）。
+
+**替身说明**（BIAD 无对应原型，用近似机体）：
+- 霍克 H-75M → `ad_curtiss_p36_equipment_1`（P-36 同族）
+- 伏尔梯 V-11 → `ad_vultee_a19_equipment_1`（V-11 家族）
+- 伏尔梯 V-12D → `ad_vultee_a31_equipment_1`（近似）
+- CW-21、D.510C：BIAD 无原型，按约定暂不实现。
+
+**列坐标**：战斗机 26 / 重型战斗机 30 / 舰载战斗机 32 / 近距支援机 34 /
+轻型轰炸机 36 / 中型轰炸机 38 / 重型轰炸机 40 / 水上飞机 42 / 侦察机 44 / 运输机 46；
+炸弹分成 20（炸弹）与 22（火箭/特种）两列。
+
+**其他**：`data_chi.py` 的 AIRFRAMES 全面重写；`config.COLUMNS` 同步；
+预览图与 `docs/科技树布局_坐标.csv` 可按需重生成。校验 `error: 0  warn: 0`。版本 0.4.0。
+
+## 0.3.0 — 2026-11-27 · 按机种重排科技树
+
+按黑冰美国/德国空军树的做法，**把中国空军页改成严格按机种纵向分列**，每列只放同一类机型：
+
+| 列 | x | 内容 |
+|---|---|---|
+| 发动机 | 0/2/4/6/8/12 | 美制单发/双发、苏制单发/双发、日制、德英 |
+| 航空枪炮 | 16 | 机枪/机炮 |
+| 炸弹火箭 | 20 | 炸弹/火箭 |
+| 战斗机 | 26 | 霍克 III、伊-15 比斯、伊-16 10 型、P-40B/E、P-47D、P-51D、九七式战、伊-153、一式战、零战二一、三式战、四式战、拉-9 |
+| 截击机 | 30 | 伊-16 24 型 |
+| 重型战斗机 | 32 | 蚊式 FB Mk VI |
+| 攻击机 | 34 | Hs 123、A-19、伊尔-10 |
+| 侦察机 | 36 | 九七式司侦、F-5、蚊式 PR |
+| 轻型轰炸机 | 38 | SB 2M、BR.20 |
+| 中型轰炸机 | 40 | He 111A、DB-3、B-25C、图-2、一式陆攻 |
+| 重型轰炸机 | 42 | B-24J |
+| 运输机 | 44 | C-47 |
+| 水上飞机 | 46 | PBY-5 |
+| 喷气战斗机 | 48 | P-80A、米格-9 |
+
+- `config.COLUMNS` 按黑冰 `@FTR/@INT/@CAS/@TACT_BOMBER/@STRAT_BOMBERS/@TRPT` 的机种划分重写；
+- `data_chi.py` 新增 `ROLE_COLUMNS`，逐机归类；同列同年自动错行；**跨列的前置链自动断开**，
+  避免斜穿箭头；
+- 预览图列标题同步更新（`docs/科技树预览.png`）；
+- 校验 `error: 0  warn: 0`；
+- 版本 0.3.0。
+
+## 0.2.8 — 2026-11-24
+
+按需求修正元数据：
+
+- `descriptor.mod` 的 `version` 从 `1.0.8` 改为 **`0.2.8`**（`config.MOD_VERSION` 同步）；
+- `name` 改为 **「黑冰：中国空军科技 Black ICE CHINA AIRFORCE TECH」**；
+- **封面问题的根因**：`make.py all` 每次都会调用 `make_art.make_thumbnail()` 重新生成 `thumbnail.png`，
+  把用户提供的封面覆盖掉了。现在新增 `GENERATE_THUMBNAIL = False`，构建不再重绘封面；
+- 更新包现在包含 `thumbnail.png`（355KB），解压即可换封面；
+- 版本 0.2.8。
+
+## 1.0.8 — 2026-11-24 · 大小格混排确认
+
+中国空军页的大小格混排**已验证成功**（配件小方块 + 飞机大条目），定版。
+
+- 机制三条（缺一不可）：
+  1. 科技带 `force_use_small_tech_layout = yes`；
+  2. GUI 里该科技只有一个 `<tech>_tree` gridboxtype；
+  3. 文件夹级小格底图 6 个 sprite 全部注册（`GFX_technology_chinaair_folder_small_*`）。
+- 已写入 `_DSH/科研UI雷区与经验.md` R10.5（含三次踩坑记录，避免以后重犯）；
+- `_DSH/定版配置快照.md` 同步更新到 v1.0.8；
+- 版本 1.0.8。
+
+## 1.0.7 — 2026-11-24
+
+**找到小格的真正机制**（来自坦克子模的 `interface/countrytechtreeview_CHI.gfx`）：
+
+引擎绘制小格科技时，背景图不是通用的 `GFX_technology_unavailable_item_bg`，而是按文件夹命名去取：
+
+```
+GFX_technology_<文件夹>_small_unavailable_item_bg
+GFX_technology_<文件夹>_small_available_item_bg
+GFX_technology_<文件夹>_small_researched_item_bg
+GFX_technology_<文件夹>_small_currently_researching_item_bg
+GFX_technology_<文件夹>_special_project_small_unavailable_item_bg
+GFX_technology_<文件夹>_special_project_small_available_item_bg
+```
+
+之前我们没注册这些图，小格条目就"没有底框"，看起来像图标全部消失。
+
+- 现在 `interface/chi_air_technology.gfx` 已为 `chinaair_folder` 注册上面 6 个 sprite
+  （贴图复用黑冰本体的 `tech_trm_*_item_bg.dds`，不依赖坦克子模）；
+- 科技仍带 `force_use_small_tech_layout = yes`，gridbox 仍是 `<tech>_tree`；
+- 版本 1.0.7。
+
+## 1.0.6 — 2026-11-24
+
+回退 1.0.5：`<tech>_small_tree` 单独存在时条目窗口不生成（配件区又只剩角标），
+恢复为所有科技统一 `<tech>_tree`，配件重新可见（大格）。
+
+结论（三次尝试后）：
+- `_large_tree` → 不认，条目消失；
+- 只给 `_small_tree` → 不认，条目消失；
+- `_tree` + `_small_tree` → 按 `_tree` 渲染，大格；
+- 即：**本文件夹里引擎没有按 `force_use_small_tech_layout` 切到 `_small_item`**。
+
+后续可选方案见 `_DSH/科研UI雷区与经验.md` 的补充说明。
+
+## 1.0.5 — 2026-11-24
+
+配件小方格（第三次修正，机制终于对上了）：
+
+- 条目模板由 **gridboxtype 名字的后缀**决定：`<tech>_small_tree` → 72×72，`<tech>_tree` → 203×84；
+- 每个科技只能有**一个** gridbox。之前我们同时给 `_tree` 和 `_small_tree`，引擎按 `_tree` 渲染成大格；
+- 现在 41 项配件科技只输出 `<tech>_small_tree`（黑冰自己的 `tech_trm_ammo_chi_apcr` 就是这样，
+  它也只有 `_small_tree` 一个格子）；
+- 飞机仍输出 `<tech>_tree`（大格）；
+- 校验器按同样规则检查。
+- 版本 1.0.5。
+
+## 1.0.4 — 2026-11-24
+
+- 工坊封面换成新图（I-16 与九六舰战空战，512×512 PNG）；
+- 打包脚本现在也包含 `thumbnail.png`，解压更新时会一并替换封面；
+- 版本 1.0.4。
+
+## 1.0.3 — 2026-11-24
+
+配件小方格（第二次修正）：
+
+- 你说得对，BIAD/坦克子模的同一页里确实大小混排。机制是：
+  **`force_use_small_tech_layout = yes` + 每个科技只给一个 `<tech>_tree` 格子**，
+  引擎就会改用文件夹的 `_small_item`（72×72）模板；
+- 之前我们额外给配件科技加了 `<tech>_small_tree` 格子，反而干扰了判定（按大格渲染）；
+  1.0.1 试的 `<tech>_large_tree` 更糟，条目窗口直接不生成；
+- 现在所有科技统一只保留 `<tech>_tree`，21 发动机 / 11 枪炮 / 9 挂载应显示为 72×72 小方格；
+- 版本 1.0.3。
+
+## 1.0.2 — 2026-11-24
+
+回退 1.0.1（`_large_tree` 导致条目窗口不生成，配件区只剩角标）。版本 1.0.2。
+
+## 1.0.1 — 2026-11-24
+
+界面打磨第一步：**配件科技改小方格**。
+
+- 发现：条目大小不是靠 `<tech>_tree` + `<tech>_small_tree` 决定的，BIAD 的小格科技用的是
+  **`<tech>_large_tree` + `<tech>_small_tree`** 这一对命名（`techtree_<文件夹>_item` 203×84 /
+  `_small_item` 72×72 两套模板），引擎按这对名字切换。
+- 现在 21 发动机 / 11 枪炮 / 9 挂载共 41 项科技输出 `_large_tree` + `_small_tree`；
+  35 架飞机仍用 `_tree`（203×84 大条目）。
+- `validate.py` 同步放宽：小格科技必须有 `_small_tree`，大格允许 `_tree` 或 `_large_tree`。
+- 版本 1.0.1。
+
 ## 1.0.0 — 2026-11-24 · 定版
 
 功能与 0.7.6 完全一致，仅版本号标记为定版，并新增维护者文档。

@@ -1,0 +1,32 @@
+1935 x=26(ftr) dy=0 hawk3 霍克 III
+1937 x=26(ftr) dy=0 hawk75m 霍克 H-75M
+1941 x=26(ftr) dy=0 p40b P-40B 战鹰
+1942 x=26(ftr) dy=0 p40e P-40E 战鹰
+1943 x=26(ftr) dy=0 p47d P-47D 雷电
+1944 x=26(ftr) dy=0 p51d P-51D 野马
+1946 x=26(ftr) dy=0 la9 拉-9
+1946 x=26(ftr) dy=1 p80a P-80A 流星
+1947 x=26(ftr) dy=0 mig9 米格-9
+1945 x=30(hvy_ftr) dy=0 ki45 二式复战 屠龙
+1937 x=32(cv_ftr) dy=0 a5m 九六式舰战
+1941 x=32(cv_ftr) dy=0 a6m2 零式舰战二一型
+1945 x=32(cv_ftr) dy=0 a6m3 零式舰战三二型
+1935 x=34(cas) dy=0 hs123 亨舍尔 Hs 123
+1937 x=34(cas) dy=0 v11 伏尔梯 V-11
+1938 x=34(cas) dy=0 v12d 伏尔梯 V-12D
+1945 x=34(cas) dy=0 mosquito_fb26 蚊式 FB Mk.26
+1937 x=36(l_bomber) dy=0 sb2m 图波列夫 SB 2M
+1939 x=36(l_bomber) dy=0 br20 菲亚特 BR.20 鹳
+1936 x=38(tac_bomber) dy=0 he111a 亨克尔 He 111A
+1940 x=38(tac_bomber) dy=0 db3 伊尔-4（DB-3）
+1942 x=38(tac_bomber) dy=0 b25c B-25C 米切尔
+1943 x=38(tac_bomber) dy=0 tu2 图-2
+1945 x=38(tac_bomber) dy=0 g4m2 一式陆攻二二型
+1936 x=40(strat_bomber) dy=0 martin139 马丁 139WC
+1939 x=40(strat_bomber) dy=0 db3h DB-3 轰炸机
+1944 x=40(strat_bomber) dy=0 b24j B-24J 解放者
+1942 x=42(fly_bts) dy=0 pby5 PBY-5 卡特琳娜
+1937 x=44(recon) dy=0 ki15 九七式司令部侦察机
+1943 x=44(recon) dy=0 f5 F-5 闪电侦察机
+1944 x=44(recon) dy=0 mosquito_pr 蚊式 PR Mk IX
+1942 x=46(trpt) dy=0 c47 C-47 空中列车
